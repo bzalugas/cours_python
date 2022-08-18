@@ -1,3 +1,0 @@
-#+title: Cours de Python niveau collège
-#+author: Bastien ZALUGAS
-#+language:fr
