@@ -24,19 +24,23 @@
 (require 'ox-publish)
 
 ;; Define the publishing project
-(setq org-publish-project-alist
+(setq org-publish-project-alist ;; projects to publish
       (list
        (list "cours_python"
-             :recursive t
-             :base-directory "./content"
-             :publishing-directory "./public"
-             :publishing-function 'org-html-publish-to-html
-             :with-author nil
-             :with-creator nil
-             :with-toc t
-             :section-numbers nil
-             :time-stamp-file nil)))
-(setq org-html-validation-link nil)
+             :recursive t ;; look recursively in base-directory folder
+             :base-directory "./content" ;; base directory (org files)
+             :publishing-directory "./public" ;; publishing directory (html files)
+             :publishing-function 'org-html-publish-to-html ;; function to use to publish
+             :with-author nil ;; don't include author's name
+             :with-creator nil ;; don't include emacs & org versions in footer
+             :with-toc t ;; include table of contents
+             :section-numbers nil ;; don't include section numbers
+             :time-stamp-file nil ;; don't include time stamp in file
+             )))
+
+;; Customization of HTML output
+(setq org-html-validation-link nil ;; don't include valiadation link
+      )
 
 ;; Generate the site output
 (org-publish-all t)
