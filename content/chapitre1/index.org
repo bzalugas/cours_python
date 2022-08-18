@@ -1,0 +1,13 @@
+#+title: Chapitre I
+#+author: Bastien ZALUGAS
+#+language: fr
+
+blabla tout mon blabla a propos du chapitre 1
+
+italique : /Ma phrase/
+
+gras : *Ma phrase*
+
+soulignage : _Ma phrase_
+
+code : ~Ma phrase~

@@ -20,6 +20,7 @@
 + *Nom et prénom*
 + As-tu déjà programmé ?
 * Chapitre I
+[[file:chapitre1/index.org][Chapitre I]]
 * Chapitre II
 * Chapitre III
 * Chapitre IV
@@ -28,3 +29,9 @@
 * Chapitre VII
 * Chapitre VIII
 * Chapitre IX
+#+begin_src C
+int main()
+{
+	return 0;
+}
+#+end_src
