@@ -1,37 +1,60 @@
-#+title: Cours de Python
-#+author: Bastien ZALUGAS
+#+title: Cours & exercices de Python
 #+language: fr
-
-* Table des matieres :TOC:noexport:
-- [[#introduction][Introduction]]
-  - [[#présentation][Présentation]]
-- [[#chapitre-i][Chapitre I]]
-- [[#chapitre-ii][Chapitre II]]
-- [[#chapitre-iii][Chapitre III]]
-- [[#chapitre-iv][Chapitre IV]]
-- [[#chapitre-v][Chapitre V]]
-- [[#chapitre-vi][Chapitre VI]]
-- [[#chapitre-vii][Chapitre VII]]
-- [[#chapitre-viii][Chapitre VIII]]
-- [[#chapitre-ix][Chapitre IX]]
+#+author: Bastien ZALUGAS
+#+HTML_DOCTYPE: html5
+#+options: <:nil \n:t ^:{} broken-links:mark creator:nil date:nil email:nil timestamp:nil toc:2 html-style:nil num:nil html5-fancy:t author:nil
+#+setupfile: theme/theme-readtheorg-level0-local.setup
+#+html_link_home: index.html
+#+html_link_up: index.html
 
 * Introduction
-** Présentation
-+ *Nom et prénom*
-+ As-tu déjà programmé ?
-* Chapitre I
-[[file:chapitre1/index.org][Chapitre I]]
-* Chapitre II
-* Chapitre III
-* Chapitre IV
-* Chapitre V
-* Chapitre VI
-* Chapitre VII
-* Chapitre VIII
-* Chapitre IX
-#+begin_src C
-int main()
-{
-	return 0;
-}
-#+end_src
+IDEE : essayer theme readtheorg avec org-info.js pour separer chaque chapitre
+Questions a poser pour l'introduction
+* Chapitre 1 : Calculs et variables
+:properties:
+:custom_id: chap1
+:end:
+** Cours 1
+:PROPERTIES:
+:ID: cours1
+:END:
+*** Lecture
+blablabla
+*** Exercices
+blablabla
+** Cours 2
+:PROPERTIES:
+:ID: cours2
+:END:
+*** Lecture
+blablabla
+*** Exercices
+blablabla
+** Cours 3
+*** Lecture
+blablabla
+*** Exercices
+blablabla
+* Chapitre 2 : Chaînes, listes, tuples, dictionnaires
+** Cours 4
+*** Lecture
+blablabla
+*** Exercices
+blablabla
+** Cours 5
+*** Lecture
+blablabla
+*** Exercices
+blablabla
+** Cours 6
+*** Lecture
+blablabla
+*** Exercices
+blablabla
+* Chapitre 3 : Turtle
+* Chapitre 4 : Les conditions
+* Chapitre 5 : Les boucles
+* Chapitre 6 : Input et output
+* Chapitre 7 : Mise en pratique
+* Chapitre 8 : Les fonctions
+* Chapitre 9 : Regroupons tout !

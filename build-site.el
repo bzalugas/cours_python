@@ -1,4 +1,4 @@
-;;; build-site.el --- Build script for the website -*- lexical-binding: t; -*-
+;;; build-site.el --- Description -*- lexical-binding: t; -*-
 ;;
 ;; Copyright (C) 2022 bzalugas
 ;;
@@ -20,7 +20,6 @@
 ;;; Code:
 
 ;; Load the publishing system
-(provide 'build-site)
 (require 'ox-publish)
 
 ;; Set package installation directory so that packages aren't stored in the ~/.emacs.d/elpa path
@@ -37,32 +36,34 @@
 ;; Install dependencies
 (package-install 'htmlize)
 
-;; Define the publishing project
-(setq org-publish-project-alist ;; projects to publish
-      (list
-       (list "cours_python"
-             :recursive t ;; look recursively in base-directory folder
-             :base-directory "./content" ;; base directory (org files)
-             :publishing-directory "./public" ;; publishing directory (html files)
-             :publishing-function 'org-html-publish-to-html ;; function to use to publish
-             :with-author nil ;; don't include author's name
-             :with-creator nil ;; don't include emacs & org versions in footer
-             :with-toc t ;; include table of contents
-             :section-numbers nil ;; don't include section numbers
-             :time-stamp-file nil ;; don't include time stamp in file
-             )))
+;; Define the publishing projects
+(setq org-publish-project-alist
+      '(
+	("org-notes"
+	 :recursive t ;; look recursively in base-directory folder
+	 :base-directory "./content" ;; base directory (org files)
+	 :base-extension "org" ;; extensions we want to be taken
+	 :publishing-directory "./public" ;; publishing directory (html files)
+	 :publishing-function org-html-publish-to-html ;; function to use to publish
+	 )
+
+	("org-static"
+	 :recursive t ;; look recursively in base-directory folder
+	 :base-directory "./content" ;; base directory (org files)
+	 :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf" ;; extensions we want to be taken
+	 :publishing-directory "./public" ;; publishing directory (html files)
+	 :publishing-function org-publish-attachment ;; function to use to publish
+	 )
+
+	("org-site" :components ("org-notes" "org-static")))) ;; Components to use to to build an "org-site"
 
 ;; Customization of HTML output
-(setq org-html-validation-link nil ;; don't include valiadation link
-      org-html-head-include-scripts nil ;; use our own scripts
-      org-html-head-include-default-style nil ;; use our own styles
-      org-html-head "<link rel=\"stylesheet\" href=\"https://cdn.simplecss.org/simple.css\">" ;; stylesheet
-      )
+(setq org-html-validation-link nil) ;; don't include valiadation link
 
 ;; Generate the site output
-(org-publish-all t)
-
+(org-publish "org-site" t)
 (message "Build complete !")
 
 
+(provide 'build-site)
 ;;; build-site.el ends here
