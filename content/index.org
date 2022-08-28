@@ -8,49 +8,53 @@
 #+html_link_up: index.html
 
 * Introduction
-IDEE : essayer theme readtheorg avec org-info.js pour separer chaque chapitre
-Questions a poser pour l'introduction
+- As-tu déjà programmé ?
+- Si oui, avec quel langage de programmation ?
+** Notions de base
+- Ordinateur ?
+- Programmation ?
+- Instruction ?
+- Langage de programmation ?
+- Programme ?
+- Compilation ?
+- Exécution ?
+- Syntaxe ?
+** Python
+- Langage interprété : versatilité
+- Syntaxe simple
+- Très utilisé
+** Introduction à IDLE
+- Sauvegarder un programme
+- Premier programme : Hello World !
 * Chapitre 1 : Calculs et variables
 :properties:
 :custom_id: chap1
 :end:
-** Cours 1
+** Cours 1 : Opérateurs arithmétiques
 :PROPERTIES:
 :ID: cours1
 :END:
-*** Lecture
-blablabla
+*** Manuel
+- *"Calculer avec Python"*, p.22
+- *"Les opérateurs de Python"*, p.23
+- *"L'ordre des opérateurs"*, p.24
 *** Exercices
-blablabla
-** Cours 2
+1. Créer un programme nommé ~cours1.py~ qui affiche le résultat d'une *addition*, d'une *soustraction*, d'une *multiplication*, d'une *division* et d'un calcul utilisant *tous les opérateurs*.
+
+2. Toujours dans ~cours1.py~, afficher les résultats de *deux calculs contenant les mêmes valeurs et opérateurs* mais avec et sans *parenthèses*, pour illustrer l'ordre des opérateurs et le fonctionnement des parenthèses.
+** Cours 2 : Variables
 :PROPERTIES:
 :ID: cours2
 :END:
-*** Lecture
-blablabla
+*** Manuel
+- *"Les variables sont comme des étiquettes"*, p.25
 *** Exercices
-blablabla
+
 ** Cours 3
-*** Lecture
-blablabla
-*** Exercices
-blablabla
 * Chapitre 2 : Chaînes, listes, tuples, dictionnaires
 ** Cours 4
-*** Lecture
-blablabla
-*** Exercices
-blablabla
 ** Cours 5
-*** Lecture
-blablabla
-*** Exercices
-blablabla
 ** Cours 6
-*** Lecture
-blablabla
-*** Exercices
-blablabla
 * Chapitre 3 : Turtle
 * Chapitre 4 : Les conditions
 * Chapitre 5 : Les boucles
