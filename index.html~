@@ -24,11 +24,16 @@
 <h2>Table des matières</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org31b6520">Introduction</a></li>
+<li><a href="#org31b6520">Introduction</a>
+<ul>
+<li><a href="#org957d11f">Notions de base</a></li>
+<li><a href="#org8528bc0">Introduction à IDLE</a></li>
+</ul>
+</li>
 <li><a href="#chap1">Chapitre 1 : Calculs et variables</a>
 <ul>
-<li><a href="#orgc4c9648">Cours 1</a></li>
-<li><a href="#orgdf41f0e">Cours 2</a></li>
+<li><a href="#org40d94d0">Cours 1 : Opérateurs arithmétiques</a></li>
+<li><a href="#orgf223299">Cours 2 : Variables</a></li>
 <li><a href="#org0d39010">Cours 3</a></li>
 </ul>
 </li>
@@ -53,78 +58,84 @@
 <div id="outline-container-org31b6520" class="outline-2">
 <h2 id="org31b6520">Introduction</h2>
 <div class="outline-text-2" id="text-org31b6520">
-<p>
-IDEE : essayer theme readtheorg avec org-info.js pour separer chaque chapitre<br>
-Questions a poser pour l'introduction<br>
-</p>
+<ul class="org-ul">
+<li>As-tu déjà programmé ?<br></li>
+<li>Si oui, avec quel langage de programmation ?<br></li>
+</ul>
+</div>
+<div id="outline-container-org957d11f" class="outline-3">
+<h3 id="org957d11f">Notions de base</h3>
+<div class="outline-text-3" id="text-org957d11f">
+<ul class="org-ul">
+<li>Ordinateur ?<br></li>
+<li>Programmation ?<br></li>
+<li>Instruction ?<br></li>
+<li>Langage de programmation ?<br></li>
+<li>Programme ?<br></li>
+<li>Compilation ?<br></li>
+<li>Exécution ?<br></li>
+<li>Syntaxe ?<br></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org8528bc0" class="outline-3">
+<h3 id="org8528bc0">Introduction à IDLE</h3>
+<div class="outline-text-3" id="text-org8528bc0">
+<ul class="org-ul">
+<li>Sauvegarder un programme<br></li>
+<li>Premier programme : Hello World !<br></li>
+</ul>
+</div>
 </div>
 </div>
 <div id="outline-container-chap1" class="outline-2">
 <h2 id="chap1">Chapitre 1 : Calculs et variables</h2>
 <div class="outline-text-2" id="text-chap1">
 </div>
-<div id="outline-container-orgc4c9648" class="outline-3">
-<h3 id="orgc4c9648">Cours 1</h3>
-<div class="outline-text-3" id="text-orgc4c9648">
+<div id="outline-container-org40d94d0" class="outline-3">
+<h3 id="org40d94d0">Cours 1 : Opérateurs arithmétiques</h3>
+<div class="outline-text-3" id="text-org40d94d0">
 </div>
-<div id="outline-container-org8cd9af2" class="outline-4">
-<h4 id="org8cd9af2">Lecture</h4>
-<div class="outline-text-4" id="text-org8cd9af2">
-<p>
-blablabla<br>
-</p>
-</div>
-</div>
-<div id="outline-container-org43e9d91" class="outline-4">
-<h4 id="org43e9d91">Exercices</h4>
-<div class="outline-text-4" id="text-org43e9d91">
-<p>
-blablabla<br>
-</p>
+<div id="outline-container-org42fca0a" class="outline-4">
+<h4 id="org42fca0a">Manuel</h4>
+<div class="outline-text-4" id="text-org42fca0a">
+<ul class="org-ul">
+<li><b>"Calculer avec Python"</b>, p.22<br></li>
+<li><b>"Les opérateurs de Python"</b>, p.23<br></li>
+<li><b>"L'ordre des opérateurs"</b>, p.24<br></li>
+</ul>
 </div>
 </div>
-</div>
-<div id="outline-container-orgdf41f0e" class="outline-3">
-<h3 id="orgdf41f0e">Cours 2</h3>
-<div class="outline-text-3" id="text-orgdf41f0e">
-</div>
-<div id="outline-container-org05cf13e" class="outline-4">
-<h4 id="org05cf13e">Lecture</h4>
-<div class="outline-text-4" id="text-org05cf13e">
-<p>
-blablabla<br>
-</p>
-</div>
-</div>
-<div id="outline-container-orgec4a022" class="outline-4">
-<h4 id="orgec4a022">Exercices</h4>
-<div class="outline-text-4" id="text-orgec4a022">
-<p>
-blablabla<br>
-</p>
+<div id="outline-container-org4b8b8de" class="outline-4">
+<h4 id="org4b8b8de">Exercices</h4>
+<div class="outline-text-4" id="text-org4b8b8de">
+<ol class="org-ol">
+<li>Créer un programme nommé <code>cours1.py</code> qui affiche le résultat d'une <b>addition</b>, d'une <b>soustraction</b>, d'une <b>multiplication</b>, d'une <b>division</b> et d'un calcul utilisant <b>tous les opérateurs</b>.<br></li>
+
+<li>Toujours dans <code>cours1.py</code>, afficher les résultats de <b>deux calculs contenant les mêmes valeurs et opérateurs</b> mais avec et sans <b>parenthèses</b>, pour illustrer l'ordre des opérateurs et le fonctionnement des parenthèses.<br></li>
+</ol>
 </div>
 </div>
 </div>
+<div id="outline-container-orgf223299" class="outline-3">
+<h3 id="orgf223299">Cours 2 : Variables</h3>
+<div class="outline-text-3" id="text-orgf223299">
+</div>
+<div id="outline-container-org9d2a69a" class="outline-4">
+<h4 id="org9d2a69a">Manuel</h4>
+<div class="outline-text-4" id="text-org9d2a69a">
+<ul class="org-ul">
+<li><b>"Les variables sont comme des étiquettes"</b>, p.25<br></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org45da156" class="outline-4">
+<h4 id="org45da156">Exercices</h4>
+</div>
+</div>
+
 <div id="outline-container-org0d39010" class="outline-3">
 <h3 id="org0d39010">Cours 3</h3>
-<div class="outline-text-3" id="text-org0d39010">
-</div>
-<div id="outline-container-org5761a4a" class="outline-4">
-<h4 id="org5761a4a">Lecture</h4>
-<div class="outline-text-4" id="text-org5761a4a">
-<p>
-blablabla<br>
-</p>
-</div>
-</div>
-<div id="outline-container-org6a733a0" class="outline-4">
-<h4 id="org6a733a0">Exercices</h4>
-<div class="outline-text-4" id="text-org6a733a0">
-<p>
-blablabla<br>
-</p>
-</div>
-</div>
 </div>
 </div>
 <div id="outline-container-org9693886" class="outline-2">
@@ -133,66 +144,12 @@ blablabla<br>
 </div>
 <div id="outline-container-org1f1ee23" class="outline-3">
 <h3 id="org1f1ee23">Cours 4</h3>
-<div class="outline-text-3" id="text-org1f1ee23">
-</div>
-<div id="outline-container-orgcc7f710" class="outline-4">
-<h4 id="orgcc7f710">Lecture</h4>
-<div class="outline-text-4" id="text-orgcc7f710">
-<p>
-blablabla<br>
-</p>
-</div>
-</div>
-<div id="outline-container-orgd103299" class="outline-4">
-<h4 id="orgd103299">Exercices</h4>
-<div class="outline-text-4" id="text-orgd103299">
-<p>
-blablabla<br>
-</p>
-</div>
-</div>
 </div>
 <div id="outline-container-org20c5e69" class="outline-3">
 <h3 id="org20c5e69">Cours 5</h3>
-<div class="outline-text-3" id="text-org20c5e69">
-</div>
-<div id="outline-container-org24d9fbc" class="outline-4">
-<h4 id="org24d9fbc">Lecture</h4>
-<div class="outline-text-4" id="text-org24d9fbc">
-<p>
-blablabla<br>
-</p>
-</div>
-</div>
-<div id="outline-container-orgf09f0b1" class="outline-4">
-<h4 id="orgf09f0b1">Exercices</h4>
-<div class="outline-text-4" id="text-orgf09f0b1">
-<p>
-blablabla<br>
-</p>
-</div>
-</div>
 </div>
 <div id="outline-container-orgb332f83" class="outline-3">
 <h3 id="orgb332f83">Cours 6</h3>
-<div class="outline-text-3" id="text-orgb332f83">
-</div>
-<div id="outline-container-orgc5b26a7" class="outline-4">
-<h4 id="orgc5b26a7">Lecture</h4>
-<div class="outline-text-4" id="text-orgc5b26a7">
-<p>
-blablabla<br>
-</p>
-</div>
-</div>
-<div id="outline-container-orgb0bd0ad" class="outline-4">
-<h4 id="orgb0bd0ad">Exercices</h4>
-<div class="outline-text-4" id="text-orgb0bd0ad">
-<p>
-blablabla<br>
-</p>
-</div>
-</div>
 </div>
 </div>
 <div id="outline-container-org8c3813d" class="outline-2">
