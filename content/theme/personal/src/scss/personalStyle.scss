@@ -71,6 +71,15 @@ pre {
   white-space: pre-wrap;
 }
 
+code {
+  font-size: 0.75rem;
+  padding: 0 10px;
+  border: 1px solid $defaultTextColor;
+  //box-shadow: inset white 1px 1px;
+  //background-color: $navBackground;
+  //color: white;
+}
+
 div#content {
   //width: 100vw;
   //height: 100vh;

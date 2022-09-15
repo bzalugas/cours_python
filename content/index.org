@@ -9,21 +9,24 @@
 :PROPERTIES:
 :custom_id: introduction
 :END:
+*** Présentation
+- Prénom
 - As-tu déjà programmé ?
 - Si oui, avec quel langage de programmation ?
+- Motivation : pourquoi t'es-tu inscrit à ce cours ?
 *** Notions de base
 - Ordinateur ?
 - Programmation ?
-- Instruction ?
-- Langage de programmation ?
 - Programme ?
+- Langage de programmation ?
+- Instruction ?
 - Compilation ?
 - Exécution ?
 - Syntaxe ?
 *** Python
-- Langage interprété : versatilité
+- Langage interprété : versatilité (le fonctionnement ne dépend pas du système d'exploitation)
 - Syntaxe simple
-- Très utilisé
+- Très utilisé dans pleins de domaines différents
 *** Introduction à IDLE
 - Sauvegarder un programme
 - Premier programme : Hello World !

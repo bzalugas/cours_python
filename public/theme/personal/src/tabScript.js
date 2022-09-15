@@ -12,6 +12,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
     document.querySelectorAll(".src-python").forEach(el => {
         hljs.highlightElement(el);
     })
+    document.querySelectorAll("code").forEach(el => {
+        hljs.highlightElement(el);
+    })
 })
 /*
 When the hash changes, set the correct element visible on screen & set correct nav element active
