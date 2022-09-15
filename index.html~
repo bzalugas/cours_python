@@ -47,10 +47,17 @@
 <div id="outline-container-introduction" class="outline-2">
 <h2 id="introduction">Introduction</h2>
 <div class="outline-text-2" id="text-introduction">
+</div>
+<div id="outline-container-org08e63bf" class="outline-4">
+<h4 id="org08e63bf">Présentation</h4>
+<div class="outline-text-4" id="text-org08e63bf">
 <ul class="org-ul">
+<li>Prénom</li>
 <li>As-tu déjà programmé ?</li>
 <li>Si oui, avec quel langage de programmation ?</li>
+<li>Motivation : pourquoi t'es-tu inscrit à ce cours ?</li>
 </ul>
+</div>
 </div>
 <div id="outline-container-orgf80b36e" class="outline-4">
 <h4 id="orgf80b36e">Notions de base</h4>
@@ -58,9 +65,9 @@
 <ul class="org-ul">
 <li>Ordinateur ?</li>
 <li>Programmation ?</li>
-<li>Instruction ?</li>
-<li>Langage de programmation ?</li>
 <li>Programme ?</li>
+<li>Langage de programmation ?</li>
+<li>Instruction ?</li>
 <li>Compilation ?</li>
 <li>Exécution ?</li>
 <li>Syntaxe ?</li>
@@ -71,9 +78,9 @@
 <h4 id="org1594093">Python</h4>
 <div class="outline-text-4" id="text-org1594093">
 <ul class="org-ul">
-<li>Langage interprété : versatilité</li>
+<li>Langage interprété : versatilité (le fonctionnement ne dépend pas du système d'exploitation)</li>
 <li>Syntaxe simple</li>
-<li>Très utilisé</li>
+<li>Très utilisé dans pleins de domaines différents</li>
 </ul>
 </div>
 </div>
@@ -95,9 +102,9 @@
 <h3 id="chapitre1_cours1">Cours 1 : Opérateurs arithmétiques</h3>
 <div class="outline-text-3" id="text-chapitre1_cours1">
 </div>
-<div id="outline-container-org4e95785" class="outline-4">
-<h4 id="org4e95785">Manuel</h4>
-<div class="outline-text-4" id="text-org4e95785">
+<div id="outline-container-orgb0ce8fb" class="outline-4">
+<h4 id="orgb0ce8fb">Manuel</h4>
+<div class="outline-text-4" id="text-orgb0ce8fb">
 <ul class="org-ul">
 <li><b>"Calculer avec Python"</b>, p.22</li>
 <li><b>"Les opérateurs de Python"</b>, p.23</li>
@@ -105,9 +112,9 @@
 </ul>
 </div>
 </div>
-<div id="outline-container-org0fccd49" class="outline-4">
-<h4 id="org0fccd49">Exercices</h4>
-<div class="outline-text-4" id="text-org0fccd49">
+<div id="outline-container-org5a8fb9c" class="outline-4">
+<h4 id="org5a8fb9c">Exercices</h4>
+<div class="outline-text-4" id="text-org5a8fb9c">
 <ol class="org-ol">
 <li>Créer un programme nommé <code>cours1.py</code> qui affiche le résultat d'une <b>addition</b>, d'une <b>soustraction</b>, d'une <b>multiplication</b>, d'une <b>division</b> et d'un calcul utilisant <b>tous les opérateurs</b>.</li>
 
@@ -120,16 +127,16 @@
 <h3 id="chapitre1_cours2">Cours 2 : Variables</h3>
 <div class="outline-text-3" id="text-chapitre1_cours2">
 </div>
-<div id="outline-container-org3c6ff7d" class="outline-4">
-<h4 id="org3c6ff7d">Manuel</h4>
-<div class="outline-text-4" id="text-org3c6ff7d">
+<div id="outline-container-org9082671" class="outline-4">
+<h4 id="org9082671">Manuel</h4>
+<div class="outline-text-4" id="text-org9082671">
 <ul class="org-ul">
 <li><b>"Les variables sont comme des étiquettes"</b>, p.25</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org28db17a" class="outline-4">
-<h4 id="org28db17a">Exercices</h4>
+<div id="outline-container-orgb4bac8f" class="outline-4">
+<h4 id="orgb4bac8f">Exercices</h4>
 </div>
 </div>
 
