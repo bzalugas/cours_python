@@ -2,15 +2,16 @@
 #+language: fr
 #+author: Bastien ZALUGAS
 #+HTML_DOCTYPE: html5
-#+options: <:nil \n:t ^:{} broken-links:mark creator:nil date:nil email:nil timestamp:nil toc:2 html-style:nil num:nil html5-fancy:t author:nil
-#+setupfile: theme/theme-readtheorg-level0-local.setup
-#+html_link_home: index.html
-#+html_link_up: index.html
+#+options: <:nil ^:{} broken-links:mark creator:nil date:nil email:nil timestamp:nil toc:2 html-style:nil num:nil html5-fancy:t author:nil
+#+setupfile: theme/personal/personal-theme.setup
 
 * Introduction
+:PROPERTIES:
+:custom_id: introduction
+:END:
 - As-tu déjà programmé ?
 - Si oui, avec quel langage de programmation ?
-** Notions de base
+*** Notions de base
 - Ordinateur ?
 - Programmation ?
 - Instruction ?
@@ -19,20 +20,20 @@
 - Compilation ?
 - Exécution ?
 - Syntaxe ?
-** Python
+*** Python
 - Langage interprété : versatilité
 - Syntaxe simple
 - Très utilisé
-** Introduction à IDLE
+*** Introduction à IDLE
 - Sauvegarder un programme
 - Premier programme : Hello World !
 * Chapitre 1 : Calculs et variables
 :properties:
-:custom_id: chap1
+:custom_id: chapitre1
 :end:
 ** Cours 1 : Opérateurs arithmétiques
 :PROPERTIES:
-:ID: cours1
+:custom_id: chapitre1_cours1
 :END:
 *** Manuel
 - *"Calculer avec Python"*, p.22
@@ -44,21 +45,57 @@
 2. Toujours dans ~cours1.py~, afficher les résultats de *deux calculs contenant les mêmes valeurs et opérateurs* mais avec et sans *parenthèses*, pour illustrer l'ordre des opérateurs et le fonctionnement des parenthèses.
 ** Cours 2 : Variables
 :PROPERTIES:
-:ID: cours2
+:custom_id: chapitre1_cours2
 :END:
 *** Manuel
 - *"Les variables sont comme des étiquettes"*, p.25
 *** Exercices
 
 ** Cours 3
+:PROPERTIES:
+:custom_id: chapitre1_cours3
+:END:
 * Chapitre 2 : Chaînes, listes, tuples, dictionnaires
+:PROPERTIES:
+:custom_id: chapitre2
+:END:
 ** Cours 4
+:PROPERTIES:
+:custom_id: chapitre2_cours4
+:END:
 ** Cours 5
+:PROPERTIES:
+:custom_id: chapitre2_cours5
+:END:
 ** Cours 6
+:PROPERTIES:
+:custom_id: chapitre2_cours6
+:END:
 * Chapitre 3 : Turtle
+:PROPERTIES:
+:custom_id: chapitre3
+:END:
 * Chapitre 4 : Les conditions
+:PROPERTIES:
+:custom_id: chapitre4
+:END:
 * Chapitre 5 : Les boucles
+:PROPERTIES:
+:custom_id: chapitre5
+:END:
 * Chapitre 6 : Input et output
+:PROPERTIES:
+:custom_id: chapitre6
+:END:
 * Chapitre 7 : Mise en pratique
+:PROPERTIES:
+:custom_id: chapitre7
+:END:
 * Chapitre 8 : Les fonctions
+:PROPERTIES:
+:custom_id: chapitre8
+:END:
 * Chapitre 9 : Regroupons tout !
+:PROPERTIES:
+:custom_id: chapitre9
+:END:

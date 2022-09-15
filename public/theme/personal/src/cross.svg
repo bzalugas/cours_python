@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" >
+    <g>
+        <path style="stroke:rgba(255,255,255,0.3); stroke-width:2" d="M0,0 L16,16 M0,16 L16,0 Z"/>
+    </g>
+</svg>

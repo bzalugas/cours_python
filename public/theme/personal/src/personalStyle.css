@@ -1,0 +1,212 @@
+html {
+  height: 100vh;
+}
+
+body {
+  min-height: 100%;
+}
+
+body, html {
+  margin: 0;
+  scroll-behavior: smooth;
+  font-family: Lato, "Helvetica Neue", Arial, sans-serif;
+  color: rgb(52, 49, 49);
+  background-color: rgb(228, 238, 242);
+  text-align: left;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: rgb(41, 128, 185);
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: left;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: left;
+}
+
+h4 {
+  font-size: 1.2rem;
+  color: rgb(41, 128, 185);
+  text-align: left;
+}
+
+pre {
+  white-space: pre-wrap;
+}
+
+header {
+  max-width: 800px;
+  margin: 2rem auto auto 300px;
+  padding: 0 100px 0 30px;
+  text-align: center;
+}
+header h1 {
+  margin: 0;
+}
+
+.toggleNav {
+  display: none;
+}
+
+.verticalNav {
+  height: 100vh;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  background-color: rgb(52, 49, 49);
+  width: 300px;
+}
+.verticalNav h2 {
+  margin: 0 10px 0 0;
+  padding: 13px;
+  font-size: 1.2rem;
+  text-align: center;
+  background-color: rgb(41, 128, 185);
+  color: white;
+}
+.verticalNav ul {
+  list-style-type: none;
+  padding: 0;
+  font-size: 1rem;
+}
+.verticalNav ul li {
+  padding: 0;
+  margin: 0;
+}
+.verticalNav ul a {
+  display: block;
+  transition: 0.3s;
+  text-decoration: none;
+}
+.verticalNav ul a:hover {
+  cursor: pointer;
+}
+.verticalNav__close {
+  display: none;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.3);
+  margin: 0;
+  padding-left: 40px;
+}
+.verticalNav__list {
+  margin: 0 10px 0 0;
+}
+.verticalNav__chapter {
+  padding: 10px;
+  color: rgb(179, 179, 179);
+}
+.verticalNav__chapter:hover {
+  background-color: rgb(78, 74, 74);
+  color: #fff;
+}
+.verticalNav__lesson {
+  padding: 10px 10px 10px 30px;
+  color: rgb(64, 64, 64);
+}
+.verticalNav__lesson:hover {
+  background-color: #4a4a4a;
+  color: #fff;
+}
+.verticalNav__chapter--active {
+  background-color: rgb(252, 252, 252);
+  color: black;
+}
+.verticalNav__lesson--active {
+  background-color: rgb(201, 201, 201);
+  color: black;
+}
+.verticalNav__chapter--active + .verticalNav__list__level2 {
+  display: block;
+  background-color: rgb(227, 227, 227);
+}
+.verticalNav__list__level2 {
+  display: none;
+  margin: 0;
+}
+
+.chapter {
+  background-color: white;
+  margin: 30px 0 10px 300px;
+  padding: 10px 100px 10px 50px;
+  max-width: 800px;
+  min-height: 100vh;
+  display: none;
+  text-align: justify;
+  font-size: 1rem;
+}
+.chapter--visible {
+  display: block;
+}
+.chapter__lesson {
+  padding-top: 50px;
+}
+.chapter__lesson h3::after {
+  content: "";
+  display: block;
+  margin-top: 1.5rem;
+  border-bottom: black;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+
+.lesson__content {
+  border-top: black;
+  border-top-width: 1px;
+  border-top-style: solid;
+}
+
+@media screen and (max-width: 800px) {
+  .toggleNav {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    height: 50px;
+    width: 100vw;
+    opacity: 80%;
+    background-color: rgb(41, 128, 185);
+  }
+  .toggleNav__link::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+  }
+  .toggleNav__title {
+    margin: 0;
+    padding: 13px;
+    font-size: 1.2rem;
+    text-align: center;
+    background-color: rgb(41, 128, 185);
+    color: white;
+  }
+  .verticalNav:not(:target) {
+    display: none;
+  }
+  .verticalNav {
+    z-index: 2;
+  }
+  .verticalNav__close {
+    display: inline;
+  }
+  header {
+    margin: 65px auto auto auto;
+    padding: 0;
+  }
+  .chapter {
+    margin: 50px auto auto auto;
+    padding-right: 30px;
+  }
+}
+
+/*# sourceMappingURL=personalStyle.css.map */

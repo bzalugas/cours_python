@@ -1,0 +1,277 @@
+$defaultTextColor: rgb(52,49,49);
+$background: rgb(228, 238, 242);
+$navBackground: rgb(52,49,49);
+$navTextColor: rgb(179,179,179);
+$navHoverBackground: rgb(78,74,74);
+$navHoverTextColor:#fff;
+$navHoverLessonBackground: #4a4a4a;
+$navActiveChapterBackground: rgb(252,252,252);
+$navActiveLessonBackground: rgb(201,201,201);
+$navActiveChapterTextColor: black;
+$navLessonTextColor: rgb(64,64,64);
+$navActiveLessonTextColor: black;
+$navActiveLessonListBackground: rgb(227,227,227);
+$navTitleBackground: rgb(41, 128, 185);
+$navTitleColor: white;
+$navWidth: 300px;
+$navMargin: 0 10px 0 0;
+$chapterPaddingRight: 100px;
+$chapterMaxWidth: 800px;
+$navHeightMobile: 50px;
+$navTitleFontSize: 1.2rem;
+$navListFontSize: 1rem;
+$navCloseFontSize: 1rem;
+$h1Size: 2.5rem;
+$h2Size: 2rem;
+$h3Size: 1.5rem;
+$h4Size: 1.2rem;
+
+html {
+  height: 100vh;
+}
+
+body {
+  min-height: 100%;
+}
+
+body, html{
+  margin: 0;
+  scroll-behavior: smooth;
+  font-family: Lato, "Helvetica Neue", Arial, sans-serif;
+  color: $defaultTextColor;
+  background-color: $background;
+  text-align: left;
+}
+
+h1 {
+  font-size: $h1Size;
+  font-weight: bold;
+  color: $navTitleBackground;
+}
+
+h2 {
+  font-size: $h2Size;
+  font-weight: bold;
+  text-align: left;
+}
+
+h3 {
+  font-size: $h3Size;
+  font-weight: bold;
+  text-align: left;
+}
+
+h4 {
+  font-size: $h4Size;
+  color: $navTitleBackground;
+  text-align: left;
+}
+
+pre {
+  white-space: pre-wrap;
+}
+
+div#content {
+  //width: 100vw;
+  //height: 100vh;
+}
+
+header {
+  max-width: $chapterMaxWidth;
+  margin: 2rem auto auto $navWidth;
+  padding: 0 100px 0 30px;
+  //margin: 0;
+  text-align: center;
+  h1 {
+    margin: 0;
+  }
+}
+
+.toggleNav {
+  display: none;
+}
+
+//#table-of-contents {
+.verticalNav {
+  height: 100vh;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  background-color: $navBackground;
+  width: $navWidth;
+
+  h2 {
+    margin: $navMargin;
+    padding: 13px;
+    font-size: $navTitleFontSize;
+    text-align: center;
+    background-color: $navTitleBackground;
+    color: $navTitleColor;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: $navListFontSize;
+
+    li {
+      padding: 0;
+      margin: 0;
+    }
+
+    a {
+      display: block;
+      transition: 0.3s;
+      text-decoration: none;
+    }
+
+    a:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__close {
+    display: none;
+    text-decoration: none;
+    color: rgba(255,255,255,0.3);
+    margin: 0;
+    padding-left: 40px;
+  }
+
+  &__list {
+    margin: $navMargin;
+  }
+
+  &__chapter {
+    padding: 10px;
+    color: $navTextColor;
+  }
+
+  &__chapter:hover {
+    background-color: $navHoverBackground;
+    color: $navHoverTextColor;
+  }
+
+  &__lesson {
+    padding: 10px 10px 10px 30px;
+    color: $navLessonTextColor;
+  }
+
+  &__lesson:hover {
+    background-color: $navHoverLessonBackground;
+    color: $navHoverTextColor;
+  }
+
+  &__chapter--active {
+    background-color: $navActiveChapterBackground;
+    color: $navActiveChapterTextColor;
+  }
+
+  &__lesson--active {
+    background-color: $navActiveLessonBackground;
+    color: $navActiveLessonTextColor;
+  }
+
+  &__chapter--active + &__list__level2 {
+    display: block;
+    background-color: $navActiveLessonListBackground;
+  }
+
+  &__list__level2 {
+    display: none;
+    margin: 0;
+  }
+}
+
+.chapter {
+  background-color: white;
+  margin: 30px 0 10px $navWidth;
+  padding: 10px $chapterPaddingRight 10px 50px;
+  max-width: $chapterMaxWidth;
+  min-height: 100vh;
+  display: none;
+
+  //p { //enlever le p car org ne genere pas de p
+    text-align: justify;
+    font-size: 1rem;
+  //}
+
+  &--visible {
+    display: block;
+  }
+
+  &__lesson {
+    padding-top: 50px;
+
+    h3::after {
+      content: "";
+      display: block;
+      margin-top: $h3Size;
+      border-bottom: black;
+      border-bottom-style: solid;
+      border-bottom-width: 1px;
+    }
+  }
+}
+
+.lesson__content {
+  //border-top: $defaultTextColor;
+  border-top: black;
+  border-top-width: 1px;
+  border-top-style: solid;
+}
+
+@media screen and (max-width: 800px) {
+  .toggleNav {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    height: $navHeightMobile;
+    width: 100vw;
+    opacity: 80%;
+    background-color: $navTitleBackground;
+
+    &__link::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+    }
+
+    &__title {
+      margin: 0;
+      padding: 13px;
+      font-size: 1.2rem;
+      text-align: center;
+      background-color: $navTitleBackground;
+      color: $navTitleColor;
+    }
+  }
+
+  .verticalNav:not(:target) {
+    display: none;
+  }
+
+  .verticalNav {
+    z-index: 2;
+    &__close {
+      display: inline;
+    }
+  }
+
+  header {
+    margin: $navHeightMobile + 15 auto auto auto;
+    padding: 0;
+  }
+
+  .chapter {
+    margin: $navHeightMobile auto auto auto;
+    padding-right: 30px;
+  }
+}
+
+//.chapter:target{
+//  display: block;
+//}
