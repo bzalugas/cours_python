@@ -5,12 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Cours &amp; exercices de Python</title>
 <meta name="generator" content="Org mode">
-<link rel="stylesheet" type="text/css" href="theme/src/readtheorg_theme/css/htmlize.css"/>
-<link rel="stylesheet" type="text/css" href="theme/src/readtheorg_theme/css/readtheorg.css"/>
-<script type="text/javascript" src="theme/src/lib/js/jquery.min.js"></script>
-<script type="text/javascript" src="theme/src/lib/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="theme/src/lib/js/jquery.stickytableheaders.min.js"></script>
-<script type="text/javascript" src="theme/src/readtheorg_theme/js/readtheorg.js"></script>
+<link rel="stylesheet" type="text/css" href="theme/personal/src/personalStyle.css"/>
+<script type="text/javascript" src="theme/personal/src/tabScript.js"></script>
+<link rel="stylesheet" href="theme/personal/src/highlight/styles/monokai-sublime.min.css"/>
+<script src="theme/personal/src/highlight/highlight.min.js"></script>
 <script type="text/javascript">
 /*
 @licstart  The following is the entire license notice for the
@@ -59,176 +57,188 @@ for the JavaScript code in this tag.
 </script>
 </head>
 <body>
-<div id="org-div-home-and-up">
- <a accesskey="h" href="index.html"> UP </a>
- |
- <a accesskey="H" href="index.html"> HOME </a>
-</div><div id="content">
+<div id="content">
 <header>
 <h1 class="title">Cours &amp; exercices de Python</h1>
 </header><nav id="table-of-contents">
 <h2>Table des matières</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org8260e13">Introduction</a>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#chapitre1">Chapitre 1 : Calculs et variables</a>
 <ul>
-<li><a href="#org64d6c7d">Notions de base</a></li>
-<li><a href="#org54f5f4a">Python</a></li>
-<li><a href="#orgaed976d">Introduction à IDLE</a></li>
+<li><a href="#chapitre1_cours1">Cours 1 : Opérateurs arithmétiques</a></li>
+<li><a href="#chapitre1_cours2">Cours 2 : Variables</a></li>
+<li><a href="#chapitre1_cours3">Cours 3</a></li>
 </ul>
 </li>
-<li><a href="#chap1">Chapitre 1 : Calculs et variables</a>
+<li><a href="#chapitre2">Chapitre 2 : Chaînes, listes, tuples, dictionnaires</a>
 <ul>
-<li><a href="#org80ae394">Cours 1 : Opérateurs arithmétiques</a></li>
-<li><a href="#orgba1b68d">Cours 2 : Variables</a></li>
-<li><a href="#org7c999a6">Cours 3</a></li>
+<li><a href="#chapitre2_cours4">Cours 4</a></li>
+<li><a href="#chapitre2_cours5">Cours 5</a></li>
+<li><a href="#chapitre2_cours6">Cours 6</a></li>
 </ul>
 </li>
-<li><a href="#orge4e8103">Chapitre 2 : Chaînes, listes, tuples, dictionnaires</a>
-<ul>
-<li><a href="#org139d2e6">Cours 4</a></li>
-<li><a href="#org205aaf4">Cours 5</a></li>
-<li><a href="#orgd500efc">Cours 6</a></li>
-</ul>
-</li>
-<li><a href="#orgea34824">Chapitre 3 : Turtle</a></li>
-<li><a href="#org862cb6c">Chapitre 4 : Les conditions</a></li>
-<li><a href="#orgdf5ddbd">Chapitre 5 : Les boucles</a></li>
-<li><a href="#org991adba">Chapitre 6 : Input et output</a></li>
-<li><a href="#orgedb6467">Chapitre 7 : Mise en pratique</a></li>
-<li><a href="#org516bac1">Chapitre 8 : Les fonctions</a></li>
-<li><a href="#org2277148">Chapitre 9 : Regroupons tout !</a></li>
+<li><a href="#chapitre3">Chapitre 3 : Turtle</a></li>
+<li><a href="#chapitre4">Chapitre 4 : Les conditions</a></li>
+<li><a href="#chapitre5">Chapitre 5 : Les boucles</a></li>
+<li><a href="#chapitre6">Chapitre 6 : Input et output</a></li>
+<li><a href="#chapitre7">Chapitre 7 : Mise en pratique</a></li>
+<li><a href="#chapitre8">Chapitre 8 : Les fonctions</a></li>
+<li><a href="#chapitre9">Chapitre 9 : Regroupons tout !</a></li>
 </ul>
 </div>
 </nav>
 
-<div id="outline-container-org8260e13" class="outline-2">
-<h2 id="org8260e13">Introduction</h2>
-<div class="outline-text-2" id="text-org8260e13">
+<div id="outline-container-orgdf07de0" class="outline-2">
+<h2 id="introduction"><a id="orgdf07de0"></a>Introduction</h2>
+<div class="outline-text-2" id="text-introduction">
 <ul class="org-ul">
-<li>As-tu déjà programmé ?<br></li>
-<li>Si oui, avec quel langage de programmation ?<br></li>
+<li>As-tu déjà programmé ?</li>
+<li>Si oui, avec quel langage de programmation ?</li>
 </ul>
 </div>
-<div id="outline-container-org64d6c7d" class="outline-3">
-<h3 id="org64d6c7d">Notions de base</h3>
-<div class="outline-text-3" id="text-org64d6c7d">
+<div id="outline-container-orge3b0cdf" class="outline-4">
+<h4 id="orge3b0cdf">Notions de base</h4>
+<div class="outline-text-4" id="text-orge3b0cdf">
 <ul class="org-ul">
-<li>Ordinateur ?<br></li>
-<li>Programmation ?<br></li>
-<li>Instruction ?<br></li>
-<li>Langage de programmation ?<br></li>
-<li>Programme ?<br></li>
-<li>Compilation ?<br></li>
-<li>Exécution ?<br></li>
-<li>Syntaxe ?<br></li>
-</ul>
-</div>
-</div>
-<div id="outline-container-org54f5f4a" class="outline-3">
-<h3 id="org54f5f4a">Python</h3>
-<div class="outline-text-3" id="text-org54f5f4a">
-<ul class="org-ul">
-<li>Langage interprété : versatilité<br></li>
-<li>Syntaxe simple<br></li>
-<li>Très utilisé<br></li>
+<li>Ordinateur ?</li>
+<li>Programmation ?</li>
+<li>Instruction ?</li>
+<li>Langage de programmation ?</li>
+<li>Programme ?</li>
+<li>Compilation ?</li>
+<li>Exécution ?</li>
+<li>Syntaxe ?</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgaed976d" class="outline-3">
-<h3 id="orgaed976d">Introduction à IDLE</h3>
-<div class="outline-text-3" id="text-orgaed976d">
+<div id="outline-container-org087daef" class="outline-4">
+<h4 id="org087daef">Python</h4>
+<div class="outline-text-4" id="text-org087daef">
 <ul class="org-ul">
-<li>Sauvegarder un programme<br></li>
-<li>Premier programme : Hello World !<br></li>
+<li>Langage interprété : versatilité</li>
+<li>Syntaxe simple</li>
+<li>Très utilisé</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc70dedf" class="outline-4">
+<h4 id="orgc70dedf">Introduction à IDLE</h4>
+<div class="outline-text-4" id="text-orgc70dedf">
+<ul class="org-ul">
+<li>Sauvegarder un programme</li>
+<li>Premier programme : Hello World !</li>
 </ul>
 </div>
 </div>
 </div>
-<div id="outline-container-orgb327a7c" class="outline-2">
-<h2 id="chap1"><a id="orgb327a7c"></a>Chapitre 1 : Calculs et variables</h2>
-<div class="outline-text-2" id="text-chap1">
+<div id="outline-container-orgb09b2a3" class="outline-2">
+<h2 id="chapitre1"><a id="orgb09b2a3"></a>Chapitre 1 : Calculs et variables</h2>
+<div class="outline-text-2" id="text-chapitre1">
 </div>
-<div id="outline-container-org80ae394" class="outline-3">
-<h3 id="org80ae394"><a id="cours1"></a>Cours 1 : Opérateurs arithmétiques</h3>
-<div class="outline-text-3" id="text-org80ae394">
+<div id="outline-container-org5389c0c" class="outline-3">
+<h3 id="chapitre1_cours1"><a id="org5389c0c"></a>Cours 1 : Opérateurs arithmétiques</h3>
+<div class="outline-text-3" id="text-chapitre1_cours1">
 </div>
-<div id="outline-container-orge55894d" class="outline-4">
-<h4 id="orge55894d">Manuel</h4>
-<div class="outline-text-4" id="text-orge55894d">
+<div id="outline-container-orgb4f797f" class="outline-4">
+<h4 id="orgb4f797f">Manuel</h4>
+<div class="outline-text-4" id="text-orgb4f797f">
 <ul class="org-ul">
-<li><b>"Calculer avec Python"</b>, p.22<br></li>
-<li><b>"Les opérateurs de Python"</b>, p.23<br></li>
-<li><b>"L'ordre des opérateurs"</b>, p.24<br></li>
+<li><b>"Calculer avec Python"</b>, p.22</li>
+<li><b>"Les opérateurs de Python"</b>, p.23</li>
+<li><b>"L'ordre des opérateurs"</b>, p.24</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org7f6b6f4" class="outline-4">
-<h4 id="org7f6b6f4">Exercices</h4>
-<div class="outline-text-4" id="text-org7f6b6f4">
+<div id="outline-container-org4ed9216" class="outline-4">
+<h4 id="org4ed9216">Exercices</h4>
+<div class="outline-text-4" id="text-org4ed9216">
 <ol class="org-ol">
-<li>Créer un programme nommé <code>cours1.py</code> qui affiche le résultat d'une <b>addition</b>, d'une <b>soustraction</b>, d'une <b>multiplication</b>, d'une <b>division</b> et d'un calcul utilisant <b>tous les opérateurs</b>.<br></li>
+<li>Créer un programme nommé <code>cours1.py</code> qui affiche le résultat d'une <b>addition</b>, d'une <b>soustraction</b>, d'une <b>multiplication</b>, d'une <b>division</b> et d'un calcul utilisant <b>tous les opérateurs</b>.</li>
 
-<li>Toujours dans <code>cours1.py</code>, afficher les résultats de <b>deux calculs contenant les mêmes valeurs et opérateurs</b> mais avec et sans <b>parenthèses</b>, pour illustrer l'ordre des opérateurs et le fonctionnement des parenthèses.<br></li>
+<li>Toujours dans <code>cours1.py</code>, afficher les résultats de <b>deux calculs contenant les mêmes valeurs et opérateurs</b> mais avec et sans <b>parenthèses</b>, pour illustrer l'ordre des opérateurs et le fonctionnement des parenthèses.</li>
 </ol>
 </div>
 </div>
 </div>
-<div id="outline-container-orgba1b68d" class="outline-3">
-<h3 id="orgba1b68d"><a id="cours2"></a>Cours 2 : Variables</h3>
-<div class="outline-text-3" id="text-orgba1b68d">
+<div id="outline-container-org98bca98" class="outline-3">
+<h3 id="chapitre1_cours2"><a id="org98bca98"></a>Cours 2 : Variables</h3>
+<div class="outline-text-3" id="text-chapitre1_cours2">
 </div>
-<div id="outline-container-org5eaefce" class="outline-4">
-<h4 id="org5eaefce">Manuel</h4>
-<div class="outline-text-4" id="text-org5eaefce">
+<div id="outline-container-org5eb756a" class="outline-4">
+<h4 id="org5eb756a">Manuel</h4>
+<div class="outline-text-4" id="text-org5eb756a">
 <ul class="org-ul">
-<li><b>"Les variables sont comme des étiquettes"</b>, p.25<br></li>
+<li><b>"Les variables sont comme des étiquettes"</b>, p.25</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org5825cde" class="outline-4">
-<h4 id="org5825cde">Exercices</h4>
+<div id="outline-container-orgc34e4e0" class="outline-4">
+<h4 id="orgc34e4e0">Exercices</h4>
 </div>
 </div>
 
-<div id="outline-container-org7c999a6" class="outline-3">
-<h3 id="org7c999a6">Cours 3</h3>
+<div id="outline-container-orgfc79e6e" class="outline-3">
+<h3 id="chapitre1_cours3"><a id="orgfc79e6e"></a>Cours 3</h3>
+<div class="outline-text-3" id="text-chapitre1_cours3">
 </div>
 </div>
-<div id="outline-container-orge4e8103" class="outline-2">
-<h2 id="orge4e8103">Chapitre 2 : Chaînes, listes, tuples, dictionnaires</h2>
-<div class="outline-text-2" id="text-orge4e8103">
 </div>
-<div id="outline-container-org139d2e6" class="outline-3">
-<h3 id="org139d2e6">Cours 4</h3>
+<div id="outline-container-orgd3d0743" class="outline-2">
+<h2 id="chapitre2"><a id="orgd3d0743"></a>Chapitre 2 : Chaînes, listes, tuples, dictionnaires</h2>
+<div class="outline-text-2" id="text-chapitre2">
 </div>
-<div id="outline-container-org205aaf4" class="outline-3">
-<h3 id="org205aaf4">Cours 5</h3>
-</div>
-<div id="outline-container-orgd500efc" class="outline-3">
-<h3 id="orgd500efc">Cours 6</h3>
+<div id="outline-container-orgab3767e" class="outline-3">
+<h3 id="chapitre2_cours4"><a id="orgab3767e"></a>Cours 4</h3>
+<div class="outline-text-3" id="text-chapitre2_cours4">
 </div>
 </div>
-<div id="outline-container-orgea34824" class="outline-2">
-<h2 id="orgea34824">Chapitre 3 : Turtle</h2>
+<div id="outline-container-orgaa7ad1b" class="outline-3">
+<h3 id="chapitre2_cours5"><a id="orgaa7ad1b"></a>Cours 5</h3>
+<div class="outline-text-3" id="text-chapitre2_cours5">
 </div>
-<div id="outline-container-org862cb6c" class="outline-2">
-<h2 id="org862cb6c">Chapitre 4 : Les conditions</h2>
 </div>
-<div id="outline-container-orgdf5ddbd" class="outline-2">
-<h2 id="orgdf5ddbd">Chapitre 5 : Les boucles</h2>
+<div id="outline-container-org44c9985" class="outline-3">
+<h3 id="chapitre2_cours6"><a id="org44c9985"></a>Cours 6</h3>
+<div class="outline-text-3" id="text-chapitre2_cours6">
 </div>
-<div id="outline-container-org991adba" class="outline-2">
-<h2 id="org991adba">Chapitre 6 : Input et output</h2>
 </div>
-<div id="outline-container-orgedb6467" class="outline-2">
-<h2 id="orgedb6467">Chapitre 7 : Mise en pratique</h2>
 </div>
-<div id="outline-container-org516bac1" class="outline-2">
-<h2 id="org516bac1">Chapitre 8 : Les fonctions</h2>
+<div id="outline-container-org6cf04f8" class="outline-2">
+<h2 id="chapitre3"><a id="org6cf04f8"></a>Chapitre 3 : Turtle</h2>
+<div class="outline-text-2" id="text-chapitre3">
 </div>
-<div id="outline-container-org2277148" class="outline-2">
-<h2 id="org2277148">Chapitre 9 : Regroupons tout !</h2>
+</div>
+<div id="outline-container-orgad1cdda" class="outline-2">
+<h2 id="chapitre4"><a id="orgad1cdda"></a>Chapitre 4 : Les conditions</h2>
+<div class="outline-text-2" id="text-chapitre4">
+</div>
+</div>
+<div id="outline-container-org90e980e" class="outline-2">
+<h2 id="chapitre5"><a id="org90e980e"></a>Chapitre 5 : Les boucles</h2>
+<div class="outline-text-2" id="text-chapitre5">
+</div>
+</div>
+<div id="outline-container-org4fee596" class="outline-2">
+<h2 id="chapitre6"><a id="org4fee596"></a>Chapitre 6 : Input et output</h2>
+<div class="outline-text-2" id="text-chapitre6">
+</div>
+</div>
+<div id="outline-container-org8745bc4" class="outline-2">
+<h2 id="chapitre7"><a id="org8745bc4"></a>Chapitre 7 : Mise en pratique</h2>
+<div class="outline-text-2" id="text-chapitre7">
+</div>
+</div>
+<div id="outline-container-org2092244" class="outline-2">
+<h2 id="chapitre8"><a id="org2092244"></a>Chapitre 8 : Les fonctions</h2>
+<div class="outline-text-2" id="text-chapitre8">
+</div>
+</div>
+<div id="outline-container-org7c975a0" class="outline-2">
+<h2 id="chapitre9"><a id="org7c975a0"></a>Chapitre 9 : Regroupons tout !</h2>
+<div class="outline-text-2" id="text-chapitre9">
+</div>
 </div>
 </div>
 <div id="postamble" class="status">
