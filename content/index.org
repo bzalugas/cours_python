@@ -11,8 +11,7 @@
 :END:
 *** Présentation
 - Prénom
-- As-tu déjà programmé ?
-- Si oui, avec quel langage de programmation ?
+- As-tu déjà programmé ? Si oui, avec quel langage de programmation ?
 - Motivation : pourquoi t'es-tu inscrit à ce cours ?
 *** Notions de base
 - Ordinateur ?
@@ -23,7 +22,7 @@
 - Compilation ?
 - Exécution ?
 - Syntaxe ?
-*** Python
+*** Pourquoi Python ?
 - Langage interprété : versatilité (le fonctionnement ne dépend pas du système d'exploitation)
 - Syntaxe simple
 - Très utilisé dans pleins de domaines différents
@@ -43,17 +42,25 @@
 - *"Les opérateurs de Python"*, p.23
 - *"L'ordre des opérateurs"*, p.24
 *** Exercices
-1. Créer un programme nommé ~cours1.py~ qui affiche le résultat d'une *addition*, d'une *soustraction*, d'une *multiplication*, d'une *division* et d'un calcul utilisant *tous les opérateurs*.
-
-2. Toujours dans ~cours1.py~, afficher les résultats de *deux calculs contenant les mêmes valeurs et opérateurs* mais avec et sans *parenthèses*, pour illustrer l'ordre des opérateurs et le fonctionnement des parenthèses.
+1. Dans un programme nommé ~cours1.py~
+   - Afficher le résultat d'une *addition*
+   - Afficher le résultat d'une *soustraction*
+   - Affiher le résultat d'une *multiplication*
+   - Affiher le résultat d'une *division*
+   - Affiher le résultat d'un calcul utilisant *tous les opérateurs*.
+   - Afficher les résultats de *deux calculs contenant les mêmes valeurs et opérateurs* mais avec et sans *parenthèses*, pour illustrer l'ordre des opérateurs et le fonctionnement des parenthèses.
 ** Cours 2 : Variables
 :PROPERTIES:
 :custom_id: chapitre1_cours2
 :END:
 *** Manuel
 - *"Les variables sont comme des étiquettes"*, p.25
+- *"Utiliser les variables"*, p.26
 *** Exercices
-
+1. Dans un programme nommé =variables.py=
+   - Créer une variable nommée =mon_age= égale à ton âge, puis afficher le contenu de cette varibale
+   - Créer une variable nommée =annee= égale à l'année actuelle
+   - Afficher le résultat de =annee= moins =mon_age=
 ** Cours 3
 :PROPERTIES:
 :custom_id: chapitre1_cours3
