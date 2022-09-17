@@ -53,8 +53,7 @@
 <div class="outline-text-4" id="text-org08e63bf">
 <ul class="org-ul">
 <li>Prénom</li>
-<li>As-tu déjà programmé ?</li>
-<li>Si oui, avec quel langage de programmation ?</li>
+<li>As-tu déjà programmé ? Si oui, avec quel langage de programmation ?</li>
 <li>Motivation : pourquoi t'es-tu inscrit à ce cours ?</li>
 </ul>
 </div>
@@ -74,9 +73,9 @@
 </ul>
 </div>
 </div>
-<div id="outline-container-org1594093" class="outline-4">
-<h4 id="org1594093">Python</h4>
-<div class="outline-text-4" id="text-org1594093">
+<div id="outline-container-org6cb4a95" class="outline-4">
+<h4 id="org6cb4a95">Pourquoi Python ?</h4>
+<div class="outline-text-4" id="text-org6cb4a95">
 <ul class="org-ul">
 <li>Langage interprété : versatilité (le fonctionnement ne dépend pas du système d'exploitation)</li>
 <li>Syntaxe simple</li>
@@ -102,9 +101,9 @@
 <h3 id="chapitre1_cours1">Cours 1 : Opérateurs arithmétiques</h3>
 <div class="outline-text-3" id="text-chapitre1_cours1">
 </div>
-<div id="outline-container-orgb0ce8fb" class="outline-4">
-<h4 id="orgb0ce8fb">Manuel</h4>
-<div class="outline-text-4" id="text-orgb0ce8fb">
+<div id="outline-container-org9082671" class="outline-4">
+<h4 id="org9082671">Manuel</h4>
+<div class="outline-text-4" id="text-org9082671">
 <ul class="org-ul">
 <li><b>"Calculer avec Python"</b>, p.22</li>
 <li><b>"Les opérateurs de Python"</b>, p.23</li>
@@ -112,13 +111,19 @@
 </ul>
 </div>
 </div>
-<div id="outline-container-org5a8fb9c" class="outline-4">
-<h4 id="org5a8fb9c">Exercices</h4>
-<div class="outline-text-4" id="text-org5a8fb9c">
+<div id="outline-container-orgb4bac8f" class="outline-4">
+<h4 id="orgb4bac8f">Exercices</h4>
+<div class="outline-text-4" id="text-orgb4bac8f">
 <ol class="org-ol">
-<li>Créer un programme nommé <code>cours1.py</code> qui affiche le résultat d'une <b>addition</b>, d'une <b>soustraction</b>, d'une <b>multiplication</b>, d'une <b>division</b> et d'un calcul utilisant <b>tous les opérateurs</b>.</li>
-
-<li>Toujours dans <code>cours1.py</code>, afficher les résultats de <b>deux calculs contenant les mêmes valeurs et opérateurs</b> mais avec et sans <b>parenthèses</b>, pour illustrer l'ordre des opérateurs et le fonctionnement des parenthèses.</li>
+<li>Dans un programme nommé <code>cours1.py</code>
+<ul class="org-ul">
+<li>Afficher le résultat d'une <b>addition</b></li>
+<li>Afficher le résultat d'une <b>soustraction</b></li>
+<li>Affiher le résultat d'une <b>multiplication</b></li>
+<li>Affiher le résultat d'une <b>division</b></li>
+<li>Affiher le résultat d'un calcul utilisant <b>tous les opérateurs</b>.</li>
+<li>Afficher les résultats de <b>deux calculs contenant les mêmes valeurs et opérateurs</b> mais avec et sans <b>parenthèses</b>, pour illustrer l'ordre des opérateurs et le fonctionnement des parenthèses.</li>
+</ul></li>
 </ol>
 </div>
 </div>
@@ -127,16 +132,25 @@
 <h3 id="chapitre1_cours2">Cours 2 : Variables</h3>
 <div class="outline-text-3" id="text-chapitre1_cours2">
 </div>
-<div id="outline-container-org9082671" class="outline-4">
-<h4 id="org9082671">Manuel</h4>
-<div class="outline-text-4" id="text-org9082671">
+<div id="outline-container-orgb50b039" class="outline-4">
+<h4 id="orgb50b039">Manuel</h4>
+<div class="outline-text-4" id="text-orgb50b039">
 <ul class="org-ul">
 <li><b>"Les variables sont comme des étiquettes"</b>, p.25</li>
+<li><b>"Utiliser les variables"</b>, p.26</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgb4bac8f" class="outline-4">
-<h4 id="orgb4bac8f">Exercices</h4>
+<div id="outline-container-org7b6c19f" class="outline-4">
+<h4 id="org7b6c19f">Exercices</h4>
+<div class="outline-text-4" id="text-org7b6c19f">
+<ol class="org-ol">
+<li>Dans un programme nommé <code>variables.py</code>
+<ul class="org-ul">
+<li></li>
+</ul></li>
+</ol>
+</div>
 </div>
 </div>
 
