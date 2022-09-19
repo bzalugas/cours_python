@@ -47,6 +47,7 @@ code {
   font-size: 0.75rem;
   padding: 0 10px;
   border: 1px solid rgb(52, 49, 49);
+  margin: 5px;
 }
 
 header {
@@ -150,6 +151,18 @@ header h1 {
   display: none;
   text-align: justify;
   font-size: 1rem;
+}
+.chapter ul {
+  margin: 0.3rem auto;
+}
+.chapter ul li {
+  margin: 0.5rem auto;
+}
+.chapter ol {
+  margin: 0.3rem auto;
+}
+.chapter ol li {
+  margin: 0.5rem auto;
 }
 .chapter--visible {
   display: block;

@@ -75,9 +75,7 @@ code {
   font-size: 0.75rem;
   padding: 0 10px;
   border: 1px solid $defaultTextColor;
-  //box-shadow: inset white 1px 1px;
-  //background-color: $navBackground;
-  //color: white;
+  margin: 5px;
 }
 
 div#content {
@@ -206,6 +204,20 @@ header {
     text-align: justify;
     font-size: 1rem;
   //}
+
+  ul {
+    margin: 0.3rem auto;
+    li {
+      margin: 0.5rem auto;
+    }
+  }
+
+  ol {
+    margin: 0.3rem auto;
+    li {
+      margin: 0.5rem auto;
+    }
+  }
 
   &--visible {
     display: block;
