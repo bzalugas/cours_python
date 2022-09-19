@@ -114,7 +114,7 @@ function init()
     navChapters.forEach((chapter) => {
         chapter.classList.add("verticalNav__chapter");
     });
-    const listLevel2 = document.querySelectorAll("li > ul");
+    const listLevel2 = document.querySelectorAll(".verticalNav li > ul");
     listLevel2.forEach((el) => {
        el.classList.add("verticalNav__list__level2");
     });
