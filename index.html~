@@ -101,9 +101,9 @@
 <h3 id="chapitre1_cours1">Cours 1 : Opérateurs arithmétiques</h3>
 <div class="outline-text-3" id="text-chapitre1_cours1">
 </div>
-<div id="outline-container-orgb50b039" class="outline-4">
-<h4 id="orgb50b039">Manuel</h4>
-<div class="outline-text-4" id="text-orgb50b039">
+<div id="outline-container-org2e672c8" class="outline-4">
+<h4 id="org2e672c8">Manuel</h4>
+<div class="outline-text-4" id="text-org2e672c8">
 <ul class="org-ul">
 <li><b>"Calculer avec Python"</b>, p.22</li>
 <li><b>"Les opérateurs de Python"</b>, p.23</li>
@@ -111,9 +111,9 @@
 </ul>
 </div>
 </div>
-<div id="outline-container-org7b6c19f" class="outline-4">
-<h4 id="org7b6c19f">Exercices</h4>
-<div class="outline-text-4" id="text-org7b6c19f">
+<div id="outline-container-org17fcfd6" class="outline-4">
+<h4 id="org17fcfd6">Exercices</h4>
+<div class="outline-text-4" id="text-org17fcfd6">
 <ol class="org-ol">
 <li>Dans un programme nommé <code>cours1.py</code>
 <ul class="org-ul">
@@ -132,18 +132,18 @@
 <h3 id="chapitre1_cours2">Cours 2 : Variables</h3>
 <div class="outline-text-3" id="text-chapitre1_cours2">
 </div>
-<div id="outline-container-orgbd00a4e" class="outline-4">
-<h4 id="orgbd00a4e">Manuel</h4>
-<div class="outline-text-4" id="text-orgbd00a4e">
+<div id="outline-container-org6955e82" class="outline-4">
+<h4 id="org6955e82">Manuel</h4>
+<div class="outline-text-4" id="text-org6955e82">
 <ul class="org-ul">
 <li><b>"Les variables sont comme des étiquettes"</b>, p.25</li>
 <li><b>"Utiliser les variables"</b>, p.26</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orga7b88b4" class="outline-4">
-<h4 id="orga7b88b4">Exercices</h4>
-<div class="outline-text-4" id="text-orga7b88b4">
+<div id="outline-container-org6f19c84" class="outline-4">
+<h4 id="org6f19c84">Exercices</h4>
+<div class="outline-text-4" id="text-org6f19c84">
 <ol class="org-ol">
 <li>Dans un programme nommé <code>variables.py</code>
 <ul class="org-ul">
