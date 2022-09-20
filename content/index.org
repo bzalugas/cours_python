@@ -29,6 +29,7 @@
 *** Introduction à IDLE
 - Sauvegarder un programme
 - Premier programme : Hello World !
+
 * Chapitre 1 : Calculs et variables
 :properties:
 :custom_id: chapitre1
@@ -42,13 +43,14 @@
 - *"Les opérateurs de Python"*, p.23
 - *"L'ordre des opérateurs"*, p.24
 *** Exercices
-1. Dans un programme nommé ~cours1.py~
-   - Afficher le résultat d'une *addition*
-   - Afficher le résultat d'une *soustraction*
-   - Affiher le résultat d'une *multiplication*
-   - Affiher le résultat d'une *division*
-   - Affiher le résultat d'un calcul utilisant *tous les opérateurs*.
-   - Afficher les résultats de *deux calculs contenant les mêmes valeurs et opérateurs* mais avec et sans *parenthèses*, pour illustrer l'ordre des opérateurs et le fonctionnement des parenthèses.
+1. Dans un programme nommé ~cours1.py~ :
+   - Affiche le résultat d'une *addition*.
+   - Affiche le résultat d'une *soustraction*.
+   - Affiche le résultat d'une *multiplication*.
+   - Affiche le résultat d'une *division*.
+   - Affiche le résultat d'un calcul utilisant *tous les opérateurs*.
+   - Affiche les résultats de *deux calculs contenant les mêmes valeurs et opérateurs* mais avec et sans *parenthèses*, pour illustrer l'ordre des opérateurs et le fonctionnement des parenthèses.
+
 ** Cours 2 : Variables
 :PROPERTIES:
 :custom_id: chapitre1_cours2
@@ -57,30 +59,191 @@
 - *"Les variables sont comme des étiquettes"*, p.25
 - *"Utiliser les variables"*, p.26
 *** Exercices
-1. Dans un programme nommé =variables.py=
-   - Créer une variable nommée =mon_age= égale à ton âge, puis afficher le contenu de cette varibale
-   - Créer une variable nommée =annee= égale à l'année actuelle
-   - Afficher le résultat de =annee= moins =mon_age=
-** Cours 3
-:PROPERTIES:
-:custom_id: chapitre1_cours3
-:END:
+1. Dans un programme nommé =variables.py= :
+   - Crée une variable nommée =mon_age= égale à ton âge, puis afficher le contenu de cette variable.
+   - Crée une variable nommée =annee_actuelle= égale à l'année actuelle.
+   - Affiche le résultat de =annee_actuelle= moins =mon_age=.
+
 * Chapitre 2 : Chaînes, listes, tuples, dictionnaires
 :PROPERTIES:
 :custom_id: chapitre2
 :END:
-** Cours 4
+** Cours 3 : Chaînes de caractères 1
+:PROPERTIES:
+:custom_id: chapitre2_cours3
+:END:
+*** Manuel
+- *"Les chaînes"*, p.32
+- *"Créer des chaînes"*, p.32
+- *"Gérer les problèmes de chaînes"*, p.33
+*** Exercices
+1. Dans un programme nommé =prenom_nom.py= :
+   - Crée une variable =prenom= contenant une chaîne de caractères correspondant à ton prénom.
+   - Crée une variable =nom= contenant une chaîne de caractères correspondant à ton nom de famille.
+   - Affiche *"Bonjour ! Je m'appelle "* suivi du contenu de =prenom=, puis d'un espace, puis du contenu de =nom=.
+
+2. Dans un programme nommé =multiligne.py= :
+   - Crée une variable =ma_journee= contenant une chaîne de caractères de plusieurs lignes racontant ta journée.
+   - Affiche =ma_journee=.
+
+3. Dans un programme nommé =guillemets.py= :
+   - Crée une variable =guillemets= qui contient la phrase *C'est vraiment compliqué de dire "mon prof de python est le meilleur" sans provoquer d'erreur.*.
+   - Affiche cette variable.
+
+** Cours 4 : Chaînes de caractères 2
 :PROPERTIES:
 :custom_id: chapitre2_cours4
 :END:
-** Cours 5
+*** Manuel
+- *"Insérer des valeurs dans des chaînes"*, p.36
+- *"Multiplier des chaînes"*, p.37
+*** Exercices
+1. Dans un programme nommé =prenom_nom_mieux.py= :
+   - Crée une variable =prenom= contenant une chaîne de caractères correspondant à ton prénom.
+   - Crée une variable =nom= contenant une chaîne de caractères correspondant à ton nom de famille.
+   - Affiche "Bonjour ! Je m'appelle <prénom> <nom>" en remplaçant <prénom> et <nom> par les variables créées plus tôt et en utilisant une seule instruction =print()=. (Ne pas oublier les espaces !).
+
+2. Dans un programme nommé =mon_salaire.py= :
+   - Crée une variable =pieces_par_jour= contenant le nombre de pièces d'or que tu gagnes par jour.
+   - Crée une variable =jours_de_travail= contenant le nombre de jours où tu as travaillé.
+   - Affiche *"En travaillant <jours_de_travail> et avec un salaire quotidien de <pieces_par_jour>, j'ai gagné un total de <jours_de_travail * pieces_par_jour>. Je pourrai bientôt acheter mon collège !"* en n'utilisant qu'une seule instruction =print()=. Il faudra bien sûr remplacer les parties entre chevrons (<...>) par le contenu des variables.
+
+3. Dans un programme nommé =mes_anniversaires.py= :
+   - Crée une variable =phrase= contenant la phrase "Joyeux anniversaire !".
+   - Crée une variable =age= contenant ton âge
+   - Affiche *"Voici un résumé de tous mes anniversaires : "*.
+   - Affiche la phrase d'anniversaire autant de fois que ton âge.
+
+** Cours 5 : Listes 1
 :PROPERTIES:
 :custom_id: chapitre2_cours5
 :END:
-** Cours 6
+*** Manuel
+- *"Plus puissantes que les chaînes : les listes"*, p.38
+*** Exercices
+1. Dans un programme nommé =liste_courses.py= :
+   - Crée une variable =courses= contenant une liste d'au moins 5 choses à acheter. Chaque élément sera une chaîne de caractères.
+   - Affiche la liste de courses.
+   - Affiche le 1^{er} élément de la liste en utilisant son indice.
+   - Affiche le 3^{ème} élément de la liste en utilisant son indice.
+   - Modifie le 2^{ème} élément de la liste et l'afficher après modification.
+   - Modifie le dernier élément de la liste et l'afficher après modification.
+   - Affiche d'un seul coup le sous-ensemble de la liste contenant les 2^{ème}, 3^{ème} et 4^{ème} éléments de la liste.
+
+2. Dans un programme nommé =liste_courses_quantite.py= :
+   - Crée une variable =courses_quantite= contenant au moins 5 chiffres qui correspondent à des quantités d'éléments à acheter. Chaque chiffre sera suivi d'une chaîne de caractères correspondant à un élément.
+   - Affiche =courses_quantite=.
+   - Affiche le sous-ensemble contenant les 3^{ème} et 4^{ème} éléments de la liste.
+
+3. Dans un programme nommé =liste_ultime.py= :
+   - Crée une variable =courses= contenant une liste d'au moins 5 éléments à acheter. Tu peux réutiliser les éléments précédents.
+   - Crée une variable =quantites=  contenant une liste d'autant de nombres qu'il y a d'éléments dans la liste de courses. Chaque nombre correspondra à la quantité d'éléments à acheter. Tu peux réutiliser les nombres précédents.
+   - Crée une variable =liste_courses= contenant les deux listes.
+   - Affiche =liste_courses=.
+   - Affiche *"Je dois acheter <quantite> <element> au supermarché."*. <quantite> et <element> doivent correspondre au deuxième élément de chaque liste contenue dans =liste_courses=.
+
+** Cours 6 : Listes 2
 :PROPERTIES:
 :custom_id: chapitre2_cours6
 :END:
+*** Manuel
+- *"Ajouter des éléments à une liste"*, p.41
+- *"Supprimer des éléments à une liste"*, p.42
+- *"Arithmétique de liste"*, p.42
+*** Exercices
+1. Dans un programme nommé =liste_eleves.py= :
+   - Crée une variable =eleves= contenant la liste des prénoms des personnes présentes à l'atelier Python en omettant le tient.
+   - Affiche la liste.
+   - Ajoute ton prénom et celui du professeur dans la liste.
+   - Affiche la liste modifiée.
+   - Supprime le prénom du professeur.
+   - Place ton prénom au début de la liste.
+   - Affiche la liste finale.
+
+2. Dans un programme nommé =encore_plus_de_listes.py= :
+   - Crée une liste =liste_1= avec au moins 3 éléments de ton choix.
+   - Crée une liste =liste_2= avec au moins 2 élements de ton choix.
+   - Crée une liste =des_listes= qui est la concaténation des deux autres.
+   - Affiche la liste =des_listes=.
+   - Fais en sorte que la liste =des_listes= ait 5 fois plus de contenu.
+   - Affiche la liste =des_listes=.
+
+** Cours 7 : Tuples et dictionnaires
+:PROPERTIES:
+:custom_id: chapitre2_cours7
+:END:
+*** Manuel
+- *"Tuples"*, p.45
+- *"Dictionnaires"*, p.45
+*** Exercices
+1. Dans un programme nommé =tuple.py= :
+   - Crée un tuple =un_tuple= avec au moins 3 éléments.
+   - Affiche le tuple.
+   - Modifie la première valeur du tuple.
+   - Affiche le tuple modifié.
+
+2. Dans un programme nommé =courses_dictionnaire.py= :
+   - Crée un dictionnaire =courses= contenant 3 éléments à acheter comme clé avec comme valeur la quantité à acheter.
+   - Affiche le dictionnaire.
+   - Ajoute un élément que tu aurais oublié.
+   - Supprime le premier élément du dictionnaire.
+   - Modifie la deuxième entrée du dictionnaire.
+   - Affiche le dictionnaire.
+
+** Cours 8 : Input
+:PROPERTIES:
+:custom_id: chapitre2_cours8
+:END:
+*** Cours
+Jusqu'ici, nous avons donné à nos variables des valeurs directement dans le code python. Comment fait-on si l'on souhaite poser une question à l'utilisateur sans qu'il ait besoin de modifier le code ?
+
+La méthode la plus simple, c'est d'utiliser la fonction =input()=. Nous utilisons déjà la fonction =print()= pour afficher du texte à l'écran mais nous verrons plus tard et en détail ce qu'est une fonction en programmation.
+
+En anglais, "input" signifie "entrée". La fonction =input()= sert à récupérer une "entrée utilisateur", c'est-à-dire les informations que l'utilisateur (celui qui utilise le programme) donne à l'ordinateur. Pour le moment, les informations seront seulement des caractères que l'utilisateur tapera au clavier. Lorsque nous utiliserons =input()=, l'utilisateur pourra entrer des caractères au clavier et terminer par la touche <Enter> ou <Entrée> pour terminer. Dans le programme, nous pourrons récupérer ce que l'utilisateur a entré dans une variable pour le réutiliser.
+
+On peut utiliser la fonction =input()= en laissant les parenthèses vides. On peut aussi y placer un message explicatif destiné à l'utilisateur. Par exemple :
+#+begin_src python
+prenom = input("Entrez votre prénom : ")
+print("Bonjour %s !" % prenom)
+#+end_src
+
+La variable dans laquelle nous récupérons l'entrée utilisateur sera une chaîne de caractères. Si nous essayons de faire des opérations arithmétiques avec la valeur récupérée, cela va générer une erreur "TypeError":
+#+begin_src python
+age = input("Entrez votre âge : ")
+print(age + 10)
+#+end_src
+Résultat :
+#+begin_src bash
+TypeError: can only concatenate str (not "int") to str
+#+end_src
+
+Ou encore :
+#+begin_src python
+age = input("Entrez votre âge : ")
+print("Tu es né en %s !" % (2022 - age))
+#+end_src
+Résultat :
+#+begin_src bash
+TypeError: unsupported operand type(s) for -: 'int' and 'str'
+#+end_src
+
+Python génère une erreur car la variable =age= est une chaîne de caractères et non pas un nombre avec lequel on peut faire une opération. Pour résoudre ce problème, il nous suffit de convertir la valeur de retour de =input()= en nombre. Si nous voulons un nombre entier (sans virgule), il faut utiliser =int()=. Si nous souhaitons récupérer un nombre décimal (à virgule), nous devons utiliser =float()=.
+Exemple pour convertir en un nombre entier :
+#+begin_src python
+age = int(input("Entrez votre âge : "))
+print("Tu es né en %s !" % (2022 - age))
+#+end_src
+
+Pour le moment, cela suffira pour créer des programmes plus intéractifs, mais nous reverrons plus en détail les conversions en python dans le chapitre 4.
+*** Exercices
+1. Dans un programme nommé =carte_identite.py= :
+   - Pour chaque information à demander à l'utilisateur, il faudra utiliser =input()= avec une question appropriée.
+   - Récupère dans une variable =prenom= le prénom de l'utilisateur.
+   - Récupère dans une variable =nom= le nom de l'utilisateur.
+   - Récupère dans une variable =age= l'âge de l'utilisateur.
+   - Récupère dans une variable =taille= la taille de l'utilisateur.
+   - Récupère dans une variable =nationalite= la nationalité de l'utilisateur.
+   - Affiche *"Je m'appelle <prenom> <nom>, j'ai <age> ans, je fais <taille>cm et mon pays d'origine est <nationalite>."*
 * Chapitre 3 : Turtle
 :PROPERTIES:
 :custom_id: chapitre3
@@ -93,19 +256,15 @@
 :PROPERTIES:
 :custom_id: chapitre5
 :END:
-* Chapitre 6 : Input et output
+* Chapitre 6 : Mise en pratique
 :PROPERTIES:
 :custom_id: chapitre6
 :END:
-* Chapitre 7 : Mise en pratique
+* Chapitre 7 : Les fonctions
 :PROPERTIES:
 :custom_id: chapitre7
 :END:
-* Chapitre 8 : Les fonctions
+* Chapitre 8 : Regroupons tout !
 :PROPERTIES:
 :custom_id: chapitre8
-:END:
-* Chapitre 9 : Regroupons tout !
-:PROPERTIES:
-:custom_id: chapitre9
 :END:

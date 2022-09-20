@@ -9,7 +9,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
         setVisible(hash);
         setActive(hash);
     }
-    document.querySelectorAll(".src-python").forEach(el => {
+    document.querySelectorAll(".src").forEach(el => {
+        // if (el.classList.contains("src-python"))
+        //     el.classList.add("language-python");
+        // else if (el.classList.contains("src-bash"))
+        //     el.classList.add("language-bash");
         hljs.highlightElement(el);
     })
     document.querySelectorAll("code").forEach(el => {
