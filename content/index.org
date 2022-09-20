@@ -27,7 +27,7 @@
 - Syntaxe simple
 - Très utilisé dans pleins de domaines différents
 *** Introduction à IDLE
-- Sauvegarder un programme
+- Sauvegarder un programme (p.18)
 - Premier programme : Hello World !
 
 * Chapitre 1 : Calculs et variables
@@ -101,7 +101,7 @@
 1. Dans un programme nommé =prenom_nom_mieux.py= :
    - Crée une variable =prenom= contenant une chaîne de caractères correspondant à ton prénom.
    - Crée une variable =nom= contenant une chaîne de caractères correspondant à ton nom de famille.
-   - Affiche "Bonjour ! Je m'appelle <prénom> <nom>" en remplaçant <prénom> et <nom> par les variables créées plus tôt et en utilisant une seule instruction =print()=. (Ne pas oublier les espaces !).
+   - Affiche *"Bonjour ! Je m'appelle <prénom> <nom>"* en remplaçant <prénom> et <nom> par les variables créées plus tôt et en utilisant une seule instruction =print()=. (Ne pas oublier les espaces !).
 
 2. Dans un programme nommé =mon_salaire.py= :
    - Crée une variable =pieces_par_jour= contenant le nombre de pièces d'or que tu gagnes par jour.
