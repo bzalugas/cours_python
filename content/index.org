@@ -248,6 +248,14 @@ Pour le moment, cela suffira pour créer des programmes plus intéractifs, mais 
 :PROPERTIES:
 :custom_id: chapitre3
 :END:
+*** Manuel
+- *"Dessiner avec une tortue"*, p.49 - p.56
+*** Exercices
+1. Dans un programme nommé =carré.py=, fais dessiner un carré à une tortue.
+2. Dans un programme nommé =hexagone.py=, fais dessiner un hexagone à une tortue.
+3. Dans un programme nommé =etoile.py=, fais dessiner une étoile à une tortue.
+4. Dans un programme nommé =etoile_variable.py=, fais dessiner une étoile à 5 branches à une tortue. Cependant, cette fois-ci il doit y avoir une variable nommée =taille_cote= qui doit être utilisée pour déterminer la taille des côtés de l'étoile. Par exemple, si =taille_cote= vaut 1, l'étoile sera composée de segments de 1 pixel de long. Si =taille_cote= vaut 100, l'étoile sera composée de segments de 100 pixels.
+5. Dans un programme nommé =visage.py=, fais dessiner un visage à une tortue. Le visage doit contenir au moins deux yeux, un nez et une bouche.
 * Chapitre 4 : Les conditions
 :PROPERTIES:
 :custom_id: chapitre4
