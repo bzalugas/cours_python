@@ -40,7 +40,11 @@
 <li><a href="#chapitre5">Chapitre 5 : Les boucles</a></li>
 <li><a href="#chapitre6">Chapitre 6 : Mise en pratique</a></li>
 <li><a href="#chapitre7">Chapitre 7 : Les fonctions</a></li>
-<li><a href="#chapitre8">Chapitre 8 : Regroupons tout !</a></li>
+<li><a href="#chapitre8">Chapitre 8 : Projets</a>
+<ul>
+<li><a href="#org180c82a">Puissance 4</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </nav>
@@ -88,7 +92,7 @@
 <h4 id="org0b9f4a6">Introduction à IDLE</h4>
 <div class="outline-text-4" id="text-org0b9f4a6">
 <ul class="org-ul">
-<li>Sauvegarder un programme</li>
+<li>Sauvegarder un programme (p.18)</li>
 <li>Premier programme : Hello World !</li>
 </ul>
 </div>
@@ -103,9 +107,9 @@
 <h3 id="chapitre1_cours1">Cours 1 : Opérateurs arithmétiques</h3>
 <div class="outline-text-3" id="text-chapitre1_cours1">
 </div>
-<div id="outline-container-org4dde6d7" class="outline-4">
-<h4 id="org4dde6d7">Manuel</h4>
-<div class="outline-text-4" id="text-org4dde6d7">
+<div id="outline-container-org7e76e2b" class="outline-4">
+<h4 id="org7e76e2b">Manuel</h4>
+<div class="outline-text-4" id="text-org7e76e2b">
 <ul class="org-ul">
 <li><b>"Calculer avec Python"</b>, p.22</li>
 <li><b>"Les opérateurs de Python"</b>, p.23</li>
@@ -113,9 +117,9 @@
 </ul>
 </div>
 </div>
-<div id="outline-container-org5ef4e71" class="outline-4">
-<h4 id="org5ef4e71">Exercices</h4>
-<div class="outline-text-4" id="text-org5ef4e71">
+<div id="outline-container-org9e9c244" class="outline-4">
+<h4 id="org9e9c244">Exercices</h4>
+<div class="outline-text-4" id="text-org9e9c244">
 <ol class="org-ol">
 <li>Dans un programme nommé <code>cours1.py</code> :
 <ul class="org-ul">
@@ -135,18 +139,18 @@
 <h3 id="chapitre1_cours2">Cours 2 : Variables</h3>
 <div class="outline-text-3" id="text-chapitre1_cours2">
 </div>
-<div id="outline-container-orgfbbace0" class="outline-4">
-<h4 id="orgfbbace0">Manuel</h4>
-<div class="outline-text-4" id="text-orgfbbace0">
+<div id="outline-container-orgf15f65d" class="outline-4">
+<h4 id="orgf15f65d">Manuel</h4>
+<div class="outline-text-4" id="text-orgf15f65d">
 <ul class="org-ul">
 <li><b>"Les variables sont comme des étiquettes"</b>, p.25</li>
 <li><b>"Utiliser les variables"</b>, p.26</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgcf93133" class="outline-4">
-<h4 id="orgcf93133">Exercices</h4>
-<div class="outline-text-4" id="text-orgcf93133">
+<div id="outline-container-org840c757" class="outline-4">
+<h4 id="org840c757">Exercices</h4>
+<div class="outline-text-4" id="text-org840c757">
 <ol class="org-ol">
 <li>Dans un programme nommé <code>variables.py</code> :
 <ul class="org-ul">
@@ -168,9 +172,9 @@
 <h3 id="chapitre2_cours3">Cours 3 : Chaînes de caractères 1</h3>
 <div class="outline-text-3" id="text-chapitre2_cours3">
 </div>
-<div id="outline-container-orge04d754" class="outline-4">
-<h4 id="orge04d754">Manuel</h4>
-<div class="outline-text-4" id="text-orge04d754">
+<div id="outline-container-org56cc88a" class="outline-4">
+<h4 id="org56cc88a">Manuel</h4>
+<div class="outline-text-4" id="text-org56cc88a">
 <ul class="org-ul">
 <li><b>"Les chaînes"</b>, p.32</li>
 <li><b>"Créer des chaînes"</b>, p.32</li>
@@ -178,9 +182,9 @@
 </ul>
 </div>
 </div>
-<div id="outline-container-org40ed078" class="outline-4">
-<h4 id="org40ed078">Exercices</h4>
-<div class="outline-text-4" id="text-org40ed078">
+<div id="outline-container-orgb3fc073" class="outline-4">
+<h4 id="orgb3fc073">Exercices</h4>
+<div class="outline-text-4" id="text-orgb3fc073">
 <ol class="org-ol">
 <li>Dans un programme nommé <code>prenom_nom.py</code> :
 <ul class="org-ul">
@@ -209,39 +213,45 @@
 <h3 id="chapitre2_cours4">Cours 4 : Chaînes de caractères 2</h3>
 <div class="outline-text-3" id="text-chapitre2_cours4">
 </div>
-<div id="outline-container-orgf634cbd" class="outline-4">
-<h4 id="orgf634cbd">Manuel</h4>
-<div class="outline-text-4" id="text-orgf634cbd">
+<div id="outline-container-org0d7deb4" class="outline-4">
+<h4 id="org0d7deb4">Manuel</h4>
+<div class="outline-text-4" id="text-org0d7deb4">
 <ul class="org-ul">
 <li><b>"Insérer des valeurs dans des chaînes"</b>, p.36</li>
 <li><b>"Multiplier des chaînes"</b>, p.37</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org64cb5fd" class="outline-4">
-<h4 id="org64cb5fd">Exercices</h4>
-<div class="outline-text-4" id="text-org64cb5fd">
+<div id="outline-container-orgf001a2a" class="outline-4">
+<h4 id="orgf001a2a">Exercices</h4>
+<div class="outline-text-4" id="text-orgf001a2a">
 <ol class="org-ol">
 <li>Dans un programme nommé <code>prenom_nom_mieux.py</code> :
 <ul class="org-ul">
 <li>Crée une variable <code>prenom</code> contenant une chaîne de caractères correspondant à ton prénom.</li>
 <li>Crée une variable <code>nom</code> contenant une chaîne de caractères correspondant à ton nom de famille.</li>
-<li>Affiche "Bonjour ! Je m'appelle &lt;prénom&gt; &lt;nom&gt;" en remplaçant &lt;prénom&gt; et &lt;nom&gt; par les variables créées plus tôt et en utilisant une seule instruction <code>print()</code>. (Ne pas oublier les espaces !).</li>
+<li>Affiche <b>"Bonjour ! Je m'appelle &lt;prénom&gt; &lt;nom&gt;"</b> en remplaçant &lt;prénom&gt; et &lt;nom&gt; par les variables créées plus tôt et en utilisant <code>%s</code>.</li>
 </ul></li>
 
 <li>Dans un programme nommé <code>mon_salaire.py</code> :
 <ul class="org-ul">
 <li>Crée une variable <code>pieces_par_jour</code> contenant le nombre de pièces d'or que tu gagnes par jour.</li>
 <li>Crée une variable <code>jours_de_travail</code> contenant le nombre de jours où tu as travaillé.</li>
-<li>Affiche <b>"En travaillant &lt;jours_de_travail&gt; et avec un salaire quotidien de &lt;pieces_par_jour&gt;, j'ai gagné un total de &lt;jours_de_travail * pieces_par_jour&gt;. Je pourrai bientôt acheter mon collège !"</b> en n'utilisant qu'une seule instruction <code>print()</code>. Il faudra bien sûr remplacer les parties entre chevrons (&lt;&#x2026;&gt;) par le contenu des variables.</li>
+<li>Affiche <b>"En travaillant &lt;jours_de_travail&gt; et avec un salaire quotidien de &lt;pieces_par_jour&gt;, j'ai gagné un total de &lt;jours_de_travail * pieces_par_jour&gt;. Je suis riche !"</b> en utilisant <code>%s</code>. Il faudra bien sûr remplacer les parties entre chevrons (&lt;&#x2026;&gt;) par le contenu des variables.</li>
 </ul></li>
 
-<li>Dans un programme nommé <code>mes_anniversaires.py</code> :
+<li>Dans un programme nommé <code>perroquet.py</code> :
 <ul class="org-ul">
-<li>Crée une variable <code>phrase</code> contenant la phrase "Joyeux anniversaire !".</li>
-<li>Crée une variable <code>age</code> contenant ton âge</li>
-<li>Affiche <b>"Voici un résumé de tous mes anniversaires : "</b>.</li>
-<li>Affiche la phrase d'anniversaire autant de fois que ton âge.</li>
+<li>Crée une variable <code>phrase</code> contenant la phrase de ton choix.</li>
+<li>Affiche <b>"Le perroquet répète : "</b>.</li>
+<li>Affiche 10 fois la phrase contenue dans <code>phrase</code> sans te répéter.</li>
+</ul></li>
+
+<li>Dans un programme nommé <code>mur_de_caractères.py</code> :
+<ul class="org-ul">
+<li>Crée une variable <code>caractere</code> qui contient un caractère de ton choix. Par exemple "#" ou "-" ou ce que tu veux.</li>
+<li>Crée une variable <code>repetition</code> et assigne-lui un nombre entier de ton choix.</li>
+<li>Affiche autant de fois ton <code>caractere</code> que le nombre dans <code>repetition</code>.</li>
 </ul></li>
 </ol>
 </div>
@@ -252,21 +262,21 @@
 <h3 id="chapitre2_cours5">Cours 5 : Listes 1</h3>
 <div class="outline-text-3" id="text-chapitre2_cours5">
 </div>
-<div id="outline-container-org3fe01f4" class="outline-4">
-<h4 id="org3fe01f4">Manuel</h4>
-<div class="outline-text-4" id="text-org3fe01f4">
+<div id="outline-container-org0e29e81" class="outline-4">
+<h4 id="org0e29e81">Manuel</h4>
+<div class="outline-text-4" id="text-org0e29e81">
 <ul class="org-ul">
 <li><b>"Plus puissantes que les chaînes : les listes"</b>, p.38</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org347a039" class="outline-4">
-<h4 id="org347a039">Exercices</h4>
-<div class="outline-text-4" id="text-org347a039">
+<div id="outline-container-orgccb5332" class="outline-4">
+<h4 id="orgccb5332">Exercices</h4>
+<div class="outline-text-4" id="text-orgccb5332">
 <ol class="org-ol">
 <li>Dans un programme nommé <code>liste_courses.py</code> :
 <ul class="org-ul">
-<li>Crée une variable <code>courses</code> contenant une liste d'au moins 5 choses à acheter. Chaque élément sera une chaîne de caractères.</li>
+<li>Crée une variable <code>courses</code> contenant une <b>liste</b> d'au moins 5 choses à acheter. Chaque élément sera une chaîne de caractères.</li>
 <li>Affiche la liste de courses.</li>
 <li>Affiche le 1<sup>er</sup> élément de la liste en utilisant son indice.</li>
 <li>Affiche le 3<sup>ème</sup> élément de la liste en utilisant son indice.</li>
@@ -277,18 +287,18 @@
 
 <li>Dans un programme nommé <code>liste_courses_quantite.py</code> :
 <ul class="org-ul">
-<li>Crée une variable <code>courses_quantite</code> contenant au moins 5 chiffres qui correspondent à des quantités d'éléments à acheter. Chaque chiffre sera suivi d'une chaîne de caractères correspondant à un élément.</li>
+<li>Crée une variable <code>courses_quantite</code> contenant une <b>liste</b> d'au moins 5 chiffres. Après chaque chiffre, place une chaîne de caractères correspondant à quelque chose à acheter.</li>
 <li>Affiche <code>courses_quantite</code>.</li>
 <li>Affiche le sous-ensemble contenant les 3<sup>ème</sup> et 4<sup>ème</sup> éléments de la liste.</li>
 </ul></li>
 
-<li>Dans un programme nommé <code>liste_ultime.py</code> :
+<li>Dans un programme nommé <code>cadavre_exquis.py</code> :
 <ul class="org-ul">
-<li>Crée une variable <code>courses</code> contenant une liste d'au moins 5 éléments à acheter. Tu peux réutiliser les éléments précédents.</li>
-<li>Crée une variable <code>quantites</code>  contenant une liste d'autant de nombres qu'il y a d'éléments dans la liste de courses. Chaque nombre correspondra à la quantité d'éléments à acheter. Tu peux réutiliser les nombres précédents.</li>
-<li>Crée une variable <code>liste_courses</code> contenant les deux listes.</li>
-<li>Affiche <code>liste_courses</code>.</li>
-<li>Affiche <b>"Je dois acheter &lt;quantite&gt; &lt;element&gt; au supermarché."</b>. &lt;quantite&gt; et &lt;element&gt; doivent correspondre au deuxième élément de chaque liste contenue dans <code>liste_courses</code>.</li>
+<li>Crée une variable <code>debuts_de_phrases</code> contenant une <b>liste</b> de chaînes de caractères qui pourraient être des débuts de phrase. Par exemple, "Aujourd'hui, j'ai décidé de", ou alors "Pour la nouvelle année, j'ai pris la décision de ".</li>
+<li>Crée une variable <code>fins_de_phrases</code> contenant une <b>liste</b> de fins de phrases. Par exemple, "être sage.", "devenir riche.", "ne plus manger de bonbons.", etc.</li>
+<li>Crée une <b>liste</b> <code>debuts_et_fins_de_phrases</code> contenant les deux listes précédemment créées.</li>
+<li>Crée une variable <code>phrase_entiere</code> contenant n'importe quel élément de la première liste contenue dans <code>debuts_et_fins_de_phrases</code> suivi de n'importe quel élément de la deuxième liste de <code>debuts_et_fins_de_phrases</code>.</li>
+<li>Affiche la variable <code>phrase_entiere</code> pour voir apparaître une phrase inattendue !</li>
 </ul></li>
 </ol>
 </div>
@@ -299,9 +309,9 @@
 <h3 id="chapitre2_cours6">Cours 6 : Listes 2</h3>
 <div class="outline-text-3" id="text-chapitre2_cours6">
 </div>
-<div id="outline-container-orga0f4ba6" class="outline-4">
-<h4 id="orga0f4ba6">Manuel</h4>
-<div class="outline-text-4" id="text-orga0f4ba6">
+<div id="outline-container-org14b01c5" class="outline-4">
+<h4 id="org14b01c5">Manuel</h4>
+<div class="outline-text-4" id="text-org14b01c5">
 <ul class="org-ul">
 <li><b>"Ajouter des éléments à une liste"</b>, p.41</li>
 <li><b>"Supprimer des éléments à une liste"</b>, p.42</li>
@@ -309,9 +319,9 @@
 </ul>
 </div>
 </div>
-<div id="outline-container-org6df741e" class="outline-4">
-<h4 id="org6df741e">Exercices</h4>
-<div class="outline-text-4" id="text-org6df741e">
+<div id="outline-container-org06b1fac" class="outline-4">
+<h4 id="org06b1fac">Exercices</h4>
+<div class="outline-text-4" id="text-org06b1fac">
 <ol class="org-ol">
 <li>Dans un programme nommé <code>liste_eleves.py</code> :
 <ul class="org-ul">
@@ -342,18 +352,18 @@
 <h3 id="chapitre2_cours7">Cours 7 : Tuples et dictionnaires</h3>
 <div class="outline-text-3" id="text-chapitre2_cours7">
 </div>
-<div id="outline-container-orge17bd47" class="outline-4">
-<h4 id="orge17bd47">Manuel</h4>
-<div class="outline-text-4" id="text-orge17bd47">
+<div id="outline-container-org5cbec67" class="outline-4">
+<h4 id="org5cbec67">Manuel</h4>
+<div class="outline-text-4" id="text-org5cbec67">
 <ul class="org-ul">
 <li><b>"Tuples"</b>, p.45</li>
 <li><b>"Dictionnaires"</b>, p.45</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgfc09814" class="outline-4">
-<h4 id="orgfc09814">Exercices</h4>
-<div class="outline-text-4" id="text-orgfc09814">
+<div id="outline-container-org0cec046" class="outline-4">
+<h4 id="org0cec046">Exercices</h4>
+<div class="outline-text-4" id="text-org0cec046">
 <ol class="org-ol">
 <li>Dans un programme nommé <code>tuple.py</code> :
 <ul class="org-ul">
@@ -452,9 +462,9 @@ Pour le moment, cela suffira pour créer des programmes plus intéractifs, mais 
 </p>
 </div>
 </div>
-<div id="outline-container-orga18e665" class="outline-4">
-<h4 id="orga18e665">Exercices</h4>
-<div class="outline-text-4" id="text-orga18e665">
+<div id="outline-container-org4d9f4cc" class="outline-4">
+<h4 id="org4d9f4cc">Exercices</h4>
+<div class="outline-text-4" id="text-org4d9f4cc">
 <ol class="org-ol">
 <li>Dans un programme nommé <code>carte_identite.py</code> :
 <ul class="org-ul">
@@ -471,11 +481,33 @@ Pour le moment, cela suffira pour créer des programmes plus intéractifs, mais 
 </div>
 </div>
 </div>
+
 <div id="outline-container-chapitre3" class="outline-2">
 <h2 id="chapitre3">Chapitre 3 : Turtle</h2>
 <div class="outline-text-2" id="text-chapitre3">
 </div>
+<div id="outline-container-org618f3e9" class="outline-4">
+<h4 id="org618f3e9">Manuel</h4>
+<div class="outline-text-4" id="text-org618f3e9">
+<ul class="org-ul">
+<li><b>"Dessiner avec une tortue"</b>, p.49 - p.56</li>
+</ul>
 </div>
+</div>
+<div id="outline-container-orgf22df38" class="outline-4">
+<h4 id="orgf22df38">Exercices</h4>
+<div class="outline-text-4" id="text-orgf22df38">
+<ol class="org-ol">
+<li>Dans un programme nommé <code>carré.py</code>, fais dessiner un carré à une tortue.</li>
+<li>Dans un programme nommé <code>hexagone.py</code>, fais dessiner un hexagone à une tortue.</li>
+<li>Dans un programme nommé <code>etoile.py</code>, fais dessiner une étoile à une tortue.</li>
+<li>Dans un programme nommé <code>etoile_variable.py</code>, fais dessiner une étoile à 5 branches à une tortue. Cependant, cette fois-ci il doit y avoir une variable nommée <code>taille_cote</code> qui doit être utilisée pour déterminer la taille des côtés de l'étoile. Par exemple, si <code>taille_cote</code> vaut 1, l'étoile sera composée de segments de 1 pixel de long. Si <code>taille_cote</code> vaut 100, l'étoile sera composée de segments de 100 pixels.</li>
+<li>Dans un programme nommé <code>visage.py</code>, fais dessiner un visage à une tortue. Le visage doit contenir au moins deux yeux, un nez et une bouche.</li>
+</ol>
+</div>
+</div>
+</div>
+
 <div id="outline-container-chapitre4" class="outline-2">
 <h2 id="chapitre4">Chapitre 4 : Les conditions</h2>
 <div class="outline-text-2" id="text-chapitre4">
@@ -496,9 +528,149 @@ Pour le moment, cela suffira pour créer des programmes plus intéractifs, mais 
 <div class="outline-text-2" id="text-chapitre7">
 </div>
 </div>
+
 <div id="outline-container-chapitre8" class="outline-2">
-<h2 id="chapitre8">Chapitre 8 : Regroupons tout !</h2>
+<h2 id="chapitre8">Chapitre 8 : Projets</h2>
 <div class="outline-text-2" id="text-chapitre8">
+<p>
+Dans ce chapitre, nous allons mettre en applications tout ce que tu as appris dans les chapitres précédents. Pour cela, nous pouvons commencer à créer des petits projets qui t'intéressent. N'hésite pas à proposer à ton professeur un projet, que ce soit un jeu ou un autre programme, que tu aimerais créer.
+</p>
+</div>
+
+<div id="outline-container-org180c82a" class="outline-3">
+<h3 id="org180c82a">Puissance 4</h3>
+<div class="outline-text-3" id="text-org180c82a">
+<p>
+Dans cette section, nous allons créer un puissance 4. Nous commencerons par le créer à partir des notions que nous avons vues, donc avec une interface en ligne de commande. Par la suite, quand nous étudierons comment créer des interfaces graphiques, nous pourrons revenir sur ce projet pour ajouter des visuels plus intéressants.
+</p>
+
+<p>
+Les consignes qui sont données ici sont là pour t'aider à réaliser le projet. Si tu as des idées d'améliorations ou que tu veux faire quelque chose différemment, tu es libre de les réaliser, c'est ton projet ! Néanmoins, le professeur vérifiera que ton travail est correct et correspond aux bonnes pratiques de Python que nous avons étudiées.
+</p>
+</div>
+
+<div id="outline-container-orgb8fab41" class="outline-4">
+<h4 id="orgb8fab41">Règles du Puissance 4</h4>
+<div class="outline-text-4" id="text-orgb8fab41">
+
+<figure id="orgb0ce8f0">
+<img src="./img/puissance4.jpg" alt="puissance4.jpg">
+
+</figure>
+
+<p>
+Le but du jeu est d'aligner une suite de 4 pions de même couleur sur une grille comptant 6 rangées et 7 colonnes. Chaque joueur dispose de 21 pions d'une couleur, en général jaune ou rouge. Tour à tour, les deux joueurs placent un pion dans la colonne de leur choix, le pion coulisse alors jusqu'à la position la plus basse possible dans la dite colonne à la suite de quoi c'est à l'adversaire de jouer. Le vainqueur est le joueur qui réalise le premier un alignement (horizontal, vertical ou diagonal) consécutif d'au moins quatre pions de sa couleur. Si, alors que toutes les cases de la grille de jeu sont remplies, aucun des deux joueurs n'a réalisé un tel alignement, la partie est déclarée nulle.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org18474c8" class="outline-4">
+<h4 id="org18474c8">Étape 1 : Définir la structure de notre programme</h4>
+<div class="outline-text-4" id="text-org18474c8">
+<p>
+C'est l'étape la plus importante d'un programme : il faut définir, par exemple avec un schéma, comment sera notre programme, c'est-à-dire quelles fonctions on devra utiliser, à quel moment, etc. Parfois, il est aussi utile d'utiliser du "pseudo code". Le pseudo code, c'est une façon d'écrire un algorithme de façon presque naturelle, sans langage de programmation. Par exemple, dans un pseudo code on peu écrire :
+</p>
+<pre class="example" id="orgcf9591f">
+si (utilisateur écrit "Bonjour") alors
+    afficher "Bonjour"
+sinon
+    afficher "Au revoir"
+</pre>
+<p>
+Le pseudo code aide à déterminer quelles actions notre programme devra effectuer.
+</p>
+
+<p>
+Notre programme ne comportera que des fonctions. Chaque action devra être effectuée grâce à une fonction. C'est comme ça que l'on programme : ça permet de pouvoir s'y retrouver plus facilement dans le code et de pouvoir mieux repérer nos erreurs.
+</p>
+
+<p>
+La seule instruction qui ne sera pas dans une fonction sera celle qui lance le jeu !
+</p>
+
+<p>
+La "grille" du jeu sera représentée par une liste à deux dimensions qui réprésentera les lignes et les colonnes. Nous reviendrons plus en détail sur cette grille dans l'étape 2.
+</p>
+
+<p>
+Nous allons donc maintenant lister et décrire les fonctions dont nous aurons besoin. Tu peux faire un schéma si ça t'aide. Si tu n'as pas tout compris au début, ce n'est pas grave nous allons revenir en détail sur chaque fonction dans les étapes suivantes. L'important est de visualiser à peu près comment sera notre programme.
+</p>
+
+<ul class="org-ul">
+<li><code>jeu()</code> : c'est la fonction qui lancera le jeu et le relancera une fois la partie terminée si le joueur en a envie.
+<ul class="org-ul">
+<li><code>initialiserGrille()</code> : cette fonction permettra d'initialiser (mettre à zéro) la grille du Puissance 4. C'est comme si elle enlevait les pions ! On utilisera cette fonction avant chaque début de partie.</li>
+<li><code>boucleDeJeu()</code> : c'est la fonction qui demandera aux joueurs de choisir où poser leurs jetons et les placera tant qu'aucun des deux joueurs n'aura gagné et que la grille n'est pas pleine. Quand le jeu est fini, elle renvoie le numéro du joueur qui a gagné (ou <code>False</code> si c'est un match nul).
+<ul class="org-ul">
+<li><code>quiGagne()</code> : cette fonction devra parcourir toute la grille pour déterminer si un joueur a gagné et si oui, lequel.
+Elle sera utilisée dans la fonction <code>boucleDeJeu</code>.
+<ul class="org-ul">
+<li><code>verifierHorizontalement(joueur)</code> : vérifie si le joueur passé en paramètre a aligné 4 pions horizontalement dans la grille. Elle sera utilisée dans la fonction <code>quiGagne()</code>.</li>
+<li><code>verifierVerticalement(joueur)</code> : vérifie si le joueur passé en paramètre a aligné 4 pions verticalement dans la grille. Elle sera utilisée dans la fonction <code>quiGagne()</code>.</li>
+<li><code>verifierDiagonale(joueur)</code> : vérifie si le joueur passé en paramètre a aligné 4 pions en diagonale dans la grille. Elle sera utilisée dans la fonction <code>quiGagne()</code>.</li>
+</ul></li>
+<li><code>verifierGrillePleine()</code> : cette fonction devra parcourir la grille pour vérifier s'il y a encore de la place pour poser des jetons.
+Elle sera utilisée dans la fonction <code>boucleDeJeu</code>.</li>
+<li><code>afficherGrille()</code> : cette fonction affiche la grille actuelle. Nous formaterons la grille pour qu'elle apparaisse de manière compréhensible aux joueurs.
+Elle sera utilisée dans la fonction <code>boucleDeJeu</code></li>
+<li><code>remplirGrille(joueurActuel)</code> : cette fonction demandera à un joueur dans quelle colonne il veut placer son jeton. Elle placera ensuite le jeton au bon endroit, c'est-à-dire à la dernière ligne disponible de la colonne demandée.
+Elle sera utilisée dans la fonction <code>boucleDeJeu</code>
+<ul class="org-ul">
+<li><code>demanderColonne(joueur)</code> : cette fonction permet de demander au joueur dans quelle colonne il veut placer son pion. Elle renverra le numéro de la colonne demandée. Elle sera utilisée dans la fonction <code>remplirGrille(joueurActuel)</code>.</li>
+<li><code>ligneLibreDeLaColonne(colonne)</code> : cette fonction renverra le numéro de la ligne libre de la colonne choisie par le joueur. Elle sera utilisée dans la fonction <code>remplirGrille(joueurActuel)</code>.</li>
+<li><code>placerJeton(joueur, coordonnees)</code> : cette fonction permet de placer le jeton du <code>joueur</code> passé en paramètre à l'endroit de la grille indiqué par <code>coordonnees</code>. <code>coordonnees</code> sera un tuple qui aura cette forme : <code>(ligne, colonne)</code>. Elle sera utilisée dans la fonction <code>remplirGrille(joueurActuel)</code>.</li>
+</ul></li>
+</ul></li>
+<li><code>afficherFinDuJeu(gagnant)</code> : cette fonction fera l'affichage de la fin du jeu en félicitant le gagant s'il y en a un et en disant qu'il y a match nul sinon.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org72ac215" class="outline-4">
+<h4 id="org72ac215">Étape 2 : Définir les variables globales</h4>
+<div class="outline-text-4" id="text-org72ac215">
+<p>
+Une variable globale est une variable qui pourra être utilisée dans toutes les fontions d'un programme, sans avoir besoin de la passer en paramètre. Pour le Puissance 4, nous aurons besoin de 3 variables. Elles correspondront à la grille de jeu et aux symboles que l'on utilise pour chaque joueur.
+</p>
+
+<p>
+La grille sera une liste de 6 listes qui contiendront chacune 7 chiffres. Chaque sous-liste de la grille représentera une ligne de la grille. Comme le Puissance 4 contient 7 colonnes, chaque ligne aura donc 7 chiffres. Au début, la grille sera remplie de 0.
+</p>
+
+<p>
+Par exemple, si les jetons jaunes sont ceux du joueur 1 et les jetons rouges ceux du joueur 2, nous pouvons représenter la grille comme cela :
+<img src="./img/schema_liste.png" alt="schema_liste.png">
+</p>
+
+<p>
+Pour les symboles, je te conseille d'utiliser les caractères <b>'X'</b> et <b>'O'</b> pour bien différencier les joueurs.
+</p>
+
+<p>
+Pour créer des variables globales, c'est très simple : c'est comme des variables normales, sauf qu'elles ne sont pas dans une fonctions. Pour notre cas, nous appelerons nos variables <code>grille</code>, <code>symboleJoueur1</code> et <code>symboleJoueur2</code> :
+</p>
+<div class="org-src-container">
+<pre class="src src-python"><span style="font-weight: bold; font-style: italic;">grille</span> = [[0,0,0,0,0,0,0],
+          [0,0,0,0,0,0,0],
+          [0,0,0,0,0,0,0],
+          [0,0,0,0,0,0,0],
+          [0,0,0,0,0,0,0],
+          [0,0,0,0,0,0,0]]
+<span style="font-weight: bold; font-style: italic;">symboleJoueur1</span> = <span style="font-style: italic;">'X'</span>
+<span style="font-weight: bold; font-style: italic;">symboleJoueur2</span> = <span style="font-style: italic;">'O'</span>
+</pre>
+</div>
+
+<p>
+Nous n'aurons pas besoin d'autres variables globales pour le moment.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgaa723bb" class="outline-4">
+<h4 id="orgaa723bb">Étape 3 : Définir la fonction de lancement du jeu</h4>
+</div>
 </div>
 </div>
 </div>
