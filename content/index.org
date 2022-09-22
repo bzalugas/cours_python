@@ -101,18 +101,22 @@
 1. Dans un programme nommé =prenom_nom_mieux.py= :
    - Crée une variable =prenom= contenant une chaîne de caractères correspondant à ton prénom.
    - Crée une variable =nom= contenant une chaîne de caractères correspondant à ton nom de famille.
-   - Affiche *"Bonjour ! Je m'appelle <prénom> <nom>"* en remplaçant <prénom> et <nom> par les variables créées plus tôt et en utilisant une seule instruction =print()=. (Ne pas oublier les espaces !).
+   - Affiche *"Bonjour ! Je m'appelle <prénom> <nom>"* en remplaçant <prénom> et <nom> par les variables créées plus tôt et en utilisant =%s=.
 
 2. Dans un programme nommé =mon_salaire.py= :
    - Crée une variable =pieces_par_jour= contenant le nombre de pièces d'or que tu gagnes par jour.
    - Crée une variable =jours_de_travail= contenant le nombre de jours où tu as travaillé.
-   - Affiche *"En travaillant <jours_de_travail> et avec un salaire quotidien de <pieces_par_jour>, j'ai gagné un total de <jours_de_travail * pieces_par_jour>. Je pourrai bientôt acheter mon collège !"* en n'utilisant qu'une seule instruction =print()=. Il faudra bien sûr remplacer les parties entre chevrons (<...>) par le contenu des variables.
+   - Affiche *"En travaillant <jours_de_travail> et avec un salaire quotidien de <pieces_par_jour>, j'ai gagné un total de <jours_de_travail * pieces_par_jour>. Je suis riche !"* en utilisant =%s=. Il faudra bien sûr remplacer les parties entre chevrons (<...>) par le contenu des variables.
 
-3. Dans un programme nommé =mes_anniversaires.py= :
-   - Crée une variable =phrase= contenant la phrase "Joyeux anniversaire !".
-   - Crée une variable =age= contenant ton âge
-   - Affiche *"Voici un résumé de tous mes anniversaires : "*.
-   - Affiche la phrase d'anniversaire autant de fois que ton âge.
+3. Dans un programme nommé =perroquet.py= :
+   - Crée une variable =phrase= contenant la phrase de ton choix.
+   - Affiche *"Le perroquet répète : "*.
+   - Affiche 10 fois la phrase contenue dans =phrase= sans te répéter.
+
+4. Dans un programme nommé =mur_de_caractères.py= :
+   - Crée une variable =caractere= qui contient un caractère de ton choix. Par exemple "#" ou "-" ou ce que tu veux.
+   - Crée une variable =repetition= et assigne-lui un nombre entier de ton choix.
+   - Affiche autant de fois ton =caractere= que le nombre dans =repetition=.
 
 ** Cours 5 : Listes 1
 :PROPERTIES:
@@ -122,7 +126,7 @@
 - *"Plus puissantes que les chaînes : les listes"*, p.38
 *** Exercices
 1. Dans un programme nommé =liste_courses.py= :
-   - Crée une variable =courses= contenant une liste d'au moins 5 choses à acheter. Chaque élément sera une chaîne de caractères.
+   - Crée une variable =courses= contenant une *liste* d'au moins 5 choses à acheter. Chaque élément sera une chaîne de caractères.
    - Affiche la liste de courses.
    - Affiche le 1^{er} élément de la liste en utilisant son indice.
    - Affiche le 3^{ème} élément de la liste en utilisant son indice.
@@ -131,16 +135,16 @@
    - Affiche d'un seul coup le sous-ensemble de la liste contenant les 2^{ème}, 3^{ème} et 4^{ème} éléments de la liste.
 
 2. Dans un programme nommé =liste_courses_quantite.py= :
-   - Crée une variable =courses_quantite= contenant au moins 5 chiffres qui correspondent à des quantités d'éléments à acheter. Chaque chiffre sera suivi d'une chaîne de caractères correspondant à un élément.
+   - Crée une variable =courses_quantite= contenant une *liste* d'au moins 5 chiffres. Après chaque chiffre, place une chaîne de caractères correspondant à quelque chose à acheter.
    - Affiche =courses_quantite=.
    - Affiche le sous-ensemble contenant les 3^{ème} et 4^{ème} éléments de la liste.
 
-3. Dans un programme nommé =liste_ultime.py= :
-   - Crée une variable =courses= contenant une liste d'au moins 5 éléments à acheter. Tu peux réutiliser les éléments précédents.
-   - Crée une variable =quantites=  contenant une liste d'autant de nombres qu'il y a d'éléments dans la liste de courses. Chaque nombre correspondra à la quantité d'éléments à acheter. Tu peux réutiliser les nombres précédents.
-   - Crée une variable =liste_courses= contenant les deux listes.
-   - Affiche =liste_courses=.
-   - Affiche *"Je dois acheter <quantite> <element> au supermarché."*. <quantite> et <element> doivent correspondre au deuxième élément de chaque liste contenue dans =liste_courses=.
+3. Dans un programme nommé =cadavre_exquis.py= :
+   - Crée une variable =debuts_de_phrases= contenant une *liste* de chaînes de caractères qui pourraient être des débuts de phrase. Par exemple, "Aujourd'hui, j'ai décidé de", ou alors "Pour la nouvelle année, j'ai pris la décision de ".
+   - Crée une variable =fins_de_phrases= contenant une *liste* de fins de phrases. Par exemple, "être sage.", "devenir riche.", "ne plus manger de bonbons.", etc.
+   - Crée une *liste* =debuts_et_fins_de_phrases= contenant les deux listes précédemment créées.
+   - Crée une variable =phrase_entiere= contenant n'importe quel élément de la première liste contenue dans =debuts_et_fins_de_phrases= suivi de n'importe quel élément de la deuxième liste de =debuts_et_fins_de_phrases=.
+   - Affiche la variable =phrase_entiere= pour voir apparaître une phrase inattendue !
 
 ** Cours 6 : Listes 2
 :PROPERTIES:
@@ -244,6 +248,7 @@ Pour le moment, cela suffira pour créer des programmes plus intéractifs, mais 
    - Récupère dans une variable =taille= la taille de l'utilisateur.
    - Récupère dans une variable =nationalite= la nationalité de l'utilisateur.
    - Affiche *"Je m'appelle <prenom> <nom>, j'ai <age> ans, je fais <taille>cm et mon pays d'origine est <nationalite>."*
+
 * Chapitre 3 : Turtle
 :PROPERTIES:
 :custom_id: chapitre3
@@ -256,6 +261,7 @@ Pour le moment, cela suffira pour créer des programmes plus intéractifs, mais 
 3. Dans un programme nommé =etoile.py=, fais dessiner une étoile à une tortue.
 4. Dans un programme nommé =etoile_variable.py=, fais dessiner une étoile à 5 branches à une tortue. Cependant, cette fois-ci il doit y avoir une variable nommée =taille_cote= qui doit être utilisée pour déterminer la taille des côtés de l'étoile. Par exemple, si =taille_cote= vaut 1, l'étoile sera composée de segments de 1 pixel de long. Si =taille_cote= vaut 100, l'étoile sera composée de segments de 100 pixels.
 5. Dans un programme nommé =visage.py=, fais dessiner un visage à une tortue. Le visage doit contenir au moins deux yeux, un nez et une bouche.
+
 * Chapitre 4 : Les conditions
 :PROPERTIES:
 :custom_id: chapitre4
@@ -272,7 +278,82 @@ Pour le moment, cela suffira pour créer des programmes plus intéractifs, mais 
 :PROPERTIES:
 :custom_id: chapitre7
 :END:
-* Chapitre 8 : Regroupons tout !
+
+* Chapitre 8 : Projets
 :PROPERTIES:
 :custom_id: chapitre8
 :END:
+Dans ce chapitre, nous allons mettre en applications tout ce que tu as appris dans les chapitres précédents. Pour cela, nous pouvons commencer à créer des petits projets qui t'intéressent. N'hésite pas à proposer à ton professeur un projet, que ce soit un jeu ou un autre programme, que tu aimerais créer.
+
+** Puissance 4
+Dans cette section, nous allons créer un puissance 4. Nous commencerons par le créer à partir des notions que nous avons vues, donc avec une interface en ligne de commande. Par la suite, quand nous étudierons comment créer des interfaces graphiques, nous pourrons revenir sur ce projet pour ajouter des visuels plus intéressants.
+
+Les consignes qui sont données ici sont là pour t'aider à réaliser le projet. Si tu as des idées d'améliorations ou que tu veux faire quelque chose différemment, tu es libre de les réaliser, c'est ton projet ! Néanmoins, le professeur vérifiera que ton travail est correct et correspond aux bonnes pratiques de Python que nous avons étudiées.
+
+*** Règles du Puissance 4
+[[./img/puissance4.jpg]]
+
+Le but du jeu est d'aligner une suite de 4 pions de même couleur sur une grille comptant 6 rangées et 7 colonnes. Chaque joueur dispose de 21 pions d'une couleur, en général jaune ou rouge. Tour à tour, les deux joueurs placent un pion dans la colonne de leur choix, le pion coulisse alors jusqu'à la position la plus basse possible dans la dite colonne à la suite de quoi c'est à l'adversaire de jouer. Le vainqueur est le joueur qui réalise le premier un alignement (horizontal, vertical ou diagonal) consécutif d'au moins quatre pions de sa couleur. Si, alors que toutes les cases de la grille de jeu sont remplies, aucun des deux joueurs n'a réalisé un tel alignement, la partie est déclarée nulle.
+
+*** Étape 1 : Définir la structure de notre programme
+C'est l'étape la plus importante d'un programme : il faut définir, par exemple avec un schéma, comment sera notre programme, c'est-à-dire quelles fonctions on devra utiliser, à quel moment, etc. Parfois, il est aussi utile d'utiliser du "pseudo code". Le pseudo code, c'est une façon d'écrire un algorithme de façon presque naturelle, sans langage de programmation. Par exemple, dans un pseudo code on peu écrire :
+#+begin_example
+si (utilisateur écrit "Bonjour") alors
+    afficher "Bonjour"
+sinon
+    afficher "Au revoir"
+#+end_example
+Le pseudo code aide à déterminer quelles actions notre programme devra effectuer.
+
+Notre programme ne comportera que des fonctions. Chaque action devra être effectuée grâce à une fonction. C'est comme ça que l'on programme : ça permet de pouvoir s'y retrouver plus facilement dans le code et de pouvoir mieux repérer nos erreurs.
+
+La seule instruction qui ne sera pas dans une fonction sera celle qui lance le jeu !
+
+La "grille" du jeu sera représentée par une liste à deux dimensions qui réprésentera les lignes et les colonnes. Nous reviendrons plus en détail sur cette grille dans l'étape 2.
+
+Nous allons donc maintenant lister et décrire les fonctions dont nous aurons besoin. Tu peux faire un schéma si ça t'aide. Si tu n'as pas tout compris au début, ce n'est pas grave nous allons revenir en détail sur chaque fonction dans les étapes suivantes. L'important est de visualiser à peu près comment sera notre programme.
+
+- =jeu()= : c'est la fonction qui lancera le jeu et le relancera une fois la partie terminée si le joueur en a envie.
+  - =initialiserGrille()= : cette fonction permettra d'initialiser (mettre à zéro) la grille du Puissance 4. C'est comme si elle enlevait les pions ! On utilisera cette fonction avant chaque début de partie.
+  - =boucleDeJeu()= : c'est la fonction qui demandera aux joueurs de choisir où poser leurs jetons et les placera tant qu'aucun des deux joueurs n'aura gagné et que la grille n'est pas pleine. Quand le jeu est fini, elle renvoie le numéro du joueur qui a gagné (ou =False= si c'est un match nul).
+    - =quiGagne()= : cette fonction devra parcourir toute la grille pour déterminer si un joueur a gagné et si oui, lequel.
+        Elle sera utilisée dans la fonction =boucleDeJeu=.
+      - =verifierHorizontalement(joueur)= : vérifie si le joueur passé en paramètre a aligné 4 pions horizontalement dans la grille. Elle sera utilisée dans la fonction =quiGagne()=.
+      - =verifierVerticalement(joueur)= : vérifie si le joueur passé en paramètre a aligné 4 pions verticalement dans la grille. Elle sera utilisée dans la fonction =quiGagne()=.
+      - =verifierDiagonale(joueur)= : vérifie si le joueur passé en paramètre a aligné 4 pions en diagonale dans la grille. Elle sera utilisée dans la fonction =quiGagne()=.
+    - =verifierGrillePleine()= : cette fonction devra parcourir la grille pour vérifier s'il y a encore de la place pour poser des jetons.
+      Elle sera utilisée dans la fonction =boucleDeJeu=.
+    - =afficherGrille()= : cette fonction affiche la grille actuelle. Nous formaterons la grille pour qu'elle apparaisse de manière compréhensible aux joueurs.
+      Elle sera utilisée dans la fonction =boucleDeJeu=
+    - =remplirGrille(joueurActuel)= : cette fonction demandera à un joueur dans quelle colonne il veut placer son jeton. Elle placera ensuite le jeton au bon endroit, c'est-à-dire à la dernière ligne disponible de la colonne demandée.
+      Elle sera utilisée dans la fonction =boucleDeJeu=
+      - =demanderColonne(joueur)= : cette fonction permet de demander au joueur dans quelle colonne il veut placer son pion. Elle renverra le numéro de la colonne demandée. Elle sera utilisée dans la fonction =remplirGrille(joueurActuel)=.
+      - =ligneLibreDeLaColonne(colonne)= : cette fonction renverra le numéro de la ligne libre de la colonne choisie par le joueur. Elle sera utilisée dans la fonction =remplirGrille(joueurActuel)=.
+      - =placerJeton(joueur, coordonnees)= : cette fonction permet de placer le jeton du =joueur= passé en paramètre à l'endroit de la grille indiqué par =coordonnees=. =coordonnees= sera un tuple qui aura cette forme : =(ligne, colonne)=. Elle sera utilisée dans la fonction =remplirGrille(joueurActuel)=.
+  - =afficherFinDuJeu(gagnant)= : cette fonction fera l'affichage de la fin du jeu en félicitant le gagant s'il y en a un et en disant qu'il y a match nul sinon.
+
+*** Étape 2 : Définir les variables globales
+Une variable globale est une variable qui pourra être utilisée dans toutes les fontions d'un programme, sans avoir besoin de la passer en paramètre. Pour le Puissance 4, nous aurons besoin de 3 variables. Elles correspondront à la grille de jeu et aux symboles que l'on utilise pour chaque joueur.
+
+La grille sera une liste de 6 listes qui contiendront chacune 7 chiffres. Chaque sous-liste de la grille représentera une ligne de la grille. Comme le Puissance 4 contient 7 colonnes, chaque ligne aura donc 7 chiffres. Au début, la grille sera remplie de 0.
+
+Par exemple, si les jetons jaunes sont ceux du joueur 1 et les jetons rouges ceux du joueur 2, nous pouvons représenter la grille comme cela :
+[[./img/schema_liste.png]]
+
+Pour les symboles, je te conseille d'utiliser les caractères *'X'* et *'O'* pour bien différencier les joueurs.
+
+Pour créer des variables globales, c'est très simple : c'est comme des variables normales, sauf qu'elles ne sont pas dans une fonctions. Pour notre cas, nous appelerons nos variables =grille=, =symboleJoueur1= et =symboleJoueur2= :
+#+begin_src python
+grille = [[0,0,0,0,0,0,0],
+          [0,0,0,0,0,0,0],
+          [0,0,0,0,0,0,0],
+          [0,0,0,0,0,0,0],
+          [0,0,0,0,0,0,0],
+          [0,0,0,0,0,0,0]]
+symboleJoueur1 = 'X'
+symboleJoueur2 = 'O'
+#+end_src
+
+Nous n'aurons pas besoin d'autres variables globales pour le moment.
+
+*** Étape 3 : Définir la fonction de lancement du jeu
