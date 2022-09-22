@@ -330,19 +330,21 @@ Nous allons donc maintenant lister et décrire les fonctions dont nous aurons be
       - =demanderColonne(joueur)= : cette fonction permet de demander au joueur dans quelle colonne il veut placer son pion. Elle renverra le numéro de la colonne demandée. Elle sera utilisée dans la fonction =remplirGrille(joueurActuel)=.
       - =ligneLibreDeLaColonne(colonne)= : cette fonction renverra le numéro de la ligne libre de la colonne choisie par le joueur. Elle sera utilisée dans la fonction =remplirGrille(joueurActuel)=.
       - =placerJeton(joueur, coordonnees)= : cette fonction permet de placer le jeton du =joueur= passé en paramètre à l'endroit de la grille indiqué par =coordonnees=. =coordonnees= sera un tuple qui aura cette forme : =(ligne, colonne)=. Elle sera utilisée dans la fonction =remplirGrille(joueurActuel)=.
+    - =recupererSymbole(numeroJoueur)= : cette fonction renvoie simplement le symbole correspondant au numéro du joueur passé en paramètre. Si le numéro n'est ni 1 ni 2 alors la fonction renverra un espace *' '*. Par exemple, si nous utilisons 'X' pour le joueur 1 et 'O' pour le joueur 2, la fonction =recupererSymbole(1)= renverra *'X'*.
   - =afficherFinDuJeu(gagnant)= : cette fonction fera l'affichage de la fin du jeu en félicitant le gagant s'il y en a un et en disant qu'il y a match nul sinon.
+  - =demanderRejouer()= : cette fonction demandera aux joueurs s'ils veulent rejouer et renvoie True ou False en fonction de leur réponse.
 
 *** Étape 2 : Définir les variables globales
-Une variable globale est une variable qui pourra être utilisée dans toutes les fontions d'un programme, sans avoir besoin de la passer en paramètre. Pour le Puissance 4, nous aurons besoin de 3 variables. Elles correspondront à la grille de jeu et aux symboles que l'on utilise pour chaque joueur.
+Une *variable globale* est une variable qui pourra être utilisée dans toutes les fontions d'un programme, sans avoir besoin de la passer en paramètre. Pour le Puissance 4, nous aurons besoin de 3 variables. Elles correspondront à *la grille de jeu* et aux *symboles* que l'on utilise pour chaque joueur.
 
-La grille sera une liste de 6 listes qui contiendront chacune 7 chiffres. Chaque sous-liste de la grille représentera une ligne de la grille. Comme le Puissance 4 contient 7 colonnes, chaque ligne aura donc 7 chiffres. Au début, la grille sera remplie de 0.
+*La grille* sera une liste de 6 listes qui contiendront chacune 7 chiffres. Chaque sous-liste de la grille représentera une ligne de la grille. Comme le Puissance 4 contient 7 colonnes, chaque ligne aura donc 7 chiffres. Au début, la grille sera remplie de 0.
 
 Par exemple, si les jetons jaunes sont ceux du joueur 1 et les jetons rouges ceux du joueur 2, nous pouvons représenter la grille comme cela :
 [[./img/schema_liste.png]]
 
 Pour les symboles, je te conseille d'utiliser les caractères *'X'* et *'O'* pour bien différencier les joueurs.
 
-Pour créer des variables globales, c'est très simple : c'est comme des variables normales, sauf qu'elles ne sont pas dans une fonctions. Pour notre cas, nous appelerons nos variables =grille=, =symboleJoueur1= et =symboleJoueur2= :
+Pour créer des variables globales, c'est très simple : c'est comme des variables normales, sauf qu'elles ne sont pas dans une fonction. Pour notre cas, nous appelerons nos variables =grille=, =symboleJoueur1= et =symboleJoueur2= :
 #+begin_src python
 grille = [[0,0,0,0,0,0,0],
           [0,0,0,0,0,0,0],
@@ -356,4 +358,63 @@ symboleJoueur2 = 'O'
 
 Nous n'aurons pas besoin d'autres variables globales pour le moment.
 
-*** Étape 3 : Définir la fonction de lancement du jeu
+*** Étape 3 : Définir les fonctions d'affichage
+- Crée une fonction =recupererSymbole(numeroJoueur)=. Le code de cette fonction sera :
+  #+begin_example
+si numeroJoueur est égal à 1:
+    renvoyer symboleJoueur1
+sinon si numeroJoueur est égal à 2:
+    renvoyer symboleJoueur2
+sinon
+    renvoyer le caractère 'espace'
+  #+end_example
+
+- Crée une fonction =afficherGrille()=. Cette fonction doit simplement afficher toutes les cases de la grille =grille= (variable globale) pour que ce soit compréhensible pour les joueurs. Il faudra pour cela utiliser une double boucle pour parcourir chaque "case" de la liste. Pour chaque case, on doit afficher le symbole correspondant au pion du joueur placé. Dans notre cas, si c'est 1 il faudra afficher 'X'.
+  Ensuite on peut ajouter des caractères pour bien séparer chaque case.
+  Tu peux t'inspirer de ce code mais tu dois comprendre comment parcourir la grille pour pouvoir faire la suite :
+  #+begin_src python
+affichage = "\n_______________\n"
+for ligne in range(len(grille)):
+    # par exemple affichage += |
+    for colonne in range(len(grille[ligne])):
+        affichage += recupererSymbole(grille[ligne][colonne]) #ici on récupère le symbole correspondant au chiffre placé dans la grille.
+    affichage += "\n"
+affichage += "---------------"
+affichage += " 0 1 2 3 4 5 6" #Cet affichage servira pour que les joueurs connaissent le numéro des colonnes
+print(affichage)
+  #+end_src
+
+- Crée une fonction =afficherFinDuJeu= qui prend en paramètre une variable =gagnant=. Cette fonction doit :
+  - Afficher la grille.
+  - Afficher un texte qui dit quel joueur a gagné. Dans le cas où c'est un match nul, =gagnant= aura comme valeur =False=. Ne pas oublier ce cas-là !
+
+- Crée une fonction =initialiserGrille()= qui utilisera la variable globale =grille= pour lui redonner sa valeur par défaut :
+  #+begin_src python
+global grid
+grid = [[0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0]]
+  #+end_src
+
+*** Étape 4 : Définir la fonction de lancement du jeu
+- Crée une fonction =boucleDeJeu()= qui contiendra seulement le mot clé =pass=. Nous coderons cette fonction à l'étape suivante mais nous avons besoin de l'appeler dans la fonction de lancement du jeu.
+  #+begin_src python
+def boucleDeJeu():
+    pass
+  #+end_src
+
+- Crée une fonction =demanderRejouer()=. Elle devra :
+  - Demander à l'utilisateur s'il veut rejouer tant que sa réponse n'est ni 'o' ni 'n'. Il devra taper 'o' s'il veut et 'n' s'il veut arrêter.
+  - Retourner True si l'utilisateur veut rejouer et False sinon.
+
+- Crée une fonction =jeu()= :
+  - Crée une variable =rejouer= égale à True au début.
+  - Crée une boucle qui, tant que =rejouer= est égale à True:
+    - appelle la fonction =initialiserGrille()=
+    - stocke le résultat de la fonction =boucleDeJeu()= dans une variable =gagnant=.
+    - affiche la fin du jeu avec la fonction =afficherFinDuJeu()=.
+    - Demande à l'utilisateur s'il veut rejouer avec la fonction =demanderRejouer()= en récupérant le résultat de cette fonction dans la variable =rejouer=.
+  - Quand on sort de la boucle, cela veut dire que l'utilisateur ne veut plus jouer. Dans ce cas, il faudra juste afficher "Au revoir !".
