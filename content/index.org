@@ -423,8 +423,15 @@ sinon
   #+end_example
 
 - Crée une fonction =afficherGrille()=. Cette fonction doit simplement afficher toutes les cases de la grille =grille= (variable globale) pour que ce soit compréhensible pour les joueurs. Il faudra pour cela utiliser une double boucle pour parcourir chaque "case" de la liste. Pour chaque case, on doit afficher le symbole correspondant au pion du joueur placé. Dans notre cas, si c'est 1 il faudra afficher 'X'.
-  Ensuite on peut ajouter des caractères pour bien séparer chaque case.
-  Tu peux t'inspirer de ce code mais tu dois comprendre comment parcourir la grille pour pouvoir faire la suite :
+  Ensuite on peut ajouter des caractères pour bien séparer chaque case. Voici un exemple d'affichage :
+
+Début de partie :
+[[./img/exemple_vide.png]]
+
+Après quelques tours :
+[[./img/exemple_tours.png]]
+
+Tu peux t'inspirer de ce code mais tu dois comprendre comment parcourir la grille pour pouvoir faire la suite :
   #+begin_src python
 affichage = "\n_______________\n"
 for ligne in range(len(grille)):
@@ -437,9 +444,12 @@ affichage += " 0 1 2 3 4 5 6" #Cet affichage servira pour que les joueurs connai
 print(affichage)
   #+end_src
 
+
 - Crée une fonction =afficherFinDuJeu= qui prend en paramètre une variable =gagnant=. Cette fonction doit :
   - Afficher la grille.
   - Afficher un texte qui dit quel joueur a gagné. Dans le cas où c'est un match nul, =gagnant= aura comme valeur =False=. Ne pas oublier ce cas-là !
+
+*Tu peux tester tes fonctions d'affichage en les appelant dans le programme, pour être sûr que ce qui est affiché correspond bien à ce que tu voulais.*
 
 - Crée une fonction =initialiserGrille()= qui utilisera la variable globale =grille= pour lui redonner sa valeur par défaut :
   #+begin_src python
