@@ -525,7 +525,7 @@ La dernière fonction intermédiaire pour un tour sera la fonction =placerJeton(
 - La fonction comportera une seule ligne qui permettra de placer =joueur= dans la grille aux coordonnées données.
 
 Enfin, nous allons pouvoir créer la fonction qui fait jouer le tour au joueur :
-- Crée une fonction =jouerLeTour()= qui prend en paramètre =joueur=. Voici la logique de la fonction :
+- Modifie la fonction =jouerLeTour()= précédemment créée en supprimant le mot-clé =pass=. Voici la logique de la fonction :
   - Tant que la =ligne= vaut *-1* (c'est à dire est incorrecte) :
     - Demander la colonne au joueur (récupérer le résultat).
     - Trouver la ligne libre pour cette colonne (récupérer le résultat).
