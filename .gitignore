@@ -1,5 +1,7 @@
 ### Emacs ###
 # -*- mode: gitignore; -*-
+content/img/schema_liste.odg
+
 *~
 \#*\#
 /.emacs.desktop

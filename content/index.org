@@ -279,24 +279,26 @@ Pour le moment, cela suffira pour créer des programmes plus intéractifs, mais 
 :custom_id: chapitre7
 :END:
 
-* Chapitre 8 : Projets
+* Chapitre 8 : Puissance 4
 :PROPERTIES:
 :custom_id: chapitre8
 :END:
-Dans ce chapitre, nous allons mettre en applications tout ce que tu as appris dans les chapitres précédents. Pour cela, nous pouvons commencer à créer des petits projets qui t'intéressent. N'hésite pas à proposer à ton professeur un projet, que ce soit un jeu ou un autre programme, que tu aimerais créer.
 
-** Puissance 4
-Dans cette section, nous allons créer un puissance 4. Nous commencerons par le créer à partir des notions que nous avons vues, donc avec une interface en ligne de commande. Par la suite, quand nous étudierons comment créer des interfaces graphiques, nous pourrons revenir sur ce projet pour ajouter des visuels plus intéressants.
+[[./img/puissance4.jpg]]
+
+Dans ce chapitre, tu vas mettre en applications tout ce que tu as appris dans les chapitres précédents. Pour cela, tu vas créer un projet de plus grande envergure que les exercices que tu as faits. N'hésite pas à proposer à ton professeur un projet, que ce soit un jeu ou un autre programme, que tu aimerais créer.
+
+Dans cette section, nous allons créer un *Puissance 4*. Nous commencerons par le créer à partir des notions que nous avons vues, donc avec une interface en *ligne de commande*. Par la suite, quand nous étudierons comment créer des interfaces graphiques, nous pourrons revenir sur ce projet pour ajouter des visuels plus intéressants.
 
 Les consignes qui sont données ici sont là pour t'aider à réaliser le projet. Si tu as des idées d'améliorations ou que tu veux faire quelque chose différemment, tu es libre de les réaliser, c'est ton projet ! Néanmoins, le professeur vérifiera que ton travail est correct et correspond aux bonnes pratiques de Python que nous avons étudiées.
 
-*** Règles du Puissance 4
-[[./img/puissance4.jpg]]
+** Règles du Puissance 4
 
-Le but du jeu est d'aligner une suite de 4 pions de même couleur sur une grille comptant 6 rangées et 7 colonnes. Chaque joueur dispose de 21 pions d'une couleur, en général jaune ou rouge. Tour à tour, les deux joueurs placent un pion dans la colonne de leur choix, le pion coulisse alors jusqu'à la position la plus basse possible dans la dite colonne à la suite de quoi c'est à l'adversaire de jouer. Le vainqueur est le joueur qui réalise le premier un alignement (horizontal, vertical ou diagonal) consécutif d'au moins quatre pions de sa couleur. Si, alors que toutes les cases de la grille de jeu sont remplies, aucun des deux joueurs n'a réalisé un tel alignement, la partie est déclarée nulle.
+Le but du jeu est d'aligner une suite de 4 pions de même couleur sur une grille comptant *6 rangées* et *7 colonnes*. Chaque joueur dispose de 21 pions d'une couleur, en général jaune ou rouge. Tour à tour, les deux joueurs placent un pion dans la *colonne* de leur choix, le pion *coulisse alors jusqu'à la position la plus basse possible dans la dite colonne* à la suite de quoi c'est à l'adversaire de jouer. Le vainqueur est le joueur qui réalise le premier un *alignement (horizontal, vertical ou diagonal) consécutif d'au moins quatre pions de sa couleur.* Si, alors que toutes les cases de la grille de jeu sont remplies, aucun des deux joueurs n'a réalisé un tel alignement, la partie est déclarée nulle.
 
-*** Étape 1 : Définir la structure de notre programme
-C'est l'étape la plus importante d'un programme : il faut définir, par exemple avec un schéma, comment sera notre programme, c'est-à-dire quelles fonctions on devra utiliser, à quel moment, etc. Parfois, il est aussi utile d'utiliser du "pseudo code". Le pseudo code, c'est une façon d'écrire un algorithme de façon presque naturelle, sans langage de programmation. Par exemple, dans un pseudo code on peu écrire :
+** Étape 1 : Définir la structure de notre programme
+Dans cette étape, tu ne vas pas encore coder. Nous allons d'abord réfléchir à la structure de notre programme et imaginer son fonctionnement général. Il faut que l'on définisse de quelles fonctions nous auront besoin pour faire fonctionner notre programme.
+Parfois, il est utile d'utiliser du "pseudo code". Le pseudo code, c'est une façon d'écrire un algorithme de façon presque naturelle, sans langage de programmation. Par exemple, dans un pseudo code on peu écrire :
 #+begin_example
 si (utilisateur écrit "Bonjour") alors
     afficher "Bonjour"
@@ -309,15 +311,69 @@ Notre programme ne comportera que des fonctions. Chaque action devra être effec
 
 La seule instruction qui ne sera pas dans une fonction sera celle qui lance le jeu !
 
-La "grille" du jeu sera représentée par une liste à deux dimensions qui réprésentera les lignes et les colonnes. Nous reviendrons plus en détail sur cette grille dans l'étape 2.
+*** Fonctionnement de la grille
+La "grille" du jeu sera représentée par une liste *à deux dimension*, c'est à dire une liste de plusieurs listes. Ce sera donc une liste contenant 6 listes qui contiendront chacune 7 chiffres. Chaque sous-liste de la grille représentera une ligne de la grille. Comme le Puissance 4 contient 7 colonnes, chaque ligne aura donc 7 chiffres. La valeur d'une case de la grille a 3 possibilités :
+- *0* : la case est libre.
+- *1* : un jeton du joueur 1 est placé ici.
+- *2* : un jeton du joueur 2 est placé ici.
 
-Nous allons donc maintenant lister et décrire les fonctions dont nous aurons besoin. Tu peux faire un schéma si ça t'aide. Si tu n'as pas tout compris au début, ce n'est pas grave nous allons revenir en détail sur chaque fonction dans les étapes suivantes. L'important est de visualiser à peu près comment sera notre programme.
+Au début, la grille sera remplie de *0* :
+#+begin_src python
+[[0,0,0,0,0,0,0],
+ [0,0,0,0,0,0,0],
+ [0,0,0,0,0,0,0],
+ [0,0,0,0,0,0,0],
+ [0,0,0,0,0,0,0],
+ [0,0,0,0,0,0,0]]
+#+end_src
+
+Lorsqu'un joueur placera un pion, il devra choisir seulement la colonne. À nous de "simuler" le fait que le pion tombe jusqu'à la première ligne disponible. Nous aurons une fonction pour cela. Par exemple, si le joueur 1 décide de placer son pion dans la colonne 3 (en partant de 0), la grille contiendra :
+#+begin_src python
+[[0,0,0,0,0,0,0],
+ [0,0,0,0,0,0,0],
+ [0,0,0,0,0,0,0],
+ [0,0,0,0,0,0,0],
+ [0,0,0,0,0,0,0],
+ [0,0,0,1,0,0,0]]
+#+end_src
+Si le joueur 2 décide de placer son pion dans la même colonne que le joueur 1, la grille deviendra :
+#+begin_src python
+[[0,0,0,0,0,0,0],
+ [0,0,0,0,0,0,0],
+ [0,0,0,0,0,0,0],
+ [0,0,0,0,0,0,0],
+ [0,0,0,2,0,0,0],
+ [0,0,0,1,0,0,0]]
+#+end_src
+
+Et ainsi de suite.
+
+Par exemple, si les jetons jaunes sont ceux du joueur 1 et les jetons rouges ceux du joueur 2, nous pouvons représenter la grille comme cela :
+
+[[./img/schema_liste.png]]
+
+Pour parcourir une liste à deux dimensions, c'est à dire effectuer un test ou une action sur chaque case de la liste, nous utilisons une double boucle. En effet, par exemple si l'on veut ajouter un pion du joueur 1 dans la 2^{ème} colonne de la 3^{ème} ligne, il faut écrire :
+#+begin_src python
+grille[2][1] = 1
+# grille[ligne][colonne]
+#+end_src
+
+Le premier indice correspond à la ligne et le second à la colonne. Alors pour parcourir et afficher toute la liste :
+#+begin_src python
+for ligne in range(len(grille)):
+    for colonne in range(len(grille[ligne])):
+        print(grille[ligne][colonne])
+#+end_src
+
+*** Liste des fonctions
+Maintenant que nous avons une idée générale du fonctionnement de la *grille de jeu*, voici une liste exhaustive des fonctions dont nous aurons besoin. Tu n'as pas besoin de tout comprendre dès le début, cette section servira aussi plus tard pour t'y retrouver dans toutes les fonctions. Ne commences pas non plus à coder les fonctions ici car nous allons revenir en détail sur chacune d'elles dans les étapes suivantes.
+
+L'important est de visualiser à peu près comment sera notre programme.
 
 - =jeu()= : c'est la fonction qui lancera le jeu et le relancera une fois la partie terminée si le joueur en a envie.
-  - =initialiserGrille()= : cette fonction permettra d'initialiser (mettre à zéro) la grille du Puissance 4. C'est comme si elle enlevait les pions ! On utilisera cette fonction avant chaque début de partie.
+  - =initialiserGrille()= : cette fonction permettra d'initialiser (mettre à zéro) la grille du Puissance 4. C'est comme si elle enlevait les pions ! On utilisera cette fonction avant chaque début de partie, dans la fonction =jeu()=.
   - =boucleDeJeu()= : c'est la fonction qui demandera aux joueurs de choisir où poser leurs jetons et les placera tant qu'aucun des deux joueurs n'aura gagné et que la grille n'est pas pleine. Quand le jeu est fini, elle renvoie le numéro du joueur qui a gagné (ou =False= si c'est un match nul).
-    - =quiGagne()= : cette fonction devra parcourir toute la grille pour déterminer si un joueur a gagné et si oui, lequel.
-        Elle sera utilisée dans la fonction =boucleDeJeu=.
+    - =quiGagne()= : cette fonction devra déterminer si un joueur a gagné et si oui, lequel. Elle sera utilisée dans la fonction =boucleDeJeu=.
       - =verifierHorizontalement(joueur)= : vérifie si le joueur passé en paramètre a aligné 4 pions horizontalement dans la grille. Elle sera utilisée dans la fonction =quiGagne()=.
       - =verifierVerticalement(joueur)= : vérifie si le joueur passé en paramètre a aligné 4 pions verticalement dans la grille. Elle sera utilisée dans la fonction =quiGagne()=.
       - =verifierDiagonale(joueur)= : vérifie si le joueur passé en paramètre a aligné 4 pions en diagonale dans la grille. Elle sera utilisée dans la fonction =quiGagne()=.
@@ -325,7 +381,7 @@ Nous allons donc maintenant lister et décrire les fonctions dont nous aurons be
       Elle sera utilisée dans la fonction =boucleDeJeu=.
     - =afficherGrille()= : cette fonction affiche la grille actuelle. Nous formaterons la grille pour qu'elle apparaisse de manière compréhensible aux joueurs.
       Elle sera utilisée dans la fonction =boucleDeJeu=
-    - =remplirGrille(joueurActuel)= : cette fonction demandera à un joueur dans quelle colonne il veut placer son jeton. Elle placera ensuite le jeton au bon endroit, c'est-à-dire à la dernière ligne disponible de la colonne demandée.
+    - =jouerLeTour(joueurActuel)= : cette fonction demandera à un joueur dans quelle colonne il veut placer son jeton. Elle placera ensuite le jeton au bon endroit, c'est-à-dire à la dernière ligne disponible de la colonne demandée.
       Elle sera utilisée dans la fonction =boucleDeJeu=
       - =demanderColonne(joueur)= : cette fonction permet de demander au joueur dans quelle colonne il veut placer son pion. Elle renverra le numéro de la colonne demandée. Elle sera utilisée dans la fonction =remplirGrille(joueurActuel)=.
       - =ligneLibreDeLaColonne(colonne)= : cette fonction renverra le numéro de la ligne libre de la colonne choisie par le joueur. Elle sera utilisée dans la fonction =remplirGrille(joueurActuel)=.
@@ -334,13 +390,10 @@ Nous allons donc maintenant lister et décrire les fonctions dont nous aurons be
   - =afficherFinDuJeu(gagnant)= : cette fonction fera l'affichage de la fin du jeu en félicitant le gagant s'il y en a un et en disant qu'il y a match nul sinon.
   - =demanderRejouer()= : cette fonction demandera aux joueurs s'ils veulent rejouer et renvoie True ou False en fonction de leur réponse.
 
-*** Étape 2 : Définir les variables globales
-Une *variable globale* est une variable qui pourra être utilisée dans toutes les fontions d'un programme, sans avoir besoin de la passer en paramètre. Pour le Puissance 4, nous aurons besoin de 3 variables. Elles correspondront à *la grille de jeu* et aux *symboles* que l'on utilise pour chaque joueur.
+** Étape 2 : Définir les variables globales
+Une *variable globale* est une variable qui pourra être utilisée dans toutes les fontions d'un programme, sans avoir besoin de la passer en paramètre. Pour le Puissance 4, nous aurons besoin de 3 variables. Elles correspondront à *la grille de jeu*, au *symbole du joueur 1* et au *symbole du joueur 2* dans la grille.
 
-*La grille* sera une liste de 6 listes qui contiendront chacune 7 chiffres. Chaque sous-liste de la grille représentera une ligne de la grille. Comme le Puissance 4 contient 7 colonnes, chaque ligne aura donc 7 chiffres. Au début, la grille sera remplie de 0.
-
-Par exemple, si les jetons jaunes sont ceux du joueur 1 et les jetons rouges ceux du joueur 2, nous pouvons représenter la grille comme cela :
-[[./img/schema_liste.png]]
+Comme vu précédemment, *La grille* sera une liste de 6 listes qui contiendront chacune 7 chiffres. Chaque sous-liste de la grille représentera une ligne de la grille.
 
 Pour les symboles, je te conseille d'utiliser les caractères *'X'* et *'O'* pour bien différencier les joueurs.
 
@@ -358,8 +411,8 @@ symboleJoueur2 = 'O'
 
 Nous n'aurons pas besoin d'autres variables globales pour le moment.
 
-*** Étape 3 : Définir les fonctions d'affichage
-- Crée une fonction =recupererSymbole(numeroJoueur)=. Le code de cette fonction sera :
+** Étape 3 : Définir les fonctions d'affichage
+- Crée une fonction =recupererSymbole(numeroJoueur)=. La logique de cette fonction sera :
   #+begin_example
 si numeroJoueur est égal à 1:
     renvoyer symboleJoueur1
@@ -390,16 +443,16 @@ print(affichage)
 
 - Crée une fonction =initialiserGrille()= qui utilisera la variable globale =grille= pour lui redonner sa valeur par défaut :
   #+begin_src python
-global grid
-grid = [[0,0,0,0,0,0,0],
-        [0,0,0,0,0,0,0],
-        [0,0,0,0,0,0,0],
-        [0,0,0,0,0,0,0],
-        [0,0,0,0,0,0,0],
-        [0,0,0,0,0,0,0]]
+global grille
+grille = [[0,0,0,0,0,0,0],
+          [0,0,0,0,0,0,0],
+          [0,0,0,0,0,0,0],
+          [0,0,0,0,0,0,0],
+          [0,0,0,0,0,0,0],
+          [0,0,0,0,0,0,0]]
   #+end_src
 
-*** Étape 4 : Définir la fonction de lancement du jeu
+** Étape 4 : Définir les fonctions pour lancer le jeu
 - Crée une fonction =boucleDeJeu()= qui contiendra seulement le mot clé =pass=. Nous coderons cette fonction à l'étape suivante mais nous avons besoin de l'appeler dans la fonction de lancement du jeu.
   #+begin_src python
 def boucleDeJeu():
@@ -407,14 +460,71 @@ def boucleDeJeu():
   #+end_src
 
 - Crée une fonction =demanderRejouer()=. Elle devra :
-  - Demander à l'utilisateur s'il veut rejouer tant que sa réponse n'est ni 'o' ni 'n'. Il devra taper 'o' s'il veut et 'n' s'il veut arrêter.
+  - Demander à l'utilisateur s'il veut rejouer tant que sa réponse n'est ni 'o' ni 'n'. Il devra taper 'o' s'il veut rejouer et 'n' s'il veut arrêter.
   - Retourner True si l'utilisateur veut rejouer et False sinon.
 
 - Crée une fonction =jeu()= :
-  - Crée une variable =rejouer= égale à True au début.
-  - Crée une boucle qui, tant que =rejouer= est égale à True:
-    - appelle la fonction =initialiserGrille()=
-    - stocke le résultat de la fonction =boucleDeJeu()= dans une variable =gagnant=.
-    - affiche la fin du jeu avec la fonction =afficherFinDuJeu()=.
-    - Demande à l'utilisateur s'il veut rejouer avec la fonction =demanderRejouer()= en récupérant le résultat de cette fonction dans la variable =rejouer=.
+  - Tant que l'utilisateur veut rejouer, il faut :
+    - Initialiser la grille en utilisant la fonction adéquate.
+    - Appeler la fonction =boucleDeJeu()= et recuperer son resultat.
+    - Afficher le message de fin de partie en utlisant la fonction adéquate.
+    - Demander à l'utilisateur s'il veut rejouer en utilisant la fonction adéquate.
   - Quand on sort de la boucle, cela veut dire que l'utilisateur ne veut plus jouer. Dans ce cas, il faudra juste afficher "Au revoir !".
+
+** Étape 5 : Déroulement d'une partie
+Dans cette étape nous allons commencer la fonction principale =boucleDeJeu()=. Nous allons préparer la logique et nous coderons les fonctions intérmédiaires au fur et à mesure des étapes suivantes.
+
+Pour commencer, nous allons déclarer les fonctions utilisées dans =boucleDeJeu()= sans pour autant en écrire le code, avec le mot-clé =pass= :
+- Crée une fonction =quiGagne()=.
+- Crée une fonction =verifierGrillePleine()=.
+- Crée une fonction =jouerLeTour()= qui prend en paramètre =joueur=.
+
+Définissons maintenant la logique de la boucle de jeu :
+- Nous avons besoin d'un variable qui contiendra simplement le numéro du joueur qui doit jouer. Cette variable sera toujours égale à 1 au début d'un partie (le joueur 1 commence).
+- Tant que personne n'a gagné (on vérifie avec la fonction =quiGagne()= et que la grille n'est pas pleine (=verifierGrillePleine()=), il faut :
+  - Afficher la grille.
+  - Jouer le tour du joueur actuel (sans oublier de préciser quel joueur).
+  - Inverser le numéro du joueur (la variable devient 2 si on fait jouer 1 et vice-versa).
+- Quand c'est fini, cela signifie que quelqu'un a gagné ou qu'il y a match nul. Il faudra simplement finir la partie en retournant la valeur du gagnant.
+
+** Étape 6 : Déroulement d'un tour
+Nous allons maintenant coder le déroulement d'un tour. Voici ce qu'il se passe à chaque tour :
+- On demande à un joueur de choisir la colonne où placer son jeton. On lui redemande tant qu'il choisi une colonne inexistante (<0 ou >6).
+- On trouve quelle ligne est la première ligne libre (en partant du bas) de la colonne choisie.
+- On place le jeton du joueur dans la grille, aux coordonnées ainsi trouvées.
+
+Commençons par la fonction qui demande la colonne au joueur :
+- Crée une fonction =demanderColonne()= qui prend en paramètre =joueur=. Cette fonction doit :
+  - Afficher un message demandant au joueur de choisir sa colonne (préciser à quel joueur on demande pour que ce soit plus clair).
+  - Récupérer son choix et le convertir en entier.
+  - Recommencer tant que le choix de colonne est incorrect (afficher un message précisant pourquoi on redemande au joueur un numéro de colonne).
+  - Retourner le choix de l'utilisateur.
+
+Passons maintenant à la fonction qui trouve la ligne libre d'une colonne. Nous allons devoir coder une fonction qui parcourt chaque ligne de la grille pour vérifier si la colonne choisie est libre sur cette ligne. (Voir le fonctionnement de la grille à l'étape 1 pour savoir si une case est libre).
+
+Il faudra garder la dernière ligne libre trouvée, car le parcours de la liste se fait de haut en bas et que nous devons placer les jetons le plus bas possible. Pour faire ça, nous devrons utiliser une variable =premiereLigneLibre= qui s'actualisera chaque fois que l'on trouve une ligne libre.
+- Crée une fonction =ligneLibreDeLaColonne()= qui prend en paramètre la =colonne=. Dans cette fonction :
+  - Initialise la variable =premiereLigneLibre= à *-1*. Cela permettra de déterminer si une colonne n'est pas libre. En effet, si nous mettons 0, cela correspond en fait à la ligne 0 et la fonction trouvera toujours une ligne libre même si c'est faux !
+  - Parcours toutes les lignes de la liste. Pour chaque ligne, si la =colonne= est libre, alors =premiereLigneLibre= prend la valeur de cette ligne.
+  - Après avoir parcouru toute la liste, retourne la valeur de =premiereLigneLibre=.
+
+La dernière fonction intermédiaire pour un tour sera la fonction =placerJeton(joueur, coordonnees)=. Cette fonction placera simplement le numéro du joueur à un endroit défini dans la liste.
+- Crée une fonction =placerJeton()= qui prend un paramètres :
+  - =joueur= : c'est le numéro du joueur
+  - =coordonnees= : l'endroit où placer le jeton, sous forme d'un tuple =(ligne, colonne)=
+- La fonction comportera une seule ligne qui permettra de placer =joueur= dans la grille aux coordonnées données.
+
+Enfin, nous allons pouvoir créer la fonction qui fait jouer le tour au joueur :
+- Crée une fonction =jouerLeTour()= qui prend en paramètre =joueur=. Voici la logique de la fonction :
+  - Tant que la =ligne= vaut *-1* (c'est à dire est incorrecte) :
+    - Demander la colonne au joueur (récupérer le résultat).
+    - Trouver la ligne libre pour cette colonne (récupérer le résultat).
+    - Si la ligne vaut encore *-1* dire au joueur que la colonne qu'il a choisie n'est plus libre.
+  - Quand on a trouvé la ligne correspondant à la colonne choisie, placer le jeton du joueur aux coordonnées trouvées.
+
+Nous avons fini de créer le déroulement d'un tour. Dans la prochaine étape, nous nous attaquerons à la fonction qui trouve le gagnant.
+
+* Chapitre 8 Bis : Boids
+:PROPERTIES:
+:custom_id: chapitre8bis
+:END:
