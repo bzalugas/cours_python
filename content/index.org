@@ -238,7 +238,7 @@ age = int(input("Entrez votre âge : "))
 print("Tu es né en %s !" % (2022 - age))
 #+end_src
 
-Pour le moment, cela suffira pour créer des programmes plus intéractifs, mais nous reverrons plus en détail les conversions en python dans le chapitre 4.
+Pour le moment, cela suffira pour créer des programmes plus intéractifs, mais nous reverrons plus en détail les conversions en python dans le chapitre 4 (cours 13).
 *** Exercices
 1. Dans un programme nommé =carte_identite.py= :
    - Pour chaque information à demander à l'utilisateur, il faudra utiliser =input()= avec une question appropriée.
@@ -253,6 +253,10 @@ Pour le moment, cela suffira pour créer des programmes plus intéractifs, mais 
 :PROPERTIES:
 :custom_id: chapitre3
 :END:
+** Cours 9 : Turtle
+:PROPERTIES:
+:custom_id: chapitre3_cours9
+:END:
 *** Manuel
 - *"Dessiner avec une tortue"*, p.49 - p.56
 *** Exercices
@@ -266,14 +270,192 @@ Pour le moment, cela suffira pour créer des programmes plus intéractifs, mais 
 :PROPERTIES:
 :custom_id: chapitre4
 :END:
+** Cours 10 : if
+:PROPERTIES:
+:custom_id: chapitre4_cours10
+:END:
+*** Manuel
+- *"Poser des questions avec if et else"*, p. 59
+- *"Intructions if"*, p.60
+- *"Un bloc est un groupe d'instructions"*, p.60
+- *"Des conditions pour comparer des choses"*, p.62
+*** Exercices
+1. Dans un programme nommé =boutique.py= :
+   - Demande à l'utilisateur un nombre entier correspondant à la somme d'argent qu'il a et stocke sa réponse dans une variable =euros=.
+   - Si =euros= est supérieure à 2, le programme doit afficher "Tu peux t'acheter des chewing-gums" puis enlever 2 à =euros=.
+   - Si =euros= est supérieure à 30, le programme devra aussi afficher "Tu peux t'acheter des légos" puis enlever 30 à =euros=.
+   - Si =euros= est supérieure à 350, le programme devra aussi afficher "Tu peux t'acheter une playstation" puis enlever 350 à =euros=.
+   - Si =euros= est supérieure à 5000000, le programme devra aussi afficher "Tu es trop riche et tu donnes toute ta fortune !" puis =euros= devra être mise à 0.
+   - Enfin, affiche "Il me reste <euros>" en remplaçant =euros= par ce qu'il y a dans la variable.
+
+2. Dans un programme nommé =montagnes_russes.py= :
+   - Demande à l'utilisateur son âge puis sa taille et stocke ses réponses dans des variables =age= et =taille=.
+   - Crée une condition qui affiche "Tu es trop jeune pour faire les montagnes russes." si =age= est strictement inférieure à 7 ans.
+   - Crée une condition qui affiche "Tu as le bon âge pour faire les montagnes russes." si =age= est supérieure ou égale à 7 ans.
+   - Crée une condition qui affiche "Tu es trop petit pour faire les montagnes russes." si =taille= est strictement inférieure à 60cm.
+   - Crée une condition qui affiche "Tu es trop petit pour faire les montagnes russes sans être accompagné." si =taille= est entre 60cm inclus et 80cm exclus.
+   - Crée une condition qui affiche "Tu as la vonne taille pour faire les montagnes russes sans être accompagné." si =taille= est supérieure ou égale à 80cm.
+
+3. Dans un programme nommé =formes.py= :
+   - Demande à l'utilisateur un nombre entier que tu stockeras dans une variable =nb_cotes=.
+   - Demande à l'utilisateur un autre nombre entier que tu stockeras dans une variable =taille_cote=.
+   - Si =nb_cotes= est égale à 3, une tortue doit dessiner un triangle dont les côtés sont égaux à =taille_cote=.
+   - Si =nb_cotes= est égale à 4, une tortue doit dessiner un carré dont les côtés sont égaux à =taille_cote=.
+   - Si =nb_cotes= est égale à 5, une tortue doit dessiner un pentagone dont les côtés doivent être égaux à =taille_cote=.
+   - Si =nb_cotes= est strictement inférieure à 3, affiche "Nombre de côtés trop petit.".
+   - Si =nb_cotes= est strictement supérieure à 5, affiche "Nombre de côtés trop grand.".
+
+** Cours 11 : if, elif, else
+:PROPERTIES:
+:custom_id: chapitre4_cours11
+:END:
+*** Manuel
+- *"Instructions si-alors-sinon"*, p.64
+- *"Instructions if et elif"*, p.65
+*** Exercices
+1. Dans un programme nommé =dragon.py= :
+   - Affiche "Tu te trouves dans une pièce obscure d'un mystérieux château.".
+   - Affiche "Tu dois choisir entre trois portes. Choisis 1, 2 ou 3... " et récupère la réponse de l'utilisateur dans une variable =choix=.
+   - Si le joueur a choisi la porte 1, affiche "Tu as trouvé un trésor, tu es riche !".
+   - Si le joueur a choisi la porte 2, affiche "La porte s'ouvre et un ogre affamé te donne un coup de massue. Perdu !".
+   - Si le joueur a choisi la porte 3, affiche "Il y a un dragon dans cette pièce. Le dragon se réveille et te mange. Il te trouve délicieux... Perdu !".
+   - Si le joueur a choisi autre chose, affiche "Désolé, il faut entrer 1, 2 ou 3.".
+
+2. Dans un programme nommé =endroit_secret.py= :
+   - Crée une variable =mot_secret= égale au mot de ton choix.
+   - Crée une variable =humeur_gardien= égale à un entier entre 0 et 10.
+   - Demande à l'utilisateur d'entrer son mot secret et stocke-le dans une variable =mot_utilisateur=.
+   - En utilisant =if=, =elif= et =else=, implémente les conditions suivantes :
+     - Si le =mot_utilisateur= est égal au =mot_secret=, affiche "Bienvenue, vous êtes VIP !".
+     - Si le =mot_utilisateur= est différent de =mot_secret=, il y a 3 possibilités :
+       - Soit le gardien est de mauvaise humeur (=humeur_gardien= inférieure à 3). Dans ce cas, affiche "Veuillez procéder à une vérification des papiers.".
+       - Soit le gardien est de bonne humeur (=humeur_gardien= supérieure à 7). Dans ce cas, affiche "Bienvenue, mais vous n'êtes pas VIP.".
+       - Soit le gardien est neutre. Dans ce cas, affiche "Veuillez prendre connaissance des règles avant d'entrer.".
+
+** Cours 12 : and, or
+:PROPERTIES:
+:custom_id: chapitre4_cours12
+:END:
+*** Manuel
+- *"Combiner des conditions"*, p.66
+*** Exercices
+1. Dans un programme nommé =montagnes_russes2.py= :
+   - Demande à l'utilisateur son âge puis sa taille et stocke ses réponses dans des variables =age= et =taille=.
+   - En utilisant seulement deux =if= et en utilisant =and= et =or=, implémente les conditions suivantes :
+     - Si =age= est supérieure ou égale à 7 et =taille= est supérieure ou égale à 80, affiche "Tu peux faire les montagnes russes.".
+     - Si =age= est inférieure à 7 ou =taille= est inférieure à 80, affiche "Tu ne peux pas faire les montagnes russes.".
+
+** Cours 13 : Types de données et conversions
+:PROPERTIES:
+:custom_id: chapitre4_cours13
+:END:
+*** Manuel
+- *"Variables sans valeur : None"*, p.66
+- *"Différence entre chaînes et nombres"*, p.67
+*** Exercices
+1. Dans un programme nommé =types.py= :
+   - Demande à l'utilisateur un nombre entier et stocke-le dans une variable =entier_str=.
+   - Demande à l'utilisateur un nombre décimal et stocke-le dans une variable =decimal_str=.
+   - Demande à l'utilisateur un mot de son choi et stocke-le dans une variable =mot=.
+   - Convertis =entier_str= en entier dans une variable =entier=.
+   - Convertis =decimal_str= en nombre décimal dans une variable =decimal=.
+   - Si le nombre entier est égal à ton âge, affiche "Bravo tu es tombé sur mon âge !".
+   - Si le nombre décimal est égal à 23.23, affiche "Bravo tu as trouvé le nombre auquel je pensais !".
+   - Si le mot est égal à ton prénom, affiche "Bravo tu as trouvé mon prénom !".
+   - Demande à nouveau un nombre entier à l'utilisateur et stocke-le directement sous forme de nombre entier dans une variable =entier2=.
+   - Affiche le contenu de =entier2=.
+   - Essaye ton programme en entrant un mot au lieu d'un nombre entier au début. Que se passe-t-il ?
+
 * Chapitre 5 : Les boucles
 :PROPERTIES:
 :custom_id: chapitre5
 :END:
+** Cours 14 : Les boucles for
+:PROPERTIES:
+:custom_id: chapitre5_cours14
+:END:
+*** Manuel
+- *"Tourner en boucle"*, p.73
+- *"Utiliser les boucles for"*, p.74
+*** Exercices
+1. Dans un programme nommé =repetition.py= :
+   - Demande à l'utilisateur un nombre entier et stocke-le dans une variable =nombre=.
+   - Fais une boucle =for= qui affiche =nombre= fois "Je n'aurais plus jamais besoin de me répéter".
+   - Fais une boucle =for= qui affiche tous les nombres de 0 à =nombre= inclus.
+   - Fais une boucle =for= qui affiche tous les nombres de 0 à =nombre= exclus.
+   - Crée une liste =liste=.
+   - Fais une boucle =for= qui demande =nombre= fois à l'utilisateur d'entrer un mot qui s'ajoutera à la liste.
+   - Fais une boucle =for= qui affiche chaque élément de la liste ligne par ligne.
+
+2. Dans un programme nommé =pairs.py= :
+   - Affiche tous les nombres pairs de 0 à 20 en utilisant une boucle =for=.
+
+3. Dans un programme nommé =repetortue.py= :
+   - Crée deux variables : =distance= et =angle= et demande à l'utilisateur d'entrer leurs valeurs (nombres entiers uniquement).
+   - Dans une boucle =for=, fais avancer la tortue de =distance= pixels et fais-la tourner de =angle= degrés.
+   - Essaie différentes valeurs pour =distance= et =angle= pour voir ce qu'il se passe de différent.
+
+4. Dans un programme nommé =cerlce.py= :
+   - Fais dessiner à une tortue un cercle à l'aide d'une boucle =for=.
+
+5. Dans un programme =spirale.py= :
+   - Fais dessiner à une tortue une spirale à l'aide d'une boucle =for=.
+
+6. (À FAIRE EN GROUPE). Dans un programme nommé =fibonacci.py= :
+   - Fais un programme qui calcule les 10 premiers nombres de la suite de fibonacci en utilisant une boucle =for=. La suite de Fibonacci est : 1, 1, 2, 3, 5, 8, 13, 21, 34, 55,... Les deux premiers nombres de la suite sont toujours 1 et 1, puis ensuite chaque nombre est égal aux deux précédents.
+   - (BONUS) : Fais avancer une tortue de chaque valeur de la suite de Fibonacci en la faisant tourner à chaque fois de 90°.
+
+** Cours 15 : Boucles while
+:PROPERTIES:
+:custom_id: chapitre5_cours15
+:END:
+*** Manuel
+- *"Tant que nous parlons de boucles : while"*, p.81
+*** Exercices
+1. Dans un programme nommé =repetition_while.py= :
+   - Demande à l'utilisateur un nombre entier et stocke-le dans une variable =nombre=.
+   - Fais une boucle =while= qui affiche =nombre= fois "Je n'aurais plus jamais besoin de me répéter".
+   - Fais une boucle =while= qui affiche tous les nombres de 0 à =nombre= inclus.
+   - Fais une boucle =while= qui affiche tous les nombres de 0 à =nombre= exclus.
+   - Crée une liste =liste=.
+   - Fais une boucle =while= qui demande =nombre= fois à l'utilisateur d'entrer un mot qui s'ajoutera à la liste.
+   - Fais une boucle =while= qui affiche chaque élément de la liste ligne par ligne.
+
+2. Dans un programme nommé =compte_a_rebours.py= :
+   - Demande à l'utilisateur un nombre entier de son choix et stocke-le dans une variable =nombre=
+   - Fais une boucle =while= qui, tant que =nombre= est strictement supérieur à 0 :
+     - Affiche =nombre= - 1
+     - Demande à l'utilisateur s'il veut continuer. Si l'utilisateur tape *'non'*, alors le programme s'arrête.
+     - Sinon, =nombre= prend la valeur =nombre= - 1
+
 * Chapitre 6 : Mise en pratique
 :PROPERTIES:
 :custom_id: chapitre6
 :END:
+** Cours 16 : Nombre secret
+:PROPERTIES:
+:custom_id: chapitre6_cours16
+:END:
+*** Exercice
+Dans un programme nommé =nombre_secret.py= :
+- Fais un jeu où l'ordinateur choisit un nombre aléatoire et le joueur doit le deviner.
+- Le programme doit choisir un nombre aléatoire entre 1 et 10 en utilisant random.randint(nombre_minimum, nombre_maximum) (n'oublie pas d'importer le module random)
+- Le joueur doit avoir 4 essais pour deviner le nombre.
+- Une fois qu'une partie est terminée (gagnée ou perdue), une nouvelle partie doit se relancer automatiquement.
+- Le nombre d'essai et le minimum et maximum du nombre secret doivent être stockés dans des variables au début du programme et qui doivent être utilisées au bon endroit dans le programme afin de permettre de choisir le nombre d'essai, le minimum et le maximum en changeant seulement la variable au début du programme.
+- A chaque essai, le programme doit :
+  - Dire au joueur entre combien et le minimum et maximum du nombre secret.
+  - Demander au joueur un nombre.
+  - Si le nombre entré par le joueur est le bon, le jeu doit féliciter le joueur.
+  - Si le nombre entré est plus petit ou plus grand, le jeu doit informer le joueur et commencer un nouvel essai s'il en reste au joueur.
+  - Si le nombre n'est pas le bon est qu'il s'agissait du dernier essai, le jeu doit informer le joueur qu'il a perdu.
+
+*** BONUS
+- Si le joueur a gagné, le jeu doit se relancer avec une plus grande difficulté (moins d'essais, nombre secret maximum plus grand, ...)
+- Si le joueur a perdu, le jeu doit baisser la difficulté ou retourner à la difficulté originale.
+- Des messages cachés qui ne s'affichent que si l'on réussit un certain niveau ou si on trouve le nombre secret du premier coup.
+
+
 * Chapitre 7 : Les fonctions
 :PROPERTIES:
 :custom_id: chapitre7
