@@ -392,7 +392,7 @@ L'important est de visualiser à peu près comment sera notre programme.
       - =ligneLibreDeLaColonne(colonne)= : cette fonction renverra le numéro de la ligne libre de la colonne choisie par le joueur. Elle sera utilisée dans la fonction =remplirGrille(joueurActuel)=.
       - =placerJeton(joueur, coordonnees)= : cette fonction permet de placer le jeton du =joueur= passé en paramètre à l'endroit de la grille indiqué par =coordonnees=. =coordonnees= sera un tuple qui aura cette forme : =(ligne, colonne)=. Elle sera utilisée dans la fonction =remplirGrille(joueurActuel)=.
     - =recupererSymbole(numeroJoueur)= : cette fonction renvoie simplement le symbole correspondant au numéro du joueur passé en paramètre. Si le numéro n'est ni 1 ni 2 alors la fonction renverra un espace *' '*. Par exemple, si nous utilisons 'X' pour le joueur 1 et 'O' pour le joueur 2, la fonction =recupererSymbole(1)= renverra *'X'*.
-  - =afficherFinDuJeu(gagnant)= : cette fonction fera l'affichage de la fin du jeu en félicitant le gagant s'il y en a un et en disant qu'il y a match nul sinon.
+  - =afficherFinDePartie(gagnant)= : cette fonction fera l'affichage de la fin du jeu en félicitant le gagant s'il y en a un et en disant qu'il y a match nul sinon.
   - =demanderRejouer()= : cette fonction demandera aux joueurs s'ils veulent rejouer et renvoie True ou False en fonction de leur réponse.
 
 ** Étape 2 : Définir les variables globales
@@ -423,6 +423,7 @@ Nous n'aurons pas besoin d'autres variables globales pour le moment.
 :PROPERTIES:
 :custom_id: chapitre8_etape3
 :END:
+*** Affichage des symboles des joueurs
 - Crée une fonction =recupererSymbole(numeroJoueur)=. La logique de cette fonction sera :
   #+begin_example
 si numeroJoueur est égal à 1:
@@ -433,6 +434,7 @@ sinon
     renvoyer le caractère 'espace'
   #+end_example
 
+*** Affichage de la grille
 - Crée une fonction =afficherGrille()=. Cette fonction doit simplement afficher toutes les cases de la grille =grille= (variable globale) pour que ce soit compréhensible pour les joueurs. Il faudra pour cela utiliser une double boucle pour parcourir chaque "case" de la liste. Pour chaque case, on doit afficher le symbole correspondant au pion du joueur placé. Dans notre cas, si c'est 1 il faudra afficher 'X'.
   Ensuite on peut ajouter des caractères pour bien séparer chaque case. Voici un exemple d'affichage :
 
@@ -455,8 +457,8 @@ affichage += " 0 1 2 3 4 5 6" #Cet affichage servira pour que les joueurs connai
 print(affichage)
   #+end_src
 
-
-- Crée une fonction =afficherFinDuJeu= qui prend en paramètre une variable =gagnant=. Cette fonction doit :
+*** Affichage de fin de partie
+- Crée une fonction =afficherFinDePartie= qui prend en paramètre une variable =gagnant=. Cette fonction doit :
   - Afficher la grille.
   - Afficher un texte qui dit quel joueur a gagné. Dans le cas où c'est un match nul, =gagnant= aura comme valeur *0*. Ne pas oublier ce cas-là !
 
@@ -501,11 +503,13 @@ def boucleDeJeu():
 :END:
 Dans cette étape nous allons commencer la fonction principale =boucleDeJeu()=. Nous allons préparer la logique et nous coderons les fonctions intérmédiaires au fur et à mesure des étapes suivantes.
 
+*** Fonctions intermédiaires
 Pour commencer, nous allons déclarer les fonctions utilisées dans =boucleDeJeu()= sans pour autant en écrire le code, avec le mot-clé =pass= :
 - Crée une fonction =joueurGagne()= qui prend en paramètre =joueur=.
 - Crée une fonction =verifierGrillePleine()=.
 - Crée une fonction =jouerLeTour()= qui prend en paramètre =joueur=.
 
+*** Boucle du jeu
 Définissons maintenant la logique de la boucle de jeu :
 - Modifie la fonction =boucleDeJeu()= en enlevant l'instruction =pass=
 - Nous avons besoin d'une variable qui contiendra le numéro du joueur qui doit jouer. Cette variable sera toujours égale à 1 au début d'un partie (le joueur 1 commence).
@@ -525,6 +529,7 @@ Nous allons maintenant coder le déroulement d'un tour. Voici ce qu'il se passe 
 - On trouve quelle ligne est la première ligne libre (en partant du bas) de la colonne choisie.
 - On place le jeton du joueur dans la grille, aux coordonnées ainsi trouvées.
 
+*** Demander la colonne
 Commençons par la fonction qui demande la colonne au joueur :
 - Crée une fonction =demanderColonne()= qui prend en paramètre =joueur=. Cette fonction doit :
   - Afficher un message demandant au joueur de choisir sa colonne (préciser à quel joueur on demande pour que ce soit plus clair).
@@ -532,6 +537,7 @@ Commençons par la fonction qui demande la colonne au joueur :
   - Recommencer tant que le choix de colonne est incorrect (afficher un message précisant pourquoi on redemande au joueur un numéro de colonne).
   - Retourner le choix de l'utilisateur.
 
+*** Trouver la ligne où placer le jeton
 Passons maintenant à la fonction qui trouve la ligne libre d'une colonne. Nous allons devoir coder une fonction qui parcourt chaque ligne de la grille pour vérifier si la colonne choisie est libre sur cette ligne. (Voir le fonctionnement de la grille à l'étape 1 pour savoir si une case est libre).
 
 Il faudra garder la dernière ligne libre trouvée, car le parcours de la liste se fait de haut en bas et que nous devons placer les jetons le plus bas possible. Pour faire ça, nous devrons utiliser une variable =premiereLigneLibre= qui s'actualisera chaque fois que l'on trouve une ligne libre.
@@ -540,12 +546,14 @@ Il faudra garder la dernière ligne libre trouvée, car le parcours de la liste 
   - Parcours toutes les lignes de la liste. Pour chaque ligne, si la =colonne= est libre, alors =premiereLigneLibre= prend la valeur de cette ligne.
   - Après avoir parcouru toute la liste, retourne la valeur de =premiereLigneLibre=.
 
+*** Placer le jeton
 La dernière fonction intermédiaire pour un tour sera la fonction =placerJeton(joueur, coordonnees)=. Cette fonction placera simplement le numéro du joueur à un endroit défini dans la liste.
 - Crée une fonction =placerJeton()= qui prend un paramètres :
   - =joueur= : c'est le numéro du joueur
   - =coordonnees= : l'endroit où placer le jeton, sous forme d'un tuple =(ligne, colonne)=
 - La fonction comportera une seule ligne qui permettra de placer =joueur= dans la grille aux coordonnées données.
 
+*** Jouer le tour
 Enfin, nous allons pouvoir créer la fonction qui fait jouer le tour au joueur :
 - Modifie la fonction =jouerLeTour()= précédemment créée en supprimant le mot-clé =pass=. Voici la logique de la fonction :
   - Tant que la =ligne= vaut *-1* (c'est à dire est incorrecte) :
@@ -564,13 +572,16 @@ Désormais, on peut faire jouer un tour à un joueur. Il faut maintenant que l'o
 
 Pour cela, nous utiliserons deux fonctions différentes : une première qui permet de vérifier si un joueur passé en paramètre a gagné et une seconde qui permet de vérifier si la grille est pleine.
 
+*** Trouver un alignement
 Nous allons commencer par déterminer si un joueur a gagné. Pour cela, nous devons créer 3 fonctions intermédiaires :
 - =verifierHorizontalement(joueur)= : cette fonction vérifie si le joueur spécifié passé en paramètre a un *alignement horizontal* de 4 jetons. Pour cela, il faut parcourir toutes les lignes de la liste pour vérifier si le numéro du joueur apparaît 4 fois de suite dans la ligne.
 - =verifierVerticalement(joueur)= : cette fonction vérifie si le joueur spécifié a un *alignement vertical* de 4 jetons. Il faudra parcourir chaque colonne de la liste pour vérifier si le numéro du joueur apparaît 4 fois de suite dans la colonne. *Conseil* : pas besoin de commencer la vérification au-delà de la 3^{ème} ligne, car ce n'est plus possible d'aligner 4 pions sur 3 lignes !
 - =verifierDiagonale(joueur)= : cette fonction vérifie si le joueur spécifié a un *aligement en diagonale* de 4 jetons. Il faudra parcourir toute la liste en cherchant si le numéro du joueur apparaît 4 fois de suite dans une diagonale *ou dans l'autre*. En effet, n'oublie pas les deux sens possibles d'une diagonale ! Cette fonction sera un peu plus difficile que les autres, je te conseille de commencer par essayer de parcourir les diagonales de la liste en faisant des tests d'affichage.
 
+*** Le joueur a-t-il a gagné ?
 Maintenant que nous avons codé nos 3 fonctions intermédiaires, nous pouvons modier la fonction =joueurGagne(joueur)=. La fonction doit maintenant renvoyer =True= si le =joueur= a un alignement horizontal, vertical ou en diagonale. Sinon, elle renvoie =False=.
 
+*** Match nul ?
 Enfin, il nous manque la fonction qui vérifie s'il y a *match nul*. Nous savons qu'il y a match nul si la grille est remplie et que personne n'a gagné. Alors, nous avons simplement besoin d'une fonction qui vérifie si la grille est pleine :
 - Modifie la fonction =verifierGrillePleine()=. Elle doit parcourir la première ligne de la grille (car ce sera la dernière à être remplie). Si une case est libre, alors la grille n'est pas pleine : il faut renvoyer =False=. Si la grille est pleine, il faudra renvoyer =True=.
 
