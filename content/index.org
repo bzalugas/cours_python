@@ -435,35 +435,6 @@ sinon
   #+end_example
 
 *** Affichage de la grille
-- Crée une fonction =afficherGrille()=. Cette fonction doit simplement afficher toutes les cases de la grille =grille= (variable globale) pour que ce soit compréhensible pour les joueurs. Il faudra pour cela utiliser une double boucle pour parcourir chaque "case" de la liste. Pour chaque case, on doit afficher le symbole correspondant au pion du joueur placé. Dans notre cas, si c'est 1 il faudra afficher 'X'.
-  Ensuite on peut ajouter des caractères pour bien séparer chaque case. Voici un exemple d'affichage :
-
-Début de partie :
-[[./img/exemple_vide.png]]
-
-Après quelques tours :
-[[./img/exemple_tours.png]]
-
-Tu peux t'inspirer de ce code mais tu dois comprendre comment parcourir la grille pour pouvoir faire la suite :
-  #+begin_src python
-affichage = "\n_______________\n"
-for ligne in range(len(grille)):
-    # par exemple affichage += |
-    for colonne in range(len(grille[ligne])):
-        affichage += recupererSymbole(grille[ligne][colonne]) #ici on récupère le symbole correspondant au chiffre placé dans la grille.
-    affichage += "\n"
-affichage += "---------------"
-affichage += " 0 1 2 3 4 5 6" #Cet affichage servira pour que les joueurs connaissent le numéro des colonnes
-print(affichage)
-  #+end_src
-
-*** Affichage de fin de partie
-- Crée une fonction =afficherFinDePartie= qui prend en paramètre une variable =gagnant=. Cette fonction doit :
-  - Afficher la grille.
-  - Afficher un texte qui dit quel joueur a gagné. Dans le cas où c'est un match nul, =gagnant= aura comme valeur *0*. Ne pas oublier ce cas-là !
-
-*Tu peux tester tes fonctions d'affichage en les appelant dans le programme, pour être sûr que ce qui est affiché correspond bien à ce que tu voulais.*
-
 - Crée une fonction =initialiserGrille()= qui utilisera la variable globale =grille= pour lui redonner sa valeur par défaut :
   #+begin_src python
 global grille
@@ -474,6 +445,35 @@ grille = [[0,0,0,0,0,0,0],
           [0,0,0,0,0,0,0],
           [0,0,0,0,0,0,0]]
   #+end_src
+
+- Crée une fonction =afficherGrille()=. Cette fonction doit simplement afficher toutes les cases de la grille =grille= (variable globale) pour que ce soit compréhensible pour les joueurs. Il faudra pour cela utiliser une double boucle pour parcourir chaque "case" de la liste. Pour chaque case, on doit afficher le symbole correspondant au pion du joueur placé. Dans notre cas, si c'est 1 il faudra afficher 'X'.
+  Ensuite on peut ajouter des caractères pour bien séparer chaque case. *Voici un exemple d'affichage* :
+
+Début de partie :
+[[./img/exemple_vide.png]]
+
+Après quelques tours :
+[[./img/exemple_tours.png]]
+
+# Tu peux t'inspirer de ce code mais tu dois comprendre comment parcourir la grille pour pouvoir faire la suite :
+#   #+begin_src python
+# affichage = "\n_______________\n"
+# for ligne in range(len(grille)):
+#     # par exemple affichage += |
+#     for colonne in range(len(grille[ligne])):
+#         affichage += recupererSymbole(grille[ligne][colonne]) #ici on récupère le symbole correspondant au chiffre placé dans la grille.
+#     affichage += "\n"
+# affichage += "---------------"
+# affichage += " 0 1 2 3 4 5 6" #Cet affichage servira pour que les joueurs connaissent le numéro des colonnes
+# print(affichage)
+#   #+end_src
+
+*** Affichage de fin de partie
+- Crée une fonction =afficherFinDePartie= qui prend en paramètre une variable =gagnant=. Cette fonction doit :
+  - Afficher la grille.
+  - Afficher un texte qui dit quel joueur a gagné. Dans le cas où c'est un match nul, =gagnant= aura comme valeur *0*. Ne pas oublier ce cas-là !
+
+*Tu peux tester tes fonctions d'affichage en les appelant dans le programme, pour être sûr que ce qui est affiché correspond bien à ce que tu voulais.*
 
 ** Étape 4 : Définir les fonctions pour lancer le jeu
 :PROPERTIES:
@@ -540,18 +540,19 @@ Commençons par la fonction qui demande la colonne au joueur :
 *** Trouver la ligne où placer le jeton
 Passons maintenant à la fonction qui trouve la ligne libre d'une colonne. Nous allons devoir coder une fonction qui parcourt chaque ligne de la grille pour vérifier si la colonne choisie est libre sur cette ligne. (Voir le fonctionnement de la grille à l'étape 1 pour savoir si une case est libre).
 
-Il faudra garder la dernière ligne libre trouvée, car le parcours de la liste se fait de haut en bas et que nous devons placer les jetons le plus bas possible. Pour faire ça, nous devrons utiliser une variable =premiereLigneLibre= qui s'actualisera chaque fois que l'on trouve une ligne libre.
-- Crée une fonction =ligneLibreDeLaColonne()= qui prend en paramètre la =colonne=. Dans cette fonction :
-  - Initialise la variable =premiereLigneLibre= à *-1*. Cela permettra de déterminer si une colonne n'est pas libre. En effet, si nous mettons 0, cela correspond en fait à la ligne 0 et la fonction trouvera toujours une ligne libre même si c'est faux !
-  - Parcours toutes les lignes de la liste. Pour chaque ligne, si la =colonne= est libre, alors =premiereLigneLibre= prend la valeur de cette ligne.
-  - Après avoir parcouru toute la liste, retourne la valeur de =premiereLigneLibre=.
+Il faudra garder la dernière ligne libre trouvée, car le parcours de la liste se fait de haut en bas et que nous devons placer les jetons le plus bas possible.
+- Crée une fonction =ligneLibreDeLaColonne()= qui prend en paramètre la =colonne=. Cette fonction doit parcourir toutes les lignes de la =colonne= afin de trouver la colonne libre la plus basse. Elle devra renvoyer le numéro de la ligne libre et -1 si aucune ligne n'est libre pour cette =colonne=.
+# - Crée une fonction =ligneLibreDeLaColonne()= qui prend en paramètre la =colonne=. Dans cette fonction :
+  # - Initialise la variable =premiereLigneLibre= à *-1*. Cela permettra de déterminer si une colonne n'est pas libre. En effet, si nous mettons 0, cela correspond en fait à la ligne 0 et la fonction trouvera toujours une ligne libre même si c'est faux !
+  # - Parcours toutes les lignes de la liste. Pour chaque ligne, si la =colonne= est libre, alors =premiereLigneLibre= prend la valeur de cette ligne.
+  # - Après avoir parcouru toute la liste, retourne la valeur de =premiereLigneLibre=.
 
 *** Placer le jeton
-La dernière fonction intermédiaire pour un tour sera la fonction =placerJeton(joueur, coordonnees)=. Cette fonction placera simplement le numéro du joueur à un endroit défini dans la liste.
-- Crée une fonction =placerJeton()= qui prend un paramètres :
-  - =joueur= : c'est le numéro du joueur
-  - =coordonnees= : l'endroit où placer le jeton, sous forme d'un tuple =(ligne, colonne)=
-- La fonction comportera une seule ligne qui permettra de placer =joueur= dans la grille aux coordonnées données.
+La dernière fonction intermédiaire pour un tour sera la fonction =placerJeton(joueur, coordonnees)=. Cette fonction placera simplement le numéro du =joueur= à un l'endroit défini par le tuple =coordonnees=.
+# - Crée une fonction =placerJeton()= qui prend un paramètres :
+#   - =joueur= : c'est le numéro du joueur
+#   - =coordonnees= : l'endroit où placer le jeton, sous forme d'un tuple =(ligne, colonne)=
+# - La fonction comportera une seule ligne qui permettra de placer =joueur= dans la grille aux coordonnées données.
 
 *** Jouer le tour
 Enfin, nous allons pouvoir créer la fonction qui fait jouer le tour au joueur :
@@ -583,7 +584,7 @@ Maintenant que nous avons codé nos 3 fonctions intermédiaires, nous pouvons mo
 
 *** Match nul ?
 Enfin, il nous manque la fonction qui vérifie s'il y a *match nul*. Nous savons qu'il y a match nul si la grille est remplie et que personne n'a gagné. Alors, nous avons simplement besoin d'une fonction qui vérifie si la grille est pleine :
-- Modifie la fonction =verifierGrillePleine()=. Elle doit parcourir la première ligne de la grille (car ce sera la dernière à être remplie). Si une case est libre, alors la grille n'est pas pleine : il faut renvoyer =False=. Si la grille est pleine, il faudra renvoyer =True=.
+- Modifie la fonction =verifierGrillePleine()=. Elle doit renvoyer =True= si la grille est pleine et =False= sinon.
 
 ** Étape 8 : Lancement du jeu !
 :PROPERTIES:
@@ -592,7 +593,6 @@ Enfin, il nous manque la fonction qui vérifie s'il y a *match nul*. Nous savons
 Désormais, il ne nous reste plus qu'à lancer le jeu : appelle simplement la fonction =jeu()= dans le programme !
 
 Quand tu vas tester le jeu, il est très fort probable qu'il y ait des "bugs" et que certaines choses ne fonctionnent pas : c'est normal pour un gros programme. Ne t'inquiètes pas et n'hésite pas à faire plein de tests pour chaque fonction pour trouver d'où vient le problème.
-
 
 * Chapitre 8 Bis : Boids
 :PROPERTIES:
