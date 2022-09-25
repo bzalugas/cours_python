@@ -40,11 +40,20 @@
 <li><a href="#chapitre5">Chapitre 5 : Les boucles</a></li>
 <li><a href="#chapitre6">Chapitre 6 : Mise en pratique</a></li>
 <li><a href="#chapitre7">Chapitre 7 : Les fonctions</a></li>
-<li><a href="#chapitre8">Chapitre 8 : Projets</a>
+<li><a href="#chapitre8">Chapitre 8 : Puissance 4</a>
 <ul>
-<li><a href="#org180c82a">Puissance 4</a></li>
+<li><a href="#chapitre8_règles">Règles du Puissance 4</a></li>
+<li><a href="#chapitre8_etape1">Étape 1 : Définir la structure de notre programme</a></li>
+<li><a href="#chapitre8_etape2">Étape 2 : Définir les variables globales</a></li>
+<li><a href="#chapitre8_etape3">Étape 3 : Définir les fonctions d'affichage</a></li>
+<li><a href="#chapitre8_etape4">Étape 4 : Définir les fonctions pour lancer le jeu</a></li>
+<li><a href="#chapitre8_etape5">Étape 5 : Déroulement d'une partie</a></li>
+<li><a href="#chapitre8_etape6">Étape 6 : Déroulement d'un tour</a></li>
+<li><a href="#chapitre8_etape7">Étape 7 : Y a-t-il un vainqueur ?</a></li>
+<li><a href="#chapitre8_etape8">Étape 8 : Lancement du jeu !</a></li>
 </ul>
 </li>
+<li><a href="#chapitre8bis">Chapitre 8 Bis : Boids</a></li>
 </ul>
 </div>
 </nav>
@@ -107,9 +116,9 @@
 <h3 id="chapitre1_cours1">Cours 1 : Opérateurs arithmétiques</h3>
 <div class="outline-text-3" id="text-chapitre1_cours1">
 </div>
-<div id="outline-container-org618f3e9" class="outline-4">
-<h4 id="org618f3e9">Manuel</h4>
-<div class="outline-text-4" id="text-org618f3e9">
+<div id="outline-container-org3945785" class="outline-4">
+<h4 id="org3945785">Manuel</h4>
+<div class="outline-text-4" id="text-org3945785">
 <ul class="org-ul">
 <li><b>"Calculer avec Python"</b>, p.22</li>
 <li><b>"Les opérateurs de Python"</b>, p.23</li>
@@ -117,9 +126,9 @@
 </ul>
 </div>
 </div>
-<div id="outline-container-orgf22df38" class="outline-4">
-<h4 id="orgf22df38">Exercices</h4>
-<div class="outline-text-4" id="text-orgf22df38">
+<div id="outline-container-org4771c72" class="outline-4">
+<h4 id="org4771c72">Exercices</h4>
+<div class="outline-text-4" id="text-org4771c72">
 <ol class="org-ol">
 <li>Dans un programme nommé <code>cours1.py</code> :
 <ul class="org-ul">
@@ -139,18 +148,18 @@
 <h3 id="chapitre1_cours2">Cours 2 : Variables</h3>
 <div class="outline-text-3" id="text-chapitre1_cours2">
 </div>
-<div id="outline-container-org86f70f2" class="outline-4">
-<h4 id="org86f70f2">Manuel</h4>
-<div class="outline-text-4" id="text-org86f70f2">
+<div id="outline-container-orga669f74" class="outline-4">
+<h4 id="orga669f74">Manuel</h4>
+<div class="outline-text-4" id="text-orga669f74">
 <ul class="org-ul">
 <li><b>"Les variables sont comme des étiquettes"</b>, p.25</li>
 <li><b>"Utiliser les variables"</b>, p.26</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgedf7c89" class="outline-4">
-<h4 id="orgedf7c89">Exercices</h4>
-<div class="outline-text-4" id="text-orgedf7c89">
+<div id="outline-container-org82f11cc" class="outline-4">
+<h4 id="org82f11cc">Exercices</h4>
+<div class="outline-text-4" id="text-org82f11cc">
 <ol class="org-ol">
 <li>Dans un programme nommé <code>variables.py</code> :
 <ul class="org-ul">
@@ -172,9 +181,9 @@
 <h3 id="chapitre2_cours3">Cours 3 : Chaînes de caractères 1</h3>
 <div class="outline-text-3" id="text-chapitre2_cours3">
 </div>
-<div id="outline-container-org6ae2dd7" class="outline-4">
-<h4 id="org6ae2dd7">Manuel</h4>
-<div class="outline-text-4" id="text-org6ae2dd7">
+<div id="outline-container-org5bbdf9d" class="outline-4">
+<h4 id="org5bbdf9d">Manuel</h4>
+<div class="outline-text-4" id="text-org5bbdf9d">
 <ul class="org-ul">
 <li><b>"Les chaînes"</b>, p.32</li>
 <li><b>"Créer des chaînes"</b>, p.32</li>
@@ -182,9 +191,9 @@
 </ul>
 </div>
 </div>
-<div id="outline-container-org742540b" class="outline-4">
-<h4 id="org742540b">Exercices</h4>
-<div class="outline-text-4" id="text-org742540b">
+<div id="outline-container-orgd54fe9b" class="outline-4">
+<h4 id="orgd54fe9b">Exercices</h4>
+<div class="outline-text-4" id="text-orgd54fe9b">
 <ol class="org-ol">
 <li>Dans un programme nommé <code>prenom_nom.py</code> :
 <ul class="org-ul">
@@ -213,18 +222,18 @@
 <h3 id="chapitre2_cours4">Cours 4 : Chaînes de caractères 2</h3>
 <div class="outline-text-3" id="text-chapitre2_cours4">
 </div>
-<div id="outline-container-org2a9487b" class="outline-4">
-<h4 id="org2a9487b">Manuel</h4>
-<div class="outline-text-4" id="text-org2a9487b">
+<div id="outline-container-orge139791" class="outline-4">
+<h4 id="orge139791">Manuel</h4>
+<div class="outline-text-4" id="text-orge139791">
 <ul class="org-ul">
 <li><b>"Insérer des valeurs dans des chaînes"</b>, p.36</li>
 <li><b>"Multiplier des chaînes"</b>, p.37</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org5162e4f" class="outline-4">
-<h4 id="org5162e4f">Exercices</h4>
-<div class="outline-text-4" id="text-org5162e4f">
+<div id="outline-container-org24eb844" class="outline-4">
+<h4 id="org24eb844">Exercices</h4>
+<div class="outline-text-4" id="text-org24eb844">
 <ol class="org-ol">
 <li>Dans un programme nommé <code>prenom_nom_mieux.py</code> :
 <ul class="org-ul">
@@ -262,17 +271,17 @@
 <h3 id="chapitre2_cours5">Cours 5 : Listes 1</h3>
 <div class="outline-text-3" id="text-chapitre2_cours5">
 </div>
-<div id="outline-container-org292029e" class="outline-4">
-<h4 id="org292029e">Manuel</h4>
-<div class="outline-text-4" id="text-org292029e">
+<div id="outline-container-org41f674c" class="outline-4">
+<h4 id="org41f674c">Manuel</h4>
+<div class="outline-text-4" id="text-org41f674c">
 <ul class="org-ul">
 <li><b>"Plus puissantes que les chaînes : les listes"</b>, p.38</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org27472c0" class="outline-4">
-<h4 id="org27472c0">Exercices</h4>
-<div class="outline-text-4" id="text-org27472c0">
+<div id="outline-container-orgb12fdc9" class="outline-4">
+<h4 id="orgb12fdc9">Exercices</h4>
+<div class="outline-text-4" id="text-orgb12fdc9">
 <ol class="org-ol">
 <li>Dans un programme nommé <code>liste_courses.py</code> :
 <ul class="org-ul">
@@ -309,9 +318,9 @@
 <h3 id="chapitre2_cours6">Cours 6 : Listes 2</h3>
 <div class="outline-text-3" id="text-chapitre2_cours6">
 </div>
-<div id="outline-container-orga902a28" class="outline-4">
-<h4 id="orga902a28">Manuel</h4>
-<div class="outline-text-4" id="text-orga902a28">
+<div id="outline-container-org0d75ee9" class="outline-4">
+<h4 id="org0d75ee9">Manuel</h4>
+<div class="outline-text-4" id="text-org0d75ee9">
 <ul class="org-ul">
 <li><b>"Ajouter des éléments à une liste"</b>, p.41</li>
 <li><b>"Supprimer des éléments à une liste"</b>, p.42</li>
@@ -319,9 +328,9 @@
 </ul>
 </div>
 </div>
-<div id="outline-container-org898f6f9" class="outline-4">
-<h4 id="org898f6f9">Exercices</h4>
-<div class="outline-text-4" id="text-org898f6f9">
+<div id="outline-container-org3ac16bf" class="outline-4">
+<h4 id="org3ac16bf">Exercices</h4>
+<div class="outline-text-4" id="text-org3ac16bf">
 <ol class="org-ol">
 <li>Dans un programme nommé <code>liste_eleves.py</code> :
 <ul class="org-ul">
@@ -352,18 +361,18 @@
 <h3 id="chapitre2_cours7">Cours 7 : Tuples et dictionnaires</h3>
 <div class="outline-text-3" id="text-chapitre2_cours7">
 </div>
-<div id="outline-container-orgd8d69ae" class="outline-4">
-<h4 id="orgd8d69ae">Manuel</h4>
-<div class="outline-text-4" id="text-orgd8d69ae">
+<div id="outline-container-org24159ee" class="outline-4">
+<h4 id="org24159ee">Manuel</h4>
+<div class="outline-text-4" id="text-org24159ee">
 <ul class="org-ul">
 <li><b>"Tuples"</b>, p.45</li>
 <li><b>"Dictionnaires"</b>, p.45</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgc06e1ee" class="outline-4">
-<h4 id="orgc06e1ee">Exercices</h4>
-<div class="outline-text-4" id="text-orgc06e1ee">
+<div id="outline-container-orgdea63f3" class="outline-4">
+<h4 id="orgdea63f3">Exercices</h4>
+<div class="outline-text-4" id="text-orgdea63f3">
 <ol class="org-ol">
 <li>Dans un programme nommé <code>tuple.py</code> :
 <ul class="org-ul">
@@ -462,9 +471,9 @@ Pour le moment, cela suffira pour créer des programmes plus intéractifs, mais 
 </p>
 </div>
 </div>
-<div id="outline-container-orgadfbe02" class="outline-4">
-<h4 id="orgadfbe02">Exercices</h4>
-<div class="outline-text-4" id="text-orgadfbe02">
+<div id="outline-container-org7174246" class="outline-4">
+<h4 id="org7174246">Exercices</h4>
+<div class="outline-text-4" id="text-org7174246">
 <ol class="org-ol">
 <li>Dans un programme nommé <code>carte_identite.py</code> :
 <ul class="org-ul">
@@ -486,17 +495,17 @@ Pour le moment, cela suffira pour créer des programmes plus intéractifs, mais 
 <h2 id="chapitre3">Chapitre 3 : Turtle</h2>
 <div class="outline-text-2" id="text-chapitre3">
 </div>
-<div id="outline-container-org3945785" class="outline-4">
-<h4 id="org3945785">Manuel</h4>
-<div class="outline-text-4" id="text-org3945785">
+<div id="outline-container-orgcfd7b54" class="outline-4">
+<h4 id="orgcfd7b54">Manuel</h4>
+<div class="outline-text-4" id="text-orgcfd7b54">
 <ul class="org-ul">
 <li><b>"Dessiner avec une tortue"</b>, p.49 - p.56</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org4771c72" class="outline-4">
-<h4 id="org4771c72">Exercices</h4>
-<div class="outline-text-4" id="text-org4771c72">
+<div id="outline-container-orgb51f5e7" class="outline-4">
+<h4 id="orgb51f5e7">Exercices</h4>
+<div class="outline-text-4" id="text-orgb51f5e7">
 <ol class="org-ol">
 <li>Dans un programme nommé <code>carré.py</code>, fais dessiner un carré à une tortue.</li>
 <li>Dans un programme nommé <code>hexagone.py</code>, fais dessiner un hexagone à une tortue.</li>
@@ -530,18 +539,20 @@ Pour le moment, cela suffira pour créer des programmes plus intéractifs, mais 
 </div>
 
 <div id="outline-container-chapitre8" class="outline-2">
-<h2 id="chapitre8">Chapitre 8 : Projets</h2>
+<h2 id="chapitre8">Chapitre 8 : Puissance 4</h2>
 <div class="outline-text-2" id="text-chapitre8">
-<p>
-Dans ce chapitre, nous allons mettre en applications tout ce que tu as appris dans les chapitres précédents. Pour cela, nous pouvons commencer à créer des petits projets qui t'intéressent. N'hésite pas à proposer à ton professeur un projet, que ce soit un jeu ou un autre programme, que tu aimerais créer.
-</p>
-</div>
 
-<div id="outline-container-org180c82a" class="outline-3">
-<h3 id="org180c82a">Puissance 4</h3>
-<div class="outline-text-3" id="text-org180c82a">
+<figure id="org7d61ca3">
+<img src="./img/puissance4.jpg" alt="puissance4.jpg">
+
+</figure>
+
 <p>
-Dans cette section, nous allons créer un puissance 4. Nous commencerons par le créer à partir des notions que nous avons vues, donc avec une interface en ligne de commande. Par la suite, quand nous étudierons comment créer des interfaces graphiques, nous pourrons revenir sur ce projet pour ajouter des visuels plus intéressants.
+Dans ce chapitre, tu vas mettre en applications tout ce que tu as appris dans les chapitres précédents. Pour cela, tu vas créer un projet de plus grande envergure que les exercices que tu as faits. N'hésite pas à proposer à ton professeur un projet, que ce soit un jeu ou un autre programme, que tu aimerais créer.
+</p>
+
+<p>
+Dans cette section, nous allons créer un <b>Puissance 4</b>. Nous commencerons par le créer à partir des notions que nous avons vues, donc avec une interface en <b>ligne de commande</b>. Par la suite, quand nous étudierons comment créer des interfaces graphiques, nous pourrons revenir sur ce projet pour ajouter des visuels plus intéressants.
 </p>
 
 <p>
@@ -549,28 +560,23 @@ Les consignes qui sont données ici sont là pour t'aider à réaliser le projet
 </p>
 </div>
 
-<div id="outline-container-orgb8fab41" class="outline-4">
-<h4 id="orgb8fab41">Règles du Puissance 4</h4>
-<div class="outline-text-4" id="text-orgb8fab41">
-
-<figure id="org6c75780">
-<img src="./img/puissance4.jpg" alt="puissance4.jpg">
-
-</figure>
-
+<div id="outline-container-chapitre8_règles" class="outline-3">
+<h3 id="chapitre8_règles">Règles du Puissance 4</h3>
+<div class="outline-text-3" id="text-chapitre8_règles">
 <p>
-Le but du jeu est d'aligner une suite de 4 pions de même couleur sur une grille comptant 6 rangées et 7 colonnes. Chaque joueur dispose de 21 pions d'une couleur, en général jaune ou rouge. Tour à tour, les deux joueurs placent un pion dans la colonne de leur choix, le pion coulisse alors jusqu'à la position la plus basse possible dans la dite colonne à la suite de quoi c'est à l'adversaire de jouer. Le vainqueur est le joueur qui réalise le premier un alignement (horizontal, vertical ou diagonal) consécutif d'au moins quatre pions de sa couleur. Si, alors que toutes les cases de la grille de jeu sont remplies, aucun des deux joueurs n'a réalisé un tel alignement, la partie est déclarée nulle.
+Le but du jeu est d'aligner une suite de 4 pions de même couleur sur une grille comptant <b>6 rangées</b> et <b>7 colonnes</b>. Chaque joueur dispose de 21 pions d'une couleur, en général jaune ou rouge. Tour à tour, les deux joueurs placent un pion dans la <b>colonne</b> de leur choix, le pion <b>coulisse alors jusqu'à la position la plus basse possible dans la dite colonne</b> à la suite de quoi c'est à l'adversaire de jouer. Le vainqueur est le joueur qui réalise le premier un <b>alignement (horizontal, vertical ou diagonal) consécutif d'au moins quatre pions de sa couleur.</b> Si, alors que toutes les cases de la grille de jeu sont remplies, aucun des deux joueurs n'a réalisé un tel alignement, la partie est déclarée nulle.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org18474c8" class="outline-4">
-<h4 id="org18474c8">Étape 1 : Définir la structure de notre programme</h4>
-<div class="outline-text-4" id="text-org18474c8">
+<div id="outline-container-chapitre8_etape1" class="outline-3">
+<h3 id="chapitre8_etape1">Étape 1 : Définir la structure de notre programme</h3>
+<div class="outline-text-3" id="text-chapitre8_etape1">
 <p>
-C'est l'étape la plus importante d'un programme : il faut définir, par exemple avec un schéma, comment sera notre programme, c'est-à-dire quelles fonctions on devra utiliser, à quel moment, etc. Parfois, il est aussi utile d'utiliser du "pseudo code". Le pseudo code, c'est une façon d'écrire un algorithme de façon presque naturelle, sans langage de programmation. Par exemple, dans un pseudo code on peu écrire :
+Dans cette étape, tu ne vas pas encore coder. Nous allons d'abord réfléchir à la structure de notre programme et imaginer son fonctionnement général. Il faut que l'on définisse de quelles fonctions nous auront besoin pour faire fonctionner notre programme.
+Parfois, il est utile d'utiliser du "pseudo code". Le pseudo code, c'est une façon d'écrire un algorithme de façon presque naturelle, sans langage de programmation. Par exemple, dans un pseudo code on peu écrire :
 </p>
-<pre class="example" id="orgb3df307">
+<pre class="example" id="org51935eb">
 si (utilisateur écrit "Bonjour") alors
     afficher "Bonjour"
 sinon
@@ -587,34 +593,122 @@ Notre programme ne comportera que des fonctions. Chaque action devra être effec
 <p>
 La seule instruction qui ne sera pas dans une fonction sera celle qui lance le jeu !
 </p>
+</div>
+
+<div id="outline-container-orgb5d1350" class="outline-4">
+<h4 id="orgb5d1350">Fonctionnement de la grille</h4>
+<div class="outline-text-4" id="text-orgb5d1350">
+<p>
+La "grille" du jeu sera représentée par une liste <b>à deux dimension</b>, c'est à dire une liste de plusieurs listes. Ce sera donc une liste contenant 6 listes qui contiendront chacune 7 chiffres. Chaque sous-liste de la grille représentera une ligne de la grille. Comme le Puissance 4 contient 7 colonnes, chaque ligne aura donc 7 chiffres. La valeur d'une case de la grille a 3 possibilités :
+</p>
+<ul class="org-ul">
+<li><b>0</b> : la case est libre.</li>
+<li><b>1</b> : un jeton du joueur 1 est placé ici.</li>
+<li><b>2</b> : un jeton du joueur 2 est placé ici.</li>
+</ul>
 
 <p>
-La "grille" du jeu sera représentée par une liste à deux dimensions qui réprésentera les lignes et les colonnes. Nous reviendrons plus en détail sur cette grille dans l'étape 2.
+Au début, la grille sera remplie de <b>0</b> :
+</p>
+<div class="org-src-container">
+<pre class="src src-python">[[0,0,0,0,0,0,0],
+ [0,0,0,0,0,0,0],
+ [0,0,0,0,0,0,0],
+ [0,0,0,0,0,0,0],
+ [0,0,0,0,0,0,0],
+ [0,0,0,0,0,0,0]]
+</pre>
+</div>
+
+<p>
+Lorsqu'un joueur placera un pion, il devra choisir seulement la colonne. À nous de "simuler" le fait que le pion tombe jusqu'à la première ligne disponible. Nous aurons une fonction pour cela. Par exemple, si le joueur 1 décide de placer son pion dans la colonne 3 (en partant de 0), la grille contiendra :
+</p>
+<div class="org-src-container">
+<pre class="src src-python">[[0,0,0,0,0,0,0],
+ [0,0,0,0,0,0,0],
+ [0,0,0,0,0,0,0],
+ [0,0,0,0,0,0,0],
+ [0,0,0,0,0,0,0],
+ [0,0,0,1,0,0,0]]
+</pre>
+</div>
+<p>
+Si le joueur 2 décide de placer son pion dans la même colonne que le joueur 1, la grille deviendra :
+</p>
+<div class="org-src-container">
+<pre class="src src-python">[[0,0,0,0,0,0,0],
+ [0,0,0,0,0,0,0],
+ [0,0,0,0,0,0,0],
+ [0,0,0,0,0,0,0],
+ [0,0,0,2,0,0,0],
+ [0,0,0,1,0,0,0]]
+</pre>
+</div>
+
+<p>
+Et ainsi de suite.
 </p>
 
 <p>
-Nous allons donc maintenant lister et décrire les fonctions dont nous aurons besoin. Tu peux faire un schéma si ça t'aide. Si tu n'as pas tout compris au début, ce n'est pas grave nous allons revenir en détail sur chaque fonction dans les étapes suivantes. L'important est de visualiser à peu près comment sera notre programme.
+Par exemple, si les jetons jaunes sont ceux du joueur 1 et les jetons rouges ceux du joueur 2, nous pouvons représenter la grille comme cela :
+</p>
+
+
+<figure id="org067344c">
+<img src="./img/schema_liste.png" alt="schema_liste.png">
+
+</figure>
+
+<p>
+Pour parcourir une liste à deux dimensions, c'est à dire effectuer un test ou une action sur chaque case de la liste, nous utilisons une double boucle. En effet, par exemple si l'on veut ajouter un pion du joueur 1 dans la 2<sup>ème</sup> colonne de la 3<sup>ème</sup> ligne, il faut écrire :
+</p>
+<div class="org-src-container">
+<pre class="src src-python">grille[2][1] = 1
+<span style="font-weight: bold; font-style: italic;"># </span><span style="font-weight: bold; font-style: italic;">grille[ligne][colonne]</span>
+</pre>
+</div>
+
+<p>
+Le premier indice correspond à la ligne et le second à la colonne. Alors pour parcourir et afficher toute la liste :
+</p>
+<div class="org-src-container">
+<pre class="src src-python"><span style="font-weight: bold;">for</span> ligne <span style="font-weight: bold;">in</span> <span style="font-weight: bold;">range</span>(<span style="font-weight: bold;">len</span>(grille)):
+    <span style="font-weight: bold;">for</span> colonne <span style="font-weight: bold;">in</span> <span style="font-weight: bold;">range</span>(<span style="font-weight: bold;">len</span>(grille[ligne])):
+        <span style="font-weight: bold;">print</span>(grille[ligne][colonne])
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org8591776" class="outline-4">
+<h4 id="org8591776">Liste des fonctions</h4>
+<div class="outline-text-4" id="text-org8591776">
+<p>
+Maintenant que nous avons une idée générale du fonctionnement de la <b>grille de jeu</b>, voici une liste exhaustive des fonctions dont nous aurons besoin. Tu n'as pas besoin de tout comprendre dès le début, cette section servira aussi plus tard pour t'y retrouver dans toutes les fonctions. Ne commences pas non plus à coder les fonctions ici car nous allons revenir en détail sur chacune d'elles dans les étapes suivantes.
+</p>
+
+<p>
+L'important est de visualiser à peu près comment sera notre programme.
 </p>
 
 <ul class="org-ul">
 <li><code>jeu()</code> : c'est la fonction qui lancera le jeu et le relancera une fois la partie terminée si le joueur en a envie.
 <ul class="org-ul">
-<li><code>initialiserGrille()</code> : cette fonction permettra d'initialiser (mettre à zéro) la grille du Puissance 4. C'est comme si elle enlevait les pions ! On utilisera cette fonction avant chaque début de partie.</li>
+<li><code>initialiserGrille()</code> : cette fonction permettra d'initialiser (mettre à zéro) la grille du Puissance 4. C'est comme si elle enlevait les pions ! On utilisera cette fonction avant chaque début de partie, dans la fonction <code>jeu()</code>.</li>
 <li><code>boucleDeJeu()</code> : c'est la fonction qui demandera aux joueurs de choisir où poser leurs jetons et les placera tant qu'aucun des deux joueurs n'aura gagné et que la grille n'est pas pleine. Quand le jeu est fini, elle renvoie le numéro du joueur qui a gagné (ou <code>False</code> si c'est un match nul).
 <ul class="org-ul">
-<li><code>quiGagne()</code> : cette fonction devra parcourir toute la grille pour déterminer si un joueur a gagné et si oui, lequel.
-Elle sera utilisée dans la fonction <code>boucleDeJeu</code>.
+<li><code>joueurGagne(joueur)</code> : cette fonction détermine si le <code>joueur</code> passé en argument a gagné la partie. Elle sera utilisée dans la fonction <code>boucleDejeu()</code>.
 <ul class="org-ul">
-<li><code>verifierHorizontalement(joueur)</code> : vérifie si le joueur passé en paramètre a aligné 4 pions horizontalement dans la grille. Elle sera utilisée dans la fonction <code>quiGagne()</code>.</li>
-<li><code>verifierVerticalement(joueur)</code> : vérifie si le joueur passé en paramètre a aligné 4 pions verticalement dans la grille. Elle sera utilisée dans la fonction <code>quiGagne()</code>.</li>
-<li><code>verifierDiagonale(joueur)</code> : vérifie si le joueur passé en paramètre a aligné 4 pions en diagonale dans la grille. Elle sera utilisée dans la fonction <code>quiGagne()</code>.</li>
+<li><code>verifierHorizontalement(joueur)</code> : vérifie si le joueur passé en paramètre a aligné 4 pions horizontalement dans la grille. Elle sera utilisée dans la fonction <code>joueurGagne(joueur)</code>.</li>
+<li><code>verifierVerticalement(joueur)</code> : vérifie si le joueur passé en paramètre a aligné 4 pions verticalement dans la grille. Elle sera utilisée dans la fonction <code>joueurGagne(joueur)</code>.</li>
+<li><code>verifierDiagonale(joueur)</code> : vérifie si le joueur passé en paramètre a aligné 4 pions en diagonale dans la grille. Elle sera utilisée dans la fonction <code>joueurGagne(joueur)</code>.</li>
 </ul></li>
 <li><code>verifierGrillePleine()</code> : cette fonction devra parcourir la grille pour vérifier s'il y a encore de la place pour poser des jetons.
-Elle sera utilisée dans la fonction <code>boucleDeJeu</code>.</li>
+Elle sera utilisée dans la fonction <code>boucleDeJeu()</code>.</li>
 <li><code>afficherGrille()</code> : cette fonction affiche la grille actuelle. Nous formaterons la grille pour qu'elle apparaisse de manière compréhensible aux joueurs.
-Elle sera utilisée dans la fonction <code>boucleDeJeu</code></li>
-<li><code>remplirGrille(joueurActuel)</code> : cette fonction demandera à un joueur dans quelle colonne il veut placer son jeton. Elle placera ensuite le jeton au bon endroit, c'est-à-dire à la dernière ligne disponible de la colonne demandée.
-Elle sera utilisée dans la fonction <code>boucleDeJeu</code>
+Elle sera utilisée dans la fonction <code>boucleDeJeu()</code></li>
+<li><code>jouerLeTour(joueurActuel)</code> : cette fonction demandera à un joueur dans quelle colonne il veut placer son jeton. Elle placera ensuite le jeton au bon endroit, c'est-à-dire à la dernière ligne disponible de la colonne demandée.
+Elle sera utilisée dans la fonction <code>boucleDeJeu()</code>
 <ul class="org-ul">
 <li><code>demanderColonne(joueur)</code> : cette fonction permet de demander au joueur dans quelle colonne il veut placer son pion. Elle renverra le numéro de la colonne demandée. Elle sera utilisée dans la fonction <code>remplirGrille(joueurActuel)</code>.</li>
 <li><code>ligneLibreDeLaColonne(colonne)</code> : cette fonction renverra le numéro de la ligne libre de la colonne choisie par le joueur. Elle sera utilisée dans la fonction <code>remplirGrille(joueurActuel)</code>.</li>
@@ -622,27 +716,23 @@ Elle sera utilisée dans la fonction <code>boucleDeJeu</code>
 </ul></li>
 <li><code>recupererSymbole(numeroJoueur)</code> : cette fonction renvoie simplement le symbole correspondant au numéro du joueur passé en paramètre. Si le numéro n'est ni 1 ni 2 alors la fonction renverra un espace <b>' '</b>. Par exemple, si nous utilisons 'X' pour le joueur 1 et 'O' pour le joueur 2, la fonction <code>recupererSymbole(1)</code> renverra <b>'X'</b>.</li>
 </ul></li>
-<li><code>afficherFinDuJeu(gagnant)</code> : cette fonction fera l'affichage de la fin du jeu en félicitant le gagant s'il y en a un et en disant qu'il y a match nul sinon.</li>
+<li><code>afficherFinDePartie(gagnant)</code> : cette fonction fera l'affichage de la fin du jeu en félicitant le gagant s'il y en a un et en disant qu'il y a match nul sinon.</li>
 <li><code>demanderRejouer()</code> : cette fonction demandera aux joueurs s'ils veulent rejouer et renvoie True ou False en fonction de leur réponse.</li>
 </ul></li>
 </ul>
 </div>
 </div>
+</div>
 
-<div id="outline-container-org72ac215" class="outline-4">
-<h4 id="org72ac215">Étape 2 : Définir les variables globales</h4>
-<div class="outline-text-4" id="text-org72ac215">
+<div id="outline-container-chapitre8_etape2" class="outline-3">
+<h3 id="chapitre8_etape2">Étape 2 : Définir les variables globales</h3>
+<div class="outline-text-3" id="text-chapitre8_etape2">
 <p>
-Une <b>variable globale</b> est une variable qui pourra être utilisée dans toutes les fontions d'un programme, sans avoir besoin de la passer en paramètre. Pour le Puissance 4, nous aurons besoin de 3 variables. Elles correspondront à <b>la grille de jeu</b> et aux <b>symboles</b> que l'on utilise pour chaque joueur.
+Une <b>variable globale</b> est une variable qui pourra être utilisée dans toutes les fontions d'un programme, sans avoir besoin de la passer en paramètre. Pour le Puissance 4, nous aurons besoin de 3 variables. Elles correspondront à <b>la grille de jeu</b>, au <b>symbole du joueur 1</b> et au <b>symbole du joueur 2</b> dans la grille.
 </p>
 
 <p>
-<b>La grille</b> sera une liste de 6 listes qui contiendront chacune 7 chiffres. Chaque sous-liste de la grille représentera une ligne de la grille. Comme le Puissance 4 contient 7 colonnes, chaque ligne aura donc 7 chiffres. Au début, la grille sera remplie de 0.
-</p>
-
-<p>
-Par exemple, si les jetons jaunes sont ceux du joueur 1 et les jetons rouges ceux du joueur 2, nous pouvons représenter la grille comme cela :
-<img src="./img/schema_liste.png" alt="schema_liste.png">
+Comme vu précédemment, <b>La grille</b> sera une liste de 6 listes qui contiendront chacune 7 chiffres. Chaque sous-liste de la grille représentera une ligne de la grille.
 </p>
 
 <p>
@@ -670,14 +760,18 @@ Nous n'aurons pas besoin d'autres variables globales pour le moment.
 </div>
 </div>
 
-<div id="outline-container-orgc311228" class="outline-4">
-<h4 id="orgc311228">Étape 3 : Définir les fonctions d'affichage</h4>
-<div class="outline-text-4" id="text-orgc311228">
+<div id="outline-container-chapitre8_etape3" class="outline-3">
+<h3 id="chapitre8_etape3">Étape 3 : Définir les fonctions d'affichage</h3>
+<div class="outline-text-3" id="text-chapitre8_etape3">
+</div>
+<div id="outline-container-org98dc4d4" class="outline-4">
+<h4 id="org98dc4d4">Affichage des symboles des joueurs</h4>
+<div class="outline-text-4" id="text-org98dc4d4">
 <ul class="org-ul">
 <li><p>
-Crée une fonction <code>recupererSymbole(numeroJoueur)</code>. Le code de cette fonction sera :
+Crée une fonction <code>recupererSymbole(numeroJoueur)</code>. La logique de cette fonction sera :
 </p>
-<pre class="example" id="orgdc1abc0">
+<pre class="example" id="org432585d">
 si numeroJoueur est égal à 1:
     renvoyer symboleJoueur1
 sinon si numeroJoueur est égal à 2:
@@ -685,51 +779,67 @@ sinon si numeroJoueur est égal à 2:
 sinon
     renvoyer le caractère 'espace'
 </pre></li>
+</ul>
+</div>
+</div>
 
-<li><p>
-Crée une fonction <code>afficherGrille()</code>. Cette fonction doit simplement afficher toutes les cases de la grille <code>grille</code> (variable globale) pour que ce soit compréhensible pour les joueurs. Il faudra pour cela utiliser une double boucle pour parcourir chaque "case" de la liste. Pour chaque case, on doit afficher le symbole correspondant au pion du joueur placé. Dans notre cas, si c'est 1 il faudra afficher 'X'.
-Ensuite on peut ajouter des caractères pour bien séparer chaque case.
-Tu peux t'inspirer de ce code mais tu dois comprendre comment parcourir la grille pour pouvoir faire la suite :
+<div id="outline-container-org35ad8bc" class="outline-4">
+<h4 id="org35ad8bc">Affichage de la grille</h4>
+<div class="outline-text-4" id="text-org35ad8bc">
+<ul class="org-ul">
+<li>Crée une fonction <code>afficherGrille()</code>. Cette fonction doit simplement afficher toutes les cases de la grille <code>grille</code> (variable globale) pour que ce soit compréhensible pour les joueurs. Il faudra pour cela utiliser une double boucle pour parcourir chaque "case" de la liste. Pour chaque case, on doit afficher le symbole correspondant au pion du joueur placé. Dans notre cas, si c'est 1 il faudra afficher 'X'.
+Ensuite on peut ajouter des caractères pour bien séparer chaque case. <b>Voici un exemple d'affichage</b> :</li>
+</ul>
+
+<p>
+Début de partie :
+<img src="./img/exemple_vide.png" alt="exemple_vide.png">
 </p>
-<div class="org-src-container">
-<pre class="src src-python"><span style="font-weight: bold; font-style: italic;">affichage</span> = <span style="font-style: italic;">"\n_______________\n"</span>
-<span style="font-weight: bold;">for</span> ligne <span style="font-weight: bold;">in</span> <span style="font-weight: bold;">range</span>(<span style="font-weight: bold;">len</span>(grille)):
-    <span style="font-weight: bold; font-style: italic;"># </span><span style="font-weight: bold; font-style: italic;">par exemple affichage += |</span>
-    <span style="font-weight: bold;">for</span> colonne <span style="font-weight: bold;">in</span> <span style="font-weight: bold;">range</span>(<span style="font-weight: bold;">len</span>(grille[ligne])):
-        <span style="font-weight: bold; font-style: italic;">affichage</span> += recupererSymbole(grille[ligne][colonne]) <span style="font-weight: bold; font-style: italic;">#</span><span style="font-weight: bold; font-style: italic;">ici on r&#233;cup&#232;re le symbole correspondant au chiffre plac&#233; dans la grille.</span>
-    <span style="font-weight: bold; font-style: italic;">affichage</span> += <span style="font-style: italic;">"\n"</span>
-<span style="font-weight: bold; font-style: italic;">affichage</span> += <span style="font-style: italic;">"---------------"</span>
-<span style="font-weight: bold; font-style: italic;">affichage</span> += <span style="font-style: italic;">" 0 1 2 3 4 5 6"</span> <span style="font-weight: bold; font-style: italic;">#</span><span style="font-weight: bold; font-style: italic;">Cet affichage servira pour que les joueurs connaissent le num&#233;ro des colonnes</span>
-<span style="font-weight: bold;">print</span>(affichage)
-</pre>
-</div></li>
 
-<li>Crée une fonction <code>afficherFinDuJeu</code> qui prend en paramètre une variable <code>gagnant</code>. Cette fonction doit :
+<p>
+Après quelques tours :
+<img src="./img/exemple_tours.png" alt="exemple_tours.png">
+</p>
+</div>
+</div>
+
+<div id="outline-container-org57cfc91" class="outline-4">
+<h4 id="org57cfc91">Affichage de fin de partie</h4>
+<div class="outline-text-4" id="text-org57cfc91">
+<ul class="org-ul">
+<li>Crée une fonction <code>afficherFinDePartie</code> qui prend en paramètre une variable <code>gagnant</code>. Cette fonction doit :
 <ul class="org-ul">
 <li>Afficher la grille.</li>
-<li>Afficher un texte qui dit quel joueur a gagné. Dans le cas où c'est un match nul, <code>gagnant</code> aura comme valeur <code>False</code>. Ne pas oublier ce cas-là !</li>
+<li>Afficher un texte qui dit quel joueur a gagné. Dans le cas où c'est un match nul, <code>gagnant</code> aura comme valeur <b>0</b>. Ne pas oublier ce cas-là !</li>
 </ul></li>
+</ul>
 
+<p>
+<b>Tu peux tester tes fonctions d'affichage en les appelant dans le programme, pour être sûr que ce qui est affiché correspond bien à ce que tu voulais.</b>
+</p>
+
+<ul class="org-ul">
 <li><p>
 Crée une fonction <code>initialiserGrille()</code> qui utilisera la variable globale <code>grille</code> pour lui redonner sa valeur par défaut :
 </p>
 <div class="org-src-container">
-<pre class="src src-python"><span style="font-weight: bold;">global</span> grid
-<span style="font-weight: bold; font-style: italic;">grid</span> = [[0,0,0,0,0,0,0],
-        [0,0,0,0,0,0,0],
-        [0,0,0,0,0,0,0],
-        [0,0,0,0,0,0,0],
-        [0,0,0,0,0,0,0],
-        [0,0,0,0,0,0,0]]
+<pre class="src src-python"><span style="font-weight: bold;">global</span> grille
+<span style="font-weight: bold; font-style: italic;">grille</span> = [[0,0,0,0,0,0,0],
+          [0,0,0,0,0,0,0],
+          [0,0,0,0,0,0,0],
+          [0,0,0,0,0,0,0],
+          [0,0,0,0,0,0,0],
+          [0,0,0,0,0,0,0]]
 </pre>
 </div></li>
 </ul>
 </div>
 </div>
+</div>
 
-<div id="outline-container-org5d0492f" class="outline-4">
-<h4 id="org5d0492f">Étape 4 : Définir la fonction de lancement du jeu</h4>
-<div class="outline-text-4" id="text-org5d0492f">
+<div id="outline-container-chapitre8_etape4" class="outline-3">
+<h3 id="chapitre8_etape4">Étape 4 : Définir les fonctions pour lancer le jeu</h3>
+<div class="outline-text-3" id="text-chapitre8_etape4">
 <ul class="org-ul">
 <li><p>
 Crée une fonction <code>boucleDeJeu()</code> qui contiendra seulement le mot clé <code>pass</code>. Nous coderons cette fonction à l'étape suivante mais nous avons besoin de l'appeler dans la fonction de lancement du jeu.
@@ -742,25 +852,230 @@ Crée une fonction <code>boucleDeJeu()</code> qui contiendra seulement le mot cl
 
 <li>Crée une fonction <code>demanderRejouer()</code>. Elle devra :
 <ul class="org-ul">
-<li>Demander à l'utilisateur s'il veut rejouer tant que sa réponse n'est ni 'o' ni 'n'. Il devra taper 'o' s'il veut et 'n' s'il veut arrêter.</li>
+<li>Demander à l'utilisateur s'il veut rejouer tant que sa réponse n'est ni 'o' ni 'n'. Il devra taper 'o' s'il veut rejouer et 'n' s'il veut arrêter.</li>
 <li>Retourner True si l'utilisateur veut rejouer et False sinon.</li>
 </ul></li>
 
 <li>Crée une fonction <code>jeu()</code> :
 <ul class="org-ul">
-<li>Crée une variable <code>rejouer</code> égale à True au début.</li>
-<li>Crée une boucle qui, tant que <code>rejouer</code> est égale à True:
+<li>Tant que l'utilisateur veut rejouer, il faut :
 <ul class="org-ul">
-<li>appelle la fonction <code>initialiserGrille()</code></li>
-<li>stocke le résultat de la fonction <code>boucleDeJeu()</code> dans une variable <code>gagnant</code>.</li>
-<li>affiche la fin du jeu avec la fonction <code>afficherFinDuJeu()</code>.</li>
-<li>Demande à l'utilisateur s'il veut rejouer avec la fonction <code>demanderRejouer()</code> en récupérant le résultat de cette fonction dans la variable <code>rejouer</code>.</li>
+<li>Initialiser la grille en utilisant la fonction adéquate.</li>
+<li>Appeler la fonction <code>boucleDeJeu()</code> et recuperer son resultat.</li>
+<li>Afficher le message de fin de partie en utlisant la fonction adéquate.</li>
+<li>Demander à l'utilisateur s'il veut rejouer en utilisant la fonction adéquate.</li>
 </ul></li>
 <li>Quand on sort de la boucle, cela veut dire que l'utilisateur ne veut plus jouer. Dans ce cas, il faudra juste afficher "Au revoir !".</li>
 </ul></li>
 </ul>
 </div>
 </div>
+
+<div id="outline-container-chapitre8_etape5" class="outline-3">
+<h3 id="chapitre8_etape5">Étape 5 : Déroulement d'une partie</h3>
+<div class="outline-text-3" id="text-chapitre8_etape5">
+<p>
+Dans cette étape nous allons commencer la fonction principale <code>boucleDeJeu()</code>. Nous allons préparer la logique et nous coderons les fonctions intérmédiaires au fur et à mesure des étapes suivantes.
+</p>
+</div>
+
+<div id="outline-container-org096b449" class="outline-4">
+<h4 id="org096b449">Fonctions intermédiaires</h4>
+<div class="outline-text-4" id="text-org096b449">
+<p>
+Pour commencer, nous allons déclarer les fonctions utilisées dans <code>boucleDeJeu()</code> sans pour autant en écrire le code, avec le mot-clé <code>pass</code> :
+</p>
+<ul class="org-ul">
+<li>Crée une fonction <code>joueurGagne()</code> qui prend en paramètre <code>joueur</code>.</li>
+<li>Crée une fonction <code>verifierGrillePleine()</code>.</li>
+<li>Crée une fonction <code>jouerLeTour()</code> qui prend en paramètre <code>joueur</code>.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org8b4b433" class="outline-4">
+<h4 id="org8b4b433">Boucle du jeu</h4>
+<div class="outline-text-4" id="text-org8b4b433">
+<p>
+Définissons maintenant la logique de la boucle de jeu :
+</p>
+<ul class="org-ul">
+<li>Modifie la fonction <code>boucleDeJeu()</code> en enlevant l'instruction <code>pass</code></li>
+<li>Nous avons besoin d'une variable qui contiendra le numéro du joueur qui doit jouer. Cette variable sera toujours égale à 1 au début d'un partie (le joueur 1 commence).</li>
+<li>Tant que la grille n'est pas pleine (<code>verifierGrillePleine()</code>), il faut :
+<ul class="org-ul">
+<li>Afficher la grille.</li>
+<li>Jouer le tour du joueur actuel (sans oublier de préciser quel joueur).</li>
+<li>Si le joueur actuel gagne (<code>joueurGagne(...)</code>), il faut renvoyer la valeur du joueur gagnant.</li>
+<li>Sinon, inverser le numéro du joueur (la variable devient 2 si on fait jouer 1 et vice-versa).</li>
+</ul></li>
+<li>Quand c'est fini, cela signifie qu'il y a match nul. Dans ce cas, il faudra renvoyer <b>0</b>.</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-chapitre8_etape6" class="outline-3">
+<h3 id="chapitre8_etape6">Étape 6 : Déroulement d'un tour</h3>
+<div class="outline-text-3" id="text-chapitre8_etape6">
+<p>
+Nous allons maintenant coder le déroulement d'un tour. Voici ce qu'il se passe à chaque tour :
+</p>
+<ul class="org-ul">
+<li>On demande à un joueur de choisir la colonne où placer son jeton. On lui redemande tant qu'il choisi une colonne inexistante (&lt;0 ou &gt;6).</li>
+<li>On trouve quelle ligne est la première ligne libre (en partant du bas) de la colonne choisie.</li>
+<li>On place le jeton du joueur dans la grille, aux coordonnées ainsi trouvées.</li>
+</ul>
+</div>
+
+<div id="outline-container-org72f7a44" class="outline-4">
+<h4 id="org72f7a44">Demander la colonne</h4>
+<div class="outline-text-4" id="text-org72f7a44">
+<p>
+Commençons par la fonction qui demande la colonne au joueur :
+</p>
+<ul class="org-ul">
+<li>Crée une fonction <code>demanderColonne()</code> qui prend en paramètre <code>joueur</code>. Cette fonction doit :
+<ul class="org-ul">
+<li>Afficher un message demandant au joueur de choisir sa colonne (préciser à quel joueur on demande pour que ce soit plus clair).</li>
+<li>Récupérer son choix et le convertir en entier.</li>
+<li>Recommencer tant que le choix de colonne est incorrect (afficher un message précisant pourquoi on redemande au joueur un numéro de colonne).</li>
+<li>Retourner le choix de l'utilisateur.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orge5cb00b" class="outline-4">
+<h4 id="orge5cb00b">Trouver la ligne où placer le jeton</h4>
+<div class="outline-text-4" id="text-orge5cb00b">
+<p>
+Passons maintenant à la fonction qui trouve la ligne libre d'une colonne. Nous allons devoir coder une fonction qui parcourt chaque ligne de la grille pour vérifier si la colonne choisie est libre sur cette ligne. (Voir le fonctionnement de la grille à l'étape 1 pour savoir si une case est libre).
+</p>
+
+<p>
+Il faudra garder la dernière ligne libre trouvée, car le parcours de la liste se fait de haut en bas et que nous devons placer les jetons le plus bas possible. Pour faire ça, nous devrons utiliser une variable <code>premiereLigneLibre</code> qui s'actualisera chaque fois que l'on trouve une ligne libre.
+</p>
+<ul class="org-ul">
+<li>Crée une fonction <code>ligneLibreDeLaColonne()</code> qui prend en paramètre la <code>colonne</code>. Dans cette fonction :
+<ul class="org-ul">
+<li>Initialise la variable <code>premiereLigneLibre</code> à <b>-1</b>. Cela permettra de déterminer si une colonne n'est pas libre. En effet, si nous mettons 0, cela correspond en fait à la ligne 0 et la fonction trouvera toujours une ligne libre même si c'est faux !</li>
+<li>Parcours toutes les lignes de la liste. Pour chaque ligne, si la <code>colonne</code> est libre, alors <code>premiereLigneLibre</code> prend la valeur de cette ligne.</li>
+<li>Après avoir parcouru toute la liste, retourne la valeur de <code>premiereLigneLibre</code>.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org14d8067" class="outline-4">
+<h4 id="org14d8067">Placer le jeton</h4>
+<div class="outline-text-4" id="text-org14d8067">
+<p>
+La dernière fonction intermédiaire pour un tour sera la fonction <code>placerJeton(joueur, coordonnees)</code>. Cette fonction placera simplement le numéro du joueur à un endroit défini dans la liste.
+</p>
+<ul class="org-ul">
+<li>Crée une fonction <code>placerJeton()</code> qui prend un paramètres :
+<ul class="org-ul">
+<li><code>joueur</code> : c'est le numéro du joueur</li>
+<li><code>coordonnees</code> : l'endroit où placer le jeton, sous forme d'un tuple <code>(ligne, colonne)</code></li>
+</ul></li>
+<li>La fonction comportera une seule ligne qui permettra de placer <code>joueur</code> dans la grille aux coordonnées données.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org81ba0ce" class="outline-4">
+<h4 id="org81ba0ce">Jouer le tour</h4>
+<div class="outline-text-4" id="text-org81ba0ce">
+<p>
+Enfin, nous allons pouvoir créer la fonction qui fait jouer le tour au joueur :
+</p>
+<ul class="org-ul">
+<li>Modifie la fonction <code>jouerLeTour()</code> précédemment créée en supprimant le mot-clé <code>pass</code>. Voici la logique de la fonction :
+<ul class="org-ul">
+<li>Tant que la <code>ligne</code> vaut <b>-1</b> (c'est à dire est incorrecte) :
+<ul class="org-ul">
+<li>Demander la colonne au joueur (récupérer le résultat).</li>
+<li>Trouver la ligne libre pour cette colonne (récupérer le résultat).</li>
+<li>Si la ligne vaut encore <b>-1</b> dire au joueur que la colonne qu'il a choisie n'est plus libre.</li>
+</ul></li>
+<li>Quand on a trouvé la ligne correspondant à la colonne choisie, placer le jeton du joueur aux coordonnées trouvées.</li>
+</ul></li>
+</ul>
+
+<p>
+Nous avons fini de créer le déroulement d'un tour. Dans la prochaine étape, nous nous attaquerons à la fonction qui trouve le gagnant d'une partie.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-chapitre8_etape7" class="outline-3">
+<h3 id="chapitre8_etape7">Étape 7 : Y a-t-il un vainqueur ?</h3>
+<div class="outline-text-3" id="text-chapitre8_etape7">
+<p>
+Désormais, on peut faire jouer un tour à un joueur. Il faut maintenant que l'on puisse déterminer à chaque fin de tour si le joueur qui vient de jouer a gagné ou s'il y a match nul.
+</p>
+
+<p>
+Pour cela, nous utiliserons deux fonctions différentes : une première qui permet de vérifier si un joueur passé en paramètre a gagné et une seconde qui permet de vérifier si la grille est pleine.
+</p>
+</div>
+
+<div id="outline-container-org4a4a7b4" class="outline-4">
+<h4 id="org4a4a7b4">Trouver un alignement</h4>
+<div class="outline-text-4" id="text-org4a4a7b4">
+<p>
+Nous allons commencer par déterminer si un joueur a gagné. Pour cela, nous devons créer 3 fonctions intermédiaires :
+</p>
+<ul class="org-ul">
+<li><code>verifierHorizontalement(joueur)</code> : cette fonction vérifie si le joueur spécifié passé en paramètre a un <b>alignement horizontal</b> de 4 jetons. Pour cela, il faut parcourir toutes les lignes de la liste pour vérifier si le numéro du joueur apparaît 4 fois de suite dans la ligne.</li>
+<li><code>verifierVerticalement(joueur)</code> : cette fonction vérifie si le joueur spécifié a un <b>alignement vertical</b> de 4 jetons. Il faudra parcourir chaque colonne de la liste pour vérifier si le numéro du joueur apparaît 4 fois de suite dans la colonne. <b>Conseil</b> : pas besoin de commencer la vérification au-delà de la 3<sup>ème</sup> ligne, car ce n'est plus possible d'aligner 4 pions sur 3 lignes !</li>
+<li><code>verifierDiagonale(joueur)</code> : cette fonction vérifie si le joueur spécifié a un <b>aligement en diagonale</b> de 4 jetons. Il faudra parcourir toute la liste en cherchant si le numéro du joueur apparaît 4 fois de suite dans une diagonale <b>ou dans l'autre</b>. En effet, n'oublie pas les deux sens possibles d'une diagonale ! Cette fonction sera un peu plus difficile que les autres, je te conseille de commencer par essayer de parcourir les diagonales de la liste en faisant des tests d'affichage.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org0e453ba" class="outline-4">
+<h4 id="org0e453ba">Le joueur a-t-il a gagné ?</h4>
+<div class="outline-text-4" id="text-org0e453ba">
+<p>
+Maintenant que nous avons codé nos 3 fonctions intermédiaires, nous pouvons modier la fonction <code>joueurGagne(joueur)</code>. La fonction doit maintenant renvoyer <code>True</code> si le <code>joueur</code> a un alignement horizontal, vertical ou en diagonale. Sinon, elle renvoie <code>False</code>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8c9587d" class="outline-4">
+<h4 id="org8c9587d">Match nul ?</h4>
+<div class="outline-text-4" id="text-org8c9587d">
+<p>
+Enfin, il nous manque la fonction qui vérifie s'il y a <b>match nul</b>. Nous savons qu'il y a match nul si la grille est remplie et que personne n'a gagné. Alors, nous avons simplement besoin d'une fonction qui vérifie si la grille est pleine :
+</p>
+<ul class="org-ul">
+<li>Modifie la fonction <code>verifierGrillePleine()</code>. Elle doit parcourir la première ligne de la grille (car ce sera la dernière à être remplie). Si une case est libre, alors la grille n'est pas pleine : il faut renvoyer <code>False</code>. Si la grille est pleine, il faudra renvoyer <code>True</code>.</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-chapitre8_etape8" class="outline-3">
+<h3 id="chapitre8_etape8">Étape 8 : Lancement du jeu !</h3>
+<div class="outline-text-3" id="text-chapitre8_etape8">
+<p>
+Désormais, il ne nous reste plus qu'à lancer le jeu : appelle simplement la fonction <code>jeu()</code> dans le programme !
+</p>
+
+<p>
+Quand tu vas tester le jeu, il est très fort probable qu'il y ait des "bugs" et que certaines choses ne fonctionnent pas : c'est normal pour un gros programme. Ne t'inquiètes pas et n'hésite pas à faire plein de tests pour chaque fonction pour trouver d'où vient le problème.
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-chapitre8bis" class="outline-2">
+<h2 id="chapitre8bis">Chapitre 8 Bis : Boids</h2>
+<div class="outline-text-2" id="text-chapitre8bis">
 </div>
 </div>
 </div>
