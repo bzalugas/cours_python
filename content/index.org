@@ -586,6 +586,9 @@ Enfin, il nous manque la fonction qui vérifie s'il y a *match nul*. Nous savons
 - Modifie la fonction =verifierGrillePleine()=. Elle doit parcourir la première ligne de la grille (car ce sera la dernière à être remplie). Si une case est libre, alors la grille n'est pas pleine : il faut renvoyer =False=. Si la grille est pleine, il faudra renvoyer =True=.
 
 ** Étape 8 : Lancement du jeu !
+:PROPERTIES:
+:custom_id: chapitre8_etape8
+:END:
 Désormais, il ne nous reste plus qu'à lancer le jeu : appelle simplement la fonction =jeu()= dans le programme !
 
 Quand tu vas tester le jeu, il est très fort probable qu'il y ait des "bugs" et que certaines choses ne fonctionnent pas : c'est normal pour un gros programme. Ne t'inquiètes pas et n'hésite pas à faire plein de tests pour chaque fonction pour trouver d'où vient le problème.
