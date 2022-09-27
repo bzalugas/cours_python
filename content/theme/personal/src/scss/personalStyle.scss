@@ -78,10 +78,14 @@ code {
   margin: 5px;
 }
 
-div#content {
-  //width: 100vw;
-  //height: 100vh;
+figure img {
+	max-width: 100%;
 }
+
+// div#content {
+//   //width: 100vw;
+//   //height: 100vh;
+// }
 
 header {
   max-width: $chapterMaxWidth;

@@ -50,6 +50,10 @@ code {
   margin: 5px;
 }
 
+figure img {
+  max-width: 100%;
+}
+
 header {
   max-width: 800px;
   margin: 2rem auto auto 300px;
