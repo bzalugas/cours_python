@@ -28,7 +28,7 @@
 - Très utilisé dans pleins de domaines différents
 *** Introduction à IDLE
 - Sauvegarder un programme (p.18)
-- Premier programme : Hello World !
+- Premier programme : Crée un premier programme =bonjour.py= qui affiche le texte *"Bonjour tout le monde !"*
 
 * Chapitre 1 : Calculs et variables
 :properties:
