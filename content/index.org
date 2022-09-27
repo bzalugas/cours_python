@@ -464,7 +464,7 @@ Dans un programme nommé =nombre_secret.py= :
 *** Manuel
 - *"Recycler du code avec des fonctions et des modules"*, p.87
 - *"Utiliser des fonctions"*, p.88
-- *"Qu'est-ce qu'une foncitons ?"*, p.89
+- *"Qu'est-ce qu'une fonction ?"*, p.89
 - *"Variables et portée"*, p.90
 *** Exercices
 1. Dans un programme nommé =fonctions1.py= :
@@ -498,16 +498,22 @@ Dans un programme nommé =nombre_secret.py= :
 
 4. Dans un programme nommé =inverse.py= :
    - Définis une fonction ayant la signature =inverse(liste)= qui doit renvoyer la =liste= passée en argument à l'envers. Par exemple, si on lui donne la liste =[1, 5, 2, 6]= en argument, elle doit renvoyer =[6, 2, 5, 1]=.
-   - Définis une fonction =creerListe(taille)= qui :
-     - Définit une variable =liste= vide au début.
-     - Demande à l'utilisateur =taille= fois un nombre et l'ajoute à la liste.
-     - Renvoie la liste ainsi créée.
-   - Crée une boucle qui va effectuer ces actions 5 fois :
-     - Demande à l'utilisateur une taille de liste.
-     - Appelle la fonction =creerListe= avec la taille entrée par l'utilisateur en argument et récupère sa valeur de retour dans une variable =liste=.
-     - Affiche la =liste=.
-     - Appelle la fonction =inverse= avec la =liste= en argument et affiche la liste ainsi modifiée.
-   - Teste tous les cas pour vérifier que la fonction =inverse= fonctionne bien.
+   - Appelle la fonction plusieurs fois avec des listes différentes pour bien tester tous les cas.
+   - Essaie de passer une chaîne de caractères en arugment. Que se passe-t-il ?
+
+5. Dans un programme nommé =minimum_liste.py= :
+   - Définir une fonction ayant la signature =minimum_liste(liste_nombres)= qui prend une liste de nombre en paramètre et renvoie le plus petit nombre de la liste.
+   - Appeler plusieurs fois la fonction avec différentes listes de nombres pour bien tester tous les cas.
+
+6. Dans un programme nommé =tri.py= :
+   - Faire une fonction ayant la signature =tri(liste_nombres)=.
+   - Le paramètre =liste_nombres= sera une liste de nombres.
+   - La fonction doit renvoyer une liste qui contient tous les nombres de =liste_nombres= triés dans l'ordre croissant.
+   - Appeler plusieurs fois la fonction avec différentes listes de nombres pour tester tous les cas.
+   (BONUS)
+   - Définis une fonction =creerListe(taille)= qui crée une liste de taille =taille= en demandant à l'utilisateur chaque nombre de la liste et renvoie la liste ainsi créée.
+   - Appelle la fonction =creerListe= après avoir demandé la =taille= à l'utiliateur puis utilise la liste créée dans la fonction =tri=. Affiche la liste avant et après avoir utilisé =tri=.
+
 
 * Chapitre 8 : Puissance 4
 :PROPERTIES:
@@ -516,11 +522,13 @@ Dans un programme nommé =nombre_secret.py= :
 
 [[./img/puissance4.jpg]]
 
-Dans ce chapitre, tu vas mettre en applications tout ce que tu as appris dans les chapitres précédents. Pour cela, tu vas créer un projet de plus grande envergure que les exercices que tu as faits. N'hésite pas à proposer à ton professeur un projet, que ce soit un jeu ou un autre programme, que tu aimerais créer.
+Dans ce chapitre, tu vas mettre en applications tout ce que tu as appris dans les chapitres précédents. Pour cela, tu vas créer un projet de plus grande envergure que les exercices que tu as faits.
 
 Dans cette section, nous allons créer un *Puissance 4*. Nous commencerons par le créer à partir des notions que nous avons vues, donc avec une interface en *ligne de commande*. Par la suite, quand nous étudierons comment créer des interfaces graphiques, nous pourrons revenir sur ce projet pour ajouter des visuels plus intéressants.
 
-Les consignes qui sont données ici sont là pour t'aider à réaliser le projet. Si tu as des idées d'améliorations ou que tu veux faire quelque chose différemment, tu es libre de les réaliser, c'est ton projet ! Néanmoins, le professeur vérifiera que ton travail est correct et correspond aux bonnes pratiques de Python que nous avons étudiées.
+*Les consignes qui sont données dans ce chapitre sont là pour t'aider à réaliser le projet. Le but est que tu développes le Puissance 4 en t'aidant le moins possible des consignes : dans un projet comme celui-ci, il n'y a pas "une seule bonne réponse", chacun peut avoir des idées différentes pour développer et c'est le meilleur moyen de progresser. Si tu es en trop grande difficulté, les étapes décrites dans ce chapitre sont là pour t'aider.*
+
+Si tu as des idées d'améliorations ou que tu veux faire quelque chose différemment, tu es libre de les réaliser, c'est ton projet ! Néanmoins, le professeur vérifiera que ton travail est correct et correspond aux bonnes pratiques de Python que nous avons étudiées.
 
 ** Règles du Puissance 4
 :PROPERTIES:
