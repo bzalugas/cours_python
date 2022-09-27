@@ -834,7 +834,7 @@ Désormais, il ne nous reste plus qu'à lancer le jeu : appelle simplement la fo
 
 Quand tu vas tester le jeu, il est très fort probable qu'il y ait des "bugs" et que certaines choses ne fonctionnent pas : c'est normal pour un gros programme. Ne t'inquiètes pas et n'hésite pas à faire plein de tests pour chaque fonction pour trouver d'où vient le problème.
 
-* Chapitre 8 Bis : Boids
-:PROPERTIES:
-:custom_id: chapitre8bis
-:END:
+# * Chapitre 8 Bis : Boids
+# :PROPERTIES:
+# :custom_id: chapitre8bis
+# :END:
