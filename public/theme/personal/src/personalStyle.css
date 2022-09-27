@@ -50,6 +50,10 @@ code {
   margin: 5px;
 }
 
+figure img {
+  max-width: 100%;
+}
+
 header {
   max-width: 800px;
   margin: 2rem auto auto 300px;
@@ -154,6 +158,7 @@ header h1 {
 }
 .chapter ul {
   margin: 0.3rem auto;
+  padding-left: 1rem;
 }
 .chapter ul li {
   margin: 0.5rem auto;

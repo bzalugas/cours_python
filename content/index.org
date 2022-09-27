@@ -688,9 +688,11 @@ grille = [[0,0,0,0,0,0,0],
   Ensuite on peut ajouter des caractères pour bien séparer chaque case. *Voici un exemple d'affichage* :
 
 Début de partie :
+
 [[./img/exemple_vide.png]]
 
 Après quelques tours :
+
 [[./img/exemple_tours.png]]
 
 # Tu peux t'inspirer de ce code mais tu dois comprendre comment parcourir la grille pour pouvoir faire la suite :
