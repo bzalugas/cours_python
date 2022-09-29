@@ -14,7 +14,6 @@
 - As-tu déjà programmé ? Si oui, avec quel langage de programmation ?
 - Motivation : pourquoi t'es-tu inscrit à ce cours ?
 *** Notions de base
-- Ordinateur ?
 - Programmation ?
 - Programme ?
 - Langage de programmation ?
@@ -26,13 +25,15 @@
 - Langage interprété : versatilité (le fonctionnement ne dépend pas du système d'exploitation)
 - Syntaxe simple
 - Très utilisé dans pleins de domaines différents
-*** Introduction à IDLE
-- Sauvegarder un programme (p.18)
-- Premier programme : Crée un premier programme =bonjour.py= qui affiche le texte *"Bonjour tout le monde !"*
 *** Fonctionnement du cours
-Pour chaque cours, tu as des chapitres du manuel de python à lire. Une fois que tu as lu les chapitres demandés, tu devras faire les exercices demandés. Pour quasiment chaque exercice, on te demande de créer un nouveau programme, c'est à dire un nouveau fichier. Retiens-bien ça : *Un programme = un fichier*.
+*Les notions dont tu auras besoin dans ce cours se trouvent dans le [[file:./manuel/manuel_python][manuel de python]].* Dans chaque cours, les chapitres que tu dois lire sont indiqués au début dans la section *Manuel*. Une fois que tu as lu les chapitres demandés, tu devras faire les exercices de la section *Exercices*.
 
-Une fois les exercices d'un cours terminés, appelle le professeur pour qu'il vienne vérifier que ce que tu as fait est correct. N'oublie pas d'essayer ton programme avant pour être sûr que tu as terminé l'exercice et qu'il n'y a pas d'erreur.
+Pour quasiment chaque exercice, on te demande de créer un *nouveau programme*, c'est à dire un *nouveau fichier*. Retiens-bien ça : *Un programme = un fichier*.
+
+Une fois les exercices d'un cours terminés, appelle le professeur pour qu'il vienne vérifier que ce que tu as fait est correct. *N'oublie pas d'essayer ton programme avant pour être sûr que tu as terminé l'exercice et qu'il n'y a pas d'erreur.*
+*** Introduction à IDLE
+- Sauvegarder un programme (p.18 du manuel)
+- Premier programme : Crée un premier programme nommé =bonjour.py= qui affiche le texte *"Bonjour tout le monde !"*
 
 * Chapitre 1 : Calculs et variables
 :properties:
@@ -47,6 +48,7 @@ Une fois les exercices d'un cours terminés, appelle le professeur pour qu'il vi
 - *"Les opérateurs de Python"*, p.23
 - *"L'ordre des opérateurs"*, p.24
 *** Exercices
+*Pour chaque exercice, il faut créer un nouveau programme.*
 1. Dans un programme nommé ~cours1.py~ :
    - Affiche le résultat d'une *addition*.
    - Affiche le résultat d'une *soustraction*.
