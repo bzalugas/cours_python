@@ -9,6 +9,8 @@
 :PROPERTIES:
 :custom_id: introduction
 :END:
+*** Manuel de Python
+Tu peux télécharger le manuel de python en [[file:manuel/manuel_python.pdf][cliquant ici]].
 *** Présentation
 - Prénom
 - As-tu déjà programmé ? Si oui, avec quel langage de programmation ?
@@ -26,7 +28,7 @@
 - Syntaxe simple
 - Très utilisé dans pleins de domaines différents
 *** Fonctionnement du cours
-*Les notions dont tu auras besoin dans ce cours se trouvent dans le [[file:./manuel/manuel_python][manuel de python]].* Dans chaque cours, les chapitres que tu dois lire sont indiqués au début dans la section *Manuel*. Une fois que tu as lu les chapitres demandés, tu devras faire les exercices de la section *Exercices*.
+*Les notions dont tu auras besoin dans ce cours se trouvent dans le [[file:manuel/manuel_python.pdf][manuel de python]].* Dans chaque cours, les chapitres que tu dois lire sont indiqués au début dans la section *Manuel*. Une fois que tu as lu les chapitres demandés, tu devras faire les exercices de la section *Exercices*.
 
 Pour quasiment chaque exercice, on te demande de créer un *nouveau programme*, c'est à dire un *nouveau fichier*. Retiens-bien ça : *Un programme = un fichier*.
 
