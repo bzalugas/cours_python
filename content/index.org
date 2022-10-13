@@ -302,7 +302,7 @@ Pour le moment, cela suffira pour créer des programmes plus intéractifs, mais 
    - Crée une condition qui affiche "Tu as le bon âge pour faire les montagnes russes." si =age= est supérieure ou égale à 7 ans.
    - Crée une condition qui affiche "Tu es trop petit pour faire les montagnes russes." si =taille= est strictement inférieure à 60cm.
    - Crée une condition qui affiche "Tu es trop petit pour faire les montagnes russes sans être accompagné." si =taille= est entre 60cm inclus et 80cm exclus.
-   - Crée une condition qui affiche "Tu as la vonne taille pour faire les montagnes russes sans être accompagné." si =taille= est supérieure ou égale à 80cm.
+   - Crée une condition qui affiche "Tu as la bonne taille pour faire les montagnes russes sans être accompagné." si =taille= est supérieure ou égale à 80cm.
 
 3. Dans un programme nommé =formes.py= :
    - Demande à l'utilisateur un nombre entier que tu stockeras dans une variable =nb_cotes=.
