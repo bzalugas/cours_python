@@ -48,9 +48,9 @@ Une fois les exercices d'un cours terminés, appelle le professeur pour qu'il vi
 :custom_id: chapitre1_cours1
 :END:
 *** Manuel
-- *"Calculer avec Python"*, p.22
+- *"Calculer avec Python"*, p.22-23
 - *"Les opérateurs de Python"*, p.23
-- *"L'ordre des opérateurs"*, p.24
+- *"L'ordre des opérateurs"*, p.24-25
 *** Exercices
 *Pour chaque exercice, il faut créer un nouveau programme.*
 1. Dans un programme nommé ~cours1.py~ :
@@ -66,8 +66,8 @@ Une fois les exercices d'un cours terminés, appelle le professeur pour qu'il vi
 :custom_id: chapitre1_cours2
 :END:
 *** Manuel
-- *"Les variables sont comme des étiquettes"*, p.25
-- *"Utiliser les variables"*, p.26
+- *"Les variables sont comme des étiquettes"*, p.25-26
+- *"Utiliser les variables"*, p.26-29
 *** Exercices
 1. Dans un programme nommé =variables.py= :
    - Crée une variable nommée =mon_age= égale à ton âge, puis afficher le contenu de cette variable.
@@ -84,8 +84,8 @@ Une fois les exercices d'un cours terminés, appelle le professeur pour qu'il vi
 :END:
 *** Manuel
 - *"Les chaînes"*, p.32
-- *"Créer des chaînes"*, p.32
-- *"Gérer les problèmes de chaînes"*, p.33
+- *"Créer des chaînes"*, p.32-33
+- *"Gérer les problèmes de chaînes"*, p.33-36
 *** Exercices
 1. Dans un programme nommé =prenom_nom.py= :
    - Crée une variable =prenom= contenant une chaîne de caractères correspondant à ton prénom.
@@ -105,8 +105,8 @@ Une fois les exercices d'un cours terminés, appelle le professeur pour qu'il vi
 :custom_id: chapitre2_cours4
 :END:
 *** Manuel
-- *"Insérer des valeurs dans des chaînes"*, p.36
-- *"Multiplier des chaînes"*, p.37
+- *"Insérer des valeurs dans des chaînes"*, p.36-37
+- *"Multiplier des chaînes"*, p.37-38
 *** Exercices
 1. Dans un programme nommé =prenom_nom_mieux.py= :
    - Crée une variable =prenom= contenant une chaîne de caractères correspondant à ton prénom.
@@ -133,7 +133,7 @@ Une fois les exercices d'un cours terminés, appelle le professeur pour qu'il vi
 :custom_id: chapitre2_cours5
 :END:
 *** Manuel
-- *"Plus puissantes que les chaînes : les listes"*, p.38
+- *"Plus puissantes que les chaînes : les listes"*, p.38-41
 *** Exercices
 1. Dans un programme nommé =liste_courses.py= :
    - Crée une variable =courses= contenant une *liste* d'au moins 5 choses à acheter. Chaque élément sera une chaîne de caractères.
@@ -161,9 +161,9 @@ Une fois les exercices d'un cours terminés, appelle le professeur pour qu'il vi
 :custom_id: chapitre2_cours6
 :END:
 *** Manuel
-- *"Ajouter des éléments à une liste"*, p.41
+- *"Ajouter des éléments à une liste"*, p.41-42
 - *"Supprimer des éléments à une liste"*, p.42
-- *"Arithmétique de liste"*, p.42
+- *"Arithmétique de liste"*, p.42-44
 *** Exercices
 1. Dans un programme nommé =liste_eleves.py= :
    - Crée une variable =eleves= contenant la liste des prénoms des personnes présentes à l'atelier Python en omettant le tient.
@@ -188,7 +188,7 @@ Une fois les exercices d'un cours terminés, appelle le professeur pour qu'il vi
 :END:
 *** Manuel
 - *"Tuples"*, p.45
-- *"Dictionnaires"*, p.45
+- *"Dictionnaires"*, p.45-47
 *** Exercices
 1. Dans un programme nommé =tuple.py= :
    - Crée un tuple =un_tuple= avec au moins 3 éléments.
@@ -268,7 +268,7 @@ Pour le moment, cela suffira pour créer des programmes plus intéractifs, mais 
 :custom_id: chapitre3_cours9
 :END:
 *** Manuel
-- *"Dessiner avec une tortue"*, p.49 - p.56
+- *"Dessiner avec une tortue"*, p.49-56
 *** Exercices
 1. Dans un programme nommé =carré.py=, fais dessiner un carré à une tortue.
 2. Dans un programme nommé =hexagone.py=, fais dessiner un hexagone à une tortue.
@@ -287,8 +287,8 @@ Pour le moment, cela suffira pour créer des programmes plus intéractifs, mais 
 *** Manuel
 - *"Poser des questions avec if et else"*, p. 59
 - *"Intructions if"*, p.60
-- *"Un bloc est un groupe d'instructions"*, p.60
-- *"Des conditions pour comparer des choses"*, p.62
+- *"Un bloc est un groupe d'instructions"*, p.60-62
+- *"Des conditions pour comparer des choses"*, p.62-64
 *** Exercices
 1. Dans un programme nommé =boutique.py= :
    - Demande à l'utilisateur un nombre entier correspondant à la somme d'argent qu'il a et stocke sa réponse dans une variable =euros=.
@@ -320,8 +320,8 @@ Pour le moment, cela suffira pour créer des programmes plus intéractifs, mais 
 :custom_id: chapitre4_cours11
 :END:
 *** Manuel
-- *"Instructions si-alors-sinon"*, p.64
-- *"Instructions if et elif"*, p.65
+- *"Instructions si-alors-sinon"*, p.64-65
+- *"Instructions if et elif"*, p.65-66
 *** Exercices
 1. Dans un programme nommé =dragon.py= :
    - Affiche "Tu te trouves dans une pièce obscure d'un mystérieux château.".
@@ -360,8 +360,8 @@ Pour le moment, cela suffira pour créer des programmes plus intéractifs, mais 
 :custom_id: chapitre4_cours13
 :END:
 *** Manuel
-- *"Variables sans valeur : None"*, p.66
-- *"Différence entre chaînes et nombres"*, p.67
+- *"Variables sans valeur : None"*, p.66-67
+- *"Différence entre chaînes et nombres"*, p.67-69
 *** Exercices
 1. Dans un programme nommé =types.py= :
    - Demande à l'utilisateur un nombre entier et stocke-le dans une variable =entier_str=.
@@ -386,7 +386,7 @@ Pour le moment, cela suffira pour créer des programmes plus intéractifs, mais 
 :END:
 *** Manuel
 - *"Tourner en boucle"*, p.73
-- *"Utiliser les boucles for"*, p.74
+- *"Utiliser les boucles for"*, p.74-80
 *** Exercices
 1. Dans un programme nommé =repetition.py= :
    - Demande à l'utilisateur un nombre entier et stocke-le dans une variable =nombre=.
@@ -420,7 +420,7 @@ Pour le moment, cela suffira pour créer des programmes plus intéractifs, mais 
 :custom_id: chapitre5_cours15
 :END:
 *** Manuel
-- *"Tant que nous parlons de boucles : while"*, p.81
+- *"Tant que nous parlons de boucles : while"*, p.81-83
 *** Exercices
 1. Dans un programme nommé =repetition_while.py= :
    - Demande à l'utilisateur un nombre entier et stocke-le dans une variable =nombre=.
@@ -475,10 +475,10 @@ Dans un programme nommé =nombre_secret.py= :
 :custom_id: chapitre7_cours17
 :END:
 *** Manuel
-- *"Recycler du code avec des fonctions et des modules"*, p.87
-- *"Utiliser des fonctions"*, p.88
-- *"Qu'est-ce qu'une fonction ?"*, p.89
-- *"Variables et portée"*, p.90
+- *"Recycler du code avec des fonctions et des modules"*, p.87-88
+- *"Utiliser des fonctions"*, p.88-89
+- *"Qu'est-ce qu'une fonction ?"*, p.89-90
+- *"Variables et portée"*, p.90-92
 *** Exercices
 1. Dans un programme nommé =fonctions1.py= :
    - Définir une fonction ayant la signature =bonjour(prenom, nom)= qui doit afficher "Bonjour <prenom> <nom> !", en remplaçant <prenom> et <nom> par les arguments passés à la fonction.
