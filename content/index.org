@@ -471,6 +471,9 @@ Dans un programme nommé =nombre_secret.py= :
 :custom_id: chapitre7
 :END:
 ** Cours 17 : Fonctions
+:PROPERTIES:
+:custom_id: chapitre7_cours17
+:END:
 *** Manuel
 - *"Recycler du code avec des fonctions et des modules"*, p.87
 - *"Utiliser des fonctions"*, p.88
