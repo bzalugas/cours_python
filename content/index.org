@@ -859,6 +859,11 @@ Quand tu vas tester le jeu, il est très fort probable qu'il y ait des "bugs" et
 *** Ressources
 #+attr_html: :target _blank
 [[https://www.youtube.com/watch?v=0lQxdR6IqCA&t=103s]]
+
+#+attr_html: :target _blank
+Un cours de fac plutôt bien résumé : [[file:./manuel/Minmax.pdf][MinMax]]
+
+
 # Nous allons aborder dans ce chapitre une catégorie d'intelligences artificielles : celle dédiée aux jeux de réflexion tour à tour et à deux joueurs.
 # Il faudra comprendre le mieux possible certaines notions pour pouvoir finir notre intelligence artificielle du Puissance 4 :
 # - La récursion : un fonction qui s'appelle elle-même.
