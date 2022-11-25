@@ -976,12 +976,12 @@ Quand les scores des deux joueurs ont été calculés, la fonction devra renvoye
 
 # # La programmation d'une IA pour jeu de réflexion est un peu différente d'une IA pour résoudre d'autres types de problèmes. Notamment, un temps limite est imposé : si l'ordinateur a besoin de 3 jours pour jouer un coup, ce n'est pas intéressant pour notre besoin. Nous aurons donc besoin d'approximer le "but".
 
-* Interfaces graphiques avec Tkinter
-Pour ce chapitre, il faut avoir vu et compris ce que sont les classes en Python.
-** Manuel
-*"De meilleurs graphismes avec Tkinter"*, p.167
-** Exercices
-Dans un programme nommé "visage_tkinter.py", refais l'exercice "visage.py" mais en utilisant cette fois Tkinter.
+# * Interfaces graphiques avec Tkinter
+# Pour ce chapitre, il faut avoir vu et compris ce que sont les classes en Python.
+# *** Manuel
+# *"De meilleurs graphismes avec Tkinter"*, p.167
+# *** Exercices
+# Dans un programme nommé "visage_tkinter.py", refais l'exercice "visage.py" mais en utilisant cette fois Tkinter.
 
-Dans un programme nommé "balle_rebondissante.py", affiche à l'aide de Tkinter un rectangle dans lequel une balle rebondit sur tous les bords.
+# Dans un programme nommé "balle_rebondissante.py", affiche à l'aide de Tkinter un rectangle dans lequel une balle rebondit sur tous les bords.
 # Adapte l'exercice "carte_identite.py" pour que l'utilisateur entre les informations dans des champs de texte et qu'il clique sur un bouton OK pour les valider.
