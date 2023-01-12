@@ -363,10 +363,10 @@ Pour le moment, cela suffira pour créer des programmes plus intéractifs, mais 
 - *"Variables sans valeur : None"*, p.66-67
 - *"Différence entre chaînes et nombres"*, p.67-69
 *** Exercices
-1. Dans un programme nommé =types.py= :
+1. Dans un programme nommé =types_donnees.py= :
    - Demande à l'utilisateur un nombre entier et stocke-le dans une variable =entier_str=.
    - Demande à l'utilisateur un nombre décimal et stocke-le dans une variable =decimal_str=.
-   - Demande à l'utilisateur un mot de son choi et stocke-le dans une variable =mot=.
+   - Demande à l'utilisateur un mot de son choix et stocke-le dans une variable =mot=.
    - Convertis =entier_str= en entier dans une variable =entier=.
    - Convertis =decimal_str= en nombre décimal dans une variable =decimal=.
    - Si le nombre entier est égal à ton âge, affiche "Bravo tu es tombé sur mon âge !".
@@ -854,8 +854,13 @@ Quand tu vas tester le jeu, il est très fort probable qu'il y ait des "bugs" et
 
 
 * Intelligence Artificielle du Puissance 4
+:PROPERTIES:
+:custom_id: ia_puissance4
+:END:
 ** Théorie
-# => donner des ressources (vidéo, cours) puis donner les étapes à faire. Commencer par la fonction d'évaluation.
+:PROPERTIES:
+:custom_id: ia_puissance4_theorie
+:END:
 *** Ressources
 #+attr_html: :target _blank
 [[https://www.youtube.com/watch?v=0lQxdR6IqCA&t=103s]]
@@ -870,6 +875,9 @@ Un cours de fac plutôt bien résumé : [[file:./manuel/Minmax.pdf][MinMax]]
 # - Les arbres de recherche : manière de représenter toutes les possibilités d'une situation et anticiper les coups suivants.
 
 ** Code
+:PROPERTIES:
+:custom_id: ia_puissance4_code
+:END:
 *** Étape 1 : Tous les coups possibles
 Crée une fonction qui doit retourner la liste de tous les coups possibles au prochain tour. Chaque élément de la liste sera un tuple correspondant à la ligne et la colonne où le jeton peut être placé : *(ligne, colonne)*.
 
@@ -898,6 +906,7 @@ S'il peut, alors il faut compter combien de pions sont déjà présents dans l'a
 
 Quand les scores des deux joueurs ont été calculés, la fonction devra renvoyer le score du joueur en paramètre moins le score de l'adversaire.
 
+# * IA (OLD)
 # Ce chapitre aborde des notions complexes qui demandent un niveau très avancé. Il faudra notamment être à l'aise avec la *récursion*.
 # # ** Qu'est-ce qu'une intelligence artificielle (IA) ?
 # # *** Définition du Larousse
