@@ -190,7 +190,7 @@ Une fois les exercices d'un cours terminés, appelle le professeur pour qu'il vi
 - *"Tuples"*, p.45
 - *"Dictionnaires"*, p.45-47
 *** Exercices
-1. Dans un programme nommé =tuple.py= :
+1. Dans un programme nommé =mon_tuple.py= :
    - Crée un tuple =un_tuple= avec au moins 3 éléments.
    - Affiche le tuple.
    - Modifie la première valeur du tuple.
