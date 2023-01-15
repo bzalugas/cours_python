@@ -43,6 +43,7 @@
 	 :recursive t ;; look recursively in base-directory folder
 	 :base-directory "./content" ;; base directory (org files)
 	 :base-extension "org" ;; extensions we want to be taken
+	 :exclude "temp/*"
 	 :publishing-directory "./public" ;; publishing directory (html files)
 	 :publishing-function org-html-publish-to-html ;; function to use to publish
 	 )
@@ -51,6 +52,7 @@
 	 :recursive t ;; look recursively in base-directory folder
 	 :base-directory "./content" ;; base directory (org files)
 	 :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf\\|svg" ;; extensions we want to be taken
+	 :exclude "temp/*"
 	 :publishing-directory "./public" ;; publishing directory (html files)
 	 :publishing-function org-publish-attachment ;; function to use to publish
 	 )

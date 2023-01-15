@@ -1,0 +1,6 @@
+# -*- mode: org; -*-
+
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="personalStyle.css"/>
+
+#+HTML_HEAD: <link rel="stylesheet" href="highlight/styles/monokai-sublime.min.css"/>
+#+HTML_HEAD: <script src="highlight/highlight.min.js"></script>

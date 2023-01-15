@@ -1,0 +1,12 @@
+#+title: Grilles Tkinter
+#+language: fr
+#+author: Bastien ZALUGAS
+#+HTML_DOCTYPE: html5
+#+options: <:nil ^:{} broken-links:mark creator:nil date:nil email:nil timestamp:nil toc:nil html-style:nil num:nil html5-fancy:t author:nil
+#+setupfile: ./temp-theme.setup
+
+* Types de fenêtres Tkinter
+
+* Pourquoi une grille pour le Puissance 4 ?
+
+* 
