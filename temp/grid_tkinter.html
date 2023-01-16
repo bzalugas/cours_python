@@ -5,9 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Grid Tkinter</title>
 <meta name="generator" content="Org mode">
-<link rel="stylesheet" type="text/css" href="personalStyle.css"/>
-<link rel="stylesheet" href="highlight/styles/monokai-sublime.min.css"/>
-<script src="highlight/highlight.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../theme/personal/src/personalStyle.css"/>
+<script type="text/javascript" src="../theme/personal/src/tabScript.js"></script>
+<link rel="stylesheet" href="../theme/personal/src/highlight/styles/monokai-sublime.min.css"/>
+<script src="../theme/personal/src/highlight/highlight.min.js"></script>
 <script type="text/javascript">
 /*
 @licstart  The following is the entire license notice for the
@@ -59,41 +60,60 @@ for the JavaScript code in this tag.
 <div id="content">
 <header>
 <h1 class="title">Grid Tkinter</h1>
-</header>
-<div id="outline-container-orge966bbd" class="outline-2">
-<h2 id="orge966bbd">Ressources</h2>
-<div class="outline-text-2" id="text-orge966bbd">
+</header><nav id="table-of-contents">
+<h2>Table des matières</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#grid">Utiliser la méthode grid pour l'interface du Puissance 4</a>
+<ul>
+<li><a href="#ressources">Ressources</a></li>
+<li><a href="#pourquoi-grid">Pourquoi une Grid pour le Puissance 4 ?</a></li>
+<li><a href="#etapes">Etape par étape</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+
+<div id="outline-container-org1c34f81" class="outline-2">
+<h2 id="grid">Utiliser la méthode grid pour l'interface du Puissance 4</h2>
+<div class="outline-text-2" id="text-grid">
+</div>
+
+<div id="outline-container-orgdfcf8fa" class="outline-3">
+<h3 id="ressources">Ressources</h3>
+<div class="outline-text-3" id="text-ressources">
 <p target="_blank">
 <a href="https://koor.fr/Python/Tutoriel_Tkinter/tkinter_layout_grid.wp" target="_blank">https://koor.fr/Python/Tutoriel_Tkinter/tkinter_layout_grid.wp</a>
 </p>
 </div>
 </div>
 
-<div id="outline-container-org0cbd632" class="outline-2">
-<h2 id="org0cbd632">Pourquoi une Grid pour le Puissance 4 ?</h2>
-<div class="outline-text-2" id="text-org0cbd632">
+<div id="outline-container-org37e9c34" class="outline-3">
+<h3 id="pourquoi-grid">Pourquoi une Grid pour le Puissance 4 ?</h3>
+<div class="outline-text-3" id="text-pourquoi-grid">
 <p>
 La méthode grid sert à positionner des éléments (=widgets) dans notre écran en fonction d'un positionnement matriciel. Comme nous utilisons une matrice, c'est à dire une liste de listes, pour placer nos jetons sur le plateau, c'est la méthode la plus adaptée. Il faudra associer à chaque cellule créée le clic de la souris et la fonction qui placera le jeton.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org20d91f7" class="outline-2">
-<h2 id="org20d91f7">Etape par étape</h2>
-<div class="outline-text-2" id="text-org20d91f7">
+<div id="outline-container-org6300af0" class="outline-3">
+<h3 id="etapes">Etape par étape</h3>
+<div class="outline-text-3" id="text-etapes">
 </div>
-<div id="outline-container-org8369cc8" class="outline-3">
-<h3 id="org8369cc8">Pré-requis</h3>
-<div class="outline-text-3" id="text-org8369cc8">
+<div id="outline-container-org961c0ba" class="outline-4">
+<h4 id="org961c0ba">Pré-requis</h4>
+<div class="outline-text-4" id="text-org961c0ba">
 <p>
 Il faut déjà avoir initialisé ta grille de puissance 4 avant de paramétrer l'affichage car tu auras besoin de la taille de la grille et des éventuelles valeurs des cases.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org8e66e80" class="outline-3">
-<h3 id="org8e66e80">Initialisation</h3>
-<div class="outline-text-3" id="text-org8e66e80">
+<div id="outline-container-orgd9a92aa" class="outline-4">
+<h4 id="orgd9a92aa">Initialisation</h4>
+<div class="outline-text-4" id="text-orgd9a92aa">
 <ol class="org-ol">
 <li>Crée un objet Tk() (<code>window = tkinter.Tk()</code>).</li>
 <li>Configure la fenêtre (titre, fond, etc).</li>
@@ -102,9 +122,9 @@ Il faut déjà avoir initialisé ta grille de puissance 4 avant de paramétrer l
 </div>
 </div>
 
-<div id="outline-container-org6431759" class="outline-3">
-<h3 id="org6431759">Création des widgets</h3>
-<div class="outline-text-3" id="text-org6431759">
+<div id="outline-container-org336ec64" class="outline-4">
+<h4 id="org336ec64">Création des widgets</h4>
+<div class="outline-text-4" id="text-org336ec64">
 <ol class="org-ol">
 <li><p>
 A l'aide d'une double boucle imbriquée (pour parcourir la grille de puissance 4), il faut pour chaque case de la grille créer une cellule pour ton affichage (une cellule sera un Label()). Exemple à l'intérieur de la boucle:
@@ -131,6 +151,7 @@ La fonction clic doit récupérer l'information de la colonne sélectionnée et 
 </pre>
 </div></li>
 </ol>
+</div>
 </div>
 </div>
 </div>
