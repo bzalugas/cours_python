@@ -2,26 +2,40 @@
 #+language: fr
 #+author: Bastien ZALUGAS
 #+HTML_DOCTYPE: html5
-#+options: <:nil ^:{} broken-links:mark creator:nil date:nil email:nil timestamp:nil toc:nil html-style:nil num:nil html5-fancy:t author:nil
+#+options: <:nil ^:{} broken-links:mark creator:nil date:nil email:nil timestamp:nil toc:2 html-style:nil num:nil html5-fancy:t author:nil
 #+setupfile: ./temp-theme.setup
 
-* Ressources
+* Utiliser la méthode grid pour l'interface du Puissance 4
+:PROPERTIES:
+:CUSTOM_ID: grid
+:END:
+
+** Ressources
+:PROPERTIES:
+:CUSTOM_ID: ressources
+:END:
 #+attr_html: :target _blank
 [[https://koor.fr/Python/Tutoriel_Tkinter/tkinter_layout_grid.wp]]
 
-* Pourquoi une Grid pour le Puissance 4 ?
+** Pourquoi une Grid pour le Puissance 4 ?
+:PROPERTIES:
+:CUSTOM_ID: pourquoi-grid
+:END:
 La méthode grid sert à positionner des éléments (=widgets) dans notre écran en fonction d'un positionnement matriciel. Comme nous utilisons une matrice, c'est à dire une liste de listes, pour placer nos jetons sur le plateau, c'est la méthode la plus adaptée. Il faudra associer à chaque cellule créée le clic de la souris et la fonction qui placera le jeton.
 
-* Etape par étape
-** Pré-requis
+** Etape par étape
+:PROPERTIES:
+:CUSTOM_ID: etapes
+:END:
+*** Pré-requis
 Il faut déjà avoir initialisé ta grille de puissance 4 avant de paramétrer l'affichage car tu auras besoin de la taille de la grille et des éventuelles valeurs des cases.
 
-** Initialisation
+*** Initialisation
 1. Crée un objet Tk() (=window = tkinter.Tk()=).
 2. Configure la fenêtre (titre, fond, etc).
 3. Crée un dictionnaire vide qui contiendra tous les widgets de la grille (=widgets = {}=).
    
-** Création des widgets
+*** Création des widgets
 1. A l'aide d'une double boucle imbriquée (pour parcourir la grille de puissance 4), il faut pour chaque case de la grille créer une cellule pour ton affichage (une cellule sera un Label()). Exemple à l'intérieur de la boucle:
    #+begin_src python
      cell = Label(window, text=" ", bg='white')
