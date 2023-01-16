@@ -10,33 +10,33 @@
 [[https://koor.fr/Python/Tutoriel_Tkinter/tkinter_layout_grid.wp]]
 
 * Pourquoi une Grid pour le Puissance 4 ?
-La méthode grid sert à positionner des éléments (=widgets) dans notre écran en fonction d'un positionnement matriciel. Comme nous utilisons une matrice, c'est à dire une liste de listes, pour placer nos jetons sur le plateau, c'est la méthode la plus adaptée. Il faudra associer à chaque cellule créée le clic de la souris et la fonction qui placera le jeton.
+La mÃ©thode grid sert Ã  positionner des Ã©lÃ©ments (=widgets) dans notre Ã©cran en fonction d'un positionnement matriciel. Comme nous utilisons une matrice, c'est Ã  dire une liste de listes, pour placer nos jetons sur le plateau, c'est la mÃ©thode la plus adaptÃ©e. Il faudra associer Ã  chaque cellule crÃ©Ã©e le clic de la souris et la fonction qui placera le jeton.
 
-* Etape par étape
-** Pré-requis
-Il faut déjà avoir initialisé ta grille de puissance 4 avant de paramétrer l'affichaque car tu auras besoin de la taille de la grille et des éventuelles valeurs des cases.
+* Etape par Ã©tape
+** PrÃ©-requis
+Il faut dÃ©jÃ  avoir initialisÃ© ta grille de puissance 4 avant de paramÃ©trer l'affichage car tu auras besoin de la taille de la grille et des Ã©ventuelles valeurs des cases.
 
 ** Initialisation
-1. Crée un objet Tk() (=window = tkinter.Tk()=).
-2. Configure la fenêtre (titre, fond, etc).
-3. Crée un dictionnaire vide qui contiendra tous les widgets de la grille (=widgets = {}=).
+1. CrÃ©e un objet Tk() (=window = tkinter.Tk()=).
+2. Configure la fenÃªtre (titre, fond, etc).
+3. CrÃ©e un dictionnaire vide qui contiendra tous les widgets de la grille (=widgets = {}=).
    
-** Création des widgets
-1. A l'aide d'une double boucle imbriquée (pour parcourir la grille de puissance 4), il faut pour chaque case de la grille créer une cellule pour ton affichage (une cellule sera un Label()). Exemple à l'intérieur de la boucle:
+** CrÃ©ation des widgets
+1. A l'aide d'une double boucle imbriquÃ©e (pour parcourir la grille de puissance 4), il faut pour chaque case de la grille crÃ©er une cellule pour ton affichage (une cellule sera un Label()). Exemple Ã  l'intÃ©rieur de la boucle:
    #+begin_src python
      cell = Label(window, text=" ", bg='white')
      cell.grid(row = i, column = j)
      cell.bind('<Button-1>', clic)
-     # clic correspond à une fonction qui faut définir et qui sera lancée uniquement lorsque l'on clique sur une cellule.
+     # clic correspond Ã  une fonction qui faudra dÃ©finir et qui sera lancÃ©e uniquement lorsque l'on clique sur une cellule.
      widgets[(i,j)] = cell
-     # utiliser le (i,j) comme clé permettra de retrouver le widget correspondant à une case de la grille de puissance 4.
+     # utiliser le (i,j) comme clÃ© permettra de retrouver le widget correspondant Ã  une case de la grille de puissance 4.
    #+end_src
 
-2. La fonction clic doit récupérer l'information de la colonne sélectionnée et lancer la fonction qui trouve la bonne ligne pour placer le jeton. Exemple de début de la fonction :
+2. La fonction clic doit rÃ©cupÃ©rer l'information de la colonne sÃ©lectionnÃ©e et lancer la fonction qui trouve la bonne ligne pour placer le jeton. Exemple de dÃ©but de la fonction :
     #+begin_src python
       def clic(event):
 	  cell = event.widget
 	  col = int(cell.grid_info()['column'])
 	  ligne = trouver_ligne(col)
-	  # Le reste à implémenter
+	  # Le reste Ã  implÃ©menter
     #+end_src
