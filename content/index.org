@@ -906,6 +906,72 @@ S'il peut, alors il faut compter combien de pions sont déjà présents dans l'a
 
 Quand les scores des deux joueurs ont été calculés, la fonction devra renvoyer le score du joueur en paramètre moins le score de l'adversaire.
 
+** Un peu de cours
+*** Recherche
+Le jeu du Puissance 4 est un jeu dit *déterministe* et *complètement observable*. Cela siginifie que l'agent sait dans quel état il est et dans quel état il sera (en fonction des actions qu'il fait). La solution de ce type de problème est une suite d'actions (par exemple "jouer dans la colonne n°3").
+
+Pour trouver la meilleure solution possible dans un état donné, l'agent doit connaître toutes les possibilités de jeu et leurs conséquences. Nous utilisons pour imager cela un *arbre de recherche*. Cet arbre de recherche permet de parcourir toutes les possibilités de jeu.
+
+Exemple de l'arbre de recherche du morpion (ou tic-tac-toe) :
+
+[[./img/arbre-recherche.png]]
+
+Pour pouvoir générer cet arbre de recherche pour notre IA, nous avons créé une fonction qui renvoie tous les coups possibles, c'est-à-dire tous les ensembles =(ligne, colonne)= correspondants aux endroits où le prochain joueur peut placer son pion.
+
+*** Algorithme Min-Max
+L'algorithme Min-Max est un algorithme utilisé uniquement pour la programmation d'intelligences artificielles de jeux. Le principe est le suivant:
+- Quand c'est au tour de l'agent de jouer (notre IA), il doit trouver la solution qui lui offrira le plus de chances de gagner. Pour ce faire, il va devoir *tester tous les coups* qu'il peut jouer dans l'*état actuel* de la grille.
+- Pour chaque coup possible, il vérifie le résultat (a-t-il gagné ?) et va tester *tous les coups que l'adversaire pourra jouer ensuite*.
+- L'agent continue de "simuler" la partie jusqu'à ce qu'il arrive dans un *état final*, c'est-à-dire un état où soit un des joueurs a gagné soit la grille est remplie.
+- L'agent doit recommencer cette simulation de partie pour tous les coups possibles à chaque fois.
+
+C'est ici que nous aurons besoin d'utiliser la récursion : l'agent devra tester toutes les parties possibles pour déterminer quel coup amène la partie vers sa victoire. Chaque "étape" ou "étage" dans l'arbre de recherche correspond à ce que l'on appelle *la profondeur*. Plus l'agent va en profondeur, plus le temps de recherche sera long car à chaque prondeur, cela ajoute encore plus de solutions à vérifier.
+
+*L'algorithme Min-Max est donc une manière de générer et explorer l'arbre de recherche associé à la partie de Puissance 4.*
+
+Le fonctionnement de l'algorithme est le suivant :
+- Max et Min sont les deux joueurs.
+- Max joue en premier, Min en second.
+- Le joueur Max (qui correspond à l'agent) cherche à obtenir le score maximal avec son coup.
+- Le joueur Min (qui correspond au joueur humain) cherche à obtenir le score minimal avec son coup.
+
+Le Puissance 4 est un *jeu à somme nulle*. Nous pouvons traduire cela par le fait que :
+- Quand le joueur 1 gagne, le joueur 2 a perdu.
+- Quand le joueur 2 gagne, le joueur 1 a perdu.
+- Quand il y a match nul, aucun des joueurs n'a gagné.
+Nous avons déjà pu remarquer ça quand nous avons programmé les fonctions pour déterminer le vainqueur d'une partie : quand on trouve l'alignement d'un joueur, nous n'avons plus besoin de vérifier le reste de la grille.
+
+*Pour l'algorithme Min-Max, nous aurons donc trois "scores" possibles pour une grille* :
+- 1 si Max gagne.
+- -1 si Min gagne.
+- 0 si aucun des deux ne gagne.
+
+Le pseudo-code de l'algorithme Min-Max se trouve à la page 12 du cours dans la partie *Ressources*.
+
+** Retour au code
+Pour notre jeu, nous utiliserons deux fonctions : =min_max(joueur_max, is_tour_max, profondeur)= et =trouver_meilleur_coup(joueur_max, profondeur)=.
+
+- La fonction =trouver_meilleur_coup(...)= doit :
+  - Récupérer tous les coups possibles.
+  - Initialiser =meilleur_score= à =-math.inf=.
+  - Initialiser =meilleur_coup= à =None=.
+  - Pour chaque coup possible :
+    - Placer le jeton dans la grille aux coordonnées du coup.
+    - Récupérer le score du coup grâce à =min_max=.
+    - Effacer le coup dans la grille.
+    - Garder en mémoire le meilleur score et le meilleur coup.
+  - Il faudra retourner à la fin les coordonnées du meilleur coup trouvé.
+
+- Pour la fonction =min_max(...)=, nous pouvons utiliser le pseudo-code en page 12 du cours dans *Ressources*.
+
+
+
+
+# # La programmation d'une IA pour jeu de réflexion est un peu différente d'une IA pour résoudre d'autres types de problèmes. Notamment, un temps limite est imposé : si l'ordinateur a besoin de 3 jours pour jouer un coup, ce n'est pas intéressant pour notre besoin. Nous aurons donc besoin d'approximer le "but".
+
+
+
+
 # * IA (OLD)
 # Ce chapitre aborde des notions complexes qui demandent un niveau très avancé. Il faudra notamment être à l'aise avec la *récursion*.
 # # ** Qu'est-ce qu'une intelligence artificielle (IA) ?
