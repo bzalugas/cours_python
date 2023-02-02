@@ -527,10 +527,47 @@ Dans un programme nommé =nombre_secret.py= :
    - Définis une fonction =creerListe(taille)= qui crée une liste de taille =taille= en demandant à l'utilisateur chaque nombre de la liste et renvoie la liste ainsi créée.
    - Appelle la fonction =creerListe= après avoir demandé la =taille= à l'utiliateur puis utilise la liste créée dans la fonction =tri=. Affiche la liste avant et après avoir utilisé =tri=.
 
-
-* Chapitre 8 : Puissance 4
+* Chapitre 8 : Mise en pratique 2
 :PROPERTIES:
 :custom_id: chapitre8
+:END:
+** Niveau 1
+:PROPERTIES:
+:custom_id: chapitre8_niv1
+:END:
+*** Nombres premiers
+Dans un programme nommé =nombres_premiers.py= :
+- Crée une fonction =is_premier(nb)= qui renvoie =True= si =nb= est un nombre premier et =False= sinon.
+- Crée une fonction =nb_premiers(n)= qui retourne une liste contenant les =n= premiers nombres premiers.
+- Utilise cette fonction dans un programme qui :
+  - Demande à l'utilisateur le nombre de nombres premiers à afficher.
+  - Affiche les nombres premiers ainsi calculés, *un par ligne*.
+
+*** Division euclidienne
+Dans un programme nommé =division_euclidienne.py= :
+- Crée une fonction =div_euclidienne(a,b)= qui renvoie un tuple contenant le *quotient* et le *reste* de la division euclidienne de =a= par =b=.
+- Utilise cette fonction dans un programme qui demande à l'utilisateur deux nombres et affiche le quotient et le reste de la division euclidienne de ces nombres.
+
+*** Pair ou impair
+Dans un programme nommé =pair_impair.py= :
+- Crée une fonction =is_pair(nb)= qui retourne =True= si =nb= est pair et =False= sinon.
+- Utilise cette fonction dans un programme qui demande un chiffre à l'utilisateur et affiche un texte indiquant si le nombre est pair ou impair.
+
+*** Cercle
+Dans un programme nommé =super_cercle.py= :
+- Crée une fonction =surface(rayon)= qui retourne la surface d'un cercle de rayon =rayon=.
+- Crée une fonction =perimetre(rayon)= qui retourne le périmètre d'un cercle de rayon =rayon=.
+- Crée une fonction =creer_cercle(rayon)= qui dessine avec Turtle un cercle de rayon =rayon=.
+- Utilise toutes ces fonctions dans un programme qui demande le rayon à l'utiliateur et affiche la surface, le périmètre et le dessin du cercle.
+
+*** Diviseurs
+Dans un programme nommé =diviseurs.py= :
+- Crée une fonction =diviseurs(nb)= qui retourne la liste de tous les diviseurs du nombre =nb=.
+- Utilise cette fonction dans un programme qui demande un nombre à l'utiliateur et affiche tous les diviseurs de ce nombre, séparés par des virgules et sans crochets.
+
+* Chapitre 9 : Puissance 4
+:PROPERTIES:
+:custom_id: chapitre9
 :END:
 
 [[./img/puissance4.jpg]]
@@ -545,13 +582,13 @@ Si tu as des idées d'améliorations ou que tu veux faire quelque chose différe
 
 ** Règles du Puissance 4
 :PROPERTIES:
-:custom_id: chapitre8_règles
+:custom_id: chapitre9_règles
 :END:
 Le but du jeu est d'aligner une suite de 4 pions de même couleur sur une grille comptant *6 rangées* et *7 colonnes*. Chaque joueur dispose de 21 pions d'une couleur, en général jaune ou rouge. Tour à tour, les deux joueurs placent un pion dans la *colonne* de leur choix, le pion *coulisse alors jusqu'à la position la plus basse possible dans la dite colonne* à la suite de quoi c'est à l'adversaire de jouer. Le vainqueur est le joueur qui réalise le premier un *alignement (horizontal, vertical ou diagonal) consécutif d'au moins quatre pions de sa couleur.* Si, alors que toutes les cases de la grille de jeu sont remplies, aucun des deux joueurs n'a réalisé un tel alignement, la partie est déclarée nulle.
 
 ** Étape 1 : Définir la structure de notre programme
 :PROPERTIES:
-:custom_id: chapitre8_etape1
+:custom_id: chapitre9_etape1
 :END:
 Dans cette étape, tu ne vas pas encore coder. Nous allons d'abord réfléchir à la structure de notre programme et imaginer son fonctionnement général. Il faut que l'on définisse de quelles fonctions nous auront besoin pour faire fonctionner notre programme.
 Parfois, il est utile d'utiliser du "pseudo code". Le pseudo code, c'est une façon d'écrire un algorithme de façon presque naturelle, sans langage de programmation. Par exemple, dans un pseudo code on peu écrire :
@@ -648,7 +685,7 @@ L'important est de visualiser à peu près comment sera notre programme.
 
 ** Étape 2 : Définir les variables globales
 :PROPERTIES:
-:custom_id: chapitre8_etape2
+:custom_id: chapitre9_etape2
 :END:
 Une *variable globale* est une variable qui pourra être utilisée dans toutes les fontions d'un programme, sans avoir besoin de la passer en paramètre. Pour le Puissance 4, nous aurons besoin de 3 variables. Elles correspondront à *la grille de jeu*, au *symbole du joueur 1* et au *symbole du joueur 2* dans la grille.
 
@@ -672,7 +709,7 @@ Nous n'aurons pas besoin d'autres variables globales pour le moment.
 
 ** Étape 3 : Définir les fonctions d'affichage
 :PROPERTIES:
-:custom_id: chapitre8_etape3
+:custom_id: chapitre9_etape3
 :END:
 *** Affichage des symboles des joueurs
 - Crée une fonction =recupererSymbole(numeroJoueur)=. La logique de cette fonction sera :
@@ -730,7 +767,7 @@ Après quelques tours :
 
 ** Étape 4 : Définir les fonctions pour lancer le jeu
 :PROPERTIES:
-:custom_id: chapitre8_etape4
+:custom_id: chapitre9_etape4
 :END:
 - Crée une fonction =boucleDeJeu()= qui contiendra seulement le mot clé =pass=. Nous coderons cette fonction à l'étape suivante mais nous avons besoin de l'appeler dans la fonction de lancement du jeu.
   #+begin_src python
@@ -752,7 +789,7 @@ def boucleDeJeu():
 
 ** Étape 5 : Déroulement d'une partie
 :PROPERTIES:
-:custom_id: chapitre8_etape5
+:custom_id: chapitre9_etape5
 :END:
 Dans cette étape nous allons commencer la fonction principale =boucleDeJeu()=. Nous allons préparer la logique et nous coderons les fonctions intérmédiaires au fur et à mesure des étapes suivantes.
 
@@ -775,7 +812,7 @@ Définissons maintenant la logique de la boucle de jeu :
 
 ** Étape 6 : Déroulement d'un tour
 :PROPERTIES:
-:custom_id: chapitre8_etape6
+:custom_id: chapitre9_etape6
 :END:
 Nous allons maintenant coder le déroulement d'un tour. Voici ce qu'il se passe à chaque tour :
 - On demande à un joueur de choisir la colonne où placer son jeton. On lui redemande tant qu'il choisi une colonne inexistante (<0 ou >6).
@@ -820,7 +857,7 @@ Nous avons fini de créer le déroulement d'un tour. Dans la prochaine étape, n
 
 ** Étape 7 : Y a-t-il un vainqueur ?
 :PROPERTIES:
-:custom_id: chapitre8_etape7
+:custom_id: chapitre9_etape7
 :END:
 Désormais, on peut faire jouer un tour à un joueur. Il faut maintenant que l'on puisse déterminer à chaque fin de tour si le joueur qui vient de jouer a gagné ou s'il y a match nul.
 
@@ -841,7 +878,7 @@ Enfin, il nous manque la fonction qui vérifie s'il y a *match nul*. Nous savons
 
 ** Étape 8 : Lancement du jeu !
 :PROPERTIES:
-:custom_id: chapitre8_etape8
+:custom_id: chapitre9_etape8
 :END:
 Désormais, il ne nous reste plus qu'à lancer le jeu : appelle simplement la fonction =jeu()= dans le programme !
 
