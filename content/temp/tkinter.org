@@ -56,7 +56,13 @@ Il faut déjà avoir initialisé ta grille de puissance 4 avant de paramétrer l
     #+end_src
 
 * Autre solution sans la méthode grid
+:PROPERTIES:
+:CUSTOM_ID: solution2
+:END:
 ** Stockage des formes du canvas dans une liste
+:PROPERTIES:
+:CUSTOM_ID: stockage-formes
+:END:
 Au moment de créer les formes dans le canvas, tu peux les stocker dans une liste de la même forme que celle qui contient la grille du puissance 4. Exemple :
 #+begin_src python
 canvas = Canvas(root, ...)
@@ -68,6 +74,9 @@ for i in range(len(grille)):
 #+end_src
 
 ** Détection de la forme cliquée dans un canvas
+:PROPERTIES:
+:CUSTOM_ID: detection-forme
+:END:
 On peut détecter assez facilement sur quelle forme était la souris lorsqu'elle a déclenché l'évènement ='<Button-1>'= en utilisant la méthode disponible dans notre canvas =canvas.find_closest(x,y)=.
 *** Démonstration
 - Tu peux utiliser la méthode bind directement dans le canvas après l'avoir créé :
@@ -88,4 +97,7 @@ for i in range(len(formes)):
   #+end_src
 Après cette étape, tu as retrouvé la colonne de la forme sur laquelle on a cliqué et tu peux utiliser tes fonctions codées auparavant avec cette information.
 ** Cas d'une forme sous une autre
+:PROPERTIES:
+:CUSTOM_ID: find-below
+:END:
 Normalement, la méthode =find_closest()= devrait suffire mais il se peut que tu aies besoin de trouver quelle forme se trouve en-dessous de celle sur laquelle on a cliqué. Il faudra utiliser pour cela la méthode =find_below(item)= pour trouver la forme en dessous d'une autre.
