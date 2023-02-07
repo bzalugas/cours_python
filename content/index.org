@@ -565,6 +565,39 @@ Dans un programme nommé =diviseurs.py= :
 - Crée une fonction =diviseurs(nb)= qui retourne la liste de tous les diviseurs du nombre =nb=.
 - Utilise cette fonction dans un programme qui demande un nombre à l'utiliateur et affiche tous les diviseurs de ce nombre, séparés par des virgules et sans crochets.
 
+*** Lettres
+Dans un programme nommé =lettres.py= :
+- Crée une fonction =afficher_lettres(chaine)= qui permet d'afficher chaque lettre d'une chaîne de caractères ; une par ligne.
+- Utilise cette fonction dans un programme qui demande à l'utilisateur un mot ou une phrase et qui affiche ensuite dans l'ordre chaque lettre une à une.
+Exemple d'affichage pour =chaine = "python"= :
+#+begin_example
+p
+y
+t
+h
+o
+n
+#+end_example
+
+** Niveau 2
+:PROPERTIES:
+:CUSTOM_ID: chapitre8_niv2
+:END:
+*** Occurrences de lettres
+Dans un programme nommé =occurrences.py= :
+- Crée une fonction =occurrences(chaine)= qui renvoie un dictionnaire contenant comme clés chaque lettre présente dans la chaîne de caractères =chaine= et comme valeurs le nombre de fois où elle apparaît dans la chaîne.
+- Utilise cette fonction dans un programme qui demande à l'utilisateur un mot ou une phrase et qui affiche chaque lettre et le nombre de fois où elle apparaît.
+Exemple d'affichage pour =chaine = "Bonjour"= :
+#+begin_example
+Le caractère " B " apparaît 1 fois.
+Le caractère " o " apparaît 2 fois.
+Le caractère " n " apparaît 1 fois.
+Le caractère " j " apparaît 1 fois.
+Le caractère " u " apparaît 1 fois.
+Le caractère " r " apparaît 1 fois.
+#+end_example
+
+
 * Chapitre 9 : Puissance 4
 :PROPERTIES:
 :custom_id: chapitre9
