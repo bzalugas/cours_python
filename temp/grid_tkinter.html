@@ -1,146 +1,80 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Grid Tkinter</title>
-<meta name="generator" content="Org mode">
-<link rel="stylesheet" type="text/css" href="../theme/personal/src/personalStyle.css"/>
-<script type="text/javascript" src="../theme/personal/src/tabScript.js"></script>
-<link rel="stylesheet" href="../theme/personal/src/highlight/styles/monokai-sublime.min.css"/>
-<script src="../theme/personal/src/highlight/highlight.min.js"></script>
-<script type="text/javascript">
-/*
-@licstart  The following is the entire license notice for the
-JavaScript code in this tag.
-
-Copyright (C) 2012-2020 Free Software Foundation, Inc.
-
-The JavaScript code in this tag is free software: you can
-redistribute it and/or modify it under the terms of the GNU
-General Public License (GNU GPL) as published by the Free Software
-Foundation, either version 3 of the License, or (at your option)
-any later version.  The code is distributed WITHOUT ANY WARRANTY;
-without even the implied warranty of MERCHANTABILITY or FITNESS
-FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
-
-As additional permission under GNU GPL version 3 section 7, you
-may distribute non-source (e.g., minimized or compacted) forms of
-that code without the copy of the GNU GPL normally required by
-section 4, provided you include this license notice and a URL
-through which recipients can access the Corresponding Source.
-
-
-@licend  The above is the entire license notice
-for the JavaScript code in this tag.
-*/
-<!--/*--><![CDATA[/*><!--*/
- function CodeHighlightOn(elem, id)
- {
-   var target = document.getElementById(id);
-   if(null != target) {
-     elem.cacheClassElem = elem.className;
-     elem.cacheClassTarget = target.className;
-     target.className = "code-highlighted";
-     elem.className   = "code-highlighted";
-   }
- }
- function CodeHighlightOff(elem, id)
- {
-   var target = document.getElementById(id);
-   if(elem.cacheClassElem)
-     elem.className = elem.cacheClassElem;
-   if(elem.cacheClassTarget)
-     target.className = elem.cacheClassTarget;
- }
-/*]]>*///-->
-</script>
+<meta name="generator" content="Org Mode" />
+<link rel="stylesheet" type="text/css" href="personalStyle.css"/>
+<link rel="stylesheet" href="highlight/styles/monokai-sublime.min.css"/>
+<script src="highlight/highlight.min.js"></script>
 </head>
 <body>
-<div id="content">
+<div id="content" class="content">
 <header>
 <h1 class="title">Grid Tkinter</h1>
-</header><nav id="table-of-contents">
-<h2>Table des mati√®res</h2>
-<div id="text-table-of-contents">
-<ul>
-<li><a href="#grid">Utiliser la m√©thode grid pour l'interface du Puissance 4</a>
-<ul>
-<li><a href="#ressources">Ressources</a></li>
-<li><a href="#pourquoi-grid">Pourquoi une Grid pour le Puissance 4 ?</a></li>
-<li><a href="#etapes">Etape par √©tape</a></li>
-</ul>
-</li>
-</ul>
-</div>
-</nav>
-
-<div id="outline-container-orge7a9095" class="outline-2">
-<h2 id="grid">Utiliser la m√©thode grid pour l'interface du Puissance 4</h2>
-<div class="outline-text-2" id="text-grid">
-</div>
-
-<div id="outline-container-orgcf4acdd" class="outline-3">
-<h3 id="ressources">Ressources</h3>
-<div class="outline-text-3" id="text-ressources">
+</header>
+<div id="outline-container-org657f295" class="outline-2">
+<h2 id="org657f295">Ressources</h2>
+<div class="outline-text-2" id="text-org657f295">
 <p target="_blank">
 <a href="https://koor.fr/Python/Tutoriel_Tkinter/tkinter_layout_grid.wp" target="_blank">https://koor.fr/Python/Tutoriel_Tkinter/tkinter_layout_grid.wp</a>
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgffdc62f" class="outline-3">
-<h3 id="pourquoi-grid">Pourquoi une Grid pour le Puissance 4 ?</h3>
-<div class="outline-text-3" id="text-pourquoi-grid">
+<div id="outline-container-orgd36bdf7" class="outline-2">
+<h2 id="orgd36bdf7">Pourquoi une Grid pour le Puissance 4 ?</h2>
+<div class="outline-text-2" id="text-orgd36bdf7">
 <p>
-La m√©thode grid sert √† positionner des √©l√©ments (=widgets) dans notre √©cran en fonction d'un positionnement matriciel. Comme nous utilisons une matrice, c'est √† dire une liste de listes, pour placer nos jetons sur le plateau, c'est la m√©thode la plus adapt√©e. Il faudra associer √† chaque cellule cr√©√©e le clic de la souris et la fonction qui placera le jeton.
+La mÈthode grid sert ‡ positionner des ÈlÈments (=widgets) dans notre Ècran en fonction d'un positionnement matriciel. Comme nous utilisons une matrice, c'est ‡ dire une liste de listes, pour placer nos jetons sur le plateau, c'est la mÈthode la plus adaptÈe. Il faudra associer ‡ chaque cellule crÈÈe le clic de la souris et la fonction qui placera le jeton.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org8f62f89" class="outline-3">
-<h3 id="etapes">Etape par √©tape</h3>
-<div class="outline-text-3" id="text-etapes">
+<div id="outline-container-org764bf78" class="outline-2">
+<h2 id="org764bf78">Etape par Ètape</h2>
+<div class="outline-text-2" id="text-org764bf78">
 </div>
-<div id="outline-container-org595bf36" class="outline-4">
-<h4 id="org595bf36">Pr√©-requis</h4>
-<div class="outline-text-4" id="text-org595bf36">
+<div id="outline-container-org03d2143" class="outline-3">
+<h3 id="org03d2143">PrÈ-requis</h3>
+<div class="outline-text-3" id="text-org03d2143">
 <p>
-Il faut d√©j√† avoir initialis√© ta grille de puissance 4 avant de param√©trer l'affichage car tu auras besoin de la taille de la grille et des √©ventuelles valeurs des cases.
+Il faut dÈj‡ avoir initialisÈ ta grille de puissance 4 avant de paramÈtrer l'affichaque car tu auras besoin de la taille de la grille et des Èventuelles valeurs des cases.
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgdcc012f" class="outline-4">
-<h4 id="orgdcc012f">Initialisation</h4>
-<div class="outline-text-4" id="text-orgdcc012f">
+<div id="outline-container-org0898bf8" class="outline-3">
+<h3 id="org0898bf8">Initialisation</h3>
+<div class="outline-text-3" id="text-org0898bf8">
 <ol class="org-ol">
-<li>Cr√©e un objet Tk() (<code>window = tkinter.Tk()</code>).</li>
-<li>Configure la fen√™tre (titre, fond, etc).</li>
-<li>Cr√©e un dictionnaire vide qui contiendra tous les widgets de la grille (<code>widgets = {}</code>).</li>
+<li>CrÈe un objet Tk() (<code>window = tkinter.Tk()</code>).</li>
+<li>Configure la fenÍtre (titre, fond, etc).</li>
+<li>CrÈe un dictionnaire vide qui contiendra tous les widgets de la grille (<code>widgets = {}</code>).</li>
 </ol>
 </div>
 </div>
 
-<div id="outline-container-org885f21a" class="outline-4">
-<h4 id="org885f21a">Cr√©ation des widgets</h4>
-<div class="outline-text-4" id="text-org885f21a">
+<div id="outline-container-org554e2d3" class="outline-3">
+<h3 id="org554e2d3">CrÈation des widgets</h3>
+<div class="outline-text-3" id="text-org554e2d3">
 <ol class="org-ol">
 <li><p>
-A l'aide d'une double boucle imbriqu√©e (pour parcourir la grille de puissance 4), il faut pour chaque case de la grille cr√©er une cellule pour ton affichage (une cellule sera un Label()). Exemple √† l'int√©rieur de la boucle:
+A l'aide d'une double boucle imbriquÈe (pour parcourir la grille de puissance 4), il faut pour chaque case de la grille crÈer une cellule pour ton affichage (une cellule sera un Label()). Exemple ‡ l'intÈrieur de la boucle:
 </p>
 <div class="org-src-container">
 <pre class="src src-python"><span style="font-weight: bold; font-style: italic;">cell</span> = Label(window, text=<span style="font-style: italic;">" "</span>, bg=<span style="font-style: italic;">'white'</span>)
 cell.grid(row = i, column = j)
 cell.bind(<span style="font-style: italic;">'&lt;Button-1&gt;'</span>, clic)
-<span style="font-weight: bold; font-style: italic;"># </span><span style="font-weight: bold; font-style: italic;">clic correspond &#224; une fonction qui faudra d&#233;finir et qui sera lanc&#233;e uniquement lorsque l'on clique sur une cellule.</span>
-<span style="font-weight: bold; font-style: italic;">widgets</span>[(i,j)] = cell
+<span style="font-weight: bold; font-style: italic;"># </span><span style="font-weight: bold; font-style: italic;">clic correspond &#224; une fonction qui faut d&#233;finir et qui sera lanc&#233;e uniquement lorsque l'on clique sur une cellule.</span>
+widgets[(i,j)] = cell
 <span style="font-weight: bold; font-style: italic;"># </span><span style="font-weight: bold; font-style: italic;">utiliser le (i,j) comme cl&#233; permettra de retrouver le widget correspondant &#224; une case de la grille de puissance 4.</span>
 </pre>
 </div></li>
 
 <li><p>
-La fonction clic doit r√©cup√©rer l'information de la colonne s√©lectionn√©e et lancer la fonction qui trouve la bonne ligne pour placer le jeton. Exemple de d√©but de la fonction :
+La fonction clic doit rÈcupÈrer l'information de la colonne sÈlectionnÈe et lancer la fonction qui trouve la bonne ligne pour placer le jeton. Exemple de dÈbut de la fonction :
 </p>
 <div class="org-src-container">
 <pre class="src src-python"><span style="font-weight: bold;">def</span> <span style="font-weight: bold;">clic</span>(event):
@@ -151,7 +85,6 @@ La fonction clic doit r√©cup√©rer l'information de la colonne s√©lectionn√©e et 
 </pre>
 </div></li>
 </ol>
-</div>
 </div>
 </div>
 </div>
