@@ -71,23 +71,23 @@ for the JavaScript code in this tag.
 <li><a href="#etapes">Etape par étape</a></li>
 </ul>
 </li>
-<li><a href="#orgd1728c5">Autre solution sans la méthode grid</a>
+<li><a href="#solution2">Autre solution sans la méthode grid</a>
 <ul>
-<li><a href="#org6fcdc18">Stockage des formes du canvas dans une liste</a></li>
-<li><a href="#org976b138">Détection de la forme cliquée dans un canvas</a></li>
-<li><a href="#org91c0c34">Cas d'une forme sous une autre</a></li>
+<li><a href="#stockage-formes">Stockage des formes du canvas dans une liste</a></li>
+<li><a href="#detection-forme">Détection de la forme cliquée dans un canvas</a></li>
+<li><a href="#find-below">Cas d'une forme sous une autre</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </nav>
 
-<div id="outline-container-org4fbbd81" class="outline-2">
+<div id="outline-container-orgb7bedf6" class="outline-2">
 <h2 id="grid">Utiliser la méthode grid pour l'interface du Puissance 4</h2>
 <div class="outline-text-2" id="text-grid">
 </div>
 
-<div id="outline-container-org20bb8b3" class="outline-3">
+<div id="outline-container-org60ba4be" class="outline-3">
 <h3 id="ressources">Ressources</h3>
 <div class="outline-text-3" id="text-ressources">
 <p target="_blank">
@@ -96,7 +96,7 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-org5bf5b87" class="outline-3">
+<div id="outline-container-org4cd25ab" class="outline-3">
 <h3 id="pourquoi-grid">Pourquoi une Grid pour le Puissance 4 ?</h3>
 <div class="outline-text-3" id="text-pourquoi-grid">
 <p>
@@ -105,22 +105,22 @@ La méthode grid sert à positionner des éléments (=widgets) dans notre écran
 </div>
 </div>
 
-<div id="outline-container-org4175278" class="outline-3">
+<div id="outline-container-org02deb1c" class="outline-3">
 <h3 id="etapes">Etape par étape</h3>
 <div class="outline-text-3" id="text-etapes">
 </div>
-<div id="outline-container-org887a93b" class="outline-4">
-<h4 id="org887a93b">Pré-requis</h4>
-<div class="outline-text-4" id="text-org887a93b">
+<div id="outline-container-orga8a582a" class="outline-4">
+<h4 id="orga8a582a">Pré-requis</h4>
+<div class="outline-text-4" id="text-orga8a582a">
 <p>
 Il faut déjà avoir initialisé ta grille de puissance 4 avant de paramétrer l'affichage car tu auras besoin de la taille de la grille et des éventuelles valeurs des cases.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org7ae444f" class="outline-4">
-<h4 id="org7ae444f">Initialisation</h4>
-<div class="outline-text-4" id="text-org7ae444f">
+<div id="outline-container-org5d3c32b" class="outline-4">
+<h4 id="org5d3c32b">Initialisation</h4>
+<div class="outline-text-4" id="text-org5d3c32b">
 <ol class="org-ol">
 <li>Crée un objet Tk() (<code>window = tkinter.Tk()</code>).</li>
 <li>Configure la fenêtre (titre, fond, etc).</li>
@@ -129,9 +129,9 @@ Il faut déjà avoir initialisé ta grille de puissance 4 avant de paramétrer l
 </div>
 </div>
 
-<div id="outline-container-orgb5217b1" class="outline-4">
-<h4 id="orgb5217b1">Création des widgets</h4>
-<div class="outline-text-4" id="text-orgb5217b1">
+<div id="outline-container-orgb7171f0" class="outline-4">
+<h4 id="orgb7171f0">Création des widgets</h4>
+<div class="outline-text-4" id="text-orgb7171f0">
 <ol class="org-ol">
 <li><p>
 A l'aide d'une double boucle imbriquée (pour parcourir la grille de puissance 4), il faut pour chaque case de la grille créer une cellule pour ton affichage (une cellule sera un Label()). Exemple à l'intérieur de la boucle:
@@ -163,13 +163,13 @@ La fonction clic doit récupérer l'information de la colonne sélectionnée et 
 </div>
 </div>
 
-<div id="outline-container-orgd1728c5" class="outline-2">
-<h2 id="orgd1728c5">Autre solution sans la méthode grid</h2>
-<div class="outline-text-2" id="text-orgd1728c5">
+<div id="outline-container-orgfbf57fb" class="outline-2">
+<h2 id="solution2">Autre solution sans la méthode grid</h2>
+<div class="outline-text-2" id="text-solution2">
 </div>
-<div id="outline-container-org6fcdc18" class="outline-3">
-<h3 id="org6fcdc18">Stockage des formes du canvas dans une liste</h3>
-<div class="outline-text-3" id="text-org6fcdc18">
+<div id="outline-container-org1e30993" class="outline-3">
+<h3 id="stockage-formes">Stockage des formes du canvas dans une liste</h3>
+<div class="outline-text-3" id="text-stockage-formes">
 <p>
 Au moment de créer les formes dans le canvas, tu peux les stocker dans une liste de la même forme que celle qui contient la grille du puissance 4. Exemple :
 </p>
@@ -185,16 +185,16 @@ Au moment de créer les formes dans le canvas, tu peux les stocker dans une list
 </div>
 </div>
 
-<div id="outline-container-org976b138" class="outline-3">
-<h3 id="org976b138">Détection de la forme cliquée dans un canvas</h3>
-<div class="outline-text-3" id="text-org976b138">
+<div id="outline-container-org348f72d" class="outline-3">
+<h3 id="detection-forme">Détection de la forme cliquée dans un canvas</h3>
+<div class="outline-text-3" id="text-detection-forme">
 <p>
 On peut détecter assez facilement sur quelle forme était la souris lorsqu'elle a déclenché l'évènement <code>'&lt;Button-1&gt;'</code> en utilisant la méthode disponible dans notre canvas <code>canvas.find_closest(x,y)</code>.
 </p>
 </div>
-<div id="outline-container-orgc8fc8b0" class="outline-4">
-<h4 id="orgc8fc8b0">Démonstration</h4>
-<div class="outline-text-4" id="text-orgc8fc8b0">
+<div id="outline-container-orgba5c183" class="outline-4">
+<h4 id="orgba5c183">Démonstration</h4>
+<div class="outline-text-4" id="text-orgba5c183">
 <ul class="org-ul">
 <li><p>
 Tu peux utiliser la méthode bind directement dans le canvas après l'avoir créé :
@@ -225,9 +225,9 @@ Après cette étape, tu as retrouvé la colonne de la forme sur laquelle on a cl
 </div>
 </div>
 </div>
-<div id="outline-container-org91c0c34" class="outline-3">
-<h3 id="org91c0c34">Cas d'une forme sous une autre</h3>
-<div class="outline-text-3" id="text-org91c0c34">
+<div id="outline-container-orgbd3932a" class="outline-3">
+<h3 id="find-below">Cas d'une forme sous une autre</h3>
+<div class="outline-text-3" id="text-find-below">
 <p>
 Normalement, la méthode <code>find_closest()</code> devrait suffire mais il se peut que tu aies besoin de trouver quelle forme se trouve en-dessous de celle sur laquelle on a cliqué. Il faudra utiliser pour cela la méthode <code>find_below(item)</code> pour trouver la forme en dessous d'une autre.
 </p>
