@@ -597,6 +597,10 @@ Le caractère " u " apparaît 1 fois.
 Le caractère " r " apparaît 1 fois.
 #+end_example
 
+*** Trouver la position
+ Dans un programme nommé =position_lettre.py= :
+ - Crée une fonction =position(lettre, chaine)= qui renvoie une liste contenant les positions de la lettre =lettre= dans la chaîne de caractères =chaine=. Si la lettre n'est pas présente dans la chaîne, la première et seule valeur de la liste devra être -1.
+ - Utilise cette fonction dans un programme qui demande d'abord à l'utilisateur un mot ou une phrase puis la lettre à trouver et affiche toutes les positions où se trouve la lettre dans la chaîne.
 
 * Chapitre 9 : Puissance 4
 :PROPERTIES:
