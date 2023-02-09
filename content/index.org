@@ -446,12 +446,24 @@ Pour le moment, cela suffira pour créer des programmes plus intéractifs, mais 
 :PROPERTIES:
 :custom_id: chapitre6_cours16
 :END:
+
+*** Indication pour générer un nombre aléatoire
+Pour générer un nombre aléatoire, tu dois d'abord importer le module =random=. Il faut toujours importer les modules en début de programme pour plus de clarté :
+#+begin_src python
+import random
+#+end_src
+
+Ensuite, pour générer le nombre et le stocker, tu dois utiliser la fonction =random.randint(min, max)=. =min= et =max= sont les valeurs minimale et maximale du nombre aléatoire souhaité.
+#+begin_src python
+nombre = random.randint(0, 10)
+#+end_src
+
 *** Exercice
 Dans un programme nommé =nombre_secret.py= :
 - Fais un jeu où l'ordinateur choisit un nombre aléatoire et le joueur doit le deviner.
-- Le programme doit choisir un nombre aléatoire entre 1 et 10 en utilisant random.randint(nombre_minimum, nombre_maximum) (n'oublie pas d'importer le module random)
+- Le programme doit choisir un nombre aléatoire entre 1 et 10 en utilisant la fonction vue avant.
 - Le joueur doit avoir 4 essais pour deviner le nombre.
-- Une fois qu'une partie est terminée (gagnée ou perdue), une nouvelle partie doit se relancer automatiquement.
+- Une fois qu'une partie est terminée (gagnée ou perdue), le programme doit demander à l'utilisateur s'il souhaite rejouer et relancer une partie si celui-ci répond ="oui"=.
 - Le nombre d'essai et le minimum et maximum du nombre secret doivent être stockés dans des variables au début du programme et qui doivent être utilisées au bon endroit dans le programme afin de permettre de choisir le nombre d'essai, le minimum et le maximum en changeant seulement la variable au début du programme.
 - A chaque essai, le programme doit :
   - Dire au joueur entre combien et le minimum et maximum du nombre secret.
@@ -535,13 +547,6 @@ Dans un programme nommé =nombre_secret.py= :
 :PROPERTIES:
 :custom_id: chapitre8_niv1
 :END:
-*** Nombres premiers
-Dans un programme nommé =nombres_premiers.py= :
-- Crée une fonction =is_premier(nb)= qui renvoie =True= si =nb= est un nombre premier et =False= sinon.
-- Crée une fonction =nb_premiers(n)= qui retourne une liste contenant les =n= premiers nombres premiers.
-- Utilise cette fonction dans un programme qui :
-  - Demande à l'utilisateur le nombre de nombres premiers à afficher.
-  - Affiche les nombres premiers ainsi calculés, *un par ligne*.
 
 *** Division euclidienne
 Dans un programme nommé =division_euclidienne.py= :
@@ -552,6 +557,14 @@ Dans un programme nommé =division_euclidienne.py= :
 Dans un programme nommé =pair_impair.py= :
 - Crée une fonction =is_pair(nb)= qui retourne =True= si =nb= est pair et =False= sinon.
 - Utilise cette fonction dans un programme qui demande un chiffre à l'utilisateur et affiche un texte indiquant si le nombre est pair ou impair.
+
+*** Nombres premiers
+Dans un programme nommé =nombres_premiers.py= :
+- Crée une fonction =is_premier(nb)= qui renvoie =True= si =nb= est un nombre premier et =False= sinon.
+- Crée une fonction =nb_premiers(n)= qui retourne une liste contenant les =n= premiers nombres premiers.
+- Utilise cette fonction dans un programme qui :
+  - Demande à l'utilisateur le nombre de nombres premiers à afficher.
+  - Affiche les nombres premiers ainsi calculés, *un par ligne*.
 
 *** Cercle
 Dans un programme nommé =super_cercle.py= :
@@ -579,6 +592,11 @@ o
 n
 #+end_example
 
+*** Swap de lettres
+Dans un programme nommé =swap_lettres.py= :
+- Crée une fonction =swap_lettres(chaine, lettre1, lettre2)= qui échange les lettres à la position =lettre1= et =lettre2= dans la chaîne de caractères =chaine=.
+- Utilise cette fonction dans un programme qui demande à l'utiliateur une chaîne de caractères puis la position des lettres à échanger. Le programme devra afficher la chaîne avant et après modification.
+
 ** Niveau 2
 :PROPERTIES:
 :CUSTOM_ID: chapitre8_niv2
@@ -597,10 +615,18 @@ Le caractère " u " apparaît 1 fois.
 Le caractère " r " apparaît 1 fois.
 #+end_example
 
-*** Trouver la position
- Dans un programme nommé =position_lettre.py= :
- - Crée une fonction =position(lettre, chaine)= qui renvoie une liste contenant les positions de la lettre =lettre= dans la chaîne de caractères =chaine=. Si la lettre n'est pas présente dans la chaîne, la première et seule valeur de la liste devra être -1.
+*** Trouver les positions
+ Dans un programme nommé =positions_lettre.py= :
+ - Crée une fonction =positions(lettre, chaine)= qui renvoie une liste contenant les positions de la lettre =lettre= dans la chaîne de caractères =chaine=. Si la lettre n'est pas présente dans la chaîne, la première et seule valeur de la liste devra être -1.
  - Utilise cette fonction dans un programme qui demande d'abord à l'utilisateur un mot ou une phrase puis la lettre à trouver et affiche toutes les positions où se trouve la lettre dans la chaîne.
+
+*** Taille des chaînes
+Dans un programme nommé =taille_chaines_liste.py= :
+- Crée une fonction =taille_chaines(liste)= qui renvoie un dictionnaire qui associe à chaque chaîne de caractères la valeur de sa taille.
+- Utilise cette fonction dans un programme qui :
+  - Demande à l'utilisateur la taille de la liste à créer.
+  - Demande à l'utilisateur d'entrer des mots ou des phrases et les ajoute à une liste.
+  - Affiche (à l'aide de la fonction =taille_chaines()=) chaque chaîne de caractères suivi de sa taille.
 
 * Chapitre 9 : Puissance 4
 :PROPERTIES:
