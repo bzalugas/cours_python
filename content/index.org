@@ -2,7 +2,7 @@
 #+language: fr
 #+author: Bastien ZALUGAS
 #+HTML_DOCTYPE: html5
-#+options: <:nil ^:{} broken-links:mark creator:nil date:nil email:nil timestamp:nil toc:2 html-style:nil num:nil html5-fancy:t author:nil
+#+options: <:nil ^:{} broken-links:mark creator:nil date:nil email:nil timestamp:nil toc:2 html-style:nil num:nil html5-fancy:t author:t
 #+setupfile: theme/personal/personal-theme.setup
 
 * Introduction
@@ -524,7 +524,7 @@ Dans un programme nommé =nombre_secret.py= :
 4. Dans un programme nommé =inverse.py= :
    - Définis une fonction ayant la signature =inverse(liste)= qui doit renvoyer la =liste= passée en argument à l'envers. Par exemple, si on lui donne la liste =[1, 5, 2, 6]= en argument, elle doit renvoyer =[6, 2, 5, 1]=.
    - Appelle la fonction plusieurs fois avec des listes différentes pour bien tester tous les cas.
-   - Essaie de passer une chaîne de caractères en arugment. Que se passe-t-il ?
+   - Essaie de passer une chaîne de caractères en argument. Que se passe-t-il ?
 
 5. Dans un programme nommé =minimum_liste.py= :
    - Définir une fonction ayant la signature =minimum_liste(liste_nombres)= qui prend une liste de nombre en paramètre et renvoie le plus petit nombre de la liste.

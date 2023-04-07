@@ -3,4 +3,5 @@
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="theme/personal/src/personalStyle.css"/>
 #+HTML_HEAD: <script type="text/javascript" src="theme/personal/src/tabScript.js"></script>
 #+HTML_HEAD: <link rel="stylesheet" href="theme/personal/src/highlight/styles/monokai-sublime.min.css"/>
+#+HTML_HEAD: <meta name="description" content="Cours et exercices de programmation en python niveau collège. Par Bastien Zalugas.">
 #+HTML_HEAD: <script src="theme/personal/src/highlight/highlight.min.js"></script>
