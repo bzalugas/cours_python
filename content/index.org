@@ -678,9 +678,9 @@ Dans un programme nommé =del_doublons.py= :
   - Affiche la liste.
   - Affiche la liste sans les doublons.
 
-* Chapitre 9 : Puissance 4
+* Puissance 4
 :PROPERTIES:
-:custom_id: chapitre9
+:custom_id: puissance4
 :END:
 
 [[./img/puissance4.jpg]]
@@ -695,13 +695,13 @@ Si tu as des idées d'améliorations ou que tu veux faire quelque chose différe
 
 ** Règles du Puissance 4
 :PROPERTIES:
-:custom_id: chapitre9_règles
+:custom_id: puissance4_règles
 :END:
 Le but du jeu est d'aligner une suite de 4 pions de même couleur sur une grille comptant *6 rangées* et *7 colonnes*. Chaque joueur dispose de 21 pions d'une couleur, en général jaune ou rouge. Tour à tour, les deux joueurs placent un pion dans la *colonne* de leur choix, le pion *coulisse alors jusqu'à la position la plus basse possible dans la dite colonne* à la suite de quoi c'est à l'adversaire de jouer. Le vainqueur est le joueur qui réalise le premier un *alignement (horizontal, vertical ou diagonal) consécutif d'au moins quatre pions de sa couleur.* Si, alors que toutes les cases de la grille de jeu sont remplies, aucun des deux joueurs n'a réalisé un tel alignement, la partie est déclarée nulle.
 
 ** Étape 1 : Définir la structure de notre programme
 :PROPERTIES:
-:custom_id: chapitre9_etape1
+:custom_id: puissance4_etape1
 :END:
 Dans cette étape, tu ne vas pas encore coder. Nous allons d'abord réfléchir à la structure de notre programme et imaginer son fonctionnement général. Il faut que l'on définisse de quelles fonctions nous auront besoin pour faire fonctionner notre programme.
 Parfois, il est utile d'utiliser du "pseudo code". Le pseudo code, c'est une façon d'écrire un algorithme de façon presque naturelle, sans langage de programmation. Par exemple, dans un pseudo code on peu écrire :
@@ -798,7 +798,7 @@ L'important est de visualiser à peu près comment sera notre programme.
 
 ** Étape 2 : Définir les variables globales
 :PROPERTIES:
-:custom_id: chapitre9_etape2
+:custom_id: puissance4_etape2
 :END:
 Une *variable globale* est une variable qui pourra être utilisée dans toutes les fontions d'un programme, sans avoir besoin de la passer en paramètre. Pour le Puissance 4, nous aurons besoin de 3 variables. Elles correspondront à *la grille de jeu*, au *symbole du joueur 1* et au *symbole du joueur 2* dans la grille.
 
@@ -822,7 +822,7 @@ Nous n'aurons pas besoin d'autres variables globales pour le moment.
 
 ** Étape 3 : Définir les fonctions d'affichage
 :PROPERTIES:
-:custom_id: chapitre9_etape3
+:custom_id: puissance4_etape3
 :END:
 *** Affichage des symboles des joueurs
 - Crée une fonction =recupererSymbole(numeroJoueur)=. La logique de cette fonction sera :
@@ -858,19 +858,6 @@ Après quelques tours :
 
 [[./img/exemple_tours.png]]
 
-# Tu peux t'inspirer de ce code mais tu dois comprendre comment parcourir la grille pour pouvoir faire la suite :
-#   #+begin_src python
-# affichage = "\n_______________\n"
-# for ligne in range(len(grille)):
-#     # par exemple affichage += |
-#     for colonne in range(len(grille[ligne])):
-#         affichage += recupererSymbole(grille[ligne][colonne]) #ici on récupère le symbole correspondant au chiffre placé dans la grille.
-#     affichage += "\n"
-# affichage += "---------------"
-# affichage += " 0 1 2 3 4 5 6" #Cet affichage servira pour que les joueurs connaissent le numéro des colonnes
-# print(affichage)
-#   #+end_src
-
 *** Affichage de fin de partie
 - Crée une fonction =afficherFinDePartie= qui prend en paramètre une variable =gagnant=. Cette fonction doit :
   - Afficher la grille.
@@ -880,7 +867,7 @@ Après quelques tours :
 
 ** Étape 4 : Définir les fonctions pour lancer le jeu
 :PROPERTIES:
-:custom_id: chapitre9_etape4
+:custom_id: puissance4_etape4
 :END:
 - Crée une fonction =boucleDeJeu()= qui contiendra seulement le mot clé =pass=. Nous coderons cette fonction à l'étape suivante mais nous avons besoin de l'appeler dans la fonction de lancement du jeu.
   #+begin_src python
@@ -902,7 +889,7 @@ def boucleDeJeu():
 
 ** Étape 5 : Déroulement d'une partie
 :PROPERTIES:
-:custom_id: chapitre9_etape5
+:custom_id: puissance4_etape5
 :END:
 Dans cette étape nous allons commencer la fonction principale =boucleDeJeu()=. Nous allons préparer la logique et nous coderons les fonctions intérmédiaires au fur et à mesure des étapes suivantes.
 
@@ -925,7 +912,7 @@ Définissons maintenant la logique de la boucle de jeu :
 
 ** Étape 6 : Déroulement d'un tour
 :PROPERTIES:
-:custom_id: chapitre9_etape6
+:custom_id: puissance4_etape6
 :END:
 Nous allons maintenant coder le déroulement d'un tour. Voici ce qu'il se passe à chaque tour :
 - On demande à un joueur de choisir la colonne où placer son jeton. On lui redemande tant qu'il choisi une colonne inexistante (<0 ou >6).
@@ -970,7 +957,7 @@ Nous avons fini de créer le déroulement d'un tour. Dans la prochaine étape, n
 
 ** Étape 7 : Y a-t-il un vainqueur ?
 :PROPERTIES:
-:custom_id: chapitre9_etape7
+:custom_id: puissance4_etape7
 :END:
 Désormais, on peut faire jouer un tour à un joueur. Il faut maintenant que l'on puisse déterminer à chaque fin de tour si le joueur qui vient de jouer a gagné ou s'il y a match nul.
 
@@ -991,7 +978,7 @@ Enfin, il nous manque la fonction qui vérifie s'il y a *match nul*. Nous savons
 
 ** Étape 8 : Lancement du jeu !
 :PROPERTIES:
-:custom_id: chapitre9_etape8
+:custom_id: puissance4_etape8
 :END:
 Désormais, il ne nous reste plus qu'à lancer le jeu : appelle simplement la fonction =jeu()= dans le programme !
 
