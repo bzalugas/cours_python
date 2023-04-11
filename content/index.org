@@ -648,7 +648,7 @@ Dans un programme nommé =palindrome.py= :
 
 *** Mot inverse
 Dans un programme nommé =mot_inverse.py= :
-- Crée une fonction =mot_inverse(mot)= qui *retourne une chaîne* correspondant à l'inverse du mot =mot=. *Attention, le mot original ne doit pas être modifié !.*
+- Crée une fonction =mot_inverse(mot)= qui *retourne une chaîne* correspondant à l'inverse du mot =mot=. *Attention, le mot original ne doit pas être modifié !*
 - *Utilise cette fonction* dans un programme qui :
   - Demande un mot à l'utilisateur.
   - Affiche le mot original et son inverse.
@@ -677,6 +677,32 @@ Dans un programme nommé =del_doublons.py= :
   - Demande à l'utilisateur des éléments à insérer dans une liste.
   - Affiche la liste.
   - Affiche la liste sans les doublons.
+
+*** Rendu de monnaie
+Nous voulons créer un programme qui permet de calculer un rendu de monnaie et de dire de quels billets et pièces nous avons besoin pour former la somme à rendre. Par exemple, si la somme à payer est de 18.57€ et qu'un client donne 100€, le programme doit pouvoir :
+1. Calculer qu'il faut rendre 81.43€
+2. Afficher les billets et les pièces à utiliser pour cela. Exemple :
+#+begin_example
+Prix à payer : 18.57€
+Rendu : 81.43€
+Décomposition :
+50€ : 1
+20€ : 1
+10€ : 1
+1€ : 1
+0.20€ : 2
+0.02€ : 1
+0.01€ : 1
+#+end_example
+Nous considérerons les sommes suivantes pour décomposer les sommes : 500€, 100€, 50€, 20€, 10€, 5€, 2€, 1€, 0.50€, 0.20€, 0.10€, 0.05€, 0.02€, 0.01€. L'algorithme devra bien entendu utiliser le moins de pièces et billets possibles.
+
+Dans un programme nommé =rendu_monnaie.py= :
+- Crée une fonction =rendu_monnaie(prix, somme_payee)= qui *retourne la somme à rendre*.
+- Crée une fonction =decomposer_somme(somme)= qui *retourne l'ensemble des billets et pièces à utiliser et leur nombre* nécessaires pour décomposer la somme d'argent =somme=. Tu peux par exemple retourner cette information sous forme de dictionnaire.
+- *Utilise ces fonctions* dans un programme qui :
+  - Demande à l'utilisateur un prix
+  - Demande à l'utilisateur la somme qu'il donne
+  - Affiche la somme à rendre ainsi que les billets et pièces à utiliser.
 
 * Puissance 4
 :PROPERTIES:
