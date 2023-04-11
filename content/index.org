@@ -543,6 +543,8 @@ Dans un programme nommé =nombre_secret.py= :
 :PROPERTIES:
 :custom_id: chapitre8
 :END:
+Attention ! Pour chaque exercice, il faudra bien faire la différence entre le code *à l'intérieur des fonctions* et le code qui *utilise les fonctions*.
+
 ** Niveau 1
 :PROPERTIES:
 :custom_id: chapitre8_niv1
@@ -550,38 +552,38 @@ Dans un programme nommé =nombre_secret.py= :
 
 *** Division euclidienne
 Dans un programme nommé =division_euclidienne.py= :
-- Crée une fonction =div_euclidienne(a,b)= qui renvoie un tuple contenant le *quotient* et le *reste* de la division euclidienne de =a= par =b=.
-- Utilise cette fonction dans un programme qui demande à l'utilisateur deux nombres et affiche le quotient et le reste de la division euclidienne de ces nombres.
+- Crée une fonction =div_euclidienne(a,b)= qui *retourne un tuple* contenant le *quotient* et le *reste* de la division euclidienne de =a= par =b= sous la forme =(quotient, reste)=.
+- *Utilise cette fonction* dans un programme qui demande à l'utilisateur deux nombres et affiche le calcul effectué ainsi que le quotient et le reste de la division euclidienne de ces nombres.
 
 *** Pair ou impair
 Dans un programme nommé =pair_impair.py= :
-- Crée une fonction =is_pair(nb)= qui retourne =True= si =nb= est pair et =False= sinon.
-- Utilise cette fonction dans un programme qui demande un chiffre à l'utilisateur et affiche un texte indiquant si le nombre est pair ou impair.
+- Crée une fonction =is_pair(nb)= qui *retourne =True= si =nb= est pair et =False= sinon*.
+- *Utilise cette fonction* dans un programme qui demande un chiffre à l'utilisateur et affiche un texte indiquant si le nombre est pair ou impair.
+
+*** Diviseurs
+Dans un programme nommé =diviseurs.py= :
+- Crée une fonction =diviseurs(nb)= qui *retourne la liste* de tous les diviseurs du nombre =nb=.
+- *Utilise cette fonction* dans un programme qui demande un nombre à l'utiliateur et affiche tous les diviseurs de ce nombre, séparés par des virgules et sans crochets.
 
 *** Nombres premiers
 Dans un programme nommé =nombres_premiers.py= :
-- Crée une fonction =is_premier(nb)= qui renvoie =True= si =nb= est un nombre premier et =False= sinon.
-- Crée une fonction =nb_premiers(n)= qui retourne une liste contenant les =n= premiers nombres premiers.
-- Utilise cette fonction dans un programme qui :
+- Crée une fonction =is_premier(nb)= qui *retourne =True= si =nb= est un nombre premier et =False= sinon*.
+- Crée une fonction =nb_premiers(n)= qui *retourne une liste* contenant les =n= premiers nombres premiers.
+- *Utilise cette fonction* dans un programme qui :
   - Demande à l'utilisateur le nombre de nombres premiers à afficher.
   - Affiche les nombres premiers ainsi calculés, *un par ligne*.
 
 *** Cercle
 Dans un programme nommé =super_cercle.py= :
-- Crée une fonction =surface(rayon)= qui retourne la surface d'un cercle de rayon =rayon=.
-- Crée une fonction =perimetre(rayon)= qui retourne le périmètre d'un cercle de rayon =rayon=.
-- Crée une fonction =creer_cercle(rayon)= qui dessine avec Turtle un cercle de rayon =rayon=.
-- Utilise toutes ces fonctions dans un programme qui demande le rayon à l'utiliateur et affiche la surface, le périmètre et le dessin du cercle.
-
-*** Diviseurs
-Dans un programme nommé =diviseurs.py= :
-- Crée une fonction =diviseurs(nb)= qui retourne la liste de tous les diviseurs du nombre =nb=.
-- Utilise cette fonction dans un programme qui demande un nombre à l'utiliateur et affiche tous les diviseurs de ce nombre, séparés par des virgules et sans crochets.
+- Crée une fonction =surface(rayon)= qui *retourne un float* correspondant à la surface d'un cercle de rayon =rayon=.
+- Crée une fonction =perimetre(rayon)= qui *retourne un float* correspondant au périmètre d'un cercle de rayon =rayon=.
+- Crée une fonction =creer_cercle(rayon)= qui *dessine avec Turtle* un cercle de rayon =rayon=.
+- *Utilise toutes ces fonctions* dans un programme qui demande le rayon à l'utiliateur et affiche la surface, le périmètre et le dessin du cercle.
 
 *** Lettres
 Dans un programme nommé =lettres.py= :
-- Crée une fonction =afficher_lettres(chaine)= qui permet d'afficher chaque lettre d'une chaîne de caractères ; une par ligne.
-- Utilise cette fonction dans un programme qui demande à l'utilisateur un mot ou une phrase et qui affiche ensuite dans l'ordre chaque lettre une à une.
+- Crée une fonction =afficher_lettres(chaine)= *qui permet d'afficher* chaque lettre d'une chaîne de caractères ; une par ligne.
+- *Utilise cette fonction* dans un programme qui demande à l'utilisateur un mot ou une phrase et qui affiche ensuite dans l'ordre chaque lettre une à une.
 Exemple d'affichage pour =chaine = "python"= :
 #+begin_example
 p
@@ -594,8 +596,8 @@ n
 
 *** Swap de lettres
 Dans un programme nommé =swap_lettres.py= :
-- Crée une fonction =swap_lettres(chaine, lettre1, lettre2)= qui échange les lettres à la position =lettre1= et =lettre2= dans la chaîne de caractères =chaine=.
-- Utilise cette fonction dans un programme qui demande à l'utiliateur une chaîne de caractères puis la position des lettres à échanger. Le programme devra afficher la chaîne avant et après modification.
+- Crée une fonction =swap_lettres(chaine, position1, position2)= *qui échange* les lettres à la position =position1= et =position2= dans la chaîne de caractères =chaine=.
+- *Utilise cette fonction* dans un programme qui demande à l'utiliateur une chaîne de caractères puis la position des lettres à échanger. Le programme devra afficher la chaîne avant et après modification.
 
 ** Niveau 2
 :PROPERTIES:
@@ -603,8 +605,8 @@ Dans un programme nommé =swap_lettres.py= :
 :END:
 *** Occurrences de lettres
 Dans un programme nommé =occurrences.py= :
-- Crée une fonction =occurrences(chaine)= qui renvoie un dictionnaire contenant comme clés chaque lettre présente dans la chaîne de caractères =chaine= et comme valeurs le nombre de fois où elle apparaît dans la chaîne.
-- Utilise cette fonction dans un programme qui demande à l'utilisateur un mot ou une phrase et qui affiche chaque lettre et le nombre de fois où elle apparaît.
+- Crée une fonction =occurrences(chaine)= qui *renvoie un dictionnaire* contenant comme clés chaque lettre présente dans la chaîne de caractères =chaine= et comme valeurs le nombre de fois où elle apparaît dans la chaîne.
+- *Utilise cette fonction* dans un programme qui demande à l'utilisateur un mot ou une phrase et qui affiche chaque lettre et le nombre de fois où elle apparaît.
 Exemple d'affichage pour =chaine = "Bonjour"= :
 #+begin_example
 Le caractère " B " apparaît 1 fois.
@@ -617,16 +619,64 @@ Le caractère " r " apparaît 1 fois.
 
 *** Trouver les positions
  Dans un programme nommé =positions_lettre.py= :
- - Crée une fonction =positions(lettre, chaine)= qui renvoie une liste contenant les positions de la lettre =lettre= dans la chaîne de caractères =chaine=. Si la lettre n'est pas présente dans la chaîne, la première et seule valeur de la liste devra être -1.
- - Utilise cette fonction dans un programme qui demande d'abord à l'utilisateur un mot ou une phrase puis la lettre à trouver et affiche toutes les positions où se trouve la lettre dans la chaîne.
+ - Crée une fonction =positions(lettre, chaine)= qui *retourne une liste* contenant les positions de la lettre =lettre= dans la chaîne de caractères =chaine=. Si la lettre n'est pas présente dans la chaîne, la première et seule valeur de la liste devra être -1.
+ - *Utilise cette fonction* dans un programme qui demande d'abord à l'utilisateur un mot ou une phrase puis la lettre à trouver et affiche toutes les positions où se trouve la lettre dans la chaîne.
 
 *** Taille des chaînes
 Dans un programme nommé =taille_chaines_liste.py= :
-- Crée une fonction =taille_chaines(liste)= qui renvoie un dictionnaire qui associe à chaque chaîne de caractères la valeur de sa taille.
-- Utilise cette fonction dans un programme qui :
+- Crée une fonction =taille_chaines(liste)= qui *retourne un dictionnaire* qui associe à chaque chaîne de caractères la valeur de sa taille.
+- *Utilise cette fonction* dans un programme qui :
   - Demande à l'utilisateur la taille de la liste à créer.
   - Demande à l'utilisateur d'entrer des mots ou des phrases et les ajoute à une liste.
   - Affiche (à l'aide de la fonction =taille_chaines()=) chaque chaîne de caractères suivi de sa taille.
+
+*** Nombre de voyelles
+Dans un programme nommé =nb_voyelles.py= :
+- Crée une fonction =nb_voyelles(chaine)= qui *retourne le nombre de voyelles* présentes dans la chaîne de caractères =chaine=.
+- *Utilise cette fonction* dans un programme qui :
+  - Demande à l'utilisateur d'entrer une chaîne.
+  - Affiche le nombre de voyelles présentes dans la chaîne.
+
+*** Palindrome
+Un palindrome est un mot dont l'ordre des lettres reste le même qu'on le lise de gauche à droite ou de droite à gauche.
+
+Dans un programme nommé =palindrome.py= :
+- Crée une fonction =est_palindrome(mot)= qui *retourne =True= si le mot =mot= est un palindrome et =False= sinon*.
+- *Utilise cette fonction* dans un programme qui :
+  - Demande un mot à l'utilisateur.
+  - Affiche un texte indiquant si le mot est un palindrome ou non.
+
+*** Mot inverse
+Dans un programme nommé =mot_inverse.py= :
+- Crée une fonction =mot_inverse(mot)= qui *retourne une chaîne* correspondant à l'inverse du mot =mot=. *Attention, le mot original ne doit pas être modifié !.*
+- *Utilise cette fonction* dans un programme qui :
+  - Demande un mot à l'utilisateur.
+  - Affiche le mot original et son inverse.
+Exemple pour le mot "python" :
+#+begin_example
+mot original : python
+inverse : nohtyp
+#+end_example
+
+** Niveau 3
+:PROPERTIES:
+:custom_id: chapitre8_niv3
+:END:
+*** Valeurs communes
+Dans un programme nommé =valeurs_communes.py= :
+- Crée une fonction =valeurs_communes(liste1, liste2)= qui *retourne une liste* contenant toutes la valeurs communes entre =liste1= et =liste2=.
+- *Utilise cette fonction* dans un programme qui :
+  - Demande à l'utilisateur des éléments à insérer dans une première liste.
+  - Demande à l'utilisateur des éléments à insérer dans une seconde liste.
+  - Affiche tous les éléments communs entre les deux listes entrées.
+
+*** Suppression des doublons
+Dans un programme nommé =del_doublons.py= :
+- Crée une fonction =del_doublons(liste)= qui *supprime* les éventuels doublons présents dans la liste =liste=.
+- *Utilise cette fonction* dans un programme qui :
+  - Demande à l'utilisateur des éléments à insérer dans une liste.
+  - Affiche la liste.
+  - Affiche la liste sans les doublons.
 
 * Chapitre 9 : Puissance 4
 :PROPERTIES:
@@ -728,7 +778,7 @@ L'important est de visualiser à peu près comment sera notre programme.
 
 - =jeu()= : c'est la fonction qui lancera le jeu et le relancera une fois la partie terminée si le joueur en a envie.
   - =initialiserGrille()= : cette fonction permettra d'initialiser (mettre à zéro) la grille du Puissance 4. C'est comme si elle enlevait les pions ! On utilisera cette fonction avant chaque début de partie, dans la fonction =jeu()=.
-  - =boucleDeJeu()= : c'est la fonction qui demandera aux joueurs de choisir où poser leurs jetons et les placera tant qu'aucun des deux joueurs n'aura gagné et que la grille n'est pas pleine. Quand le jeu est fini, elle renvoie le numéro du joueur qui a gagné (ou =False= si c'est un match nul).
+  - =boucleDeJeu()= : c'est la fonction qui demandera aux joueurs de choisir où poser leurs jetons et les placera tant qu'aucun des deux joueurs n'aura gagné et que la grille n'est pas pleine. Quand le jeu est fini, elle retourne le numéro du joueur qui a gagné (ou =False= si c'est un match nul).
     - =joueurGagne(joueur)= : cette fonction détermine si le =joueur= passé en argument a gagné la partie. Elle sera utilisée dans la fonction =boucleDejeu()=.
       - =verifierHorizontalement(joueur)= : vérifie si le joueur passé en paramètre a aligné 4 pions horizontalement dans la grille. Elle sera utilisée dans la fonction =joueurGagne(joueur)=.
       - =verifierVerticalement(joueur)= : vérifie si le joueur passé en paramètre a aligné 4 pions verticalement dans la grille. Elle sera utilisée dans la fonction =joueurGagne(joueur)=.
@@ -742,9 +792,9 @@ L'important est de visualiser à peu près comment sera notre programme.
       - =demanderColonne(joueur)= : cette fonction permet de demander au joueur dans quelle colonne il veut placer son pion. Elle renverra le numéro de la colonne demandée. Elle sera utilisée dans la fonction =remplirGrille(joueurActuel)=.
       - =ligneLibreDeLaColonne(colonne)= : cette fonction renverra le numéro de la ligne libre de la colonne choisie par le joueur. Elle sera utilisée dans la fonction =remplirGrille(joueurActuel)=.
       - =placerJeton(joueur, coordonnees)= : cette fonction permet de placer le jeton du =joueur= passé en paramètre à l'endroit de la grille indiqué par =coordonnees=. =coordonnees= sera un tuple qui aura cette forme : =(ligne, colonne)=. Elle sera utilisée dans la fonction =remplirGrille(joueurActuel)=.
-    - =recupererSymbole(numeroJoueur)= : cette fonction renvoie simplement le symbole correspondant au numéro du joueur passé en paramètre. Si le numéro n'est ni 1 ni 2 alors la fonction renverra un espace *' '*. Par exemple, si nous utilisons 'X' pour le joueur 1 et 'O' pour le joueur 2, la fonction =recupererSymbole(1)= renverra *'X'*.
+    - =recupererSymbole(numeroJoueur)= : cette fonction retourne simplement le symbole correspondant au numéro du joueur passé en paramètre. Si le numéro n'est ni 1 ni 2 alors la fonction renverra un espace *' '*. Par exemple, si nous utilisons 'X' pour le joueur 1 et 'O' pour le joueur 2, la fonction =recupererSymbole(1)= renverra *'X'*.
   - =afficherFinDePartie(gagnant)= : cette fonction fera l'affichage de la fin du jeu en félicitant le gagant s'il y en a un et en disant qu'il y a match nul sinon.
-  - =demanderRejouer()= : cette fonction demandera aux joueurs s'ils veulent rejouer et renvoie True ou False en fonction de leur réponse.
+  - =demanderRejouer()= : cette fonction demandera aux joueurs s'ils veulent rejouer et retourne True ou False en fonction de leur réponse.
 
 ** Étape 2 : Définir les variables globales
 :PROPERTIES:
@@ -933,7 +983,7 @@ Nous allons commencer par déterminer si un joueur a gagné. Pour cela, nous dev
 - =verifierDiagonale(joueur)= : cette fonction vérifie si le joueur spécifié a un *aligement en diagonale* de 4 jetons. Il faudra parcourir toute la liste en cherchant si le numéro du joueur apparaît 4 fois de suite dans une diagonale *ou dans l'autre*. En effet, n'oublie pas les deux sens possibles d'une diagonale ! Cette fonction sera un peu plus difficile que les autres, je te conseille de commencer par essayer de parcourir les diagonales de la liste en faisant des tests d'affichage.
 
 *** Le joueur a-t-il a gagné ?
-Maintenant que nous avons codé nos 3 fonctions intermédiaires, nous pouvons modier la fonction =joueurGagne(joueur)=. La fonction doit maintenant renvoyer =True= si le =joueur= a un alignement horizontal, vertical ou en diagonale. Sinon, elle renvoie =False=.
+Maintenant que nous avons codé nos 3 fonctions intermédiaires, nous pouvons modier la fonction =joueurGagne(joueur)=. La fonction doit maintenant renvoyer =True= si le =joueur= a un alignement horizontal, vertical ou en diagonale. Sinon, elle retourne =False=.
 
 *** Match nul ?
 Enfin, il nous manque la fonction qui vérifie s'il y a *match nul*. Nous savons qu'il y a match nul si la grille est remplie et que personne n'a gagné. Alors, nous avons simplement besoin d'une fonction qui vérifie si la grille est pleine :
@@ -1016,7 +1066,7 @@ Exemple de l'arbre de recherche du morpion (ou tic-tac-toe) :
 
 [[./img/arbre-recherche.png]]
 
-Pour pouvoir générer cet arbre de recherche pour notre IA, nous avons créé une fonction qui renvoie tous les coups possibles, c'est-à-dire tous les ensembles =(ligne, colonne)= correspondants aux endroits où le prochain joueur peut placer son pion.
+Pour pouvoir générer cet arbre de recherche pour notre IA, nous avons créé une fonction qui retourne tous les coups possibles, c'est-à-dire tous les ensembles =(ligne, colonne)= correspondants aux endroits où le prochain joueur peut placer son pion.
 
 *** Algorithme Min-Max
 L'algorithme Min-Max est un algorithme utilisé uniquement pour la programmation d'intelligences artificielles de jeux. Le principe est le suivant:
@@ -1116,7 +1166,7 @@ Pour notre jeu, nous utiliserons deux fonctions : =min_max(joueur_max, is_tour_m
 
 # [[./img/arbre-recherche.png]]
 
-# # Pour pouvoir générer cet arbre de recherche pour notre IA, nous aurons besoin d'ajouter à notre Puissance 4 une *fonction qui renvoie tous les coups possibles, c'est-à-dire tous les ensembles (ligne,colonne) correspondants aux endroits où le prochain joueur peut placer son pion.*
+# # Pour pouvoir générer cet arbre de recherche pour notre IA, nous aurons besoin d'ajouter à notre Puissance 4 une *fonction qui retourne tous les coups possibles, c'est-à-dire tous les ensembles (ligne,colonne) correspondants aux endroits où le prochain joueur peut placer son pion.*
 
 # ** Algorithme Min-Max
 # L'algorithme Min-Max est un algorithme utilisé uniquement pour la programmation d'intelligences artificielles de jeux. Le principe est le suivant:
