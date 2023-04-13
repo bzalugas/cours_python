@@ -575,8 +575,8 @@ Dans un programme nommé =nombres_premiers.py= :
 
 *** Cercle
 Dans un programme nommé =super_cercle.py= :
-- Crée une fonction =surface(rayon)= qui *retourne un float* correspondant à la surface d'un cercle de rayon =rayon=.
-- Crée une fonction =perimetre(rayon)= qui *retourne un float* correspondant au périmètre d'un cercle de rayon =rayon=.
+- Crée une fonction =surface_cercle(rayon)= qui *retourne un float* correspondant à la surface d'un cercle de rayon =rayon=.
+- Crée une fonction =perimetre_cercle(rayon)= qui *retourne un float* correspondant au périmètre d'un cercle de rayon =rayon=.
 - Crée une fonction =creer_cercle(rayon)= qui *dessine avec Turtle* un cercle de rayon =rayon=.
 - *Utilise toutes ces fonctions* dans un programme qui demande le rayon à l'utiliateur et affiche la surface, le périmètre et le dessin du cercle.
 
@@ -637,15 +637,6 @@ Dans un programme nommé =nb_voyelles.py= :
   - Demande à l'utilisateur d'entrer une chaîne.
   - Affiche le nombre de voyelles présentes dans la chaîne.
 
-*** Palindrome
-Un palindrome est un mot dont l'ordre des lettres reste le même qu'on le lise de gauche à droite ou de droite à gauche.
-
-Dans un programme nommé =palindrome.py= :
-- Crée une fonction =est_palindrome(mot)= qui *retourne =True= si le mot =mot= est un palindrome et =False= sinon*.
-- *Utilise cette fonction* dans un programme qui :
-  - Demande un mot à l'utilisateur.
-  - Affiche un texte indiquant si le mot est un palindrome ou non.
-
 *** Mot inverse
 Dans un programme nommé =mot_inverse.py= :
 - Crée une fonction =mot_inverse(mot)= qui *retourne une chaîne* correspondant à l'inverse du mot =mot=. *Attention, le mot original ne doit pas être modifié !*
@@ -657,6 +648,15 @@ Exemple pour le mot "python" :
 mot original : python
 inverse : nohtyp
 #+end_example
+
+*** Palindrome
+Un palindrome est un mot dont l'ordre des lettres reste le même qu'on le lise de gauche à droite ou de droite à gauche.
+
+Dans un programme nommé =palindrome.py= :
+- Crée une fonction =est_palindrome(mot)= qui *retourne =True= si le mot =mot= est un palindrome et =False= sinon*.
+- *Utilise cette fonction* dans un programme qui :
+  - Demande un mot à l'utilisateur.
+  - Affiche un texte indiquant si le mot est un palindrome ou non.
 
 ** Niveau 3
 :PROPERTIES:
@@ -703,6 +703,38 @@ Dans un programme nommé =rendu_monnaie.py= :
   - Demande à l'utilisateur un prix
   - Demande à l'utilisateur la somme qu'il donne
   - Affiche la somme à rendre ainsi que les billets et pièces à utiliser.
+
+** Cours 18 : Les modules
+:PROPERTIES:
+:custom_id: chapitre8_cours18
+:END:
+*** Cours
+*Un module* sert à regrouper des fonctions, des variables et d'autres choses dans des programmes plus vastes et plus puissants. Certains modules sont intégrés dans Python lui-même, tandis que tu peux en télécharger d'autres de manière séparée. Nous en avons déjà utilisé par exemple avec *turtle* et *random*.
+
+Pour utiliser un module, il suffit d'écrire au début du fichier =import nom_du_module=. Dans le cas où tu voudrais utiliser un module qui n'est pas intégré à Python, il faudra d'abord le télécharger.
+
+Maintenant, si je te disais que tu peux créer tes propres modules avec tes propres fonctions, variables, classes dedans !? Ne serait-il pas pratique de pouvoir utiliser sans avoir à la réécrire une fonction qui, par exemple, permet de demander un entier à l'utilisateur et de vérifier qu'il n'y a pas d'erreur ?
+
+Pour créer ton propre module, il suffit de :
+1. Créer un nouveau fichier et lui donner le nom de ton module, par exemple =mes_fonctions.py=.
+2. Écrire tes fonctions à l'intérieur du fichier, autant que tu veux. *Attention, nous voulons seulement écrire les fonctions, pas les utiliser tout de suite.*
+3. Une fois le fichier enregistré, il suffit de le mettre dans le même *dossier* que le programme dans lequel tu vas l'utiliser puis de l'importer avec =import mes_fonctions=.
+
+*** Exercices
+Nous allons maintenant faire quelques exercices pour se familiariser avec la création des modules et commencer à nous créer notre propre "bibliothèque" de fonctions.
+
+1. Dans un fichier nommé =mes_fonctions.py= :
+   - recopie (le copier-coller est fortement conseillé !) les fonctions faites précédemment :
+     - =div_euclidienne(a,b)=
+     - =is_pair(nb)=
+     - =diviseurs(nb)=
+     - =is_premier(nb)= et =nb_premiers(n)=
+   - Tu peux ajouter toutes les fonctions que tu veux ou en créer de nouvelles dans ce fichier, car tu pourras le réutiliser pour t'aider dans les exercices suivants.
+   - Crée une fonction =demander_int(message)= qui permet de demander à l'utilsateur un nombre entier en affichant le message =message=. N'oublie pas de vérifier que l'utilisateur n'a pas fait d'erreurs.
+
+2. Dans un programme nommé =manips_nombres.py= :
+   - Importe ton module =mes_fonctions=
+   - Crée un programme qui utilise les fonctions demandées dans l'exercice précédent en demandant les nombres à l'utilisateur puis affiche les résultats.
 
 * Puissance 4
 :PROPERTIES:
