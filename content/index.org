@@ -296,7 +296,7 @@ Pour le moment, cela suffira pour créer des programmes plus intéractifs, mais 
    - Si =euros= est supérieure à 30, le programme devra aussi afficher "Tu peux t'acheter des légos" puis enlever 30 à =euros=.
    - Si =euros= est supérieure à 350, le programme devra aussi afficher "Tu peux t'acheter une playstation" puis enlever 350 à =euros=.
    - Si =euros= est supérieure à 5000000, le programme devra aussi afficher "Tu es trop riche et tu donnes toute ta fortune !" puis =euros= devra être mise à 0.
-   - Enfin, affiche "Il me reste <euros>" en remplaçant =euros= par ce qu'il y a dans la variable.
+   - Enfin, affiche "Il te reste <euros>" en remplaçant =euros= par ce qu'il y a dans la variable.
 
 2. Dans un programme nommé =montagnes_russes.py= :
    - Demande à l'utilisateur son âge puis sa taille et stocke ses réponses dans des variables =age= et =taille=.
