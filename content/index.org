@@ -189,6 +189,33 @@ Une fois les exercices d'un cours terminés, appelle le professeur pour qu'il vi
 *** Manuel
 - *"Tuples"*, p.45
 - *"Dictionnaires"*, p.45-47
+
+*** Indication complémentaire sur les dictionnaires
+Comme vu dans le manuel, tu peux modifier une valeur dans un dictionnaire simplement en utilisant sa clef :
+#+begin_src python
+fortunes = {'Elon Musk': 180000000000, 'Jeff Bezos': 114000000000, 'Bill Gates': 104000000000, 'Mark Zuckerberg': 64400000000, 'Moi': 0}
+print(fortunes)
+fortunes['Moi'] = 100
+print(fortunes)
+#+end_src
+Résultat :
+#+begin_example
+{'Elon Musk': 180000000000, 'Jeff Bezos': 114000000000, 'Bill Gates': 104000000000, 'Mark Zuckerberg': 64400000000, 'Moi': 0}
+{'Elon Musk': 180000000000, 'Jeff Bezos': 114000000000, 'Bill Gates': 104000000000, 'Mark Zuckerberg': 64400000000, 'Moi': 100}
+#+end_example
+
+Si tu veux *ajouter* un élément, c'est-à-dire une clef et un valeur, il faut faire comme si on modifiait la valeur de la nouvelle clef :
+#+begin_src python
+fortunes = {'Elon Musk': 180000000000, 'Jeff Bezos': 114000000000, 'Bill Gates': 104000000000, 'Mark Zuckerberg': 64400000000, 'Moi': 0}
+print(fortunes)
+fortunes['Mon chat'] = 100
+print(fortunes)
+#+end_src
+Résulat :
+#+begin_example
+{'Elon Musk': 180000000000, 'Jeff Bezos': 114000000000, 'Bill Gates': 104000000000, 'Mark Zuckerberg': 64400000000, 'Moi': 0}
+{'Elon Musk': 180000000000, 'Jeff Bezos': 114000000000, 'Bill Gates': 104000000000, 'Mark Zuckerberg': 64400000000, 'Moi': 0, 'Mon chat': 100}
+#+end_example
 *** Exercices
 1. Dans un programme nommé =mon_tuple.py= :
    - Crée un tuple =un_tuple= avec au moins 3 éléments.
@@ -197,7 +224,7 @@ Une fois les exercices d'un cours terminés, appelle le professeur pour qu'il vi
    - Affiche le tuple modifié.
 
 2. Dans un programme nommé =courses_dictionnaire.py= :
-   - Crée un dictionnaire =courses= contenant 3 éléments à acheter comme clé avec comme valeur la quantité à acheter.
+   - Crée un dictionnaire =courses= contenant 3 éléments à acheter comme clef avec comme valeur la quantité à acheter.
    - Affiche le dictionnaire.
    - Ajoute un élément que tu aurais oublié.
    - Supprime le premier élément du dictionnaire.
@@ -605,7 +632,7 @@ Dans un programme nommé =swap_lettres.py= :
 :END:
 *** Occurrences de lettres
 Dans un programme nommé =occurrences.py= :
-- Crée une fonction =occurrences(chaine)= qui *renvoie un dictionnaire* contenant comme clés chaque lettre présente dans la chaîne de caractères =chaine= et comme valeurs le nombre de fois où elle apparaît dans la chaîne.
+- Crée une fonction =occurrences(chaine)= qui *renvoie un dictionnaire* contenant comme clefs chaque lettre présente dans la chaîne de caractères =chaine= et comme valeurs le nombre de fois où elle apparaît dans la chaîne.
 - *Utilise cette fonction* dans un programme qui demande à l'utilisateur un mot ou une phrase et qui affiche chaque lettre et le nombre de fois où elle apparaît.
 Exemple d'affichage pour =chaine = "Bonjour"= :
 #+begin_example
@@ -927,7 +954,7 @@ Après quelques tours :
 :PROPERTIES:
 :custom_id: puissance4_etape4
 :END:
-- Crée une fonction =boucleDeJeu()= qui contiendra seulement le mot clé =pass=. Nous coderons cette fonction à l'étape suivante mais nous avons besoin de l'appeler dans la fonction de lancement du jeu.
+- Crée une fonction =boucleDeJeu()= qui contiendra seulement le mot clef =pass=. Nous coderons cette fonction à l'étape suivante mais nous avons besoin de l'appeler dans la fonction de lancement du jeu.
   #+begin_src python
 def boucleDeJeu():
     pass
@@ -952,7 +979,7 @@ def boucleDeJeu():
 Dans cette étape nous allons commencer la fonction principale =boucleDeJeu()=. Nous allons préparer la logique et nous coderons les fonctions intérmédiaires au fur et à mesure des étapes suivantes.
 
 *** Fonctions intermédiaires
-Pour commencer, nous allons déclarer les fonctions utilisées dans =boucleDeJeu()= sans pour autant en écrire le code, avec le mot-clé =pass= :
+Pour commencer, nous allons déclarer les fonctions utilisées dans =boucleDeJeu()= sans pour autant en écrire le code, avec le mot-clef =pass= :
 - Crée une fonction =joueurGagne()= qui prend en paramètre =joueur=.
 - Crée une fonction =verifierGrillePleine()=.
 - Crée une fonction =jouerLeTour()= qui prend en paramètre =joueur=.
@@ -1004,7 +1031,7 @@ La dernière fonction intermédiaire pour un tour sera la fonction =placerJeton(
 
 *** Jouer le tour
 Enfin, nous allons pouvoir créer la fonction qui fait jouer le tour au joueur :
-- Modifie la fonction =jouerLeTour()= précédemment créée en supprimant le mot-clé =pass=. Voici la logique de la fonction :
+- Modifie la fonction =jouerLeTour()= précédemment créée en supprimant le mot-clef =pass=. Voici la logique de la fonction :
   - Tant que la =ligne= vaut *-1* (c'est à dire est incorrecte) :
     - Demander la colonne au joueur (récupérer le résultat).
     - Trouver la ligne libre pour cette colonne (récupérer le résultat).
