@@ -405,14 +405,14 @@ Pour le moment, cela suffira pour créer des programmes plus intéractifs, mais 
    - Dans une boucle =for=, fais avancer la tortue de =distance= pixels et fais-la tourner de =angle= degrés.
    - Essaie différentes valeurs pour =distance= et =angle= pour voir ce qu'il se passe de différent.
 
-4. Dans un programme nommé =cerlce.py= :
+4. Dans un programme nommé =cercle.py= :
    - Fais dessiner à une tortue un cercle à l'aide d'une boucle =for=.
 
 5. Dans un programme =spirale.py= :
    - Fais dessiner à une tortue une spirale à l'aide d'une boucle =for=.
 
 6. Dans un programme nommé =fibonacci.py= :
-   - Fais un programme qui calcule les 10 premiers nombres de la suite de fibonacci en utilisant une boucle =for=. La suite de Fibonacci est : 1, 1, 2, 3, 5, 8, 13, 21, 34, 55,... Les deux premiers nombres de la suite sont toujours 1 et 1, puis ensuite chaque nombre est égal aux deux précédents.
+   - Fais un programme qui calcule les 10 premiers nombres de la suite de fibonacci en utilisant une boucle =for=. La suite de Fibonacci est : 1, 1, 2, 3, 5, 8,... Les deux premiers nombres de la suite sont toujours 1 et 1, puis ensuite chaque nombre est égal aux deux précédents.
    - (BONUS) : Fais avancer une tortue de chaque valeur de la suite de Fibonacci en la faisant tourner à chaque fois de 90°.
 
 ** Cours 15 : Boucles while
