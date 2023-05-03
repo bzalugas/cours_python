@@ -566,39 +566,78 @@ Dans un programme nommé =nombre_secret.py= :
    - Définis une fonction =creerListe(taille)= qui crée une liste de taille =taille= en demandant à l'utilisateur chaque nombre de la liste et renvoie la liste ainsi créée.
    - Appelle la fonction =creerListe= après avoir demandé la =taille= à l'utiliateur puis utilise la liste créée dans la fonction =tri=. Affiche la liste avant et après avoir utilisé =tri=.
 
+** Cours 18 : Les modules
+:PROPERTIES:
+:custom_id: chapitre7_cours18
+:END:
+*** Cours
+*Un module* sert à regrouper des fonctions, des variables et d'autres choses dans des programmes plus vastes et plus puissants. Certains modules sont intégrés dans Python lui-même, tandis que tu peux en télécharger d'autres de manière séparée. Nous en avons déjà utilisé par exemple avec *turtle* et *random*.
+
+Pour utiliser un module, il suffit d'écrire au début du fichier =import nom_du_module=. Dans le cas où tu voudrais utiliser un module qui n'est pas intégré à Python, il faudra d'abord le télécharger (ou le coder !).
+
+Maintenant, si je te disais que tu peux créer tes propres modules avec tes propres fonctions, variables, classes dedans !? Ne serait-il pas pratique de pouvoir utiliser sans avoir à la réécrire une fonction qui, par exemple, permet de demander un entier à l'utilisateur et de vérifier qu'il n'y a pas d'erreur ?
+
+Pour créer ton propre module, il suffit de :
+1. Créer un nouveau fichier et lui donner le nom de ton module, par exemple =mes_fonctions.py=.
+2. Écrire tes fonctions à l'intérieur du fichier, autant que tu veux. *Attention, nous voulons seulement écrire les fonctions, pas les utiliser tout de suite.*
+3. Une fois le fichier enregistré, il suffit de le mettre dans le même *dossier* que le programme dans lequel tu vas l'utiliser puis de l'importer avec =import mes_fonctions=.
+
+*** Exercices
+Dans le chapitre suivant, nous allons mettre en pratique les modules et les fonctions ensemble en créant notre propre bibliothèque personnalisée de fonctions !
+# Nous allons maintenant faire quelques exercices pour se familiariser avec la création des modules et commencer à nous créer notre propre "bibliothèque" de fonctions.
+
+1. Dans un fichier nommé =mes_fonctions.py= :
+   - Crée la fonction =demander_int(message)= qui :
+     - demande un entier à l'utilisateur en affichant le message =message=.
+     - retourne l'entier convertit en =int=.
+   - Crée la fonction =demander_float(message)= qui fonctionne comme la précédente mais avec un =float=.
+   - Crée la fonction =demander(message)= qui fonctionne comme les précédentes mais avec une chaîne de caractères.
+
+2. Dans un programme nommé =tests_fonctions.py= :
+   - importe ton module =mes_fonctions=
+   - teste les 3 fonctions présentes dans ton module
+
+Tu as maintenant créé les 3 premières fonctions de ton propre module, que tu pourras réutiliser chaque fois que tu en as besoin. Tu es libre d'y ajouter les fonctions qui te semblent intéressantes et que tu as déjà écrites, par exemple dans ce chapitre.
+
 * Chapitre 8 : Mise en pratique 2
 :PROPERTIES:
 :custom_id: chapitre8
 :END:
 Attention ! Pour chaque exercice, il faudra bien faire la différence entre le code *à l'intérieur des fonctions* et le code qui *utilise les fonctions*.
 
+Avant toute chose, crée un fichier nommé =mes_fonctions.py= qui contiendra les fonctions que l'on peut être amenés à réutiliser plus tard.
+
 ** Niveau 1
 :PROPERTIES:
 :custom_id: chapitre8_niv1
 :END:
-
 *** Division euclidienne
-Dans un programme nommé =division_euclidienne.py= :
-- Crée une fonction =div_euclidienne(a,b)= qui *retourne un tuple* contenant le *quotient* et le *reste* de la division euclidienne de =a= par =b= sous la forme =(quotient, reste)=.
-- *Utilise cette fonction* dans un programme qui demande à l'utilisateur deux nombres et affiche le calcul effectué ainsi que le quotient et le reste de la division euclidienne de ces nombres.
+Dans le fichier =mes_fonctions.py= :
+- Crée une nouvelle fonction =div_euclidienne(a,b)= qui *retourne un tuple* contenant le *quotient* et le *reste* de la division euclidienne de =a= par =b= sous la forme =(quotient, reste)=.
+Dans un programme nommé =manips_nombres.py= :
+- importe ton module =mes_fonctions=
+- *Utilise* la fonction =div_euclidienne()= dans un programme qui demande à l'utilisateur deux nombres entiers et affiche le calcul effectué ainsi que le quotient et le reste de la division euclidienne de ces nombres.
 
 *** Pair ou impair
-Dans un programme nommé =pair_impair.py= :
-- Crée une fonction =is_pair(nb)= qui *retourne =True= si =nb= est pair et =False= sinon*.
-- *Utilise cette fonction* dans un programme qui demande un chiffre à l'utilisateur et affiche un texte indiquant si le nombre est pair ou impair.
+Dans le fichier =mes_fonctions.py= :
+- Crée une nouvelle fonction =is_pair(nb)= qui *retourne =True= si =nb= est pair et =False= sinon*.
+Dans le programme =manips_nombres.py=:
+- *Utilise cette fonction* après avoir demandé un nombre entier à l'utilisateur et affiche un texte indiquant si le nombre est pair ou impair.
 
 *** Diviseurs
-Dans un programme nommé =diviseurs.py= :
+Dans le fichier =mes_fonctions.py= :
 - Crée une fonction =diviseurs(nb)= qui *retourne la liste* de tous les diviseurs du nombre =nb=.
-- *Utilise cette fonction* dans un programme qui demande un nombre à l'utiliateur et affiche tous les diviseurs de ce nombre, séparés par des virgules et sans crochets.
+Dans le programme =manips_nombres.py= :
+- *Utilise cette fonction* après avoir demandé un nombre entier à l'utiliateur et affiche tous les diviseurs de ce nombre, séparés par des virgules et sans crochets.
 
 *** Nombres premiers
-Dans un programme nommé =nombres_premiers.py= :
+Dans le fichier =mes_fonctions.py= :
 - Crée une fonction =is_premier(nb)= qui *retourne =True= si =nb= est un nombre premier et =False= sinon*.
 - Crée une fonction =nb_premiers(n)= qui *retourne une liste* contenant les =n= premiers nombres premiers.
-- *Utilise cette fonction* dans un programme qui :
-  - Demande à l'utilisateur le nombre de nombres premiers à afficher.
-  - Affiche les nombres premiers ainsi calculés, *un par ligne*.
+Dans le programme =manips_nombres.py= :
+- *Utilise ces fonctions* après avoir demandé à l'utilisateur le nombre (entier) de nombres premiers à afficher puis affiche-les ; *un par ligne*.
+
+Pour la suite, tu es libre d'ajouter et d'utiliser les fonctions que tu veux à ton module =mes_fonctions= pour ne plus avoir besoin de réécrire à chaque fois les fonctions que tu réutilises.
 
 *** Cercle
 Dans un programme nommé =super_cercle.py= :
@@ -727,41 +766,14 @@ Dans un programme nommé =rendu_monnaie.py= :
 - Crée une fonction =rendu_monnaie(prix, somme_payee)= qui *retourne la somme à rendre*.
 - Crée une fonction =decomposer_somme(somme)= qui *retourne l'ensemble des billets et pièces à utiliser et leur nombre* nécessaires pour décomposer la somme d'argent =somme=. Tu peux par exemple retourner cette information sous forme de dictionnaire.
 - *Utilise ces fonctions* dans un programme qui :
-  - Demande à l'utilisateur un prix
-  - Demande à l'utilisateur la somme qu'il donne
+  - Demande à l'utilisateur un prix (float)
+  - Demande à l'utilisateur la somme qu'il donne (float)
   - Affiche la somme à rendre ainsi que les billets et pièces à utiliser.
 
-** Cours 18 : Les modules
-:PROPERTIES:
-:custom_id: chapitre8_cours18
-:END:
-*** Cours
-*Un module* sert à regrouper des fonctions, des variables et d'autres choses dans des programmes plus vastes et plus puissants. Certains modules sont intégrés dans Python lui-même, tandis que tu peux en télécharger d'autres de manière séparée. Nous en avons déjà utilisé par exemple avec *turtle* et *random*.
 
-Pour utiliser un module, il suffit d'écrire au début du fichier =import nom_du_module=. Dans le cas où tu voudrais utiliser un module qui n'est pas intégré à Python, il faudra d'abord le télécharger.
 
-Maintenant, si je te disais que tu peux créer tes propres modules avec tes propres fonctions, variables, classes dedans !? Ne serait-il pas pratique de pouvoir utiliser sans avoir à la réécrire une fonction qui, par exemple, permet de demander un entier à l'utilisateur et de vérifier qu'il n'y a pas d'erreur ?
-
-Pour créer ton propre module, il suffit de :
-1. Créer un nouveau fichier et lui donner le nom de ton module, par exemple =mes_fonctions.py=.
-2. Écrire tes fonctions à l'intérieur du fichier, autant que tu veux. *Attention, nous voulons seulement écrire les fonctions, pas les utiliser tout de suite.*
-3. Une fois le fichier enregistré, il suffit de le mettre dans le même *dossier* que le programme dans lequel tu vas l'utiliser puis de l'importer avec =import mes_fonctions=.
 
 *** Exercices
-Nous allons maintenant faire quelques exercices pour se familiariser avec la création des modules et commencer à nous créer notre propre "bibliothèque" de fonctions.
-
-1. Dans un fichier nommé =mes_fonctions.py= :
-   - recopie (le copier-coller est fortement conseillé !) les fonctions faites précédemment :
-     - =div_euclidienne(a,b)=
-     - =is_pair(nb)=
-     - =diviseurs(nb)=
-     - =is_premier(nb)= et =nb_premiers(n)=
-   - Tu peux ajouter toutes les fonctions que tu veux ou en créer de nouvelles dans ce fichier, car tu pourras le réutiliser pour t'aider dans les exercices suivants.
-   - Crée une fonction =demander_int(message)= qui permet de demander à l'utilsateur un nombre entier en affichant le message =message=. N'oublie pas de vérifier que l'utilisateur n'a pas fait d'erreurs.
-
-2. Dans un programme nommé =manips_nombres.py= :
-   - Importe ton module =mes_fonctions=
-   - Crée un programme qui utilise les fonctions demandées dans l'exercice précédent en demandant les nombres à l'utilisateur puis affiche les résultats.
 
 * Puissance 4
 :PROPERTIES:
