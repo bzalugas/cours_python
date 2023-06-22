@@ -248,6 +248,15 @@ prenom = input("Entrez votre prénom : ")
 print("Bonjour %s !" % prenom)
 #+end_src
 
+Résultat :
+#+attr_html: :alt exemple prenom1  :align center :class img :width 100% :display block
+[[./img/example_prenom1.png]]
+
+*L'utilisateur peut entrer son prénom et appuyer sur la touche <Entrée> :*
+
+#+attr_html: :alt exemple prenom2  :align center :class img :width 100% :display block
+[[./img/example_prenom2.png]]
+
 La variable dans laquelle nous récupérons l'entrée utilisateur sera une chaîne de caractères. Si nous essayons de faire des opérations arithmétiques avec la valeur récupérée, cela va générer une erreur "TypeError":
 #+begin_src python
 age = input("Entrez votre âge : ")
