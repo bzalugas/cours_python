@@ -82,12 +82,12 @@ for the JavaScript code in this tag.
 </div>
 </nav>
 
-<div id="outline-container-org4a99c03" class="outline-2">
+<div id="outline-container-orgfe4b675" class="outline-2">
 <h2 id="grid">Utiliser la méthode grid pour l'interface du Puissance 4</h2>
 <div class="outline-text-2" id="text-grid">
 </div>
 
-<div id="outline-container-org2f54485" class="outline-3">
+<div id="outline-container-org842b1fa" class="outline-3">
 <h3 id="ressources">Ressources</h3>
 <div class="outline-text-3" id="text-ressources">
 <p target="_blank">
@@ -96,7 +96,7 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-org7d93623" class="outline-3">
+<div id="outline-container-org6a0bcc6" class="outline-3">
 <h3 id="pourquoi-grid">Pourquoi une Grid pour le Puissance 4 ?</h3>
 <div class="outline-text-3" id="text-pourquoi-grid">
 <p>
@@ -105,22 +105,22 @@ La méthode grid sert à positionner des éléments (=widgets) dans notre écran
 </div>
 </div>
 
-<div id="outline-container-org3d36b88" class="outline-3">
+<div id="outline-container-org3033dee" class="outline-3">
 <h3 id="etapes">Etape par étape</h3>
 <div class="outline-text-3" id="text-etapes">
 </div>
-<div id="outline-container-org1123d6b" class="outline-4">
-<h4 id="org1123d6b">Pré-requis</h4>
-<div class="outline-text-4" id="text-org1123d6b">
+<div id="outline-container-orga5df870" class="outline-4">
+<h4 id="orga5df870">Pré-requis</h4>
+<div class="outline-text-4" id="text-orga5df870">
 <p>
 Il faut déjà avoir initialisé ta grille de puissance 4 avant de paramétrer l'affichage car tu auras besoin de la taille de la grille et des éventuelles valeurs des cases.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org1669f14" class="outline-4">
-<h4 id="org1669f14">Initialisation</h4>
-<div class="outline-text-4" id="text-org1669f14">
+<div id="outline-container-orgef5fb1e" class="outline-4">
+<h4 id="orgef5fb1e">Initialisation</h4>
+<div class="outline-text-4" id="text-orgef5fb1e">
 <ol class="org-ol">
 <li>Crée un objet Tk() (<code>window = tkinter.Tk()</code>).</li>
 <li>Configure la fenêtre (titre, fond, etc).</li>
@@ -129,9 +129,9 @@ Il faut déjà avoir initialisé ta grille de puissance 4 avant de paramétrer l
 </div>
 </div>
 
-<div id="outline-container-org6f02299" class="outline-4">
-<h4 id="org6f02299">Création des widgets</h4>
-<div class="outline-text-4" id="text-org6f02299">
+<div id="outline-container-org1b9a366" class="outline-4">
+<h4 id="org1b9a366">Création des widgets</h4>
+<div class="outline-text-4" id="text-org1b9a366">
 <ol class="org-ol">
 <li><p>
 A l'aide d'une double boucle imbriquée (pour parcourir la grille de puissance 4), il faut pour chaque case de la grille créer une cellule pour ton affichage (une cellule sera un Label()). Exemple à l'intérieur de la boucle:
@@ -163,11 +163,11 @@ La fonction clic doit récupérer l'information de la colonne sélectionnée et 
 </div>
 </div>
 
-<div id="outline-container-org76ee061" class="outline-2">
+<div id="outline-container-org8850826" class="outline-2">
 <h2 id="solution2">Autre solution sans la méthode grid</h2>
 <div class="outline-text-2" id="text-solution2">
 </div>
-<div id="outline-container-org7712ba4" class="outline-3">
+<div id="outline-container-org0561169" class="outline-3">
 <h3 id="stockage-formes">Stockage des formes du canvas dans une liste</h3>
 <div class="outline-text-3" id="text-stockage-formes">
 <p>
@@ -185,16 +185,16 @@ Au moment de créer les formes dans le canvas, tu peux les stocker dans une list
 </div>
 </div>
 
-<div id="outline-container-orgc30281c" class="outline-3">
+<div id="outline-container-org3220d68" class="outline-3">
 <h3 id="detection-forme">Détection de la forme cliquée dans un canvas</h3>
 <div class="outline-text-3" id="text-detection-forme">
 <p>
 On peut détecter assez facilement sur quelle forme était la souris lorsqu'elle a déclenché l'évènement <code>'&lt;Button-1&gt;'</code> en utilisant la méthode disponible dans notre canvas <code>canvas.find_closest(x,y)</code>.
 </p>
 </div>
-<div id="outline-container-orge63a702" class="outline-4">
-<h4 id="orge63a702">Démonstration</h4>
-<div class="outline-text-4" id="text-orge63a702">
+<div id="outline-container-org50f47db" class="outline-4">
+<h4 id="org50f47db">Démonstration</h4>
+<div class="outline-text-4" id="text-org50f47db">
 <ul class="org-ul">
 <li><p>
 Tu peux utiliser la méthode bind directement dans le canvas après l'avoir créé :
@@ -225,7 +225,7 @@ Après cette étape, tu as retrouvé la colonne de la forme sur laquelle on a cl
 </div>
 </div>
 </div>
-<div id="outline-container-orgb4d90da" class="outline-3">
+<div id="outline-container-orgc4be20d" class="outline-3">
 <h3 id="find-below">Cas d'une forme sous une autre</h3>
 <div class="outline-text-3" id="text-find-below">
 <p>
