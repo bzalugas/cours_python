@@ -800,7 +800,9 @@ Dans un programme nommé =rendu_monnaie.py= :
 :PROPERTIES:
 :custom_id: l-systemes
 :END:
+
 [[./img/fractal_weeds.jpg]]
+
 Les L-systèmes, inventés en 1968 par le biologiste hongrois Aristid Lindenmayer, sont des procédés permettant de modéliser des processus de développement et de prolifération de plantes ou bactéries.
 
 Pour concevoir un L-système, il faut définir un ensemble de symboles et de règles qui vont permettre de modéliser un certain processus de croissance grâce à un système de réécriture.
