@@ -781,8 +781,194 @@ Dans un programme nommé =rendu_monnaie.py= :
 
 
 
+# * Chapitre 9 : Programmation orientée objet
+# :PROPERTIES:
+# :custom_id: chapitre9
+# :END:
+# ** Cours 19 : classes et objets
+# *** Manuel
+# - *"Classes et objets"*, p.97-98
+# - *"Organiser les choses en classes"*, p.98-99
+# - *"Enfants et parents"*, p.99-100
+# - *"Ajouter des objets aux classes"*, p.100
 
-*** Exercices
+# *** Exercices
+# 1. Dans un fichier nommé =college.py= :
+#    - Crée une classe =Humain= qui pour l'instant ne contiendra que le mot-clef =pass=.
+#    - Crée une classe =Piece= de la même
+* L-systèmes
+:PROPERTIES:
+:custom_id: l-systemes
+:END:
+[[./img/fractal_weeds.jpg]]
+Les L-systèmes, inventés en 1968 par le biologiste hongrois Aristid Lindenmayer, sont des procédés permettant de modéliser des processus de développement et de prolifération de plantes ou bactéries.
+
+Pour concevoir un L-système, il faut définir un ensemble de symboles et de règles qui vont permettre de modéliser un certain processus de croissance grâce à un système de réécriture.
+
+** L'algue de Lindenmayer
+:PROPERTIES:
+:custom_id: l-systemes-algue
+:END:
+Nous allons étudier dans un premier temps un L-système très simple : "l'algue de Lindenmayer". Ce L-système se définit de la manière suivante :
+- Alphabet : {A,B}
+- Axiome de départ : A
+- Règles :
+  - A \to AB
+  - B \to A
+
+Les trois points ci-dessus nous permettent de construire de manière récurrente les différentes *générations* de l'algue de Lindenmayer.
+
+Explications :
+
+- L'alphabet : Il définit l'ensemble des caractères qui le L-système pourra utiliser.
+- L'axiome de départ : Il précise la *génération* 0. Dans ce cas, la génération 0 est seulement constituée d'une lettre A.
+- Les règles : Elles permettent de construire la génération n+1 en remplaçant (réécrivant) les A et les B de la génération n par, respectivement, des AB et des A.
+
+Voici les 4 première générations de l'algue de Lindenmayer :
+#+begin_example
+Génération 0 : A
+Génération 1 : AB
+Génération 2 : AB A
+Génération 3 : AB A AB
+#+end_example
+
+*Maintenant, essaye d'écrire ce que donnent les générations 4, 5 et 6.*
+
+Pour chaque génération d'un L-système, on obtient une chaine de caractères que l'on appelle *mot*. Lorsque l'alphabet du L-Système s'y prête, ce *mot* peut être interprété comme des *"consignes d'affichage"*.
+
+** La courbe de Koch
+:PROPERTIES:
+:custom_id: l-systemes-koch
+:END:
+Définissons maintenant un nouveau L-système : la *"courbe de Koch"*.
+
+- Alphabet : {F,+,-}
+- Axiome de départ : F
+- Règles :
+  - F \to F + F - F - F + F
+  - + \to +
+  - - \to -
+
+*Construire les générations 0, 1 et 2 de la "courbe de Koch".*
+
+Le choix de l'alphabet pour la courbe de Koch n'est pas anodin. Les trois symboles choisis peuvent être interprétés comme des instructions de construction pour une main tenant un crayon de la manière suivante (comme avec le module Turtle) :
+
+- F : avancer d'un pas (= forward).
+- + : tourner à gauche de 90°.
+- - : tourner à droite de 90°.
+
+*À partir de ces informations, dessine sur une feuille en t'aidant du quadrillage les générations 1 et 2 de la "courbe de Koch".*
+
+** Début de la programmation d'un L-système
+:PROPERTIES:
+:custom_id: l-systemes-start-prog
+:END:
+Nous allons maintenant passer à la pratique.
+
+Crée un programme nommé =l-systemes.py= dans lequel nous allons créer plusieurs fonctions.
+
+1. Crée une fonction =generation(axiome, regles, n)= qui prend en paramètres :
+   - L'axiome de départ sous forme de chaine de caractères.
+   - l'ensemble des règles sous forme d'un dictionnaire ={caractère(s): remplacement}=.
+   - la génération désirée (0, 1, 2...).
+   - La fonction doit renvoyer le *mot* final une fois que tous les remplacements ont été effectués.
+2. Crée une fonction =tracer(mot, angle, pas)= qui prend en paramètres :
+   - Le mot à tracer.
+   - L'angle des rotations droite et gauche.
+   - Le pas (longueur) des segments (pour forward).
+   - La fonction doit tracer à l'écran à l'aide du module =Turtle= le mot passé en paramètre.
+
+*Essaye de tracer les différentes générations de l'algue de Lendenmayer et de la courbe de Koch pour vérifier que tout fonctionne correctement.*
+
+** Le cactus
+:PROPERTIES:
+:custom_id: l-systemes-cactus
+:END:
+Maintenant que nous avons commencé à créer les fonctions dont nous avons besoin pour obtenir le mot correspondant à une génération et tracer ce mot, nous allons introduire deux nouveaux symboles permettant de faire évoluer nos constructions de L-systèmes.
+
+Définissons un nouveau L-Système : le "cactus" :
+- Alphabet : {F,+,-,[,]}
+- Axiome de départ : F
+- Règles :
+  - F \to FF[+F-F]FF[-F+F]FF
+  - + \to +
+  - - \to -
+  - [ \to [
+  - ] \to ]
+
+*Construire les générations 0, 1 et 2 du "cactus" (uniquement les mots obtenus).*
+
+Pour tracer ce L-système, nouys allons interpréter le *mot* obtenu avec les conventions suivantes :
+- F : avancer d'un pas.
+- + : tourner à gauche de 90°.
+- - : tourner à droite de 90°.
+- [ : mémoriser la position et l'orientation de la tortue.
+- ] : revenir à la dernière position et à la dernière orientation de la tortue mémorisée.
+
+*Tracer les générations 1 et 2 du cactus.*
+
+** Suite de la programmation
+:PROPERTIES:
+:custom_id: l-systemes-continue-prog
+:END:
+Maintenant que nous avons ajouté deux symboles pour la représentations de nos L-systèmes, il va falloir les ajouter à notre fonction =tracer()=.
+
+1. Ajoute la gestion du symbole =[= dans la fonction =tracer()=. Tu devras pour cela sauvegarder la position et l'orientation de la tortue. Tu peux les obtenir à l'aide des fonctions =t.pos()= et =t.heading()= de Turtle.
+2. Ajoute ensuite la gestion du symbole =]= dans la fonction =tracer()=. Tu pourras utiliser les fonctions =t.setpos()= et =t.setheading()= de Turtle.
+   - *Tu devras utiliser le principe d'une pile pour sauvegarder les positions. La fonction =pop()= disponible pour les listes te sera très utile. Pour savoir ce qu'est une pile en programmation, google est ton ami !*
+3. Enfin, nous allons ajouter deux paramètres à notre fonction : =position_initiale= et =orientation_initiale=. Notre fonction sera désormais protypée de la sorte : =tracer(mot, angle, pas, position_initiale, orienation_initiale)=.
+   - =position_initiale= est un tuple de la forme =(x,y)=. x est l'abscisse, y est l'ordonnée.
+   - =orientation_initiale= est un entier correspondant à l'orientation.
+4. Ajoute deux lignes de code au début de la fonction =tracer()= permettant de placer la tortue à la position donnée dans =position_initiale= et à l'orientation donnée dans =orientation_initiale=.
+
+*Teste les nouvelles fonctionnalités en traçant quelques générations du cactus.*
+
+** Nouveaux L-systèmes
+:PROPERTIES:
+:custom_id: l-systemes-end
+:END:
+Désormais, notre fonction pour tracer un L-système est complète. Nous allons donc pouvoir aborder de nouveaux L-systèmes plus intéressants et plus complexes.
+
+Construis graphiquement :
+1. La génération 4 de la "brindille", dont le L-système est défini de la manière suivante :
+   - Alphabet : {F,+,-,[,]}
+   - Axiome de départ : F
+   - Règles :
+     - F \to F[-F]F[+F]F
+     - + \to +
+     - - \to -
+     - [ \to [
+     - ] \to ]
+   - angle = 25
+   - pas = 7
+   - position_initiale = (0, -250)
+   - orientation_initiale = 90
+2. La génération 4 du "flocon de Von Koch", dont le L-système est défini de la manière suivante :
+   - Alphabet : {F,+,-,[,]}
+   - Axiome de départ : F++F++F++
+   - Règles :
+     - F \to F-F++F-F
+     - + \to +
+     - - \to -
+     - [ \to [
+     - ] \to ]
+   - angle = 60
+   - pas = 5
+   - position_initiale = (-200, -150)
+   - orientation_initiale = 0
+3. La génération 4 de la "broussaille", dont le L-système est défini de la manière suivante :
+   - Alphabet : {F,+,-,[,]}
+   - Axiome de départ : F
+   - Règles :
+     - F \to FF-[-F+F+F]+[+F-F-F]
+     - + \to +
+     - - \to -
+     - [ \to [
+     - ] \to ]
+   - angle = 25
+   - pas = 10
+   - position_initiale = (0, -250)
+   - orientation_initiale = 90
 
 * Puissance 4
 :PROPERTIES:
@@ -1094,7 +1280,6 @@ Quand tu vas tester le jeu, il est très fort probable qu'il y ait des "bugs" et
 # :PROPERTIES:
 # :custom_id: chapitre8bis
 # :END:
-
 
 * Intelligence Artificielle du Puissance 4
 :PROPERTIES:
