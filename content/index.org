@@ -586,7 +586,9 @@ Maintenant, si je te disais que tu peux créer tes propres modules avec tes prop
 Pour créer ton propre module, il suffit de :
 1. Créer un nouveau fichier et lui donner le nom de ton module, par exemple =mes_fonctions.py=.
 2. Écrire tes fonctions à l'intérieur du fichier, autant que tu veux. *Attention, nous voulons seulement écrire les fonctions, pas les utiliser tout de suite.*
-3. Une fois le fichier enregistré, il suffit de le mettre dans le même *dossier* que le programme dans lequel tu vas l'utiliser puis de l'importer avec =import mes_fonctions=.
+3. Une fois le fichier enregistré, il suffit de le mettre dans le même *dossier* que le programme dans lequel tu vas l'utiliser puis de l'importer avec =import mes_fonctions= dans le programme.
+4. Pour utiliser une fonction du module =mes_fonctions=, il faudra l'appeler en utilisant =mes_fonctions.<nom_de_la_fonction>(paramètres)=.
+5. Pour ne plus avoir besoin d'écrire le nom du module, il faut remplacer =import mes_fonctions= par =from mes_fonctions import *=.
 
 *** Exercices
 Dans le chapitre suivant, nous allons mettre en pratique les modules et les fonctions ensemble en créant notre propre bibliothèque personnalisée de fonctions !
@@ -666,11 +668,6 @@ o
 n
 #+end_example
 
-*** Swap de lettres
-Dans un programme nommé =swap_lettres.py= :
-- Crée une fonction =swap_lettres(chaine, position1, position2)= *qui échange* les lettres à la position =position1= et =position2= dans la chaîne de caractères =chaine=.
-- *Utilise cette fonction* dans un programme qui demande à l'utiliateur une chaîne de caractères puis la position des lettres à échanger. Le programme devra afficher la chaîne avant et après modification.
-
 ** Niveau 2
 :PROPERTIES:
 :CUSTOM_ID: chapitre8_niv2
@@ -689,26 +686,6 @@ Le caractère " u " apparaît 1 fois.
 Le caractère " r " apparaît 1 fois.
 #+end_example
 
-*** Trouver les positions
- Dans un programme nommé =positions_lettre.py= :
- - Crée une fonction =positions(lettre, chaine)= qui *retourne une liste* contenant les positions de la lettre =lettre= dans la chaîne de caractères =chaine=. Si la lettre n'est pas présente dans la chaîne, la première et seule valeur de la liste devra être -1.
- - *Utilise cette fonction* dans un programme qui demande d'abord à l'utilisateur un mot ou une phrase puis la lettre à trouver et affiche toutes les positions où se trouve la lettre dans la chaîne.
-
-*** Taille des chaînes
-Dans un programme nommé =taille_chaines_liste.py= :
-- Crée une fonction =taille_chaines(liste)= qui *retourne un dictionnaire* qui associe à chaque chaîne de caractères la valeur de sa taille.
-- *Utilise cette fonction* dans un programme qui :
-  - Demande à l'utilisateur la taille de la liste à créer.
-  - Demande à l'utilisateur d'entrer des mots ou des phrases et les ajoute à une liste.
-  - Affiche (à l'aide de la fonction =taille_chaines()=) chaque chaîne de caractères suivi de sa taille.
-
-*** Nombre de voyelles
-Dans un programme nommé =nb_voyelles.py= :
-- Crée une fonction =nb_voyelles(chaine)= qui *retourne le nombre de voyelles* présentes dans la chaîne de caractères =chaine=.
-- *Utilise cette fonction* dans un programme qui :
-  - Demande à l'utilisateur d'entrer une chaîne.
-  - Affiche le nombre de voyelles présentes dans la chaîne.
-
 *** Mot inverse
 Dans un programme nommé =mot_inverse.py= :
 - Crée une fonction =mot_inverse(mot)= qui *retourne une chaîne* correspondant à l'inverse du mot =mot=. *Attention, le mot original ne doit pas être modifié !*
@@ -720,7 +697,6 @@ Exemple pour le mot "python" :
 mot original : python
 inverse : nohtyp
 #+end_example
-
 *** Palindrome
 Un palindrome est un mot dont l'ordre des lettres reste le même qu'on le lise de gauche à droite ou de droite à gauche.
 
@@ -734,22 +710,6 @@ Dans un programme nommé =palindrome.py= :
 :PROPERTIES:
 :custom_id: chapitre8_niv3
 :END:
-*** Valeurs communes
-Dans un programme nommé =valeurs_communes.py= :
-- Crée une fonction =valeurs_communes(liste1, liste2)= qui *retourne une liste* contenant toutes la valeurs communes entre =liste1= et =liste2=.
-- *Utilise cette fonction* dans un programme qui :
-  - Demande à l'utilisateur des éléments à insérer dans une première liste.
-  - Demande à l'utilisateur des éléments à insérer dans une seconde liste.
-  - Affiche tous les éléments communs entre les deux listes entrées.
-
-*** Suppression des doublons
-Dans un programme nommé =del_doublons.py= :
-- Crée une fonction =del_doublons(liste)= qui *supprime* les éventuels doublons présents dans la liste =liste=.
-- *Utilise cette fonction* dans un programme qui :
-  - Demande à l'utilisateur des éléments à insérer dans une liste.
-  - Affiche la liste.
-  - Affiche la liste sans les doublons.
-
 *** Rendu de monnaie
 Nous voulons créer un programme qui permet de calculer un rendu de monnaie et de dire de quels billets et pièces nous avons besoin pour former la somme à rendre. Par exemple, si la somme à payer est de 18.57€ et qu'un client donne 100€, le programme doit pouvoir :
 1. Calculer qu'il faut rendre 81.43€
@@ -775,24 +735,11 @@ Dans un programme nommé =rendu_monnaie.py= :
   - Demande à l'utilisateur un prix (float)
   - Demande à l'utilisateur la somme qu'il donne (float)
   - Affiche la somme à rendre ainsi que les billets et pièces à utiliser.
-
-
-
-# * Chapitre 9 : Programmation orientée objet
+# * Le pendu
 # :PROPERTIES:
-# :custom_id: chapitre9
+# :custom_id: pendu
 # :END:
-# ** Cours 19 : classes et objets
-# *** Manuel
-# - *"Classes et objets"*, p.97-98
-# - *"Organiser les choses en classes"*, p.98-99
-# - *"Enfants et parents"*, p.99-100
-# - *"Ajouter des objets aux classes"*, p.100
 
-# *** Exercices
-# 1. Dans un fichier nommé =college.py= :
-#    - Crée une classe =Humain= qui pour l'instant ne contiendra que le mot-clef =pass=.
-#    - Crée une classe =Piece= de la même
 * L-systèmes
 :PROPERTIES:
 :custom_id: l-systemes
