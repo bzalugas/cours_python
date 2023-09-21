@@ -144,17 +144,15 @@ Une fois les exercices d'un cours terminés, appelle le professeur pour qu'il vi
    - Modifie le dernier élément de la liste et l'afficher après modification.
    - Affiche d'un seul coup le sous-ensemble de la liste contenant les 2^{ème}, 3^{ème} et 4^{ème} éléments de la liste.
 
-2. Dans un programme nommé =liste_courses_quantite.py= :
-   - Crée une variable =courses_quantite= contenant une *liste* d'au moins 5 chiffres. Après chaque chiffre, place une chaîne de caractères correspondant à quelque chose à acheter.
-   - Affiche =courses_quantite=.
-   - Affiche le sous-ensemble contenant les 3^{ème} et 4^{ème} éléments de la liste.
-
-3. Dans un programme nommé =cadavre_exquis.py= :
-   - Crée une variable =debuts_de_phrases= contenant une *liste* de chaînes de caractères qui pourraient être des débuts de phrase. Par exemple, "Aujourd'hui, j'ai décidé de", ou alors "Pour la nouvelle année, j'ai pris la décision de ".
-   - Crée une variable =fins_de_phrases= contenant une *liste* de fins de phrases. Par exemple, "être sage.", "devenir riche.", "ne plus manger de bonbons.", etc.
-   - Crée une *liste* =debuts_et_fins_de_phrases= contenant les deux listes précédemment créées.
-   - Crée une variable =phrase_entiere= contenant n'importe quel élément de la première liste contenue dans =debuts_et_fins_de_phrases= suivi de n'importe quel élément de la deuxième liste de =debuts_et_fins_de_phrases=.
-   - Affiche la variable =phrase_entiere= pour voir apparaître une phrase inattendue !
+2. Dans un programme nommé =liste_de_listes.py= :
+   - Crée une variable =legumes= contenant une *liste* de 3 légumes à acheter.
+   - Crée une variable =fruits= contenant une *liste* de 3 fruits à acheter.
+   - Crée une variable =divers= contenant une *liste* de 3 autres choses à acheter.
+   - Crée une varibale =listes= qui sera une liste contenant les 3 listes créées précédemment. *Attention, il ne faut pas réécrire les listes, mais seulement les réutiliser.*
+   - En utilisant uniquement la varibale =listes= :
+     - Affiche le 3^{ème} élément de la liste =legumes=.
+     - Affiche le 1^{er} élément de la liste =fruits=.
+     - Affiche le 2^{ème} élément de la liste =divers=.
 
 ** Cours 6 : Listes 2
 :PROPERTIES:
@@ -512,7 +510,6 @@ Dans un programme nommé =nombre_secret.py= :
 - Si le joueur a gagné, le jeu doit se relancer avec une plus grande difficulté (moins d'essais, nombre secret maximum plus grand, ...)
 - Si le joueur a perdu, le jeu doit baisser la difficulté ou retourner à la difficulté originale.
 - Des messages cachés qui ne s'affichent que si l'on réussit un certain niveau ou si on trouve le nombre secret du premier coup.
-
 
 * Chapitre 7 : Les fonctions
 :PROPERTIES:
