@@ -59,7 +59,7 @@ Une fois les exercices d'un cours terminés, appelle le professeur pour qu'il vi
    - Affiche le résultat d'une *multiplication*.
    - Affiche le résultat d'une *division*.
    - Affiche le résultat d'un calcul utilisant *tous les opérateurs*.
-   - Affiche les résultats de *deux calculs contenant les mêmes valeurs et opérateurs* mais avec et sans *parenthèses*, pour illustrer l'ordre des opérateurs et le fonctionnement des parenthèses.
+   - Affiche le résultat d'une opération qui illustre l'ordre des opérateurs et l'utilisation des parenthèses.
 
 ** Cours 2 : Variables
 :PROPERTIES:
