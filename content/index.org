@@ -524,6 +524,7 @@ Dans un programme nommé =nombre_secret.py= :
 - *"Utiliser des fonctions"*, p.88-89
 - *"Qu'est-ce qu'une fonction ?"*, p.89-90
 - *"Variables et portée"*, p.90-92
+- *"La fonction len"*, p.121-122
 *** Exercices
 1. Dans un programme nommé =fonctions1.py= :
    - Définir une fonction ayant la signature =bonjour(prenom, nom)= qui doit afficher "Bonjour <prenom> <nom> !", en remplaçant <prenom> et <nom> par les arguments passés à la fonction.
