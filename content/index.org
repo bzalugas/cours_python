@@ -614,7 +614,7 @@ Tu as maintenant créé les 3 premières fonctions de ton propre module, que tu 
 :END:
 Attention ! Pour chaque exercice, il faudra bien faire la différence entre le code *à l'intérieur des fonctions* et le code qui *utilise les fonctions*.
 
-Avant toute chose, crée un fichier nommé =mes_fonctions.py= qui contiendra les fonctions que l'on peut être amenés à réutiliser plus tard.
+Nous utiliserons le fichier =mes_fonctions= précédemment et nous y ajouterons de nouvelles fonctions.
 
 ** Niveau 1
 :PROPERTIES:
