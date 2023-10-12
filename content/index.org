@@ -740,6 +740,37 @@ Dans un programme nommé =rendu_monnaie.py= :
 :PROPERTIES:
 :custom_id: pendu
 :END:
+Dans ce chapitre, nous allons commencer puis améliorer un jeu de pendu. Tu es libre d'organiser ton code comme tu le souhaites tant qu'il respecte des règles de base :
+- Le nom des fonctions doit être explicite
+- 1 fonction = 1 action
+- Une fonction ne doit pas faire plus de 20 lignes
+- Le nom des variables doit être explicite
+
+Bien-sûr, ton code doit contenir uniquement des fonctions, qui peuvent faire appel à d'autres fonctions. Le seul code qui sera en dehors d'une fonction est celui qui appelle la boucle de jeu (qui est une fonction).
+
+** Fonctionnement du programme
+Le programme devra :
+- Demander un mot à l'utilisateur (ce sera le mot à trouver) et l'enregistrer.
+- Limiter le nombre d'erreurs (lettres non contenues dans le mot) à un nombre inférieur à 10 (5 par exemple).
+- Tant qu'il reste des essais :
+  - Afficher le mot avec les lettres trouvées et des _ à la place des lettres manquantes.
+  - Afficher toutes les lettres essayées jusqu'à présent.
+  - Demander une lettre à l'utilisateur.
+  - Indiquer si la lettre est contenue dans le mot.
+  - Si le mot est complètement trouvé, affichage de la fin de partie.
+- Si le nombre d'essais tombe à 0 et que le mot n'a pas été trouvé, affichage de la fin de partie avec le mot qu'il fallait trouver.
+
+L'affichage peut être le même dans le cas d'une victoire ou d'une défaite mais il faudra quand même indiquer si le joueur a gagné ou perdu.
+
+Pour t'aider, voici un exemple des fonctions que tu peux créer et utiliser :
+- =afficher_mot(mot, lettres_trouvees)= : Affiche le mot avec uniquement les lettres trouvées et des _ à la place des lettres à trouver.
+- =demander_mot()= : Demande un mot à l'utilisateur et le retourne (=return=)
+- =afficher_statut(mot, lettres_trouvees, nb_essais)= : Affiche le statut complet de la partie, c'est-à-dire :
+  - le mot avec les lettres trouvées jusqu'à présent
+  - toutes les lettres essayées
+  - les essais restants
+- =mot_trouve(mot, lettres_trouvees)= : Renvoie =False= s'il reste encore des lettres à trouver dans =mot= et =True= si toutes les lettres ont été trouvées.
+- =jeu()= : la boucle de jeu.
 
 * L-systèmes
 :PROPERTIES:
