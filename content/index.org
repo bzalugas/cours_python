@@ -735,10 +735,10 @@ Dans un programme nommé =rendu_monnaie.py= :
   - Demande à l'utilisateur un prix (float)
   - Demande à l'utilisateur la somme qu'il donne (float)
   - Affiche la somme à rendre ainsi que les billets et pièces à utiliser.
-# * Le pendu
-# :PROPERTIES:
-# :custom_id: pendu
-# :END:
+* Le pendu
+:PROPERTIES:
+:custom_id: pendu
+:END:
 
 * L-systèmes
 :PROPERTIES:
@@ -875,8 +875,11 @@ Maintenant que nous avons ajouté deux symboles pour la représentations de nos 
 :END:
 Désormais, notre fonction pour tracer un L-système est complète. Nous allons donc pouvoir aborder de nouveaux L-systèmes plus intéressants et plus complexes.
 
-Construis graphiquement :
-1. La génération 4 de la "brindille", dont le L-système est défini de la manière suivante :
+*** La brindille
+#+attr_html: :alt brindille  :align center :class img :width 166px :height 320px :display block
+[[./img/brindille.png]]
+
+Construire graphiquement (sur l'ordinateur, avec le programme python) la génération 4 de la "brindille", dont le L-système est défini de la manière suivante :
    - Alphabet : {F,+,-,[,]}
    - Axiome de départ : F
    - Règles :
@@ -889,7 +892,12 @@ Construis graphiquement :
    - pas = 7
    - position_initiale = (0, -250)
    - orientation_initiale = 90
-2. La génération 4 du "flocon de Von Koch", dont le L-système est défini de la manière suivante :
+
+*** Le flocon de Von Koch
+#+attr_html: :alt flocon de Von Koch  :align center :class img :width 242px :height 277px :display block
+[[./img/flocon_koch.png]]
+
+Construire graphiquement la génération 4 du "flocon de Von Koch", dont le L-système est défini de la manière suivante :
    - Alphabet : {F,+,-,[,]}
    - Axiome de départ : F++F++F++
    - Règles :
@@ -902,7 +910,12 @@ Construis graphiquement :
    - pas = 5
    - position_initiale = (-200, -150)
    - orientation_initiale = 0
-3. La génération 4 de la "broussaille", dont le L-système est défini de la manière suivante :
+
+*** La broussaille
+#+attr_html: :alt broussaille :align center :class img :width 242px :height 287px :display block
+[[./img/broussaille.png]]
+
+Construire graphiquement la génération 4 de la "broussaille", dont le L-système est défini de la manière suivante :
    - Alphabet : {F,+,-,[,]}
    - Axiome de départ : F
    - Règles :
