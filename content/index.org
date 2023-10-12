@@ -116,7 +116,7 @@ Une fois les exercices d'un cours terminés, appelle le professeur pour qu'il vi
 2. Dans un programme nommé =mon_salaire.py= :
    - Crée une variable =pieces_par_jour= contenant le nombre de pièces d'or que tu gagnes par jour.
    - Crée une variable =jours_de_travail= contenant le nombre de jours où tu as travaillé.
-   - Affiche *"En travaillant <jours_de_travail> et avec un salaire quotidien de <pieces_par_jour>, j'ai gagné un total de <jours_de_travail * pieces_par_jour>. Je suis riche !"* en utilisant =%s=. Il faudra bien sûr remplacer les parties entre chevrons (<...>) par le contenu des variables.
+   - Affiche *"En travaillant <jours_de_travail> jours et avec un salaire quotidien de <pieces_par_jour> pièces, j'ai gagné un total de <jours_de_travail * pieces_par_jour> pièces. Je suis riche !"* en utilisant =%s=. Il faudra bien sûr remplacer les parties entre chevrons (<...>) par le contenu des variables.
 
 3. Dans un programme nommé =perroquet.py= :
    - Crée une variable =phrase= contenant la phrase de ton choix.
