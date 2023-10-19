@@ -234,7 +234,7 @@ Résulat :
 :custom_id: chapitre2_cours8
 :END:
 *** Cours
-Jusqu'ici, nous avons donné à nos variables des valeurs directement dans le code python. Comment fait-on si l'on souhaite poser une question à l'utilisateur sans qu'il ait besoin de modifier le code ?
+Jusqu'ici, nous avons donné à nos variables des valeurs directement dans le code python. Comment fait-on si l'on souhaite demander une information à l'utilisateur et qu'il puisse la donner sans qu'il ait besoin de modifier le code ?
 
 La méthode la plus simple, c'est d'utiliser la fonction =input()=. Nous utilisons déjà la fonction =print()= pour afficher du texte à l'écran mais nous verrons plus tard et en détail ce qu'est une fonction en programmation.
 
