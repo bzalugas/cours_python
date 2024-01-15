@@ -116,6 +116,7 @@ for the JavaScript code in this tag.
 <li><a href="#chapitre7bis">Chapitre 7bis : Turtle avec les fonctions</a>
 <ul>
 <li><a href="#chapitre7bis_cours17b">Cours 17b : Un peu plus de turtle</a></li>
+<li><a href="#chapitre7bis_cours18b">Cours 18b : Turtle, mais avec des fonctions</a></li>
 </ul>
 </li>
 <li><a href="#chapitre8">Chapitre 8 : Mise en pratique 2</a>
@@ -127,7 +128,7 @@ for the JavaScript code in this tag.
 </li>
 <li><a href="#pendu">Le pendu</a>
 <ul>
-<li><a href="#orgda806bb">Fonctionnement du programme</a></li>
+<li><a href="#org386237f">Fonctionnement du programme</a></li>
 </ul>
 </li>
 <li><a href="#l-systemes">L-systèmes</a>
@@ -153,29 +154,29 @@ for the JavaScript code in this tag.
 <li><a href="#puissance4_etape8">Étape 8 : Lancement du jeu !</a></li>
 <li><a href="#ia_puissance4_theorie">Théorie</a></li>
 <li><a href="#ia_puissance4_code">Code</a></li>
-<li><a href="#orgd70dfde">Un peu de cours</a></li>
-<li><a href="#org844c784">Retour au code</a></li>
+<li><a href="#orgd8b9541">Un peu de cours</a></li>
+<li><a href="#orga38e3cd">Retour au code</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </nav>
 
-<div id="outline-container-org45fe7c5" class="outline-2">
+<div id="outline-container-org4f3afa4" class="outline-2">
 <h2 id="introduction">Introduction</h2>
 <div class="outline-text-2" id="text-introduction">
 </div>
-<div id="outline-container-org111cb06" class="outline-4">
-<h4 id="org111cb06">Manuel de Python</h4>
-<div class="outline-text-4" id="text-org111cb06">
+<div id="outline-container-org62f598e" class="outline-4">
+<h4 id="org62f598e">Manuel de Python</h4>
+<div class="outline-text-4" id="text-org62f598e">
 <p target="_blank">
 Tu peux télécharger le manuel de python en <a href="manuel/manuel_python.pdf" target="_blank">cliquant ici</a>.
 </p>
 </div>
 </div>
-<div id="outline-container-org2b4e6a7" class="outline-4">
-<h4 id="org2b4e6a7">Présentation</h4>
-<div class="outline-text-4" id="text-org2b4e6a7">
+<div id="outline-container-orgb4458a7" class="outline-4">
+<h4 id="orgb4458a7">Présentation</h4>
+<div class="outline-text-4" id="text-orgb4458a7">
 <ul class="org-ul">
 <li>Prénom</li>
 <li>As-tu déjà programmé ? Si oui, avec quel langage de programmation ?</li>
@@ -183,9 +184,9 @@ Tu peux télécharger le manuel de python en <a href="manuel/manuel_python.pdf" 
 </ul>
 </div>
 </div>
-<div id="outline-container-orge906838" class="outline-4">
-<h4 id="orge906838">Notions de base</h4>
-<div class="outline-text-4" id="text-orge906838">
+<div id="outline-container-org13c2ce0" class="outline-4">
+<h4 id="org13c2ce0">Notions de base</h4>
+<div class="outline-text-4" id="text-org13c2ce0">
 <ul class="org-ul">
 <li>Programmation ?</li>
 <li>Programme ?</li>
@@ -197,9 +198,9 @@ Tu peux télécharger le manuel de python en <a href="manuel/manuel_python.pdf" 
 </ul>
 </div>
 </div>
-<div id="outline-container-org53aa819" class="outline-4">
-<h4 id="org53aa819">Pourquoi Python ?</h4>
-<div class="outline-text-4" id="text-org53aa819">
+<div id="outline-container-org98dea7f" class="outline-4">
+<h4 id="org98dea7f">Pourquoi Python ?</h4>
+<div class="outline-text-4" id="text-org98dea7f">
 <ul class="org-ul">
 <li>Langage interprété : versatilité (le fonctionnement ne dépend pas du système d'exploitation)</li>
 <li>Syntaxe simple</li>
@@ -207,9 +208,9 @@ Tu peux télécharger le manuel de python en <a href="manuel/manuel_python.pdf" 
 </ul>
 </div>
 </div>
-<div id="outline-container-org3b731b2" class="outline-4">
-<h4 id="org3b731b2">Fonctionnement du cours</h4>
-<div class="outline-text-4" id="text-org3b731b2">
+<div id="outline-container-orgef24ce2" class="outline-4">
+<h4 id="orgef24ce2">Fonctionnement du cours</h4>
+<div class="outline-text-4" id="text-orgef24ce2">
 <p target="_blank">
 <b>Les notions dont tu auras besoin dans ce cours se trouvent dans le <a href="manuel/manuel_python.pdf" target="_blank">manuel de python</a>.</b> Dans chaque cours, les chapitres que tu dois lire sont indiqués au début dans la section <b>Manuel</b>. Une fois que tu as lu les chapitres demandés, tu devras faire les exercices de la section <b>Exercices</b>.
 </p>
@@ -223,9 +224,9 @@ Une fois les exercices d'un cours terminés, appelle le professeur pour qu'il vi
 </p>
 </div>
 </div>
-<div id="outline-container-orgeaafd44" class="outline-4">
-<h4 id="orgeaafd44">Introduction à IDLE</h4>
-<div class="outline-text-4" id="text-orgeaafd44">
+<div id="outline-container-org1bc14eb" class="outline-4">
+<h4 id="org1bc14eb">Introduction à IDLE</h4>
+<div class="outline-text-4" id="text-org1bc14eb">
 <ul class="org-ul">
 <li>Sauvegarder un programme (p.18 du manuel)</li>
 <li>Premier programme : Crée un premier programme nommé <code>bonjour.py</code> qui affiche le texte <b>"Bonjour tout le monde !"</b></li>
@@ -234,17 +235,17 @@ Une fois les exercices d'un cours terminés, appelle le professeur pour qu'il vi
 </div>
 </div>
 
-<div id="outline-container-org3215815" class="outline-2">
+<div id="outline-container-orgea94fb9" class="outline-2">
 <h2 id="chapitre1">Chapitre 1 : Calculs et variables</h2>
 <div class="outline-text-2" id="text-chapitre1">
 </div>
-<div id="outline-container-orgc260485" class="outline-3">
+<div id="outline-container-orgd3ff16e" class="outline-3">
 <h3 id="chapitre1_cours1">Cours 1 : Opérateurs arithmétiques</h3>
 <div class="outline-text-3" id="text-chapitre1_cours1">
 </div>
-<div id="outline-container-orgce062ca" class="outline-4">
-<h4 id="orgce062ca">Manuel</h4>
-<div class="outline-text-4" id="text-orgce062ca">
+<div id="outline-container-org79a386b" class="outline-4">
+<h4 id="org79a386b">Manuel</h4>
+<div class="outline-text-4" id="text-org79a386b">
 <ul class="org-ul">
 <li><b>"Calculer avec Python"</b>, p.22-23</li>
 <li><b>"Les opérateurs de Python"</b>, p.23</li>
@@ -252,9 +253,9 @@ Une fois les exercices d'un cours terminés, appelle le professeur pour qu'il vi
 </ul>
 </div>
 </div>
-<div id="outline-container-org3adbcea" class="outline-4">
-<h4 id="org3adbcea">Exercices</h4>
-<div class="outline-text-4" id="text-org3adbcea">
+<div id="outline-container-orgadead4d" class="outline-4">
+<h4 id="orgadead4d">Exercices</h4>
+<div class="outline-text-4" id="text-orgadead4d">
 <p>
 <b>Pour chaque exercice, il faut créer un nouveau programme.</b>
 </p>
@@ -273,22 +274,22 @@ Une fois les exercices d'un cours terminés, appelle le professeur pour qu'il vi
 </div>
 </div>
 
-<div id="outline-container-org504acd3" class="outline-3">
+<div id="outline-container-orgcf3396e" class="outline-3">
 <h3 id="chapitre1_cours2">Cours 2 : Variables</h3>
 <div class="outline-text-3" id="text-chapitre1_cours2">
 </div>
-<div id="outline-container-org8e06e21" class="outline-4">
-<h4 id="org8e06e21">Manuel</h4>
-<div class="outline-text-4" id="text-org8e06e21">
+<div id="outline-container-org3f5eb83" class="outline-4">
+<h4 id="org3f5eb83">Manuel</h4>
+<div class="outline-text-4" id="text-org3f5eb83">
 <ul class="org-ul">
 <li><b>"Les variables sont comme des étiquettes"</b>, p.25-26</li>
 <li><b>"Utiliser les variables"</b>, p.26-29</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org2faf2a8" class="outline-4">
-<h4 id="org2faf2a8">Exercices</h4>
-<div class="outline-text-4" id="text-org2faf2a8">
+<div id="outline-container-org7ca5071" class="outline-4">
+<h4 id="org7ca5071">Exercices</h4>
+<div class="outline-text-4" id="text-org7ca5071">
 <ol class="org-ol">
 <li>Dans un programme nommé <code>variables.py</code> :
 <ul class="org-ul">
@@ -302,17 +303,17 @@ Une fois les exercices d'un cours terminés, appelle le professeur pour qu'il vi
 </div>
 </div>
 
-<div id="outline-container-org66a9e49" class="outline-2">
+<div id="outline-container-org2464653" class="outline-2">
 <h2 id="chapitre2">Chapitre 2 : Chaînes, listes, tuples, dictionnaires</h2>
 <div class="outline-text-2" id="text-chapitre2">
 </div>
-<div id="outline-container-org4fc3134" class="outline-3">
+<div id="outline-container-org48ae1aa" class="outline-3">
 <h3 id="chapitre2_cours3">Cours 3 : Chaînes de caractères 1</h3>
 <div class="outline-text-3" id="text-chapitre2_cours3">
 </div>
-<div id="outline-container-org57b4760" class="outline-4">
-<h4 id="org57b4760">Manuel</h4>
-<div class="outline-text-4" id="text-org57b4760">
+<div id="outline-container-orgb839765" class="outline-4">
+<h4 id="orgb839765">Manuel</h4>
+<div class="outline-text-4" id="text-orgb839765">
 <ul class="org-ul">
 <li><b>"Les chaînes"</b>, p.32</li>
 <li><b>"Créer des chaînes"</b>, p.32-33</li>
@@ -320,9 +321,9 @@ Une fois les exercices d'un cours terminés, appelle le professeur pour qu'il vi
 </ul>
 </div>
 </div>
-<div id="outline-container-orga4f3291" class="outline-4">
-<h4 id="orga4f3291">Exercices</h4>
-<div class="outline-text-4" id="text-orga4f3291">
+<div id="outline-container-org027bbda" class="outline-4">
+<h4 id="org027bbda">Exercices</h4>
+<div class="outline-text-4" id="text-org027bbda">
 <ol class="org-ol">
 <li>Dans un programme nommé <code>prenom_nom.py</code> :
 <ul class="org-ul">
@@ -347,22 +348,22 @@ Une fois les exercices d'un cours terminés, appelle le professeur pour qu'il vi
 </div>
 </div>
 
-<div id="outline-container-org34f4328" class="outline-3">
+<div id="outline-container-orgfb829c5" class="outline-3">
 <h3 id="chapitre2_cours4">Cours 4 : Chaînes de caractères 2</h3>
 <div class="outline-text-3" id="text-chapitre2_cours4">
 </div>
-<div id="outline-container-org25f37a6" class="outline-4">
-<h4 id="org25f37a6">Manuel</h4>
-<div class="outline-text-4" id="text-org25f37a6">
+<div id="outline-container-org54c8d56" class="outline-4">
+<h4 id="org54c8d56">Manuel</h4>
+<div class="outline-text-4" id="text-org54c8d56">
 <ul class="org-ul">
 <li><b>"Insérer des valeurs dans des chaînes"</b>, p.36-37</li>
 <li><b>"Multiplier des chaînes"</b>, p.37-38</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org6df5293" class="outline-4">
-<h4 id="org6df5293">Exercices</h4>
-<div class="outline-text-4" id="text-org6df5293">
+<div id="outline-container-org3ad4a9a" class="outline-4">
+<h4 id="org3ad4a9a">Exercices</h4>
+<div class="outline-text-4" id="text-org3ad4a9a">
 <ol class="org-ol">
 <li>Dans un programme nommé <code>prenom_nom_mieux.py</code> :
 <ul class="org-ul">
@@ -396,21 +397,21 @@ Une fois les exercices d'un cours terminés, appelle le professeur pour qu'il vi
 </div>
 </div>
 
-<div id="outline-container-orgb4c0db9" class="outline-3">
+<div id="outline-container-org6e48e7f" class="outline-3">
 <h3 id="chapitre2_cours5">Cours 5 : Listes 1</h3>
 <div class="outline-text-3" id="text-chapitre2_cours5">
 </div>
-<div id="outline-container-org6c8945d" class="outline-4">
-<h4 id="org6c8945d">Manuel</h4>
-<div class="outline-text-4" id="text-org6c8945d">
+<div id="outline-container-org51ffc00" class="outline-4">
+<h4 id="org51ffc00">Manuel</h4>
+<div class="outline-text-4" id="text-org51ffc00">
 <ul class="org-ul">
 <li><b>"Plus puissantes que les chaînes : les listes"</b>, p.38-41</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org2dc1528" class="outline-4">
-<h4 id="org2dc1528">Exercices</h4>
-<div class="outline-text-4" id="text-org2dc1528">
+<div id="outline-container-org1da30d1" class="outline-4">
+<h4 id="org1da30d1">Exercices</h4>
+<div class="outline-text-4" id="text-org1da30d1">
 <ol class="org-ol">
 <li>Dans un programme nommé <code>liste_courses.py</code> :
 <ul class="org-ul">
@@ -441,13 +442,13 @@ Une fois les exercices d'un cours terminés, appelle le professeur pour qu'il vi
 </div>
 </div>
 
-<div id="outline-container-org613ed8f" class="outline-3">
+<div id="outline-container-org706e384" class="outline-3">
 <h3 id="chapitre2_cours6">Cours 6 : Listes 2</h3>
 <div class="outline-text-3" id="text-chapitre2_cours6">
 </div>
-<div id="outline-container-org1988497" class="outline-4">
-<h4 id="org1988497">Manuel</h4>
-<div class="outline-text-4" id="text-org1988497">
+<div id="outline-container-org36dfb84" class="outline-4">
+<h4 id="org36dfb84">Manuel</h4>
+<div class="outline-text-4" id="text-org36dfb84">
 <ul class="org-ul">
 <li><b>"Ajouter des éléments à une liste"</b>, p.41-42</li>
 <li><b>"Supprimer des éléments à une liste"</b>, p.42</li>
@@ -455,9 +456,9 @@ Une fois les exercices d'un cours terminés, appelle le professeur pour qu'il vi
 </ul>
 </div>
 </div>
-<div id="outline-container-orgc3055c4" class="outline-4">
-<h4 id="orgc3055c4">Exercices</h4>
-<div class="outline-text-4" id="text-orgc3055c4">
+<div id="outline-container-org56fcc23" class="outline-4">
+<h4 id="org56fcc23">Exercices</h4>
+<div class="outline-text-4" id="text-org56fcc23">
 <ol class="org-ol">
 <li>Dans un programme nommé <code>liste_eleves.py</code> :
 <ul class="org-ul">
@@ -484,13 +485,13 @@ Une fois les exercices d'un cours terminés, appelle le professeur pour qu'il vi
 </div>
 </div>
 
-<div id="outline-container-orgd8c3ab7" class="outline-3">
+<div id="outline-container-org52be8e1" class="outline-3">
 <h3 id="chapitre2_cours7">Cours 7 : Tuples et dictionnaires</h3>
 <div class="outline-text-3" id="text-chapitre2_cours7">
 </div>
-<div id="outline-container-org95bba96" class="outline-4">
-<h4 id="org95bba96">Manuel</h4>
-<div class="outline-text-4" id="text-org95bba96">
+<div id="outline-container-org14b72af" class="outline-4">
+<h4 id="org14b72af">Manuel</h4>
+<div class="outline-text-4" id="text-org14b72af">
 <ul class="org-ul">
 <li><b>"Tuples"</b>, p.45</li>
 <li><b>"Dictionnaires"</b>, p.45-47</li>
@@ -498,9 +499,9 @@ Une fois les exercices d'un cours terminés, appelle le professeur pour qu'il vi
 </div>
 </div>
 
-<div id="outline-container-orga8466a0" class="outline-4">
-<h4 id="orga8466a0">Indication complémentaire sur les dictionnaires</h4>
-<div class="outline-text-4" id="text-orga8466a0">
+<div id="outline-container-org7bfbbb6" class="outline-4">
+<h4 id="org7bfbbb6">Indication complémentaire sur les dictionnaires</h4>
+<div class="outline-text-4" id="text-org7bfbbb6">
 <p>
 Comme vu dans le manuel, tu peux modifier une valeur dans un dictionnaire simplement en utilisant sa clef :
 </p>
@@ -538,9 +539,9 @@ Résulat :
 </pre>
 </div>
 </div>
-<div id="outline-container-orgf2daf8d" class="outline-4">
-<h4 id="orgf2daf8d">Exercices</h4>
-<div class="outline-text-4" id="text-orgf2daf8d">
+<div id="outline-container-org724b78e" class="outline-4">
+<h4 id="org724b78e">Exercices</h4>
+<div class="outline-text-4" id="text-org724b78e">
 <ol class="org-ol">
 <li>Dans un programme nommé <code>mon_tuple.py</code> :
 <ul class="org-ul">
@@ -564,13 +565,13 @@ Résulat :
 </div>
 </div>
 
-<div id="outline-container-org8c64333" class="outline-3">
+<div id="outline-container-org61d2751" class="outline-3">
 <h3 id="chapitre2_cours8">Cours 8 : Input</h3>
 <div class="outline-text-3" id="text-chapitre2_cours8">
 </div>
-<div id="outline-container-org5e64579" class="outline-4">
-<h4 id="org5e64579">Cours</h4>
-<div class="outline-text-4" id="text-org5e64579">
+<div id="outline-container-org40e63c6" class="outline-4">
+<h4 id="org40e63c6">Cours</h4>
+<div class="outline-text-4" id="text-org40e63c6">
 <p>
 Jusqu'ici, nous avons donné à nos variables des valeurs directement dans le code python. Comment fait-on si l'on souhaite demander une information à l'utilisateur et qu'il puisse la donner sans qu'il ait besoin de modifier le code ?
 </p>
@@ -658,9 +659,9 @@ Pour le moment, cela suffira pour créer des programmes plus intéractifs, mais 
 </p>
 </div>
 </div>
-<div id="outline-container-org8ca6d4a" class="outline-4">
-<h4 id="org8ca6d4a">Exercices</h4>
-<div class="outline-text-4" id="text-org8ca6d4a">
+<div id="outline-container-org6fc90cd" class="outline-4">
+<h4 id="org6fc90cd">Exercices</h4>
+<div class="outline-text-4" id="text-org6fc90cd">
 <ol class="org-ol">
 <li>Dans un programme nommé <code>carte_identite.py</code> :
 <ul class="org-ul">
@@ -678,25 +679,25 @@ Pour le moment, cela suffira pour créer des programmes plus intéractifs, mais 
 </div>
 </div>
 
-<div id="outline-container-orge2c6530" class="outline-2">
+<div id="outline-container-org1d43de6" class="outline-2">
 <h2 id="chapitre3">Chapitre 3 : Turtle</h2>
 <div class="outline-text-2" id="text-chapitre3">
 </div>
-<div id="outline-container-orgea0a4c3" class="outline-3">
+<div id="outline-container-org47aa2f2" class="outline-3">
 <h3 id="chapitre3_cours9">Cours 9 : Turtle</h3>
 <div class="outline-text-3" id="text-chapitre3_cours9">
 </div>
-<div id="outline-container-org8b9aa05" class="outline-4">
-<h4 id="org8b9aa05">Manuel</h4>
-<div class="outline-text-4" id="text-org8b9aa05">
+<div id="outline-container-orgfe861c2" class="outline-4">
+<h4 id="orgfe861c2">Manuel</h4>
+<div class="outline-text-4" id="text-orgfe861c2">
 <ul class="org-ul">
 <li><b>"Dessiner avec une tortue"</b>, p.49-56</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgac25f41" class="outline-4">
-<h4 id="orgac25f41">Exercices</h4>
-<div class="outline-text-4" id="text-orgac25f41">
+<div id="outline-container-org1653e26" class="outline-4">
+<h4 id="org1653e26">Exercices</h4>
+<div class="outline-text-4" id="text-org1653e26">
 <ol class="org-ol">
 <li>Dans un programme nommé <code>carré.py</code>, fais dessiner un carré à une tortue.</li>
 <li>Dans un programme nommé <code>hexagone.py</code>, fais dessiner un hexagone à une tortue.</li>
@@ -709,17 +710,17 @@ Pour le moment, cela suffira pour créer des programmes plus intéractifs, mais 
 </div>
 </div>
 
-<div id="outline-container-org030cd53" class="outline-2">
+<div id="outline-container-orgc50f4da" class="outline-2">
 <h2 id="chapitre4">Chapitre 4 : Les conditions</h2>
 <div class="outline-text-2" id="text-chapitre4">
 </div>
-<div id="outline-container-org157a147" class="outline-3">
+<div id="outline-container-org424cc59" class="outline-3">
 <h3 id="chapitre4_cours10">Cours 10 : if</h3>
 <div class="outline-text-3" id="text-chapitre4_cours10">
 </div>
-<div id="outline-container-org97bf8b4" class="outline-4">
-<h4 id="org97bf8b4">Manuel</h4>
-<div class="outline-text-4" id="text-org97bf8b4">
+<div id="outline-container-org01dc9a7" class="outline-4">
+<h4 id="org01dc9a7">Manuel</h4>
+<div class="outline-text-4" id="text-org01dc9a7">
 <ul class="org-ul">
 <li><b>"Poser des questions avec if et else"</b>, p. 59</li>
 <li><b>"Intructions if"</b>, p.60</li>
@@ -728,9 +729,9 @@ Pour le moment, cela suffira pour créer des programmes plus intéractifs, mais 
 </ul>
 </div>
 </div>
-<div id="outline-container-orgb84599e" class="outline-4">
-<h4 id="orgb84599e">Exercices</h4>
-<div class="outline-text-4" id="text-orgb84599e">
+<div id="outline-container-org9152f4c" class="outline-4">
+<h4 id="org9152f4c">Exercices</h4>
+<div class="outline-text-4" id="text-org9152f4c">
 <ol class="org-ol">
 <li>Dans un programme nommé <code>boutique.py</code> :
 <ul class="org-ul">
@@ -767,22 +768,22 @@ Pour le moment, cela suffira pour créer des programmes plus intéractifs, mais 
 </div>
 </div>
 
-<div id="outline-container-org243e304" class="outline-3">
+<div id="outline-container-orge4fea2f" class="outline-3">
 <h3 id="chapitre4_cours11">Cours 11 : if, elif, else</h3>
 <div class="outline-text-3" id="text-chapitre4_cours11">
 </div>
-<div id="outline-container-org9fb9e7a" class="outline-4">
-<h4 id="org9fb9e7a">Manuel</h4>
-<div class="outline-text-4" id="text-org9fb9e7a">
+<div id="outline-container-org6378622" class="outline-4">
+<h4 id="org6378622">Manuel</h4>
+<div class="outline-text-4" id="text-org6378622">
 <ul class="org-ul">
 <li><b>"Instructions si-alors-sinon"</b>, p.64-65</li>
 <li><b>"Instructions if et elif"</b>, p.65-66</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org8e4bc0c" class="outline-4">
-<h4 id="org8e4bc0c">Exercices</h4>
-<div class="outline-text-4" id="text-org8e4bc0c">
+<div id="outline-container-orgf4d3895" class="outline-4">
+<h4 id="orgf4d3895">Exercices</h4>
+<div class="outline-text-4" id="text-orgf4d3895">
 <ol class="org-ol">
 <li>Dans un programme nommé <code>dragon.py</code> :
 <ul class="org-ul">
@@ -815,21 +816,21 @@ Pour le moment, cela suffira pour créer des programmes plus intéractifs, mais 
 </div>
 </div>
 
-<div id="outline-container-org3072f4e" class="outline-3">
+<div id="outline-container-org49fe695" class="outline-3">
 <h3 id="chapitre4_cours12">Cours 12 : and, or</h3>
 <div class="outline-text-3" id="text-chapitre4_cours12">
 </div>
-<div id="outline-container-orgf117356" class="outline-4">
-<h4 id="orgf117356">Manuel</h4>
-<div class="outline-text-4" id="text-orgf117356">
+<div id="outline-container-org89f60de" class="outline-4">
+<h4 id="org89f60de">Manuel</h4>
+<div class="outline-text-4" id="text-org89f60de">
 <ul class="org-ul">
 <li><b>"Combiner des conditions"</b>, p.66</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org7fe7c46" class="outline-4">
-<h4 id="org7fe7c46">Exercices</h4>
-<div class="outline-text-4" id="text-org7fe7c46">
+<div id="outline-container-org275122c" class="outline-4">
+<h4 id="org275122c">Exercices</h4>
+<div class="outline-text-4" id="text-org275122c">
 <ol class="org-ol">
 <li>Dans un programme nommé <code>montagnes_russes2.py</code> :
 <ul class="org-ul">
@@ -845,22 +846,22 @@ Pour le moment, cela suffira pour créer des programmes plus intéractifs, mais 
 </div>
 </div>
 
-<div id="outline-container-org2f4fa46" class="outline-3">
+<div id="outline-container-org227bf99" class="outline-3">
 <h3 id="chapitre4_cours13">Cours 13 : Types de données et conversions</h3>
 <div class="outline-text-3" id="text-chapitre4_cours13">
 </div>
-<div id="outline-container-orga1fb89b" class="outline-4">
-<h4 id="orga1fb89b">Manuel</h4>
-<div class="outline-text-4" id="text-orga1fb89b">
+<div id="outline-container-org5754144" class="outline-4">
+<h4 id="org5754144">Manuel</h4>
+<div class="outline-text-4" id="text-org5754144">
 <ul class="org-ul">
 <li><b>"Variables sans valeur : None"</b>, p.66-67</li>
 <li><b>"Différence entre chaînes et nombres"</b>, p.67-69</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org120d476" class="outline-4">
-<h4 id="org120d476">Exercices</h4>
-<div class="outline-text-4" id="text-org120d476">
+<div id="outline-container-org11385a1" class="outline-4">
+<h4 id="org11385a1">Exercices</h4>
+<div class="outline-text-4" id="text-org11385a1">
 <ol class="org-ol">
 <li>Dans un programme nommé <code>types_donnees.py</code> :
 <ul class="org-ul">
@@ -877,26 +878,26 @@ Pour le moment, cela suffira pour créer des programmes plus intéractifs, mais 
 </div>
 </div>
 
-<div id="outline-container-orgb6d76f4" class="outline-2">
+<div id="outline-container-org754f606" class="outline-2">
 <h2 id="chapitre5">Chapitre 5 : Les boucles</h2>
 <div class="outline-text-2" id="text-chapitre5">
 </div>
-<div id="outline-container-orga3d106d" class="outline-3">
+<div id="outline-container-org1813f14" class="outline-3">
 <h3 id="chapitre5_cours14">Cours 14 : Les boucles for</h3>
 <div class="outline-text-3" id="text-chapitre5_cours14">
 </div>
-<div id="outline-container-orgdcb64d6" class="outline-4">
-<h4 id="orgdcb64d6">Manuel</h4>
-<div class="outline-text-4" id="text-orgdcb64d6">
+<div id="outline-container-orge6661e2" class="outline-4">
+<h4 id="orge6661e2">Manuel</h4>
+<div class="outline-text-4" id="text-orge6661e2">
 <ul class="org-ul">
 <li><b>"Tourner en boucle"</b>, p.73</li>
 <li><b>"Utiliser les boucles for"</b>, p.74-80</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org66c31eb" class="outline-4">
-<h4 id="org66c31eb">Exercices</h4>
-<div class="outline-text-4" id="text-org66c31eb">
+<div id="outline-container-orgc00fe9e" class="outline-4">
+<h4 id="orgc00fe9e">Exercices</h4>
+<div class="outline-text-4" id="text-orgc00fe9e">
 <ol class="org-ol">
 <li>Dans un programme nommé <code>repetition.py</code> :
 <ul class="org-ul">
@@ -941,21 +942,21 @@ Pour le moment, cela suffira pour créer des programmes plus intéractifs, mais 
 </div>
 </div>
 
-<div id="outline-container-org115b7b9" class="outline-3">
+<div id="outline-container-org2af3b23" class="outline-3">
 <h3 id="chapitre5_cours15">Cours 15 : Boucles while</h3>
 <div class="outline-text-3" id="text-chapitre5_cours15">
 </div>
-<div id="outline-container-org1d9a94c" class="outline-4">
-<h4 id="org1d9a94c">Manuel</h4>
-<div class="outline-text-4" id="text-org1d9a94c">
+<div id="outline-container-org456e161" class="outline-4">
+<h4 id="org456e161">Manuel</h4>
+<div class="outline-text-4" id="text-org456e161">
 <ul class="org-ul">
 <li><b>"Tant que nous parlons de boucles : while"</b>, p.81-83</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org013ee8e" class="outline-4">
-<h4 id="org013ee8e">Exercices</h4>
-<div class="outline-text-4" id="text-org013ee8e">
+<div id="outline-container-org0cd41da" class="outline-4">
+<h4 id="org0cd41da">Exercices</h4>
+<div class="outline-text-4" id="text-org0cd41da">
 <ol class="org-ol">
 <li>Dans un programme nommé <code>repetition_while.py</code> :
 <ul class="org-ul">
@@ -984,18 +985,18 @@ Pour le moment, cela suffira pour créer des programmes plus intéractifs, mais 
 </div>
 </div>
 
-<div id="outline-container-org042cbfa" class="outline-2">
+<div id="outline-container-org61a5464" class="outline-2">
 <h2 id="chapitre6">Chapitre 6 : Mise en pratique</h2>
 <div class="outline-text-2" id="text-chapitre6">
 </div>
-<div id="outline-container-org3da8a2e" class="outline-3">
+<div id="outline-container-org78ddb47" class="outline-3">
 <h3 id="chapitre6_cours16">Cours 16 : Nombre secret</h3>
 <div class="outline-text-3" id="text-chapitre6_cours16">
 </div>
 
-<div id="outline-container-org4efb705" class="outline-4">
-<h4 id="org4efb705">Indication pour générer un nombre aléatoire</h4>
-<div class="outline-text-4" id="text-org4efb705">
+<div id="outline-container-orga81153c" class="outline-4">
+<h4 id="orga81153c">Indication pour générer un nombre aléatoire</h4>
+<div class="outline-text-4" id="text-orga81153c">
 <p>
 Pour générer un nombre aléatoire, tu dois d'abord importer le module <code>random</code>. Il faut toujours importer les modules en début de programme pour plus de clarté :
 </p>
@@ -1014,9 +1015,9 @@ Ensuite, pour générer le nombre et le stocker, tu dois utiliser la fonction <c
 </div>
 </div>
 
-<div id="outline-container-orgc715f7b" class="outline-4">
-<h4 id="orgc715f7b">Exercice</h4>
-<div class="outline-text-4" id="text-orgc715f7b">
+<div id="outline-container-org47bc890" class="outline-4">
+<h4 id="org47bc890">Exercice</h4>
+<div class="outline-text-4" id="text-org47bc890">
 <p>
 Dans un programme nommé <code>nombre_secret.py</code> :
 </p>
@@ -1037,9 +1038,9 @@ Dans un programme nommé <code>nombre_secret.py</code> :
 </div>
 </div>
 
-<div id="outline-container-org9240a8a" class="outline-4">
-<h4 id="org9240a8a">BONUS</h4>
-<div class="outline-text-4" id="text-org9240a8a">
+<div id="outline-container-orgbdca69f" class="outline-4">
+<h4 id="orgbdca69f">BONUS</h4>
+<div class="outline-text-4" id="text-orgbdca69f">
 <ul class="org-ul">
 <li>Si le joueur a gagné, le jeu doit se relancer avec une plus grande difficulté (moins d'essais, nombre secret maximum plus grand, &#x2026;)</li>
 <li>Si le joueur a perdu, le jeu doit baisser la difficulté ou retourner à la difficulté originale.</li>
@@ -1050,17 +1051,17 @@ Dans un programme nommé <code>nombre_secret.py</code> :
 </div>
 </div>
 
-<div id="outline-container-org0db3d69" class="outline-2">
+<div id="outline-container-org145a95b" class="outline-2">
 <h2 id="chapitre7">Chapitre 7 : Les fonctions</h2>
 <div class="outline-text-2" id="text-chapitre7">
 </div>
-<div id="outline-container-orga884b92" class="outline-3">
+<div id="outline-container-org540ebfc" class="outline-3">
 <h3 id="chapitre7_cours17">Cours 17 : Fonctions</h3>
 <div class="outline-text-3" id="text-chapitre7_cours17">
 </div>
-<div id="outline-container-org05c0015" class="outline-4">
-<h4 id="org05c0015">Manuel</h4>
-<div class="outline-text-4" id="text-org05c0015">
+<div id="outline-container-org3bb4ae2" class="outline-4">
+<h4 id="org3bb4ae2">Manuel</h4>
+<div class="outline-text-4" id="text-org3bb4ae2">
 <ul class="org-ul">
 <li><b>"Recycler du code avec des fonctions et des modules"</b>, p.87-88</li>
 <li><b>"Utiliser des fonctions"</b>, p.88-89</li>
@@ -1070,9 +1071,9 @@ Dans un programme nommé <code>nombre_secret.py</code> :
 </ul>
 </div>
 </div>
-<div id="outline-container-org0c307c5" class="outline-4">
-<h4 id="org0c307c5">Exercices</h4>
-<div class="outline-text-4" id="text-org0c307c5">
+<div id="outline-container-orge6ca8fb" class="outline-4">
+<h4 id="orge6ca8fb">Exercices</h4>
+<div class="outline-text-4" id="text-orge6ca8fb">
 <ol class="org-ol">
 <li>Dans un programme nommé <code>fonctions1.py</code> :
 <ul class="org-ul">
@@ -1157,13 +1158,13 @@ Dans un programme nommé <code>tri.py</code> :
 </div>
 </div>
 
-<div id="outline-container-orga19e4b6" class="outline-3">
+<div id="outline-container-org9c0158f" class="outline-3">
 <h3 id="chapitre7_cours18">Cours 18 : Les modules</h3>
 <div class="outline-text-3" id="text-chapitre7_cours18">
 </div>
-<div id="outline-container-orgf77017a" class="outline-4">
-<h4 id="orgf77017a">Cours</h4>
-<div class="outline-text-4" id="text-orgf77017a">
+<div id="outline-container-orgbf90911" class="outline-4">
+<h4 id="orgbf90911">Cours</h4>
+<div class="outline-text-4" id="text-orgbf90911">
 <p>
 <b>Un module</b> sert à regrouper des fonctions, des variables et d'autres choses dans des programmes plus vastes et plus puissants. Certains modules sont intégrés dans Python lui-même, tandis que tu peux en télécharger d'autres de manière séparée. Nous en avons déjà utilisé par exemple avec <b>turtle</b> et <b>random</b>.
 </p>
@@ -1189,9 +1190,9 @@ Pour créer ton propre module, il suffit de :
 </div>
 </div>
 
-<div id="outline-container-orgb025820" class="outline-4">
-<h4 id="orgb025820">Exercices</h4>
-<div class="outline-text-4" id="text-orgb025820">
+<div id="outline-container-org2b3f02c" class="outline-4">
+<h4 id="org2b3f02c">Exercices</h4>
+<div class="outline-text-4" id="text-org2b3f02c">
 <p>
 Dans le chapitre suivant, nous allons mettre en pratique les modules et les fonctions ensemble en créant notre propre bibliothèque personnalisée de fonctions !
 </p>
@@ -1223,20 +1224,20 @@ Tu as maintenant créé les 3 premières fonctions de ton propre module, que tu 
 </div>
 </div>
 
-<div id="outline-container-org25b4699" class="outline-2">
+<div id="outline-container-org8a500e6" class="outline-2">
 <h2 id="chapitre7bis">Chapitre 7bis : Turtle avec les fonctions</h2>
 <div class="outline-text-2" id="text-chapitre7bis">
 </div>
-<div id="outline-container-orgd6236ed" class="outline-3">
+<div id="outline-container-orgddcb613" class="outline-3">
 <h3 id="chapitre7bis_cours17b">Cours 17b : Un peu plus de turtle</h3>
 <div class="outline-text-3" id="text-chapitre7bis_cours17b">
 <p>
 Nous avons vu précédemment les bases du module turtle. En réalité, il existe encore beaucoup de fonctionnalités que nous n'avons pas encore explorées.
 </p>
 </div>
-<div id="outline-container-org49d80d0" class="outline-4">
-<h4 id="org49d80d0">Les couleurs</h4>
-<div class="outline-text-4" id="text-org49d80d0">
+<div id="outline-container-orgea19fc9" class="outline-4">
+<h4 id="orgea19fc9">Les couleurs</h4>
+<div class="outline-text-4" id="text-orgea19fc9">
 <p>
 Pour commencer, nous pouvons changer toutes les couleurs : l'arrière-plan, le trait et même le remplissage ! Turtle propose beaucoup de couleurs et libre à toi de les essayer. En voici une liste non-exhaustive.
 </p>
@@ -1248,9 +1249,9 @@ Pour commencer, nous pouvons changer toutes les couleurs : l'arrière-plan, le t
 </div>
 </div>
 
-<div id="outline-container-org891b487" class="outline-4">
-<h4 id="org891b487">Changer la couleur d'arrière-plan</h4>
-<div class="outline-text-4" id="text-org891b487">
+<div id="outline-container-orgd48831d" class="outline-4">
+<h4 id="orgd48831d">Changer la couleur d'arrière-plan</h4>
+<div class="outline-text-4" id="text-orgd48831d">
 <p>
 La fonction à utiliser pour changer la couleur d'arrière-plan est :
 </p>
@@ -1260,9 +1261,9 @@ La fonction à utiliser pour changer la couleur d'arrière-plan est :
 </div>
 </div>
 </div>
-<div id="outline-container-orgaeff0b7" class="outline-4">
-<h4 id="orgaeff0b7">Changer la couleur du trait</h4>
-<div class="outline-text-4" id="text-orgaeff0b7">
+<div id="outline-container-orgdf6ace7" class="outline-4">
+<h4 id="orgdf6ace7">Changer la couleur du trait</h4>
+<div class="outline-text-4" id="text-orgdf6ace7">
 <p>
 La fonction à utiliser pour changer la couleur du trait est :
 </p>
@@ -1273,9 +1274,9 @@ t.color(<span style="font-style: italic;">"couleur"</span>) <span style="font-we
 </div>
 </div>
 </div>
-<div id="outline-container-org6a2ff14" class="outline-4">
-<h4 id="org6a2ff14">Changer la couleur de remplissage d'une forme</h4>
-<div class="outline-text-4" id="text-org6a2ff14">
+<div id="outline-container-org8aad289" class="outline-4">
+<h4 id="org8aad289">Changer la couleur de remplissage d'une forme</h4>
+<div class="outline-text-4" id="text-org8aad289">
 <p>
 Pour changer la couleur de remplissage d'une forme, il y a plusieurs étapes à respecter.
 </p>
@@ -1331,9 +1332,9 @@ t.end_fill()
 </div>
 </div>
 
-<div id="outline-container-org47aaf35" class="outline-4">
-<h4 id="org47aaf35">La vitesse</h4>
-<div class="outline-text-4" id="text-org47aaf35">
+<div id="outline-container-org0980d3e" class="outline-4">
+<h4 id="org0980d3e">La vitesse</h4>
+<div class="outline-text-4" id="text-org0980d3e">
 <p>
 Il est possible de changer la vitesse d'exécution d'un dessin avec turtle en utilisant la fonction
 </p>
@@ -1348,9 +1349,9 @@ La vitesse la plus rapide est&#x2026; <code>t.speed(0)</code> !
 </div>
 </div>
 
-<div id="outline-container-org67f0483" class="outline-4">
-<h4 id="org67f0483">La taille du trait</h4>
-<div class="outline-text-4" id="text-org67f0483">
+<div id="outline-container-org3da2564" class="outline-4">
+<h4 id="org3da2564">La taille du trait</h4>
+<div class="outline-text-4" id="text-org3da2564">
 <p>
 Tu peux changer la taille du trait avec la fonction
 </p>
@@ -1361,9 +1362,9 @@ Tu peux changer la taille du trait avec la fonction
 </div>
 </div>
 
-<div id="outline-container-org06abce4" class="outline-4">
-<h4 id="org06abce4">Lever ou baisser le stylo</h4>
-<div class="outline-text-4" id="text-org06abce4">
+<div id="outline-container-org5b8529d" class="outline-4">
+<h4 id="org5b8529d">Lever ou baisser le stylo</h4>
+<div class="outline-text-4" id="text-org5b8529d">
 <p>
 Par moments, tu peux avoir besoin de déplacer la tortue sans pour autant qu'elle trace des lignes sur sa trajectoire. Eh bien, il est possible de lui faire "lever" son stylo à l'aide de la fonction
 </p>
@@ -1382,9 +1383,9 @@ Une fois que tu veux que la tortue dessine à nouveau, utilise simplement la fon
 </div>
 </div>
 
-<div id="outline-container-orged5c30c" class="outline-4">
-<h4 id="orged5c30c">Dessiner un cercle</h4>
-<div class="outline-text-4" id="text-orged5c30c">
+<div id="outline-container-org27bdceb" class="outline-4">
+<h4 id="org27bdceb">Dessiner un cercle</h4>
+<div class="outline-text-4" id="text-org27bdceb">
 <p>
 Il est possible de dessiner un cercle rapidement a l'aide de la fonction
 </p>
@@ -1395,9 +1396,9 @@ Il est possible de dessiner un cercle rapidement a l'aide de la fonction
 </div>
 </div>
 
-<div id="outline-container-org55583fd" class="outline-4">
-<h4 id="org55583fd">Afficher ou cacher la tortue</h4>
-<div class="outline-text-4" id="text-org55583fd">
+<div id="outline-container-orgdb497ef" class="outline-4">
+<h4 id="orgdb497ef">Afficher ou cacher la tortue</h4>
+<div class="outline-text-4" id="text-orgdb497ef">
 <p>
 Si tu veux cacher la forme de la tortue, tu dois utiliser la fonction
 </p>
@@ -1414,9 +1415,9 @@ Pour l'afficher à nouveau, c'est à l'aide de la fonction
 </div>
 </div>
 </div>
-<div id="outline-container-org34ffe86" class="outline-4">
-<h4 id="org34ffe86">Mon beau sapin &#x2026;</h4>
-<div class="outline-text-4" id="text-org34ffe86">
+<div id="outline-container-org06d2a77" class="outline-4">
+<h4 id="org06d2a77">Mon beau sapin &#x2026;</h4>
+<div class="outline-text-4" id="text-org06d2a77">
 <p>
 Maintenant, mets en oeuvre tout ce que l'on vient de voir en reproduisant ce sapin de noël. Ce n'est pas grave s'il n'est pas exactement similaire, mais applique-toi à le faire le plus ressemblant possible.
 </p>
@@ -1433,8 +1434,113 @@ Indice : les étages du sapin sont en fait des triangles superposés de tailles 
 </div>
 </div>
 </div>
+
+<div id="outline-container-org9d50bef" class="outline-3">
+<h3 id="chapitre7bis_cours18b">Cours 18b : Turtle, mais avec des fonctions</h3>
+<div class="outline-text-3" id="text-chapitre7bis_cours18b">
 </div>
-<div id="outline-container-org544f064" class="outline-2">
+<div id="outline-container-orgf431cfb" class="outline-4">
+<h4 id="orgf431cfb">Manuel</h4>
+<div class="outline-text-4" id="text-orgf431cfb">
+<ul class="org-ul">
+<li><b>"Recycler du code avec des fonctions et des modules"</b>, p.87-88</li>
+<li><b>"Utiliser des fonctions"</b>, p.88-89</li>
+<li><b>"Qu'est-ce qu'une fonction ?"</b>, p.89-90</li>
+<li><b>"Variables et portée"</b>, p.90-92</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb52336e" class="outline-4">
+<h4 id="orgb52336e">Exercices</h4>
+<div class="outline-text-4" id="text-orgb52336e">
+<p>
+Le but du premier exercice est de pouvoir dessiner un flocon de neige sans se répéter, grâce aux fonctions.
+</p>
+
+<p>
+Voici ce qu'on veut obtenir :
+</p>
+
+<figure>
+<img src="./img/snow_flake.png" alt="snow flake" align="center" class="img" width="233px" height="210px" display="block">
+
+</figure>
+
+<p>
+Ce dessin est très facile à réaliser si on le décompose correctement avec des fonctions. En effet, le flocon est composé de :
+</p>
+<ul class="org-ul">
+<li>6 fois la même branche :</li>
+</ul>
+
+<figure>
+<img src="./img/branch.png" alt="snow flake branch" align="center" class="img" width="118px" height="213px" display="block">
+
+</figure>
+
+<ul class="org-ul">
+<li>Une branche est elle-même composée d'une ligne + une forme en V le tout répété 4 fois:</li>
+</ul>
+
+<figure>
+<img src="./img/fd_v.png" alt="snow flake fd + v" align="center" class="img" width="75px" height="116px" display="block">
+
+</figure>
+
+<ul class="org-ul">
+<li>Et enfin, la forme en V en elle-même est une suite de plusieurs déplacements.</li>
+</ul>
+
+<figure>
+<img src="./img/v.png" alt="snow flake v" align="center" class="img" width="174px" height="169px" display="block">
+
+</figure>
+
+<p>
+Ces 3 étapes de décomposition vont correspondent en fait aux 3 fonctions dont nous avons besoin pour créer ce flocon de neige sans se répéter et en quelques lignes seulement.
+</p>
+
+<p>
+Dans un programme nommé <code>flocon.py</code> :
+</p>
+<ul class="org-ul">
+<li>Configure correctement une tortue pour qu'elle dessine en blanc sur fond "turquoise" et avec une épaisseur de trait de 6.</li>
+<li>Crée une fonction <code>forme_v()</code> qui contient les étapes pour faire le V :
+<ul class="org-ul">
+<li>Tourner à droite de 25 degrés</li>
+<li>Avancer de 50 pixels</li>
+<li>Reculer de 50 pixels</li>
+<li>Tourner à gauche de 50 degrés</li>
+<li>Avancer de 50 pixels</li>
+<li>Reculer de 50 pixels</li>
+<li>Tourner à droite de 25 degrés</li>
+</ul></li>
+<li>Crée une fonction <code>branche()</code> qui contient les étapes pour faire une branche :
+<ul class="org-ul">
+<li>Répéter 4 fois :
+<ul class="org-ul">
+<li>Avancer de 30 pixels</li>
+<li>Dessiner un V</li>
+</ul></li>
+<li>Reculer de 120 pixels</li>
+</ul></li>
+<li>Crée une fonction <code>flocon()</code> qui contient les étapes pour dessiner un flocon :
+<ul class="org-ul">
+<li>Répéter 6 fois :
+<ul class="org-ul">
+<li>Dessiner une branche</li>
+<li>Tourner à droite de 60 degrés</li>
+</ul></li>
+</ul></li>
+<li>Enfin, appelle la fonction <code>flocon()</code> et observe le flocon se dessiner !</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org0a86744" class="outline-2">
 <h2 id="chapitre8">Chapitre 8 : Mise en pratique 2</h2>
 <div class="outline-text-2" id="text-chapitre8">
 <p>
@@ -1446,13 +1552,13 @@ Nous utiliserons le fichier <code>mes_fonctions</code> précédemment et nous y 
 </p>
 </div>
 
-<div id="outline-container-org7dfec0b" class="outline-3">
+<div id="outline-container-org12efe91" class="outline-3">
 <h3 id="chapitre8_niv1">Niveau 1</h3>
 <div class="outline-text-3" id="text-chapitre8_niv1">
 </div>
-<div id="outline-container-orgf878b15" class="outline-4">
-<h4 id="orgf878b15">Division euclidienne</h4>
-<div class="outline-text-4" id="text-orgf878b15">
+<div id="outline-container-org0843d85" class="outline-4">
+<h4 id="org0843d85">Division euclidienne</h4>
+<div class="outline-text-4" id="text-org0843d85">
 <p>
 Dans le fichier <code>mes_fonctions.py</code> :
 </p>
@@ -1469,9 +1575,9 @@ Dans un programme nommé <code>manips_nombres.py</code> :
 </div>
 </div>
 
-<div id="outline-container-org7d405f8" class="outline-4">
-<h4 id="org7d405f8">Pair ou impair</h4>
-<div class="outline-text-4" id="text-org7d405f8">
+<div id="outline-container-org923ba0b" class="outline-4">
+<h4 id="org923ba0b">Pair ou impair</h4>
+<div class="outline-text-4" id="text-org923ba0b">
 <p>
 Dans le fichier <code>mes_fonctions.py</code> :
 </p>
@@ -1487,9 +1593,9 @@ Dans le programme <code>manips_nombres.py</code>:
 </div>
 </div>
 
-<div id="outline-container-org668fda7" class="outline-4">
-<h4 id="org668fda7">Diviseurs</h4>
-<div class="outline-text-4" id="text-org668fda7">
+<div id="outline-container-org745f3da" class="outline-4">
+<h4 id="org745f3da">Diviseurs</h4>
+<div class="outline-text-4" id="text-org745f3da">
 <p>
 Dans le fichier <code>mes_fonctions.py</code> :
 </p>
@@ -1505,9 +1611,9 @@ Dans le programme <code>manips_nombres.py</code> :
 </div>
 </div>
 
-<div id="outline-container-org505edf7" class="outline-4">
-<h4 id="org505edf7">Nombres premiers</h4>
-<div class="outline-text-4" id="text-org505edf7">
+<div id="outline-container-org44adfb6" class="outline-4">
+<h4 id="org44adfb6">Nombres premiers</h4>
+<div class="outline-text-4" id="text-org44adfb6">
 <p>
 Dans le fichier <code>mes_fonctions.py</code> :
 </p>
@@ -1528,9 +1634,9 @@ Pour la suite, tu es libre d'ajouter et d'utiliser les fonctions que tu veux à 
 </div>
 </div>
 
-<div id="outline-container-orgc552fb0" class="outline-4">
-<h4 id="orgc552fb0">Cercle</h4>
-<div class="outline-text-4" id="text-orgc552fb0">
+<div id="outline-container-orgf0aa7bc" class="outline-4">
+<h4 id="orgf0aa7bc">Cercle</h4>
+<div class="outline-text-4" id="text-orgf0aa7bc">
 <p>
 Dans un programme nommé <code>super_cercle.py</code> :
 </p>
@@ -1543,9 +1649,9 @@ Dans un programme nommé <code>super_cercle.py</code> :
 </div>
 </div>
 
-<div id="outline-container-orge14dfab" class="outline-4">
-<h4 id="orge14dfab">Lettres</h4>
-<div class="outline-text-4" id="text-orge14dfab">
+<div id="outline-container-org4bf67c8" class="outline-4">
+<h4 id="org4bf67c8">Lettres</h4>
+<div class="outline-text-4" id="text-org4bf67c8">
 <p>
 Dans un programme nommé <code>lettres.py</code> :
 </p>
@@ -1568,13 +1674,13 @@ n
 </div>
 </div>
 
-<div id="outline-container-orgb265a58" class="outline-3">
+<div id="outline-container-org8ad16cf" class="outline-3">
 <h3 id="chapitre8_niv2">Niveau 2</h3>
 <div class="outline-text-3" id="text-chapitre8_niv2">
 </div>
-<div id="outline-container-orgea5df1b" class="outline-4">
-<h4 id="orgea5df1b">Occurrences de lettres</h4>
-<div class="outline-text-4" id="text-orgea5df1b">
+<div id="outline-container-orgf2ecf2d" class="outline-4">
+<h4 id="orgf2ecf2d">Occurrences de lettres</h4>
+<div class="outline-text-4" id="text-orgf2ecf2d">
 <p>
 Dans un programme nommé <code>occurrences.py</code> :
 </p>
@@ -1596,9 +1702,9 @@ Le caractère " r " apparaît 1 fois.
 </div>
 </div>
 
-<div id="outline-container-orgf87bff9" class="outline-4">
-<h4 id="orgf87bff9">Mot inverse</h4>
-<div class="outline-text-4" id="text-orgf87bff9">
+<div id="outline-container-org3003439" class="outline-4">
+<h4 id="org3003439">Mot inverse</h4>
+<div class="outline-text-4" id="text-org3003439">
 <p>
 Dans un programme nommé <code>mot_inverse.py</code> :
 </p>
@@ -1619,9 +1725,9 @@ inverse : nohtyp
 </pre>
 </div>
 </div>
-<div id="outline-container-org491682a" class="outline-4">
-<h4 id="org491682a">Palindrome</h4>
-<div class="outline-text-4" id="text-org491682a">
+<div id="outline-container-org0020c00" class="outline-4">
+<h4 id="org0020c00">Palindrome</h4>
+<div class="outline-text-4" id="text-org0020c00">
 <p>
 Un palindrome est un mot dont l'ordre des lettres reste le même qu'on le lise de gauche à droite ou de droite à gauche.
 </p>
@@ -1641,13 +1747,13 @@ Dans un programme nommé <code>palindrome.py</code> :
 </div>
 </div>
 
-<div id="outline-container-orgf03ea1d" class="outline-3">
+<div id="outline-container-org642f70c" class="outline-3">
 <h3 id="chapitre8_niv3">Niveau 3</h3>
 <div class="outline-text-3" id="text-chapitre8_niv3">
 </div>
-<div id="outline-container-org99539eb" class="outline-4">
-<h4 id="org99539eb">Rendu de monnaie</h4>
-<div class="outline-text-4" id="text-org99539eb">
+<div id="outline-container-org72f8a2f" class="outline-4">
+<h4 id="org72f8a2f">Rendu de monnaie</h4>
+<div class="outline-text-4" id="text-org72f8a2f">
 <p>
 Nous voulons créer un programme qui permet de calculer un rendu de monnaie et de dire de quels billets et pièces nous avons besoin pour former la somme à rendre. Par exemple, si la somme à payer est de 18.57€ et qu'un client donne 100€, le programme doit pouvoir :
 </p>
@@ -1688,7 +1794,7 @@ Dans un programme nommé <code>rendu_monnaie.py</code> :
 </div>
 </div>
 </div>
-<div id="outline-container-org05cd004" class="outline-2">
+<div id="outline-container-org1fdf570" class="outline-2">
 <h2 id="pendu">Le pendu</h2>
 <div class="outline-text-2" id="text-pendu">
 <p>
@@ -1706,9 +1812,9 @@ Bien-sûr, ton code doit contenir uniquement des fonctions, qui peuvent faire ap
 </p>
 </div>
 
-<div id="outline-container-orgda806bb" class="outline-3">
-<h3 id="orgda806bb">Fonctionnement du programme</h3>
-<div class="outline-text-3" id="text-orgda806bb">
+<div id="outline-container-org386237f" class="outline-3">
+<h3 id="org386237f">Fonctionnement du programme</h3>
+<div class="outline-text-3" id="text-org386237f">
 <p>
 Le programme devra :
 </p>
@@ -1749,7 +1855,7 @@ Pour t'aider, voici un exemple des fonctions que tu peux créer et utiliser :
 </div>
 </div>
 
-<div id="outline-container-org102525c" class="outline-2">
+<div id="outline-container-org127ef74" class="outline-2">
 <h2 id="l-systemes">L-systèmes</h2>
 <div class="outline-text-2" id="text-l-systemes">
 
@@ -1767,7 +1873,7 @@ Pour concevoir un L-système, il faut définir un ensemble de symboles et de rè
 </p>
 </div>
 
-<div id="outline-container-orgb6bff72" class="outline-3">
+<div id="outline-container-org4b33543" class="outline-3">
 <h3 id="l-systemes-algue">L'algue de Lindenmayer</h3>
 <div class="outline-text-3" id="text-l-systemes-algue">
 <p>
@@ -1817,7 +1923,7 @@ Pour chaque génération d'un L-système, on obtient une chaine de caractères q
 </div>
 </div>
 
-<div id="outline-container-org3dc77b0" class="outline-3">
+<div id="outline-container-orgc5add16" class="outline-3">
 <h3 id="l-systemes-koch">La courbe de Koch</h3>
 <div class="outline-text-3" id="text-l-systemes-koch">
 <p>
@@ -1855,7 +1961,7 @@ Le choix de l'alphabet pour la courbe de Koch n'est pas anodin. Les trois symbol
 </div>
 </div>
 
-<div id="outline-container-org915d657" class="outline-3">
+<div id="outline-container-orgb0fbd40" class="outline-3">
 <h3 id="l-systemes-start-prog">Début de la programmation d'un L-système</h3>
 <div class="outline-text-3" id="text-l-systemes-start-prog">
 <p>
@@ -1889,7 +1995,7 @@ Crée un programme nommé <code>l-systemes.py</code> dans lequel nous allons cr�
 </div>
 </div>
 
-<div id="outline-container-orgce78eed" class="outline-3">
+<div id="outline-container-orgf8d0048" class="outline-3">
 <h3 id="l-systemes-cactus">Le cactus</h3>
 <div class="outline-text-3" id="text-l-systemes-cactus">
 <p>
@@ -1933,7 +2039,7 @@ Pour tracer ce L-système, nouys allons interpréter le <b>mot</b> obtenu avec l
 </div>
 </div>
 
-<div id="outline-container-orgd4306f0" class="outline-3">
+<div id="outline-container-org4526f45" class="outline-3">
 <h3 id="l-systemes-continue-prog">Suite de la programmation</h3>
 <div class="outline-text-3" id="text-l-systemes-continue-prog">
 <p>
@@ -1960,7 +2066,7 @@ Maintenant que nous avons ajouté deux symboles pour la représentations de nos 
 </div>
 </div>
 
-<div id="outline-container-orgb38eadf" class="outline-3">
+<div id="outline-container-orga355a98" class="outline-3">
 <h3 id="l-systemes-end">Nouveaux L-systèmes</h3>
 <div class="outline-text-3" id="text-l-systemes-end">
 <p>
@@ -1968,9 +2074,9 @@ Désormais, notre fonction pour tracer un L-système est complète. Nous allons 
 </p>
 </div>
 
-<div id="outline-container-org80dcb00" class="outline-4">
-<h4 id="org80dcb00">La brindille</h4>
-<div class="outline-text-4" id="text-org80dcb00">
+<div id="outline-container-org7dfc2c4" class="outline-4">
+<h4 id="org7dfc2c4">La brindille</h4>
+<div class="outline-text-4" id="text-org7dfc2c4">
 
 <figure>
 <img src="./img/brindille.png" alt="brindille" align="center" class="img" width="166px" height="320px" display="block">
@@ -1999,9 +2105,9 @@ Construire graphiquement (sur l'ordinateur, avec le programme python) la génér
 </div>
 </div>
 
-<div id="outline-container-org66b4f4e" class="outline-4">
-<h4 id="org66b4f4e">Le flocon de Von Koch</h4>
-<div class="outline-text-4" id="text-org66b4f4e">
+<div id="outline-container-org4902d77" class="outline-4">
+<h4 id="org4902d77">Le flocon de Von Koch</h4>
+<div class="outline-text-4" id="text-org4902d77">
 
 <figure>
 <img src="./img/flocon_koch.png" alt="flocon de Von Koch" align="center" class="img" width="242px" height="277px" display="block">
@@ -2030,9 +2136,9 @@ Construire graphiquement la génération 4 du "flocon de Von Koch", dont le L-sy
 </div>
 </div>
 
-<div id="outline-container-org624e5a9" class="outline-4">
-<h4 id="org624e5a9">La broussaille</h4>
-<div class="outline-text-4" id="text-org624e5a9">
+<div id="outline-container-org425aa1a" class="outline-4">
+<h4 id="org425aa1a">La broussaille</h4>
+<div class="outline-text-4" id="text-org425aa1a">
 
 <figure>
 <img src="./img/broussaille.png" alt="broussaille" align="center" class="img" width="242px" height="287px" display="block">
@@ -2063,7 +2169,7 @@ Construire graphiquement la génération 4 de la "broussaille", dont le L-systè
 </div>
 </div>
 
-<div id="outline-container-orgcf5fb37" class="outline-2">
+<div id="outline-container-orgcf05ce8" class="outline-2">
 <h2 id="puissance4">Puissance 4</h2>
 <div class="outline-text-2" id="text-puissance4">
 
@@ -2089,7 +2195,7 @@ Si tu as des idées d'améliorations ou que tu veux faire quelque chose différe
 </p>
 </div>
 
-<div id="outline-container-orgdd1d6c9" class="outline-3">
+<div id="outline-container-org9e65405" class="outline-3">
 <h3 id="puissance4_règles">Règles du Puissance 4</h3>
 <div class="outline-text-3" id="text-puissance4_règles">
 <p>
@@ -2098,7 +2204,7 @@ Le but du jeu est d'aligner une suite de 4 pions de même couleur sur une grille
 </div>
 </div>
 
-<div id="outline-container-org59ff4bb" class="outline-3">
+<div id="outline-container-orgc65f889" class="outline-3">
 <h3 id="puissance4_etape1">Étape 1 : Définir la structure de notre programme</h3>
 <div class="outline-text-3" id="text-puissance4_etape1">
 <p>
@@ -2124,9 +2230,9 @@ La seule instruction qui ne sera pas dans une fonction sera celle qui lance le j
 </p>
 </div>
 
-<div id="outline-container-orgfb073d0" class="outline-4">
-<h4 id="orgfb073d0">Fonctionnement de la grille</h4>
-<div class="outline-text-4" id="text-orgfb073d0">
+<div id="outline-container-orgfcaa63f" class="outline-4">
+<h4 id="orgfcaa63f">Fonctionnement de la grille</h4>
+<div class="outline-text-4" id="text-orgfcaa63f">
 <p>
 La "grille" du jeu sera représentée par une liste <b>à deux dimension</b>, c'est à dire une liste de plusieurs listes. Ce sera donc une liste contenant 6 listes qui contiendront chacune 7 chiffres. Chaque sous-liste de la grille représentera une ligne de la grille. Comme le Puissance 4 contient 7 colonnes, chaque ligne aura donc 7 chiffres. La valeur d'une case de la grille a 3 possibilités :
 </p>
@@ -2209,9 +2315,9 @@ Le premier indice correspond à la ligne et le second à la colonne. Alors pour 
 </div>
 </div>
 
-<div id="outline-container-orgb22270d" class="outline-4">
-<h4 id="orgb22270d">Liste des fonctions</h4>
-<div class="outline-text-4" id="text-orgb22270d">
+<div id="outline-container-org226085b" class="outline-4">
+<h4 id="org226085b">Liste des fonctions</h4>
+<div class="outline-text-4" id="text-org226085b">
 <p>
 Maintenant que nous avons une idée générale du fonctionnement de la <b>grille de jeu</b>, voici une liste exhaustive des fonctions dont nous aurons besoin. Tu n'as pas besoin de tout comprendre dès le début, cette section servira aussi plus tard pour t'y retrouver dans toutes les fonctions. Ne commences pas non plus à coder les fonctions ici car nous allons revenir en détail sur chacune d'elles dans les étapes suivantes.
 </p>
@@ -2253,7 +2359,7 @@ Elle sera utilisée dans la fonction <code>boucleDeJeu()</code>
 </div>
 </div>
 
-<div id="outline-container-org667dfa3" class="outline-3">
+<div id="outline-container-org0997337" class="outline-3">
 <h3 id="puissance4_etape2">Étape 2 : Définir les variables globales</h3>
 <div class="outline-text-3" id="text-puissance4_etape2">
 <p>
@@ -2289,13 +2395,13 @@ Nous n'aurons pas besoin d'autres variables globales pour le moment.
 </div>
 </div>
 
-<div id="outline-container-orgd1d2b19" class="outline-3">
+<div id="outline-container-org19d1332" class="outline-3">
 <h3 id="puissance4_etape3">Étape 3 : Définir les fonctions d'affichage</h3>
 <div class="outline-text-3" id="text-puissance4_etape3">
 </div>
-<div id="outline-container-orgfb1f179" class="outline-4">
-<h4 id="orgfb1f179">Affichage des symboles des joueurs</h4>
-<div class="outline-text-4" id="text-orgfb1f179">
+<div id="outline-container-org69e219c" class="outline-4">
+<h4 id="org69e219c">Affichage des symboles des joueurs</h4>
+<div class="outline-text-4" id="text-org69e219c">
 <ul class="org-ul">
 <li><p>
 Crée une fonction <code>recupererSymbole(numeroJoueur)</code>. La logique de cette fonction sera :
@@ -2312,9 +2418,9 @@ sinon
 </div>
 </div>
 
-<div id="outline-container-org937bad7" class="outline-4">
-<h4 id="org937bad7">Affichage de la grille</h4>
-<div class="outline-text-4" id="text-org937bad7">
+<div id="outline-container-orgc39d5d3" class="outline-4">
+<h4 id="orgc39d5d3">Affichage de la grille</h4>
+<div class="outline-text-4" id="text-orgc39d5d3">
 <ul class="org-ul">
 <li><p>
 Crée une fonction <code>initialiserGrille()</code> qui utilisera la variable globale <code>grille</code> pour lui redonner sa valeur par défaut :
@@ -2356,9 +2462,9 @@ Après quelques tours :
 </div>
 </div>
 
-<div id="outline-container-org7f421ac" class="outline-4">
-<h4 id="org7f421ac">Affichage de fin de partie</h4>
-<div class="outline-text-4" id="text-org7f421ac">
+<div id="outline-container-orgdbfe9d3" class="outline-4">
+<h4 id="orgdbfe9d3">Affichage de fin de partie</h4>
+<div class="outline-text-4" id="text-orgdbfe9d3">
 <ul class="org-ul">
 <li>Crée une fonction <code>afficherFinDePartie</code> qui prend en paramètre une variable <code>gagnant</code>. Cette fonction doit :
 <ul class="org-ul">
@@ -2374,7 +2480,7 @@ Après quelques tours :
 </div>
 </div>
 
-<div id="outline-container-org509e1dd" class="outline-3">
+<div id="outline-container-org7090c63" class="outline-3">
 <h3 id="puissance4_etape4">Étape 4 : Définir les fonctions pour lancer le jeu</h3>
 <div class="outline-text-3" id="text-puissance4_etape4">
 <ul class="org-ul">
@@ -2408,7 +2514,7 @@ Crée une fonction <code>boucleDeJeu()</code> qui contiendra seulement le mot cl
 </div>
 </div>
 
-<div id="outline-container-orgee31a51" class="outline-3">
+<div id="outline-container-org15dfd1a" class="outline-3">
 <h3 id="puissance4_etape5">Étape 5 : Déroulement d'une partie</h3>
 <div class="outline-text-3" id="text-puissance4_etape5">
 <p>
@@ -2416,9 +2522,9 @@ Dans cette étape nous allons commencer la fonction principale <code>boucleDeJeu
 </p>
 </div>
 
-<div id="outline-container-org2af5ec6" class="outline-4">
-<h4 id="org2af5ec6">Fonctions intermédiaires</h4>
-<div class="outline-text-4" id="text-org2af5ec6">
+<div id="outline-container-org41a7c38" class="outline-4">
+<h4 id="org41a7c38">Fonctions intermédiaires</h4>
+<div class="outline-text-4" id="text-org41a7c38">
 <p>
 Pour commencer, nous allons déclarer les fonctions utilisées dans <code>boucleDeJeu()</code> sans pour autant en écrire le code, avec le mot-clef <code>pass</code> :
 </p>
@@ -2430,9 +2536,9 @@ Pour commencer, nous allons déclarer les fonctions utilisées dans <code>boucle
 </div>
 </div>
 
-<div id="outline-container-org9d58d73" class="outline-4">
-<h4 id="org9d58d73">Boucle du jeu</h4>
-<div class="outline-text-4" id="text-org9d58d73">
+<div id="outline-container-orge7afee7" class="outline-4">
+<h4 id="orge7afee7">Boucle du jeu</h4>
+<div class="outline-text-4" id="text-orge7afee7">
 <p>
 Définissons maintenant la logique de la boucle de jeu :
 </p>
@@ -2452,7 +2558,7 @@ Définissons maintenant la logique de la boucle de jeu :
 </div>
 </div>
 
-<div id="outline-container-org1b8148c" class="outline-3">
+<div id="outline-container-orgbd4af38" class="outline-3">
 <h3 id="puissance4_etape6">Étape 6 : Déroulement d'un tour</h3>
 <div class="outline-text-3" id="text-puissance4_etape6">
 <p>
@@ -2465,9 +2571,9 @@ Nous allons maintenant coder le déroulement d'un tour. Voici ce qu'il se passe 
 </ul>
 </div>
 
-<div id="outline-container-org9af3e70" class="outline-4">
-<h4 id="org9af3e70">Demander la colonne</h4>
-<div class="outline-text-4" id="text-org9af3e70">
+<div id="outline-container-orge599985" class="outline-4">
+<h4 id="orge599985">Demander la colonne</h4>
+<div class="outline-text-4" id="text-orge599985">
 <p>
 Commençons par la fonction qui demande la colonne au joueur :
 </p>
@@ -2483,9 +2589,9 @@ Commençons par la fonction qui demande la colonne au joueur :
 </div>
 </div>
 
-<div id="outline-container-org10d2e09" class="outline-4">
-<h4 id="org10d2e09">Trouver la ligne où placer le jeton</h4>
-<div class="outline-text-4" id="text-org10d2e09">
+<div id="outline-container-org7eaf6c9" class="outline-4">
+<h4 id="org7eaf6c9">Trouver la ligne où placer le jeton</h4>
+<div class="outline-text-4" id="text-org7eaf6c9">
 <p>
 Passons maintenant à la fonction qui trouve la ligne libre d'une colonne. Nous allons devoir coder une fonction qui parcourt chaque ligne de la grille pour vérifier si la colonne choisie est libre sur cette ligne. (Voir le fonctionnement de la grille à l'étape 1 pour savoir si une case est libre).
 </p>
@@ -2499,18 +2605,18 @@ Il faudra garder la dernière ligne libre trouvée, car le parcours de la liste 
 </div>
 </div>
 
-<div id="outline-container-orgc1495a1" class="outline-4">
-<h4 id="orgc1495a1">Placer le jeton</h4>
-<div class="outline-text-4" id="text-orgc1495a1">
+<div id="outline-container-orgc09b04f" class="outline-4">
+<h4 id="orgc09b04f">Placer le jeton</h4>
+<div class="outline-text-4" id="text-orgc09b04f">
 <p>
 La dernière fonction intermédiaire pour un tour sera la fonction <code>placerJeton(joueur, coordonnees)</code>. Cette fonction placera simplement le numéro du <code>joueur</code> à un l'endroit défini par le tuple <code>coordonnees</code>.
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgf60d9b0" class="outline-4">
-<h4 id="orgf60d9b0">Jouer le tour</h4>
-<div class="outline-text-4" id="text-orgf60d9b0">
+<div id="outline-container-orgbe5b143" class="outline-4">
+<h4 id="orgbe5b143">Jouer le tour</h4>
+<div class="outline-text-4" id="text-orgbe5b143">
 <p>
 Enfin, nous allons pouvoir créer la fonction qui fait jouer le tour au joueur :
 </p>
@@ -2534,7 +2640,7 @@ Nous avons fini de créer le déroulement d'un tour. Dans la prochaine étape, n
 </div>
 </div>
 
-<div id="outline-container-orgb3c3853" class="outline-3">
+<div id="outline-container-orgc9caecd" class="outline-3">
 <h3 id="puissance4_etape7">Étape 7 : Y a-t-il un vainqueur ?</h3>
 <div class="outline-text-3" id="text-puissance4_etape7">
 <p>
@@ -2546,9 +2652,9 @@ Pour cela, nous utiliserons deux fonctions différentes : une première qui perm
 </p>
 </div>
 
-<div id="outline-container-org6306664" class="outline-4">
-<h4 id="org6306664">Trouver un alignement</h4>
-<div class="outline-text-4" id="text-org6306664">
+<div id="outline-container-org91d63b7" class="outline-4">
+<h4 id="org91d63b7">Trouver un alignement</h4>
+<div class="outline-text-4" id="text-org91d63b7">
 <p>
 Nous allons commencer par déterminer si un joueur a gagné. Pour cela, nous devons créer 3 fonctions intermédiaires :
 </p>
@@ -2560,18 +2666,18 @@ Nous allons commencer par déterminer si un joueur a gagné. Pour cela, nous dev
 </div>
 </div>
 
-<div id="outline-container-org38c3b2a" class="outline-4">
-<h4 id="org38c3b2a">Le joueur a-t-il a gagné ?</h4>
-<div class="outline-text-4" id="text-org38c3b2a">
+<div id="outline-container-org5f7e785" class="outline-4">
+<h4 id="org5f7e785">Le joueur a-t-il a gagné ?</h4>
+<div class="outline-text-4" id="text-org5f7e785">
 <p>
 Maintenant que nous avons codé nos 3 fonctions intermédiaires, nous pouvons modier la fonction <code>joueurGagne(joueur)</code>. La fonction doit maintenant renvoyer <code>True</code> si le <code>joueur</code> a un alignement horizontal, vertical ou en diagonale. Sinon, elle retourne <code>False</code>.
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgfde1d9e" class="outline-4">
-<h4 id="orgfde1d9e">Match nul ?</h4>
-<div class="outline-text-4" id="text-orgfde1d9e">
+<div id="outline-container-org352acce" class="outline-4">
+<h4 id="org352acce">Match nul ?</h4>
+<div class="outline-text-4" id="text-org352acce">
 <p>
 Enfin, il nous manque la fonction qui vérifie s'il y a <b>match nul</b>. Nous savons qu'il y a match nul si la grille est remplie et que personne n'a gagné. Alors, nous avons simplement besoin d'une fonction qui vérifie si la grille est pleine :
 </p>
@@ -2582,7 +2688,7 @@ Enfin, il nous manque la fonction qui vérifie s'il y a <b>match nul</b>. Nous s
 </div>
 </div>
 
-<div id="outline-container-org8795dfb" class="outline-3">
+<div id="outline-container-orgac154ab" class="outline-3">
 <h3 id="puissance4_etape8">Étape 8 : Lancement du jeu !</h3>
 <div class="outline-text-3" id="text-puissance4_etape8">
 <p>
@@ -2598,13 +2704,13 @@ Quand tu vas tester le jeu, il est très fort probable qu'il y ait des "bugs" et
 </p>
 </div>
 </div>
-<div id="outline-container-org886d3e7" class="outline-3">
+<div id="outline-container-org06e6490" class="outline-3">
 <h3 id="ia_puissance4_theorie">Théorie</h3>
 <div class="outline-text-3" id="text-ia_puissance4_theorie">
 </div>
-<div id="outline-container-org3266e77" class="outline-4">
-<h4 id="org3266e77">Ressources</h4>
-<div class="outline-text-4" id="text-org3266e77">
+<div id="outline-container-org0215e18" class="outline-4">
+<h4 id="org0215e18">Ressources</h4>
+<div class="outline-text-4" id="text-org0215e18">
 <p target="_blank">
 <a href="https://www.youtube.com/watch?v=0lQxdR6IqCA&amp;t=103s" target="_blank">https://www.youtube.com/watch?v=0lQxdR6IqCA&amp;t=103s</a>
 </p>
@@ -2616,22 +2722,22 @@ Un cours de fac plutôt bien résumé : <a href="./manuel/Minmax.pdf" target="_b
 </div>
 </div>
 
-<div id="outline-container-org96d6a94" class="outline-3">
+<div id="outline-container-org81fab50" class="outline-3">
 <h3 id="ia_puissance4_code">Code</h3>
 <div class="outline-text-3" id="text-ia_puissance4_code">
 </div>
-<div id="outline-container-org3a014ac" class="outline-4">
-<h4 id="org3a014ac">Étape 1 : Tous les coups possibles</h4>
-<div class="outline-text-4" id="text-org3a014ac">
+<div id="outline-container-org0affc87" class="outline-4">
+<h4 id="org0affc87">Étape 1 : Tous les coups possibles</h4>
+<div class="outline-text-4" id="text-org0affc87">
 <p>
 Crée une fonction qui doit retourner la liste de tous les coups possibles au prochain tour. Chaque élément de la liste sera un tuple correspondant à la ligne et la colonne où le jeton peut être placé : <b>(ligne, colonne)</b>.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org3ecdc6f" class="outline-4">
-<h4 id="org3ecdc6f">Étape 2 : Tous les alignements</h4>
-<div class="outline-text-4" id="text-org3ecdc6f">
+<div id="outline-container-org0de0a95" class="outline-4">
+<h4 id="org0de0a95">Étape 2 : Tous les alignements</h4>
+<div class="outline-text-4" id="text-org0de0a95">
 <p>
 Crée une fonction qui retourne la liste de tous les alignements de 4 cases de la grille. La liste contiendra donc des listes de 4 éléments. Les alignements possibles sont :
 </p>
@@ -2644,9 +2750,9 @@ Crée une fonction qui retourne la liste de tous les alignements de 4 cases de l
 </div>
 </div>
 
-<div id="outline-container-orga221b14" class="outline-4">
-<h4 id="orga221b14">Étape 3 : Fonction d'évaluation</h4>
-<div class="outline-text-4" id="text-orga221b14">
+<div id="outline-container-org70999f6" class="outline-4">
+<h4 id="org70999f6">Étape 3 : Fonction d'évaluation</h4>
+<div class="outline-text-4" id="text-org70999f6">
 <p>
 Crée une fonction qui devra attribuer un "score" à une grille pour un joueur donné. Cette fonction permettra à l'IA de savoir quel coup lui rapporte le plus de points. Elle sera utilisée plus tard dans la fonction chargée d'anticiper quel coup amènera au meilleur résultat.
 Voici quelques indications :
@@ -2709,13 +2815,13 @@ Quand les scores des deux joueurs ont été calculés, la fonction devra renvoye
 </div>
 </div>
 
-<div id="outline-container-orgd70dfde" class="outline-3">
-<h3 id="orgd70dfde">Un peu de cours</h3>
-<div class="outline-text-3" id="text-orgd70dfde">
+<div id="outline-container-orgd8b9541" class="outline-3">
+<h3 id="orgd8b9541">Un peu de cours</h3>
+<div class="outline-text-3" id="text-orgd8b9541">
 </div>
-<div id="outline-container-orgaae97f3" class="outline-4">
-<h4 id="orgaae97f3">Recherche</h4>
-<div class="outline-text-4" id="text-orgaae97f3">
+<div id="outline-container-orgdecaa29" class="outline-4">
+<h4 id="orgdecaa29">Recherche</h4>
+<div class="outline-text-4" id="text-orgdecaa29">
 <p>
 Le jeu du Puissance 4 est un jeu dit <b>déterministe</b> et <b>complètement observable</b>. Cela siginifie que l'agent sait dans quel état il est et dans quel état il sera (en fonction des actions qu'il fait). La solution de ce type de problème est une suite d'actions (par exemple "jouer dans la colonne n°3").
 </p>
@@ -2740,9 +2846,9 @@ Pour pouvoir générer cet arbre de recherche pour notre IA, nous avons créé u
 </div>
 </div>
 
-<div id="outline-container-orgada072b" class="outline-4">
-<h4 id="orgada072b">Algorithme Min-Max</h4>
-<div class="outline-text-4" id="text-orgada072b">
+<div id="outline-container-org0571f5c" class="outline-4">
+<h4 id="org0571f5c">Algorithme Min-Max</h4>
+<div class="outline-text-4" id="text-org0571f5c">
 <p>
 L'algorithme Min-Max est un algorithme utilisé uniquement pour la programmation d'intelligences artificielles de jeux. Le principe est le suivant:
 </p>
@@ -2799,9 +2905,9 @@ Le pseudo-code de l'algorithme Min-Max se trouve à la page 12 du cours dans la 
 </div>
 </div>
 
-<div id="outline-container-org844c784" class="outline-3">
-<h3 id="org844c784">Retour au code</h3>
-<div class="outline-text-3" id="text-org844c784">
+<div id="outline-container-orga38e3cd" class="outline-3">
+<h3 id="orga38e3cd">Retour au code</h3>
+<div class="outline-text-3" id="text-orga38e3cd">
 <p>
 Pour notre jeu, nous utiliserons deux fonctions : <code>min_max(joueur_max, is_tour_max, profondeur)</code> et <code>trouver_meilleur_coup(joueur_max, profondeur)</code>.
 </p>
