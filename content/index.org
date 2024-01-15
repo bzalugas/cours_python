@@ -202,7 +202,7 @@ Résultat :
 {'Elon Musk': 180000000000, 'Jeff Bezos': 114000000000, 'Bill Gates': 104000000000, 'Mark Zuckerberg': 64400000000, 'Moi': 100}
 #+end_example
 
-Si tu veux *ajouter* un élément, c'est-à-dire une clef et un valeur, il faut faire comme si on modifiait la valeur de la nouvelle clef :
+Si tu veux *ajouter* un élément, c'est-à-dire une clef et une valeur, il faut faire comme si on modifiait la valeur de la nouvelle clef :
 #+begin_src python
 fortunes = {'Elon Musk': 180000000000, 'Jeff Bezos': 114000000000, 'Bill Gates': 104000000000, 'Mark Zuckerberg': 64400000000, 'Moi': 0}
 print(fortunes)
@@ -398,17 +398,12 @@ Pour le moment, cela suffira pour créer des programmes plus intéractifs, mais 
 - *"Différence entre chaînes et nombres"*, p.67-69
 *** Exercices
 1. Dans un programme nommé =types_donnees.py= :
-   - Demande à l'utilisateur un nombre entier et stocke-le dans une variable =entier_str=.
-   - Demande à l'utilisateur un nombre décimal et stocke-le dans une variable =decimal_str=.
-   - Demande à l'utilisateur un mot de son choix et stocke-le dans une variable =mot=.
-   - Convertis =entier_str= en entier dans une variable =entier=.
-   - Convertis =decimal_str= en nombre décimal dans une variable =decimal=.
-   - Si le nombre entier est égal à ton âge, affiche "Bravo tu es tombé sur mon âge !".
-   - Si le nombre décimal est égal à 23.23, affiche "Bravo tu as trouvé le nombre auquel je pensais !".
-   - Si le mot est égal à ton prénom, affiche "Bravo tu as trouvé mon prénom !".
-   - Demande à nouveau un nombre entier à l'utilisateur et stocke-le directement sous forme de nombre entier dans une variable =entier2=.
-   - Affiche le contenu de =entier2=.
-   - Essaye ton programme en entrant un mot au lieu d'un nombre entier au début. Que se passe-t-il ?
+   - Crée une variable =nb_str= contenant une chaîne convertible en nombre.
+   - Crée une variable =nb_int= contenant la conversion en nombre entier de =nb_str=.
+   - Crée une variable =nb_float= contenant la conversion en nombre flottant de =nb_str=.
+   - Crée une variable =nb_int2= contenant un nombre entier de ton choix.
+   - Crée une variable =nb_str2= contenant la conversion en chaîne de =nb_int2=.
+   - Affiche toutes les variables.
 
 * Chapitre 5 : Les boucles
 :PROPERTIES:
@@ -446,7 +441,7 @@ Pour le moment, cela suffira pour créer des programmes plus intéractifs, mais 
    - Fais dessiner à une tortue une spirale à l'aide d'une boucle =for=.
 
 6. Dans un programme nommé =fibonacci.py= :
-   - Fais un programme qui calcule les 10 premiers nombres de la suite de fibonacci en utilisant une boucle =for=. La suite de Fibonacci est : 1, 1, 2, 3, 5, 8,... Les deux premiers nombres de la suite sont toujours 1 et 1, puis ensuite chaque nombre est égal aux deux précédents.
+   - Fais un programme qui calcule les 10 premiers nombres de la suite de fibonacci en utilisant une boucle =for=. [[https://fr.wikipedia.org/wiki/Suite_de_Fibonacci][La suite de Fibonacci]] est : 0, 1, 1, 2, 3, 5, 8,... *Les deux premiers nombres de la suite sont toujours 0 et 1, ensuite chaque nombre est égal à la somme des deux précédents*.
    - (BONUS) : Fais avancer une tortue de chaque valeur de la suite de Fibonacci en la faisant tourner à chaque fois de 90°.
 
 ** Cours 15 : Boucles while
@@ -498,10 +493,9 @@ Dans un programme nommé =nombre_secret.py= :
 - Le programme doit choisir un nombre aléatoire entre 1 et 10 en utilisant la fonction vue avant.
 - Le joueur doit avoir 4 essais pour deviner le nombre.
 - Une fois qu'une partie est terminée (gagnée ou perdue), le programme doit demander à l'utilisateur s'il souhaite rejouer et relancer une partie si celui-ci répond ="oui"=.
-- Le nombre d'essai et le minimum et maximum du nombre secret doivent être stockés dans des variables au début du programme et qui doivent être utilisées au bon endroit dans le programme afin de permettre de choisir le nombre d'essai, le minimum et le maximum en changeant seulement la variable au début du programme.
+- Le nombre d'essai et le minimum et maximum du nombre secret doivent être stockés dans des variables au début du programme et qui doivent être utilisées au bon endroit dans le programme afin de permettre de choisir le nombre d'essai, le minimum et le maximum en changeant seulement les variables au début du programme.
 - A chaque essai, le programme doit :
-  - Dire au joueur entre combien et le minimum et maximum du nombre secret.
-  - Demander au joueur un nombre.
+  - Demander au joueur de trouver le nombre situé entre =minimum= et =maximum=.
   - Si le nombre entré par le joueur est le bon, le jeu doit féliciter le joueur.
   - Si le nombre entré est plus petit ou plus grand, le jeu doit informer le joueur et commencer un nouvel essai s'il en reste au joueur.
   - Si le nombre n'est pas le bon est qu'il s'agissait du dernier essai, le jeu doit informer le joueur qu'il a perdu.
@@ -510,6 +504,115 @@ Dans un programme nommé =nombre_secret.py= :
 - Si le joueur a gagné, le jeu doit se relancer avec une plus grande difficulté (moins d'essais, nombre secret maximum plus grand, ...)
 - Si le joueur a perdu, le jeu doit baisser la difficulté ou retourner à la difficulté originale.
 - Des messages cachés qui ne s'affichent que si l'on réussit un certain niveau ou si on trouve le nombre secret du premier coup.
+
+* Chapitre 7bis : Turtle avec les fonctions
+:PROPERTIES:
+:custom_id: chapitre7bis
+:END:
+** Cours 17b : Un peu plus de turtle
+:PROPERTIES:
+:custom_id: chapitre7bis_cours17b
+:END:
+Nous avons vu précédemment les bases du module turtle. En réalité, il existe encore beaucoup de fonctionnalités que nous n'avons pas encore explorées.
+*** Les couleurs
+Pour commencer, nous pouvons changer toutes les couleurs : l'arrière-plan, le trait et même le remplissage ! Turtle propose beaucoup de couleurs et libre à toi de les essayer. En voici une liste non-exhaustive.
+#+attr_html: :alt colors turtle  :align center :class img :width 570px :height 624hpx :display block
+[[./img/colors_turtle.jpg]]
+
+*** Changer la couleur d'arrière-plan
+La fonction à utiliser pour changer la couleur d'arrière-plan est :
+#+begin_src python
+turtle.bgcolor("couleur") # Remplacer couleur par la couleur voulue
+#+end_src
+*** Changer la couleur du trait
+La fonction à utiliser pour changer la couleur du trait est :
+#+begin_src python
+t = turtle.Pen() # Au debut du dessin
+t.color("couleur") # Remplacer couleur par la couleur voulue
+#+end_src
+*** Changer la couleur de remplissage d'une forme
+
+Pour changer la couleur de remplissage d'une forme, il y a plusieurs étapes à respecter.
+1. Il faut d'abord choisir la couleur à l'aide de
+   #+begin_src python
+   t.color()
+   #+end_src
+2. Ensuite, lorsque l'on commence à dessiner la forme à remplir, il faut utiliser la fonction
+   #+begin_src python
+t.begin_fill()
+   #+end_src
+3. Enfin, lorsque la forme à remplir est terminée, il faut utiliser la fonction
+      #+begin_src python
+t.end_fill()
+   #+end_src
+
+Exemple :
+#+begin_src python
+import turtle
+
+t = turtle.Pen()
+t.color("cyan")
+t.begin_fill()
+t.forward(50)
+t.left(90)
+t.forward(50)
+t.left(90)
+t.forward(50)
+t.left(90)
+t.forward(50)
+t.end_fill()
+#+end_src
+
+#+attr_html: :alt turtle square :align center :class img :width 155px :height 145hpx :display block
+[[./img/turtle_square.png]]
+
+*** La vitesse
+Il est possible de changer la vitesse d'exécution d'un dessin avec turtle en utilisant la fonction
+#+begin_src python
+t.speed(vitesse) # Remplacer vitesse par un int compris entre 0-10
+#+end_src
+
+La vitesse la plus rapide est... =t.speed(0)= !
+
+*** La taille du trait
+Tu peux changer la taille du trait avec la fonction
+#+begin_src python
+t.pensize(taille) # Remplacer taille par un int
+#+end_src
+
+*** Lever ou baisser le stylo
+Par moments, tu peux avoir besoin de déplacer la tortue sans pour autant qu'elle trace des lignes sur sa trajectoire. Eh bien, il est possible de lui faire "lever" son stylo à l'aide de la fonction
+#+begin_src python
+t.up() # up veut dire "haut" en anglais
+#+end_src
+
+Une fois que tu veux que la tortue dessine à nouveau, utilise simplement la fonction
+#+begin_src python
+t.down() # down veut dire "bas" en anglais
+#+end_src
+
+*** Dessiner un cercle
+Il est possible de dessiner un cercle rapidement a l'aide de la fonction
+#+begin_src python
+t.circle(rayon) # Remplacer rayon par un int correspondant au rayon du cercle
+#+end_src
+
+*** Afficher ou cacher la tortue
+Si tu veux cacher la forme de la tortue, tu dois utiliser la fonction
+#+begin_src python
+t.hideturtle()
+#+end_src
+Pour l'afficher à nouveau, c'est à l'aide de la fonction
+#+begin_src python
+t.showturtle()
+#+end_src
+*** Mon beau sapin ...
+Maintenant, mets en oeuvre tout ce que l'on vient de voir en reproduisant ce sapin de noël. Ce n'est pas grave s'il n'est pas exactement similaire, mais applique-toi à le faire le plus ressemblant possible.
+
+#+attr_html: :alt xmas tree  :align center :class img :width 701px :height 701hpx :display block
+[[./img/xmas_tree.png]]
+
+Indice : les étages du sapin sont en fait des triangles superposés de tailles différentes.
 
 * Chapitre 7 : Les fonctions
 :PROPERTIES:
@@ -527,12 +630,15 @@ Dans un programme nommé =nombre_secret.py= :
 - *"La fonction len"*, p.121-122
 *** Exercices
 1. Dans un programme nommé =fonctions1.py= :
-   - Définir une fonction ayant la signature =bonjour(prenom, nom)= qui doit afficher "Bonjour <prenom> <nom> !", en remplaçant <prenom> et <nom> par les arguments passés à la fonction.
-   - Définir une fonction =somme(nombre1, nombre2)= qui retourne la somme des deux arguments.
-   - Définir une fonction =minimum(nombre1, nombre2)= qui retourne le plus petit nombre entre les deux arguments.
-   - Définir une fonction =puissance(nombre1, nombre2)= qui retourne =nombre1= puissance =nombre2=.
-   - Définir une fonction fibonacci(n) qui retourne le n-ième nombre de la suite de Fibonacci. Exemples : =fibonacci(0)= -> *1*, =fibonacci(1)= -> *1*, =fibonacci(2)= -> *2*, =fibonacci(3)= -> *5*, etc.
-   - Définir et appeler une fonction =menu()= qui :
+   - Définis une fonction ayant la signature =bonjour(prenom, nom)= qui doit *afficher* "Bonjour <prenom> <nom> !", en remplaçant <prenom> et <nom> par les arguments passés à la fonction.
+   - Définis une fonction =somme(nombre1, nombre2)= qui *retourne* la somme des deux arguments.
+   - Définis une fonction =minimum(nombre1, nombre2)= qui *retourne* le plus petit nombre entre les deux arguments.
+   - Définis une fonction =puissance(nombre1, nombre2)= qui *retourne* =nombre1= puissance =nombre2=.
+   - Définis une fonction fibonacci(n) qui *retourne* le n-ième nombre de la suite de Fibonacci. Exemples : =fibonacci(0)= \to *0*, =fibonacci(1)= \to *1*, =fibonacci(2)= \to *1*, =fibonacci(3)= \to *2*, etc.
+   - Appelle chaque fonction avec les paramètres de ton choix afin de vérifier qu'elles fonctionnent correctement. *Pour afficher le résultat des fonctions qui retournent quelque-chose, il suffit d'utiliser =print()= lors de l'appel de celles-ci.
+2. Dans un programme nommé =menu.py= :
+   - Reprends (copie-colle) les fonctions créées dans l'exercice précédent.
+   - Définis une fonction =menu()= qui :
      - Affiche le nom de toutes les fonctions précédemment créées et demande à l'utilisateur quelle fonction il veut utiliser.
      - Si l'utilisateur entre 'bonjour' :
        - Demande à l'utilisateur son prénom et son nom, stocke-les et appelle la fonction =bonjour(prenom, nom)= avec ce qu'a entré l'utilisateur
@@ -542,12 +648,13 @@ Dans un programme nommé =nombre_secret.py= :
      - Si l'utilisateur entre 'fibonacci' :
        - Demande à l'utilisateur un nombre et appelle la fonction =fibonnaci(n)= avec celui-ci
      - Tant que l'utilisateur n'entre pas 'quitter', il faut que la fonction propose les choix à nouveau à l'utilisateur.
+     - Appelle la fonction =menu()= dans ton programme.
 
-2. Dans un programme nommé =forme.py= :
+3. Dans un programme nommé =forme.py= :
    - Définis une fonction =forme(nb_cotes, taille_cotes)= qui dessine une forme en utilisant une tortue. La forme doit avoir =nb_cotes= en nombre de côtés et la taille doit être égale à =taille_cotes=.
    - Appele plusieurs fois la fonction avec des arguments différents pour tout bien tester.
 
-3. Dans un programme nommé =forme_aleatoire.py= :
+4. Dans un programme nommé =forme_aleatoire.py= :
    - Définis une fonction ayant la signature =forme_aleatoire(tortue)=.
    - La fonction doit définir une variable =repetition= égale à un nombre aléatoire entre 50 et 200.
    - La fonction doit définir une variable =distance= égale à un nombre aléatoire entre 10 et 200.
@@ -555,16 +662,16 @@ Dans un programme nommé =nombre_secret.py= :
    - La forme aléatoire doit être dessinée par la =tortue= passée en argument en répétant =repetition= fois le fait d'avancer de =distance= pixels et de tourner d'=angle= degrés.
    - Pour tester, appelle plusieurs fois cette fonction avec des tortues différentes.
 
-4. Dans un programme nommé =inverse.py= :
+5. Dans un programme nommé =inverse.py= :
    - Définis une fonction ayant la signature =inverse(liste)= qui doit renvoyer la =liste= passée en argument à l'envers. Par exemple, si on lui donne la liste =[1, 5, 2, 6]= en argument, elle doit renvoyer =[6, 2, 5, 1]=.
    - Appelle la fonction plusieurs fois avec des listes différentes pour bien tester tous les cas.
    - Essaie de passer une chaîne de caractères en argument. Que se passe-t-il ?
 
-5. Dans un programme nommé =minimum_liste.py= :
-   - Définir une fonction ayant la signature =minimum_liste(liste_nombres)= qui prend une liste de nombre en paramètre et renvoie le plus petit nombre de la liste.
+6. Dans un programme nommé =minimum_liste.py= :
+   - Définis une fonction ayant la signature =minimum_liste(liste_nombres)= qui prend une liste de nombre en paramètre et renvoie le plus petit nombre de la liste.
    - Appeler plusieurs fois la fonction avec différentes listes de nombres pour bien tester tous les cas.
 
-6. Dans un programme nommé =tri.py= :
+7. Dans un programme nommé =tri.py= :
    - Faire une fonction ayant la signature =tri(liste_nombres)=.
    - Le paramètre =liste_nombres= sera une liste de nombres.
    - La fonction doit renvoyer une liste qui contient tous les nombres de =liste_nombres= triés dans l'ordre croissant.
@@ -1272,7 +1379,7 @@ Quand tu vas tester le jeu, il est très fort probable qu'il y ait des "bugs" et
 # :custom_id: chapitre8bis
 # :END:
 
-* Intelligence Artificielle du Puissance 4
+# * Intelligence Artificielle du Puissance 4
 :PROPERTIES:
 :custom_id: ia_puissance4
 :END:
