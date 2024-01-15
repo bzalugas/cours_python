@@ -714,6 +714,60 @@ Maintenant, mets en oeuvre tout ce que l'on vient de voir en reproduisant ce sap
 [[./img/xmas_tree.png]]
 
 Indice : les étages du sapin sont en fait des triangles superposés de tailles différentes.
+
+** Cours 18b : Turtle, mais avec des fonctions
+:PROPERTIES:
+:custom_id: chapitre7bis_cours18b
+:END:
+*** Manuel
+- *"Recycler du code avec des fonctions et des modules"*, p.87-88
+- *"Utiliser des fonctions"*, p.88-89
+- *"Qu'est-ce qu'une fonction ?"*, p.89-90
+- *"Variables et portée"*, p.90-92
+*** Exercices
+Le but du premier exercice est de pouvoir dessiner un flocon de neige sans se répéter, grâce aux fonctions.
+
+Voici ce qu'on veut obtenir :
+#+attr_html: :alt snow flake :align center :class img :width 233px :height 210px :display block
+[[./img/snow_flake.png]]
+
+Ce dessin est très facile à réaliser si on le décompose correctement avec des fonctions. En effet, le flocon est composé de :
+- 6 fois la même branche :
+#+attr_html: :alt snow flake branch :align center :class img :width 118px :height 213px :display block
+[[./img/branch.png]]
+
+- Une branche est elle-même composée d'une ligne + une forme en V le tout répété 4 fois:
+#+attr_html: :alt snow flake fd + v :align center :class img :width 75px :height 116px :display block
+[[./img/fd_v.png]]
+
+- Et enfin, la forme en V en elle-même est une suite de plusieurs déplacements.
+#+attr_html: :alt snow flake v :align center :class img :width 174px :height 169px :display block
+[[./img/v.png]]
+
+Ces 3 étapes de décomposition vont correspondent en fait aux 3 fonctions dont nous avons besoin pour créer ce flocon de neige sans se répéter et en quelques lignes seulement.
+
+Dans un programme nommé =flocon.py= :
+- Configure correctement une tortue pour qu'elle dessine en blanc sur fond "turquoise" et avec une épaisseur de trait de 6.
+- Crée une fonction =forme_v()= qui contient les étapes pour faire le V :
+  - Tourner à droite de 25 degrés
+  - Avancer de 50 pixels
+  - Reculer de 50 pixels
+  - Tourner à gauche de 50 degrés
+  - Avancer de 50 pixels
+  - Reculer de 50 pixels
+  - Tourner à droite de 25 degrés
+- Crée une fonction =branche()= qui contient les étapes pour faire une branche :
+  - Répéter 4 fois :
+    - Avancer de 30 pixels
+    - Dessiner un V
+  - Reculer de 120 pixels
+- Crée une fonction =flocon()= qui contient les étapes pour dessiner un flocon :
+  - Répéter 6 fois :
+    - Dessiner une branche
+    - Tourner à droite de 60 degrés
+- Enfin, appelle la fonction =flocon()= et observe le flocon se dessiner !
+
+
 * Chapitre 8 : Mise en pratique 2
 :PROPERTIES:
 :custom_id: chapitre8
