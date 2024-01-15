@@ -441,8 +441,10 @@ Pour le moment, cela suffira pour créer des programmes plus intéractifs, mais 
    - Fais dessiner à une tortue une spirale à l'aide d'une boucle =for=.
 
 6. Dans un programme nommé =fibonacci.py= :
-   - Fais un programme qui calcule les 10 premiers nombres de la suite de fibonacci en utilisant une boucle =for=. [[https://fr.wikipedia.org/wiki/Suite_de_Fibonacci][La suite de Fibonacci]] est : 0, 1, 1, 2, 3, 5, 8,... *Les deux premiers nombres de la suite sont toujours 0 et 1, ensuite chaque nombre est égal à la somme des deux précédents*.
-   - (BONUS) : Fais avancer une tortue de chaque valeur de la suite de Fibonacci en la faisant tourner à chaque fois de 90°.
+   - Fais un programme qui calcule les 10 premiers nombres de la suite de fibonacci en utilisant une boucle =for=.
+     #+attr_html: :target _blank
+     [[https://fr.wikipedia.org/wiki/Suite_de_Fibonacci][La suite de Fibonacci]] est : 0, 1, 1, 2, 3, 5, 8,... *Les deux premiers nombres de la suite sont toujours 0 et 1, ensuite chaque nombre est égal à la somme des deux précédents*.
+   - (BONUS) : Fais avancer une tortue de chaque valeur de la suite de Fibonacci en la faisant tourner à chaque fois de 90\deg.
 
 ** Cours 15 : Boucles while
 :PROPERTIES:
@@ -749,13 +751,13 @@ Ces 3 étapes de décomposition vont correspondent en fait aux 3 fonctions dont 
 Dans un programme nommé =flocon.py= :
 - Configure correctement une tortue pour qu'elle dessine en blanc sur fond "turquoise" et avec une épaisseur de trait de 6.
 - Crée une fonction =forme_v()= qui contient les étapes pour faire le V :
-  - Tourner à droite de 25 degrés
+  - Tourner à droite de 25\deg
   - Avancer de 50 pixels
   - Reculer de 50 pixels
-  - Tourner à gauche de 50 degrés
+  - Tourner à gauche de 50\deg
   - Avancer de 50 pixels
   - Reculer de 50 pixels
-  - Tourner à droite de 25 degrés
+  - Tourner à droite de 25\deg
 - Crée une fonction =branche()= qui contient les étapes pour faire une branche :
   - Répéter 4 fois :
     - Avancer de 30 pixels
@@ -764,7 +766,7 @@ Dans un programme nommé =flocon.py= :
 - Crée une fonction =flocon()= qui contient les étapes pour dessiner un flocon :
   - Répéter 6 fois :
     - Dessiner une branche
-    - Tourner à droite de 60 degrés
+    - Tourner à droite de 60\deg
 - Enfin, appelle la fonction =flocon()= et observe le flocon se dessiner !
 
 
