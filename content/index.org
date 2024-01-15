@@ -505,6 +505,107 @@ Dans un programme nommé =nombre_secret.py= :
 - Si le joueur a perdu, le jeu doit baisser la difficulté ou retourner à la difficulté originale.
 - Des messages cachés qui ne s'affichent que si l'on réussit un certain niveau ou si on trouve le nombre secret du premier coup.
 
+* Chapitre 7 : Les fonctions
+:PROPERTIES:
+:custom_id: chapitre7
+:END:
+** Cours 17 : Fonctions
+:PROPERTIES:
+:custom_id: chapitre7_cours17
+:END:
+*** Manuel
+- *"Recycler du code avec des fonctions et des modules"*, p.87-88
+- *"Utiliser des fonctions"*, p.88-89
+- *"Qu'est-ce qu'une fonction ?"*, p.89-90
+- *"Variables et portée"*, p.90-92
+- *"La fonction len"*, p.121-122
+*** Exercices
+1. Dans un programme nommé =fonctions1.py= :
+   - Définis une fonction ayant la signature =bonjour(prenom, nom)= qui doit *afficher* "Bonjour <prenom> <nom> !", en remplaçant <prenom> et <nom> par les arguments passés à la fonction.
+   - Définis une fonction =somme(nombre1, nombre2)= qui *retourne* la somme des deux arguments.
+   - Définis une fonction =minimum(nombre1, nombre2)= qui *retourne* le plus petit nombre entre les deux arguments.
+   - Définis une fonction =puissance(nombre1, nombre2)= qui *retourne* =nombre1= puissance =nombre2=.
+   - Définis une fonction fibonacci(n) qui *retourne* le n-ième nombre de la suite de Fibonacci. Exemples : =fibonacci(0)= \to *0*, =fibonacci(1)= \to *1*, =fibonacci(2)= \to *1*, =fibonacci(3)= \to *2*, etc.
+   - Appelle chaque fonction avec les paramètres de ton choix afin de vérifier qu'elles fonctionnent correctement. *Pour afficher le résultat des fonctions qui retournent quelque-chose, il suffit d'utiliser =print()= lors de l'appel de celles-ci.
+2. Dans un programme nommé =menu.py= :
+   - Reprends (copie-colle) les fonctions créées dans l'exercice précédent.
+   - Définis une fonction =menu()= qui :
+     - Affiche le nom de toutes les fonctions précédemment créées et demande à l'utilisateur quelle fonction il veut utiliser.
+     - Si l'utilisateur entre 'bonjour' :
+       - Demande à l'utilisateur son prénom et son nom, stocke-les et appelle la fonction =bonjour(prenom, nom)= avec ce qu'a entré l'utilisateur
+     - Si l'utilisateur entre 'somme', 'minimum' ou 'puissance' :
+       - Demande à l'utilisateur deux nombres et stocke-les dans des variables.
+       - Appelle la fonction =somme(nombre1, nombre2)=, =minimum(nombre1, nombre2)= ou =puissance(nombre1, nombre2)= en fonction du choix de l'utilisateur.
+     - Si l'utilisateur entre 'fibonacci' :
+       - Demande à l'utilisateur un nombre et appelle la fonction =fibonnaci(n)= avec celui-ci
+     - Tant que l'utilisateur n'entre pas 'quitter', il faut que la fonction propose les choix à nouveau à l'utilisateur.
+     - Appelle la fonction =menu()= dans ton programme.
+
+3. Dans un programme nommé =forme.py= :
+   - Définis une fonction =forme(nb_cotes, taille_cotes)= qui dessine une forme en utilisant une tortue. La forme doit avoir =nb_cotes= en nombre de côtés et la taille doit être égale à =taille_cotes=.
+   - Appele plusieurs fois la fonction avec des arguments différents pour tout bien tester.
+
+4. Dans un programme nommé =forme_aleatoire.py= :
+   - Définis une fonction ayant la signature =forme_aleatoire(tortue)=.
+   - La fonction doit définir une variable =repetition= égale à un nombre aléatoire entre 50 et 200.
+   - La fonction doit définir une variable =distance= égale à un nombre aléatoire entre 10 et 200.
+   - Le programme doit définir une variable =angle= égale à un nombre aléatoire en 0 et 360.
+   - La forme aléatoire doit être dessinée par la =tortue= passée en argument en répétant =repetition= fois le fait d'avancer de =distance= pixels et de tourner d'=angle= degrés.
+   - Pour tester, appelle plusieurs fois cette fonction avec des tortues différentes.
+
+5. Dans un programme nommé =inverse.py= :
+   - Définis une fonction ayant la signature =inverse(liste)= qui doit renvoyer la =liste= passée en argument à l'envers. Par exemple, si on lui donne la liste =[1, 5, 2, 6]= en argument, elle doit renvoyer =[6, 2, 5, 1]=.
+   - Appelle la fonction plusieurs fois avec des listes différentes pour bien tester tous les cas.
+   - Essaie de passer une chaîne de caractères en argument. Que se passe-t-il ?
+
+6. Dans un programme nommé =minimum_liste.py= :
+   - Définis une fonction ayant la signature =minimum_liste(liste_nombres)= qui prend une liste de nombre en paramètre et renvoie le plus petit nombre de la liste.
+   - Appeler plusieurs fois la fonction avec différentes listes de nombres pour bien tester tous les cas.
+
+7. Dans un programme nommé =tri.py= :
+   - Faire une fonction ayant la signature =tri(liste_nombres)=.
+   - Le paramètre =liste_nombres= sera une liste de nombres.
+   - La fonction doit renvoyer une liste qui contient tous les nombres de =liste_nombres= triés dans l'ordre croissant.
+   - Appeler plusieurs fois la fonction avec différentes listes de nombres pour tester tous les cas.
+   (BONUS)
+   - Définis une fonction =creerListe(taille)= qui crée une liste de taille =taille= en demandant à l'utilisateur chaque nombre de la liste et renvoie la liste ainsi créée.
+   - Appelle la fonction =creerListe= après avoir demandé la =taille= à l'utiliateur puis utilise la liste créée dans la fonction =tri=. Affiche la liste avant et après avoir utilisé =tri=.
+
+** Cours 18 : Les modules
+:PROPERTIES:
+:custom_id: chapitre7_cours18
+:END:
+*** Cours
+*Un module* sert à regrouper des fonctions, des variables et d'autres choses dans des programmes plus vastes et plus puissants. Certains modules sont intégrés dans Python lui-même, tandis que tu peux en télécharger d'autres de manière séparée. Nous en avons déjà utilisé par exemple avec *turtle* et *random*.
+
+Pour utiliser un module, il suffit d'écrire au début du fichier =import nom_du_module=. Dans le cas où tu voudrais utiliser un module qui n'est pas intégré à Python, il faudra d'abord le télécharger (ou le coder !).
+
+Maintenant, si je te disais que tu peux créer tes propres modules avec tes propres fonctions, variables, classes dedans !? Ne serait-il pas pratique de pouvoir utiliser sans avoir à la réécrire une fonction qui, par exemple, permet de demander un entier à l'utilisateur et de vérifier qu'il n'y a pas d'erreur ?
+
+Pour créer ton propre module, il suffit de :
+1. Créer un nouveau fichier et lui donner le nom de ton module, par exemple =mes_fonctions.py=.
+2. Écrire tes fonctions à l'intérieur du fichier, autant que tu veux. *Attention, nous voulons seulement écrire les fonctions, pas les utiliser tout de suite.*
+3. Une fois le fichier enregistré, il suffit de le mettre dans le même *dossier* que le programme dans lequel tu vas l'utiliser puis de l'importer avec =import mes_fonctions= dans le programme.
+4. Pour utiliser une fonction du module =mes_fonctions=, il faudra l'appeler en utilisant =mes_fonctions.<nom_de_la_fonction>(paramètres)=.
+5. Pour ne plus avoir besoin d'écrire le nom du module, il faut remplacer =import mes_fonctions= par =from mes_fonctions import *=.
+
+*** Exercices
+Dans le chapitre suivant, nous allons mettre en pratique les modules et les fonctions ensemble en créant notre propre bibliothèque personnalisée de fonctions !
+# Nous allons maintenant faire quelques exercices pour se familiariser avec la création des modules et commencer à nous créer notre propre "bibliothèque" de fonctions.
+
+1. Dans un fichier nommé =mes_fonctions.py= :
+   - Crée la fonction =demander_int(message)= qui :
+     - demande un entier à l'utilisateur en affichant le message =message=.
+     - retourne l'entier convertit en =int=.
+   - Crée la fonction =demander_float(message)= qui fonctionne comme la précédente mais avec un =float=.
+   - Crée la fonction =demander(message)= qui fonctionne comme les précédentes mais avec une chaîne de caractères.
+
+2. Dans un programme nommé =tests_fonctions.py= :
+   - importe ton module =mes_fonctions=
+   - teste les 3 fonctions présentes dans ton module
+
+Tu as maintenant créé les 3 premières fonctions de ton propre module, que tu pourras réutiliser chaque fois que tu en as besoin. Tu es libre d'y ajouter les fonctions qui te semblent intéressantes et que tu as déjà écrites, par exemple dans ce chapitre.
+
 * Chapitre 7bis : Turtle avec les fonctions
 :PROPERTIES:
 :custom_id: chapitre7bis
@@ -613,108 +714,6 @@ Maintenant, mets en oeuvre tout ce que l'on vient de voir en reproduisant ce sap
 [[./img/xmas_tree.png]]
 
 Indice : les étages du sapin sont en fait des triangles superposés de tailles différentes.
-
-* Chapitre 7 : Les fonctions
-:PROPERTIES:
-:custom_id: chapitre7
-:END:
-** Cours 17 : Fonctions
-:PROPERTIES:
-:custom_id: chapitre7_cours17
-:END:
-*** Manuel
-- *"Recycler du code avec des fonctions et des modules"*, p.87-88
-- *"Utiliser des fonctions"*, p.88-89
-- *"Qu'est-ce qu'une fonction ?"*, p.89-90
-- *"Variables et portée"*, p.90-92
-- *"La fonction len"*, p.121-122
-*** Exercices
-1. Dans un programme nommé =fonctions1.py= :
-   - Définis une fonction ayant la signature =bonjour(prenom, nom)= qui doit *afficher* "Bonjour <prenom> <nom> !", en remplaçant <prenom> et <nom> par les arguments passés à la fonction.
-   - Définis une fonction =somme(nombre1, nombre2)= qui *retourne* la somme des deux arguments.
-   - Définis une fonction =minimum(nombre1, nombre2)= qui *retourne* le plus petit nombre entre les deux arguments.
-   - Définis une fonction =puissance(nombre1, nombre2)= qui *retourne* =nombre1= puissance =nombre2=.
-   - Définis une fonction fibonacci(n) qui *retourne* le n-ième nombre de la suite de Fibonacci. Exemples : =fibonacci(0)= \to *0*, =fibonacci(1)= \to *1*, =fibonacci(2)= \to *1*, =fibonacci(3)= \to *2*, etc.
-   - Appelle chaque fonction avec les paramètres de ton choix afin de vérifier qu'elles fonctionnent correctement. *Pour afficher le résultat des fonctions qui retournent quelque-chose, il suffit d'utiliser =print()= lors de l'appel de celles-ci.
-2. Dans un programme nommé =menu.py= :
-   - Reprends (copie-colle) les fonctions créées dans l'exercice précédent.
-   - Définis une fonction =menu()= qui :
-     - Affiche le nom de toutes les fonctions précédemment créées et demande à l'utilisateur quelle fonction il veut utiliser.
-     - Si l'utilisateur entre 'bonjour' :
-       - Demande à l'utilisateur son prénom et son nom, stocke-les et appelle la fonction =bonjour(prenom, nom)= avec ce qu'a entré l'utilisateur
-     - Si l'utilisateur entre 'somme', 'minimum' ou 'puissance' :
-       - Demande à l'utilisateur deux nombres et stocke-les dans des variables.
-       - Appelle la fonction =somme(nombre1, nombre2)=, =minimum(nombre1, nombre2)= ou =puissance(nombre1, nombre2)= en fonction du choix de l'utilisateur.
-     - Si l'utilisateur entre 'fibonacci' :
-       - Demande à l'utilisateur un nombre et appelle la fonction =fibonnaci(n)= avec celui-ci
-     - Tant que l'utilisateur n'entre pas 'quitter', il faut que la fonction propose les choix à nouveau à l'utilisateur.
-     - Appelle la fonction =menu()= dans ton programme.
-
-3. Dans un programme nommé =forme.py= :
-   - Définis une fonction =forme(nb_cotes, taille_cotes)= qui dessine une forme en utilisant une tortue. La forme doit avoir =nb_cotes= en nombre de côtés et la taille doit être égale à =taille_cotes=.
-   - Appele plusieurs fois la fonction avec des arguments différents pour tout bien tester.
-
-4. Dans un programme nommé =forme_aleatoire.py= :
-   - Définis une fonction ayant la signature =forme_aleatoire(tortue)=.
-   - La fonction doit définir une variable =repetition= égale à un nombre aléatoire entre 50 et 200.
-   - La fonction doit définir une variable =distance= égale à un nombre aléatoire entre 10 et 200.
-   - Le programme doit définir une variable =angle= égale à un nombre aléatoire en 0 et 360.
-   - La forme aléatoire doit être dessinée par la =tortue= passée en argument en répétant =repetition= fois le fait d'avancer de =distance= pixels et de tourner d'=angle= degrés.
-   - Pour tester, appelle plusieurs fois cette fonction avec des tortues différentes.
-
-5. Dans un programme nommé =inverse.py= :
-   - Définis une fonction ayant la signature =inverse(liste)= qui doit renvoyer la =liste= passée en argument à l'envers. Par exemple, si on lui donne la liste =[1, 5, 2, 6]= en argument, elle doit renvoyer =[6, 2, 5, 1]=.
-   - Appelle la fonction plusieurs fois avec des listes différentes pour bien tester tous les cas.
-   - Essaie de passer une chaîne de caractères en argument. Que se passe-t-il ?
-
-6. Dans un programme nommé =minimum_liste.py= :
-   - Définis une fonction ayant la signature =minimum_liste(liste_nombres)= qui prend une liste de nombre en paramètre et renvoie le plus petit nombre de la liste.
-   - Appeler plusieurs fois la fonction avec différentes listes de nombres pour bien tester tous les cas.
-
-7. Dans un programme nommé =tri.py= :
-   - Faire une fonction ayant la signature =tri(liste_nombres)=.
-   - Le paramètre =liste_nombres= sera une liste de nombres.
-   - La fonction doit renvoyer une liste qui contient tous les nombres de =liste_nombres= triés dans l'ordre croissant.
-   - Appeler plusieurs fois la fonction avec différentes listes de nombres pour tester tous les cas.
-   (BONUS)
-   - Définis une fonction =creerListe(taille)= qui crée une liste de taille =taille= en demandant à l'utilisateur chaque nombre de la liste et renvoie la liste ainsi créée.
-   - Appelle la fonction =creerListe= après avoir demandé la =taille= à l'utiliateur puis utilise la liste créée dans la fonction =tri=. Affiche la liste avant et après avoir utilisé =tri=.
-
-** Cours 18 : Les modules
-:PROPERTIES:
-:custom_id: chapitre7_cours18
-:END:
-*** Cours
-*Un module* sert à regrouper des fonctions, des variables et d'autres choses dans des programmes plus vastes et plus puissants. Certains modules sont intégrés dans Python lui-même, tandis que tu peux en télécharger d'autres de manière séparée. Nous en avons déjà utilisé par exemple avec *turtle* et *random*.
-
-Pour utiliser un module, il suffit d'écrire au début du fichier =import nom_du_module=. Dans le cas où tu voudrais utiliser un module qui n'est pas intégré à Python, il faudra d'abord le télécharger (ou le coder !).
-
-Maintenant, si je te disais que tu peux créer tes propres modules avec tes propres fonctions, variables, classes dedans !? Ne serait-il pas pratique de pouvoir utiliser sans avoir à la réécrire une fonction qui, par exemple, permet de demander un entier à l'utilisateur et de vérifier qu'il n'y a pas d'erreur ?
-
-Pour créer ton propre module, il suffit de :
-1. Créer un nouveau fichier et lui donner le nom de ton module, par exemple =mes_fonctions.py=.
-2. Écrire tes fonctions à l'intérieur du fichier, autant que tu veux. *Attention, nous voulons seulement écrire les fonctions, pas les utiliser tout de suite.*
-3. Une fois le fichier enregistré, il suffit de le mettre dans le même *dossier* que le programme dans lequel tu vas l'utiliser puis de l'importer avec =import mes_fonctions= dans le programme.
-4. Pour utiliser une fonction du module =mes_fonctions=, il faudra l'appeler en utilisant =mes_fonctions.<nom_de_la_fonction>(paramètres)=.
-5. Pour ne plus avoir besoin d'écrire le nom du module, il faut remplacer =import mes_fonctions= par =from mes_fonctions import *=.
-
-*** Exercices
-Dans le chapitre suivant, nous allons mettre en pratique les modules et les fonctions ensemble en créant notre propre bibliothèque personnalisée de fonctions !
-# Nous allons maintenant faire quelques exercices pour se familiariser avec la création des modules et commencer à nous créer notre propre "bibliothèque" de fonctions.
-
-1. Dans un fichier nommé =mes_fonctions.py= :
-   - Crée la fonction =demander_int(message)= qui :
-     - demande un entier à l'utilisateur en affichant le message =message=.
-     - retourne l'entier convertit en =int=.
-   - Crée la fonction =demander_float(message)= qui fonctionne comme la précédente mais avec un =float=.
-   - Crée la fonction =demander(message)= qui fonctionne comme les précédentes mais avec une chaîne de caractères.
-
-2. Dans un programme nommé =tests_fonctions.py= :
-   - importe ton module =mes_fonctions=
-   - teste les 3 fonctions présentes dans ton module
-
-Tu as maintenant créé les 3 premières fonctions de ton propre module, que tu pourras réutiliser chaque fois que tu en as besoin. Tu es libre d'y ajouter les fonctions qui te semblent intéressantes et que tu as déjà écrites, par exemple dans ce chapitre.
-
 * Chapitre 8 : Mise en pratique 2
 :PROPERTIES:
 :custom_id: chapitre8
