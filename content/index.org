@@ -1663,94 +1663,94 @@ Quand tu vas tester le jeu, il est très fort probable qu'il y ait des "bugs" et
 # # Dans un programme nommé "balle_rebondissante.py", affiche à l'aide de Tkinter un rectangle dans lequel une balle rebondit sur tous les bords.
 # # Adapte l'exercice "carte_identite.py" pour que l'utilisateur entre les informations dans des champs de texte et qu'il clique sur un bouton OK pour les valider.
 
-* Graphismes avec tkinter
-:PROPERTIES:
-:custom_id: tkinter
-:END:
-Tkinter est un module python qui permet de créer des interfaces graphiques, c'est-à-dire d'afficher à l'écran une interface avec des boutons, des textes, des cases à cocher, etc. Cela permet de créer des programmes plus pratiques et jolis pour les utilisateurs.
-** Ressources
-:PROPERTIES:
-:custom_id: tkinter_ressources
-:END:
-Voici quelques liens utiles pour en savoir plus sur tkiner.
-- [[https://tkdocs.com/]] (de bon tutoriels et la documentation expliquée, mais en anglais)
-- [[https://python.doctor/page-tkinter-interface-graphique-python-tutoriel]] (une bonne introduction à tkinter, en français)
-- [[https://docs.python.org/fr/3/library/tk.html]] (documentation officielle)
-** Peindre sur une toile
-:PROPERTIES:
-:custom_id: canvas
-:END:
-Pour introduire quelques concepts clefs de tkinter, nous allons commencer par créer ensemble notre premier petit projet avec interface graphique. Il s'agit de permettre à l'utilisateur de dessiner ce qu'il veut sur un endroit donné avec les couleurs qu'il veut.
+# * Graphismes avec tkinter
+# :PROPERTIES:
+# :custom_id: tkinter
+# :END:
+# Tkinter est un module python qui permet de créer des interfaces graphiques, c'est-à-dire d'afficher à l'écran une interface avec des boutons, des textes, des cases à cocher, etc. Cela permet de créer des programmes plus pratiques et jolis pour les utilisateurs.
+# ** Ressources
+# :PROPERTIES:
+# :custom_id: tkinter_ressources
+# :END:
+# Voici quelques liens utiles pour en savoir plus sur tkiner.
+# - [[https://tkdocs.com/]] (de bon tutoriels et la documentation expliquée, mais en anglais)
+# - [[https://python.doctor/page-tkinter-interface-graphique-python-tutoriel]] (une bonne introduction à tkinter, en français)
+# - [[https://docs.python.org/fr/3/library/tk.html]] (documentation officielle)
+# ** Peindre sur une toile
+# :PROPERTIES:
+# :custom_id: canvas
+# :END:
+# Pour introduire quelques concepts clefs de tkinter, nous allons commencer par créer ensemble notre premier petit projet avec interface graphique. Il s'agit de permettre à l'utilisateur de dessiner ce qu'il veut sur un endroit donné avec les couleurs qu'il veut.
 
-*** Début
-Tout d'abord, crée un programme nommé =chef_d_oeuvre.py=.
+# *** Début
+# Tout d'abord, crée un programme nommé =chef_d_oeuvre.py=.
 
-Pour commencer, comme tous les modules utilisés jusqu'à préssent (turtle, random, etc), il faut importer tkinter.
-#+begin_src python
-import tkinter
-#+end_src
+# Pour commencer, comme tous les modules utilisés jusqu'à préssent (turtle, random, etc), il faut importer tkinter.
+# #+begin_src python
+# import tkinter
+# #+end_src
 
-La première étape pour créer une interface graphique avec tkinter est de créer une fenêtre et de la stocker dans une variable. Nous utiliserons cette variable tout au long du programme pour savoir dans quelle fenêtre nous travaillons.
-#+begin_src python
-fenetre = tkinter.Tk()
-#+end_src
-*** Créer et afficher un texte
-Maintenant, nous pouvons commencer à configurer l'apparence de notre fenêtre.
+# La première étape pour créer une interface graphique avec tkinter est de créer une fenêtre et de la stocker dans une variable. Nous utiliserons cette variable tout au long du programme pour savoir dans quelle fenêtre nous travaillons.
+# #+begin_src python
+# fenetre = tkinter.Tk()
+# #+end_src
+# *** Créer et afficher un texte
+# Maintenant, nous pouvons commencer à configurer l'apparence de notre fenêtre.
 
-Pour afficher du texte dans une fenêtre, nous utilisons la fonction =tkinter.Label()=. Cette fonction prend une suite de paramètres dont seul le premier est obligatoire : c'est la fenêtre dans laquelle le texte doit se placer. Les autres paramètres sont pour configurer l'apparence du texte (y compris le texte en lui-même).
+# Pour afficher du texte dans une fenêtre, nous utilisons la fonction =tkinter.Label()=. Cette fonction prend une suite de paramètres dont seul le premier est obligatoire : c'est la fenêtre dans laquelle le texte doit se placer. Les autres paramètres sont pour configurer l'apparence du texte (y compris le texte en lui-même).
 
-Comme les autres paramètres sont optionnels, il faut les nommer précisément et on peut les écrire dans l'ordre que l'on veut.
+# Comme les autres paramètres sont optionnels, il faut les nommer précisément et on peut les écrire dans l'ordre que l'on veut.
 
-Ensuite, lorsque le texte est configuré, il faut l'insérer dans la fenêtre avec la fonction =pack()=. Cette étape est toujours nécessaire pour afficher quelque chose dans la fenêtre. Il existe d'autres fonctions pour placer les objets dans la fenêtre mais nous les verrons plus tard.
-#+begin_src python
-# Configuration du texte
-texte = tkinter.Label(fenetre, text="Pour dessiner, utilise ta souris en appuyant sur le bouton gauche.")
-# Placement du texte dans la fenêtre
-texte.pack()
-#+end_src
-*** Créer et afficher un canvas
-Un canvas est un objet de tkinter qui permet de dessiner sur une zone donnée. La fonction utilisée est =tkinter.Canvas()=. Tout comme le texte, seul le premier paramètre (la fenêtre) est obligatoire.
-#+begin_src python
-# Configurationn du canvas: width(=longueur)=750 pixels, height(=hauteur)=500 pixels, background(=arrière-plan) blanc
-canvas = tkinter.Canvas(fenetre, width=750, height=500, bg="white")
-# Placement du canvas dans la fenêtre
-canvas.pack()
-#+end_src
-*** Enregistrer la position
-Nous allons maintenant nous intéresser à la logique du programme. Avec tkinter, l'utilisateur peut interagir avec l'interface, et chaque interaction déclenche un "évènement" appelé event. Le principe est donc le suivant :
-1. Définir des fonctions à appeler dans le cas d'évènements précis. Par exemple, nous voulons que notre programme appelle la fonction =quand_clic()= lorsqu'un clic de souris est détecté.
-2. Détecter les évènements qui nous intéressent et les envoyer vers les fonctions associées.
+# Ensuite, lorsque le texte est configuré, il faut l'insérer dans la fenêtre avec la fonction =pack()=. Cette étape est toujours nécessaire pour afficher quelque chose dans la fenêtre. Il existe d'autres fonctions pour placer les objets dans la fenêtre mais nous les verrons plus tard.
+# #+begin_src python
+# # Configuration du texte
+# texte = tkinter.Label(fenetre, text="Pour dessiner, utilise ta souris en appuyant sur le bouton gauche.")
+# # Placement du texte dans la fenêtre
+# texte.pack()
+# #+end_src
+# *** Créer et afficher un canvas
+# Un canvas est un objet de tkinter qui permet de dessiner sur une zone donnée. La fonction utilisée est =tkinter.Canvas()=. Tout comme le texte, seul le premier paramètre (la fenêtre) est obligatoire.
+# #+begin_src python
+# # Configurationn du canvas: width(=longueur)=750 pixels, height(=hauteur)=500 pixels, background(=arrière-plan) blanc
+# canvas = tkinter.Canvas(fenetre, width=750, height=500, bg="white")
+# # Placement du canvas dans la fenêtre
+# canvas.pack()
+# #+end_src
+# *** Enregistrer la position
+# Nous allons maintenant nous intéresser à la logique du programme. Avec tkinter, l'utilisateur peut interagir avec l'interface, et chaque interaction déclenche un "évènement" appelé event. Le principe est donc le suivant :
+# 1. Définir des fonctions à appeler dans le cas d'évènements précis. Par exemple, nous voulons que notre programme appelle la fonction =quand_clic()= lorsqu'un clic de souris est détecté.
+# 2. Détecter les évènements qui nous intéressent et les envoyer vers les fonctions associées.
 
-Tout d'abord, nous allons avoir besoin de 3 variables dans notre programme : =dernierX=, qui stockera la dernière position X, =dernierY=, qui stockera la dernière position Y et =couleur= qui correspondra à la couleur de dessin actuelle.
+# Tout d'abord, nous allons avoir besoin de 3 variables dans notre programme : =dernierX=, qui stockera la dernière position X, =dernierY=, qui stockera la dernière position Y et =couleur= qui correspondra à la couleur de dessin actuelle.
 
-Initialise =dernierX= et =dernierY= à 0. Initialise =couleur= à ="black"= pour que la couleur de départ soit le noir.
+# Initialise =dernierX= et =dernierY= à 0. Initialise =couleur= à ="black"= pour que la couleur de départ soit le noir.
 
-Maintenant, écrivons une fonction =enregistrer_position(event)= nous permettant de suivre les mouvements du pointeur de souris. Le paramètre event contient plein d'informations relatives à l'évènement qui a déclenché l'appel de la fonction.
+# Maintenant, écrivons une fonction =enregistrer_position(event)= nous permettant de suivre les mouvements du pointeur de souris. Le paramètre event contient plein d'informations relatives à l'évènement qui a déclenché l'appel de la fonction.
 
-Voici le code du corps de la fonction :
-#+begin_src python
-global dernierX, dernierY # "global" permet de préciser que dernierX et dernierY sont les variables globales du programme et pas uniquement des variables de la fonction.
-dernierX = event.x
-dernierY = event.y
-# Ces deux lignes enregistrent les position x et y de l'évènement qui a déclenché l'appel de fonction.
-#+end_src
+# Voici le code du corps de la fonction :
+# #+begin_src python
+# global dernierX, dernierY # "global" permet de préciser que dernierX et dernierY sont les variables globales du programme et pas uniquement des variables de la fonction.
+# dernierX = event.x
+# dernierY = event.y
+# # Ces deux lignes enregistrent les position x et y de l'évènement qui a déclenché l'appel de fonction.
+# #+end_src
 
-*** Que faire lorsqu'un clic est détecté ?
-Nous allons créer la fonction qui sera appelée quand l'utilisateur cliquera sur la souris. Elle enregistrera simplement l'emplacement de la souris au moment du clic.
-#+begin_src python
-def quand_clic(event):
-    enregistrer_position(event)
-#+end_src
+# *** Que faire lorsqu'un clic est détecté ?
+# Nous allons créer la fonction qui sera appelée quand l'utilisateur cliquera sur la souris. Elle enregistrera simplement l'emplacement de la souris au moment du clic.
+# #+begin_src python
+# def quand_clic(event):
+#     enregistrer_position(event)
+# #+end_src
 
-Et c'est tout pour le clic !
+# Et c'est tout pour le clic !
 
-*** Que faire lors du déplacement de la souris après le clic ?
-C'est ici que l'on va commencer à dessiner des formes sur le canvas. Pour que l'utilisateur puisse dessiner ce qu'il veut, nous utiliserons simplement une ligne qui se dessinera pixel par pixel. Chaque déplacement déclenchera l'appel de la fonction =quand_bouge(event)=. Cette fonction tracera une ligne entre le dernier point enregistré et le point où se trouve la souris actuellement. Ensuite, elle devra enregistrer la nouvelle position pour préparer le prochain mouvement.
+# *** Que faire lors du déplacement de la souris après le clic ?
+# C'est ici que l'on va commencer à dessiner des formes sur le canvas. Pour que l'utilisateur puisse dessiner ce qu'il veut, nous utiliserons simplement une ligne qui se dessinera pixel par pixel. Chaque déplacement déclenchera l'appel de la fonction =quand_bouge(event)=. Cette fonction tracera une ligne entre le dernier point enregistré et le point où se trouve la souris actuellement. Ensuite, elle devra enregistrer la nouvelle position pour préparer le prochain mouvement.
 
-Définis la fonction =quand_bouge(event)=. Le code à l'intérieur est le suivant :
-#+begin_src python
-# La fonction create_line a 4 parametres obligatoires : les coordonnées du début de la ligne (x, y) et les coordonées de la fin (x, y)
-# Nous ajoutons ensuite le parametre de couleur en utilisant la variable gloable couleur puis nous mettons l'épaisseur de la ligne à 3 pixels.
-canvas.create_line(dernierX, dernierY, event.x, event.y, fill=couleur, width=3)
-#+end_src
-La dernière étape de la fonction est d'enregistrer la nouvelle position de =event=. N'oublie pas d'écrire cette partie (nous l'avons déjà vu précédemment) !
+# Définis la fonction =quand_bouge(event)=. Le code à l'intérieur est le suivant :
+# #+begin_src python
+# # La fonction create_line a 4 parametres obligatoires : les coordonnées du début de la ligne (x, y) et les coordonées de la fin (x, y)
+# # Nous ajoutons ensuite le parametre de couleur en utilisant la variable gloable couleur puis nous mettons l'épaisseur de la ligne à 3 pixels.
+# canvas.create_line(dernierX, dernierY, event.x, event.y, fill=couleur, width=3)
+# #+end_src
+# La dernière étape de la fonction est d'enregistrer la nouvelle position de =event=. N'oublie pas d'écrire cette partie (nous l'avons déjà vu précédemment) !
