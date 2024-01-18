@@ -430,12 +430,12 @@ Pour le moment, cela suffira pour créer des programmes plus intéractifs, mais 
    - Affiche tous les nombres pairs de 0 à 20 en utilisant une boucle =for=.
 
 3. Dans un programme nommé =repetortue.py= :
-   - Crée deux variables : =distance= et =angle= et demande à l'utilisateur d'entrer leurs valeurs (nombres entiers uniquement).
-   - Dans une boucle =for=, fais avancer la tortue de =distance= pixels et fais-la tourner de =angle= degrés.
-   - Essaie différentes valeurs pour =distance= et =angle= pour voir ce qu'il se passe de différent.
+   - Crée trois variables : =distance=, =angle= et =repetitions= et demande à l'utilisateur d'entrer leurs valeurs (nombres entiers uniquement).
+   - Dans une boucle =for=, fais avancer =repetitions= fois la tortue de =distance= pixels et fais-la tourner (droite ou gauche, comme tu veux) de =angle= degrés.
+   - Essaie différentes valeurs pour =distance=, =angle= et =repetitions= pour voir ce qu'il se passe de différent.
 
 4. Dans un programme nommé =cercle.py= :
-   - Fais dessiner à une tortue un cercle à l'aide d'une boucle =for=.
+   - Fais dessiner à une tortue un cercle à l'aide d'une boucle =for=. L'utilisation de la fonction =circle= est interdite ici.
 
 5. Dans un programme =spirale.py= :
    - Fais dessiner à une tortue une spirale à l'aide d'une boucle =for=.
@@ -616,11 +616,14 @@ Tu as maintenant créé les 3 premières fonctions de ton propre module, que tu 
 :PROPERTIES:
 :custom_id: chapitre7bis_cours17b
 :END:
-Nous avons vu précédemment les bases du module turtle. En réalité, il existe encore beaucoup de fonctionnalités que nous n'avons pas encore explorées.
+#+attr_html: :target _blank
+Nous avons vu précédemment les bases du module turtle. En réalité, il existe encore beaucoup de fonctionnalités que nous n'avons pas encore explorées. Pour plus de détails et si tu cherches quelque-chose qui n'est pas expliqué ici, voici la documentation officielle de turtle : [[https://docs.python.org/fr/3/library/turtle.html#turtle-graphics-reference]]
 *** Les couleurs
-Pour commencer, nous pouvons changer toutes les couleurs : l'arrière-plan, le trait et même le remplissage ! Turtle propose beaucoup de couleurs et libre à toi de les essayer. En voici une liste non-exhaustive.
-#+attr_html: :alt colors turtle  :align center :class img :width 570px :height 624hpx :display block
-[[./img/colors_turtle.jpg]]
+Pour commencer, nous pouvons changer toutes les couleurs : l'arrière-plan, le trait et même le remplissage ! Turtle propose beaucoup de couleurs et libre à toi de les essayer. En voici une liste.
+#+attr_html: :alt colors turtle  :align center :class img :width 1036px :height 588px :display block
+[[./img/turtle_colors.png]]
+
+Il existe aussi un site pour rapidement trouver le nom d'une couleur turtle : [[https://trinket.io/docs/colors]]
 
 *** Changer la couleur d'arrière-plan
 La fonction à utiliser pour changer la couleur d'arrière-plan est :
@@ -693,7 +696,6 @@ Une fois que tu veux que la tortue dessine à nouveau, utilise simplement la fon
 #+begin_src python
 t.down() # down veut dire "bas" en anglais
 #+end_src
-
 *** Dessiner un cercle
 Il est possible de dessiner un cercle rapidement a l'aide de la fonction
 #+begin_src python
@@ -709,17 +711,41 @@ Pour l'afficher à nouveau, c'est à l'aide de la fonction
 #+begin_src python
 t.showturtle()
 #+end_src
-*** Mon beau sapin ...
-Maintenant, mets en oeuvre tout ce que l'on vient de voir en reproduisant ce sapin de noël. Ce n'est pas grave s'il n'est pas exactement similaire, mais applique-toi à le faire le plus ressemblant possible.
+*** Se déplacer directement à des coordonnées précises
+On peut définir n'importe quel point de l'écran en utilisant les coordonnées. Les *abscisses x* indiquent la position horizontale, tandis que les *ordonnées y* indiquent la position verticale.
 
-#+attr_html: :alt xmas tree  :align center :class img :width 701px :height 701hpx :display block
+#+attr_html: :alt turtle coordinates :align center :class img :width 405px :height 406px :display block
+[[./img/turtle_coords.png]]
+
+La fonction =goto()= de turtle permet de "téléporter" directement la tortue à des coordonées précises. En ajoutant l'utilisation des fonctions =up()= et =down()=, le déplacement se fera sans laisser de trace.
+
+Exemple :
+#+begin_src python
+import turtle
+pen = turtle.Pen()
+pen.up()
+pen.goto(-350, 23)
+pen.down()
+pen.forward(100)
+# etc
+#+end_src
+*** Exercices
+Rendez-vous au cours 18b pour commencer à mettre en application toutes tes nouvelles connaissances.
+** Cours 18b : Exercice turtle
+:PROPERTIES:
+:custom_id: chapitre7bis_cours18b
+:END:
+*** Mon beau sapin ...
+Dans un programme nommé =mon_beau_sapin.py=, mets en oeuvre tout ce que l'on vient de voir en reproduisant ce sapin de noël. Ce n'est pas grave s'il n'est pas exactement similaire, mais applique-toi à le faire le plus ressemblant possible.
+
+#+attr_html: :alt xmas tree  :align center :class img :width 480px :height 375px :display block
 [[./img/xmas_tree.png]]
 
 Indice : les étages du sapin sont en fait des triangles superposés de tailles différentes.
 
-** Cours 18b : Turtle, mais avec des fonctions
+** Cours 19b : Turtle, mais avec des fonctions
 :PROPERTIES:
-:custom_id: chapitre7bis_cours18b
+:custom_id: chapitre7bis_cours19b
 :END:
 *** Manuel
 - *"Recycler du code avec des fonctions et des modules"*, p.87-88
@@ -845,6 +871,7 @@ Le caractère " o " apparaît 2 fois.
 Le caractère " n " apparaît 1 fois.
 Le caractère " j " apparaît 1 fois.
 Le caractère " u " apparaît 1 fois.
+
 Le caractère " r " apparaît 1 fois.
 #+end_example
 
