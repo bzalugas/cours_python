@@ -719,7 +719,7 @@ On peut définir n'importe quel point de l'écran en utilisant les coordonnées.
 
 La fonction =goto()= de turtle permet de "téléporter" directement la tortue à des coordonées précises. En ajoutant l'utilisation des fonctions =up()= et =down()=, le déplacement se fera sans laisser de trace.
 
-Exemple :
+*Exemple :*
 #+begin_src python
 import turtle
 pen = turtle.Pen()
@@ -728,6 +728,25 @@ pen.goto(-350, 23)
 pen.down()
 pen.forward(100)
 # etc
+#+end_src
+*** Connaître les coordonnées actuelles de la tortue
+On peut récupérer les coordonnées de la tortue grâce à la fonction =pos()= de turtle. Cette fonction renvoie un *tuple* de la forme =(abscisse x, ordonnée y)=.
+
+*Exemple :*
+#+begin_src python
+import turtle
+pen = turtle.Pen()
+position = pen.position()
+print(position[0]) # affiche l'abscisse x de la tortue
+print(position[1]) # affiche l'ordonnée y de la tortue
+#+end_src
+*** Définir l'orientation de la tortue
+Pour changer l'orientation de la tortue, nous avons vu les fonctions =right(angle)= et =left(angle)=. Parfois, nous avons besoin d'orienter directement la tortue vers une direction donnée, par exemple pour pouvoir remettre l'orientation à 0. La fonction qui sert à faire cela est la fonction =setheading(direction)=. Le paramètre =direction= est un nombre entier.
+*Exemple :*
+#+begin_src python
+import turtle
+pen = turtle.Pen()
+pen.setheading(90)
 #+end_src
 *** Exercices
 Rendez-vous au cours 18b pour commencer à mettre en application toutes tes nouvelles connaissances.
@@ -752,7 +771,7 @@ Indice : les étages du sapin sont en fait des triangles superposés de tailles 
 - *"Utiliser des fonctions"*, p.88-89
 - *"Qu'est-ce qu'une fonction ?"*, p.89-90
 - *"Variables et portée"*, p.90-92
-*** Exercices
+*** Exercice
 Le but du premier exercice est de pouvoir dessiner un flocon de neige sans se répéter, grâce aux fonctions.
 
 Voici ce qu'on veut obtenir :
@@ -794,7 +813,39 @@ Dans un programme nommé =flocon.py= :
     - Dessiner une branche
     - Tourner à droite de 60\deg
 - Enfin, appelle la fonction =flocon()= et observe le flocon se dessiner !
+** Cours 20b : Les fonctions avec des arguments
+Nous avons vu dans le chapitre précédent comment créer et utiliser des fonctions :
+#+begin_src python
+def nom_fonction(): #Création de la fonction
+    #Le code de la fonction
 
+nom_fonction() # Appel de la fonction pour que le code dans la fonctions soit lancé.
+#+end_src
+
+Si tu as bien lu les chapitres du manuel sur les fonctions, tu as probablement vu que les fonctions peuvent aussi s'utiliser avec des *paramètres*. Si ce n'est pas le cas, revois les chapitres du manuel indiqués dans le chapitre précédent.
+
+Nous allons donc utiliser les fonctions et les paramètres pour refaire le sapin du début de manière plus simple et plus rapide.
+
+*** Exercice
+Dans un programme nommé =sapin_fonctions.py= :
+- Crée une fonction nommée =tronc= qui prend en paramètres =largeur= et =hauteur=, qui correspondent respectivement à la largeur et la hauteur du tronc que l'on veut dessiner.
+- Cette fonction doit :
+  - Orienter la tortue à 0 (voir chapitre 17b)
+  - Commencer le remplissage de la forme
+  - Dessiner un rectangle qui a une largeur et une hauteur correspondant aux paramètres
+  - Finir le remplissage de la forme
+- Crée une fonction nommée =etage_sapin= qui prend en paramètre =taille=, qui correspond à la taille de l'étage que l'on veut dessiner.
+- Cette fonction doit permettre de dessiner un étage (un triangle):
+  - Commencer le remplissage de la forme
+  - Récupérer la position actuelle de la tortue (voir chapitre 17b) dans une variable =position=
+  - Placer la tortue aux coordonnées suivantes (voir chapitre 17b) : en abscisse (x), se placer à la position x actuelle plus =taille=, en ordonnée (y) rester à la même position.
+  - Placer la tortue aux coordonnées suivantes : position x de départ, c'est-à-dire =position[0]=, position y de départ plus =taille=
+  - Placer la tortue aux coordonnées suivantes : position x de départ moins =taille=, position y de départ.
+  - Finir le remplissage de la forme
+- Maintenant que tu as préparer les fonctions, utilise-les dans ton programme avec les valeurs de ton choix et au bon moment pour dessiner un sapin. Tu peux bien-sûr t'aider du sapin du *chapitre 18b* pour les couleurs, les tailles, etc, mais tu dois utiliser les fonctions que tu as créées pour dessiner le tronc et les étages.
+
+  *BONUS*
+Ajoute dans le programme une fonction nommée =etoile(taille)= pour dessiner l'étoile au sommet du sapin. Utilise cette fonction à la suite du programme qui dessine le sapin.
 * Chapitre 8 : Mise en pratique 2
 :PROPERTIES:
 :custom_id: chapitre8
@@ -1455,213 +1506,15 @@ Désormais, il ne nous reste plus qu'à lancer le jeu : appelle simplement la fo
 
 Quand tu vas tester le jeu, il est très fort probable qu'il y ait des "bugs" et que certaines choses ne fonctionnent pas : c'est normal pour un gros programme. Ne t'inquiètes pas et n'hésite pas à faire plein de tests pour chaque fonction pour trouver d'où vient le problème.
 
-# * Intelligence Artificielle du Puissance 4
-# :PROPERTIES:
-# :custom_id: ia_puissance4
-# :END:
-# ** Théorie
-# :PROPERTIES:
-# :custom_id: ia_puissance4_theorie
-# :END:
-# *** Ressources
-# #+attr_html: :target _blank
-# [[https://www.youtube.com/watch?v=0lQxdR6IqCA&t=103s]]
+# * Interfaces graphiques avec Tkinter
+# Pour ce chapitre, il faut avoir vu et compris ce que sont les classes en Python.
+# *** Manuel
+# *"De meilleurs graphismes avec Tkinter"*, p.167
+# *** Exercices
+# Dans un programme nommé "visage_tkinter.py", refais l'exercice "visage.py" mais en utilisant cette fois Tkinter.
 
-# #+attr_html: :target _blank
-# Un cours de fac plutôt bien résumé : [[file:./manuel/Minmax.pdf][MinMax]]
-
-
-# # Nous allons aborder dans ce chapitre une catégorie d'intelligences artificielles : celle dédiée aux jeux de réflexion tour à tour et à deux joueurs.
-# # Il faudra comprendre le mieux possible certaines notions pour pouvoir finir notre intelligence artificielle du Puissance 4 :
-# # - La récursion : un fonction qui s'appelle elle-même.
-# # - Les arbres de recherche : manière de représenter toutes les possibilités d'une situation et anticiper les coups suivants.
-
-# ** Code
-# :PROPERTIES:
-# :custom_id: ia_puissance4_code
-# :END:
-# *** Étape 1 : Tous les coups possibles
-# Crée une fonction qui doit retourner la liste de tous les coups possibles au prochain tour. Chaque élément de la liste sera un tuple correspondant à la ligne et la colonne où le jeton peut être placé : *(ligne, colonne)*.
-
-# *** Étape 2 : Tous les alignements
-# Crée une fonction qui retourne la liste de tous les alignements de 4 cases de la grille. La liste contiendra donc des listes de 4 éléments. Les alignements possibles sont :
-# - En ligne
-# - En colonne
-# - En diagonale vers la droite
-# - En diagonale vers la gauche
-
-# *** Étape 3 : Fonction d'évaluation
-# Crée une fonction qui devra attribuer un "score" à une grille pour un joueur donné. Cette fonction permettra à l'IA de savoir quel coup lui rapporte le plus de points. Elle sera utilisée plus tard dans la fonction chargée d'anticiper quel coup amènera au meilleur résultat.
-# Voici quelques indications :
-
-# Le score varie en fonction des alignements de 4 encore possibles pour le joueur donné en paramètres. C'est ici que tu auras besoin de la fonction de l'étape 2. Sers-toi de la liste pour parcourir chaque alignement et vérifier si le joueur en paramètre peut encore aligner 4 pions dedans.
-
-# S'il peut, alors il faut compter combien de pions sont déjà présents dans l'alignement. Si c'est l'autre joueur qui peut, il faut aussi sauvegarder son score dans une autre variable. Attention, il ne faut pas ajouter 1,2 ou 3 au score car dans ce cas on ne peut pas savoir si 3 correspond à 3 pions alignés ou 3 pions dans 3 alignements différents. Pour contrer ce problème, voici la grille du score à ajouter en fonction du nombre de pions alignés :
-
-# | Pions alignés |   Score  |
-# |---------------+----------|
-# |             0 |       +0 |
-# |             1 |       +1 |
-# |             2 |     +100 |
-# |             3 |   +10000 |
-# |             4 | +1000000 |
-
-# Quand les scores des deux joueurs ont été calculés, la fonction devra renvoyer le score du joueur en paramètre moins le score de l'adversaire.
-
-# ** Un peu de cours
-# *** Recherche
-# Le jeu du Puissance 4 est un jeu dit *déterministe* et *complètement observable*. Cela siginifie que l'agent sait dans quel état il est et dans quel état il sera (en fonction des actions qu'il fait). La solution de ce type de problème est une suite d'actions (par exemple "jouer dans la colonne n°3").
-
-# Pour trouver la meilleure solution possible dans un état donné, l'agent doit connaître toutes les possibilités de jeu et leurs conséquences. Nous utilisons pour imager cela un *arbre de recherche*. Cet arbre de recherche permet de parcourir toutes les possibilités de jeu.
-
-# Exemple de l'arbre de recherche du morpion (ou tic-tac-toe) :
-
-# [[./img/arbre-recherche.png]]
-
-# Pour pouvoir générer cet arbre de recherche pour notre IA, nous avons créé une fonction qui retourne tous les coups possibles, c'est-à-dire tous les ensembles =(ligne, colonne)= correspondants aux endroits où le prochain joueur peut placer son pion.
-
-# *** Algorithme Min-Max
-# L'algorithme Min-Max est un algorithme utilisé uniquement pour la programmation d'intelligences artificielles de jeux. Le principe est le suivant:
-# - Quand c'est au tour de l'agent de jouer (notre IA), il doit trouver la solution qui lui offrira le plus de chances de gagner. Pour ce faire, il va devoir *tester tous les coups* qu'il peut jouer dans l'*état actuel* de la grille.
-# - Pour chaque coup possible, il vérifie le résultat (a-t-il gagné ?) et va tester *tous les coups que l'adversaire pourra jouer ensuite*.
-# - L'agent continue de "simuler" la partie jusqu'à ce qu'il arrive dans un *état final*, c'est-à-dire un état où soit un des joueurs a gagné soit la grille est remplie.
-# - L'agent doit recommencer cette simulation de partie pour tous les coups possibles à chaque fois.
-
-# C'est ici que nous aurons besoin d'utiliser la récursion : l'agent devra tester toutes les parties possibles pour déterminer quel coup amène la partie vers sa victoire. Chaque "étape" ou "étage" dans l'arbre de recherche correspond à ce que l'on appelle *la profondeur*. Plus l'agent va en profondeur, plus le temps de recherche sera long car à chaque prondeur, cela ajoute encore plus de solutions à vérifier.
-
-# *L'algorithme Min-Max est donc une manière de générer et explorer l'arbre de recherche associé à la partie de Puissance 4.*
-
-# Le fonctionnement de l'algorithme est le suivant :
-# - Max et Min sont les deux joueurs.
-# - Max joue en premier, Min en second.
-# - Le joueur Max (qui correspond à l'agent) cherche à obtenir le score maximal avec son coup.
-# - Le joueur Min (qui correspond au joueur humain) cherche à obtenir le score minimal avec son coup.
-
-# Le Puissance 4 est un *jeu à somme nulle*. Nous pouvons traduire cela par le fait que :
-# - Quand le joueur 1 gagne, le joueur 2 a perdu.
-# - Quand le joueur 2 gagne, le joueur 1 a perdu.
-# - Quand il y a match nul, aucun des joueurs n'a gagné.
-# Nous avons déjà pu remarquer ça quand nous avons programmé les fonctions pour déterminer le vainqueur d'une partie : quand on trouve l'alignement d'un joueur, nous n'avons plus besoin de vérifier le reste de la grille.
-
-# *Pour l'algorithme Min-Max, nous aurons donc trois "scores" possibles pour une grille* :
-# - 1 si Max gagne.
-# - -1 si Min gagne.
-# - 0 si aucun des deux ne gagne.
-
-# Le pseudo-code de l'algorithme Min-Max se trouve à la page 12 du cours dans la partie *Ressources*.
-
-# ** Retour au code
-# Pour notre jeu, nous utiliserons deux fonctions : =min_max(joueur_max, is_tour_max, profondeur)= et =trouver_meilleur_coup(joueur_max, profondeur)=.
-
-# - La fonction =trouver_meilleur_coup(...)= doit :
-#   - Récupérer tous les coups possibles.
-#   - Initialiser =meilleur_score= à =-math.inf=.
-#   - Initialiser =meilleur_coup= à =None=.
-#   - Pour chaque coup possible :
-#     - Placer le jeton dans la grille aux coordonnées du coup.
-#     - Récupérer le score du coup grâce à =min_max=.
-#     - Effacer le coup dans la grille.
-#     - Garder en mémoire le meilleur score et le meilleur coup.
-#   - Il faudra retourner à la fin les coordonnées du meilleur coup trouvé.
-
-# - Pour la fonction =min_max(...)=, nous pouvons utiliser le pseudo-code en page 12 du cours dans *Ressources*.
-
-
-
-
-# # # La programmation d'une IA pour jeu de réflexion est un peu différente d'une IA pour résoudre d'autres types de problèmes. Notamment, un temps limite est imposé : si l'ordinateur a besoin de 3 jours pour jouer un coup, ce n'est pas intéressant pour notre besoin. Nous aurons donc besoin d'approximer le "but".
-
-
-
-
-# # * IA (OLD)
-# # Ce chapitre aborde des notions complexes qui demandent un niveau très avancé. Il faudra notamment être à l'aise avec la *récursion*.
-# # # ** Qu'est-ce qu'une intelligence artificielle (IA) ?
-# # # *** Définition du Larousse
-# # # Ensemble de théories et de techniques mises en œuvre en vue de réaliser des machines capables de simuler l’intelligence humaine
-
-# # # En réalité, nous retrouvons plusieurs définitions, qui ont été modifiés au fils des années et des avancées scientifiques :
-# # # *** Marvin Lee Minsky (1967)
-# # # Construction de programmes informatiques qui s’adonnent à des tâches qui sont, pour l’instant, accomplies de façon plus satisfaisantes par des êtres humains car elles demandent des processus mentaux de haut niveau tels que l’apprentissage perceptuel, l’organisation de la mémoire et le raisonnement critique.
-# # # *** Bellman (1978)
-# # # L’automatisation d’activités que nous associons à la pensée humaine, comme la prise de décision, la résolution de problèmes, l’apprentissage...
-# # # *** Winston (1992)
-# # # L’étude des moyens informatiques qui rendent possible la perception, les raisonnement et l’action.
-# # # *** Konieczny (2020)
-# # # L’étude des moyens qui permettent d’automatiser les processus de perception, d’apprentissage, de raisonnement, de décision et d’action.
-
-# # # *** Deux types d'IA
-# # # + IA forte : Technologie visant à reproduire voire dépasser l’intelligence humaine dans toutes ses composantes. Ce type d'IA fait partie pour l'instant de la science-fiction : aucun exemple concret et réel de l'IA forte n'est sorti des laboratoires.
-# # # + IA faible : Technologie visant à reprendre le plus fidèlement possible voire améliorer le résultat d’un comportement spécifique prévu à l’avance. Toutes les formes de systèmes d'IA aujourd'hui connus répondent à ces caractérisitiques.
-
-# # # ** Structure du chapitre
-# # Nous n'aborderons pas toute la théorie de la programmation d'intelligences artificielles ici mais nous nous intéresserons seulement au cas des jeux.
-
-# # # Pour construire l'IA d'un jeu de réflexion, nous allons étudier plusieurs notions :
-# # # - Tout d'abord, nous verrons ce qu'est la *recherche*. Nous aborderons notamment les *arbres de recherche*.
-# # # - Ensuite, nous aborderons brièvement le principe de *l'heuristique*.
-# # # - Enfin, nous verrons comment nous pouvons appliquer tout cela pour programmer une *IA de jeu de réflexion*.
-
-# # ** Quelques définitions
-# # Il est important de connaître et comprendre quelques termes que nous utiliserons dans ce cours.
-# # - *Agent* : entité qui perçoit et agit dans un environnement pour accomplir ses buts en fonction de ses capacités et de ses croyances (ou de ses connaissances). Pour faire simple, quand nous parlerons d'agent, ce sera *dans notre cas* pour décrire l'ordinateur.
-# # - *État* : situation dans laquelle un agent se trouve.
-# # - *Déterministe* : le hasard n'entre pas en jeu.
-# # - *Information parfaite (ou complètement observable)* : les deux joueurs ont connaissance de tous les éléments du jeu (contrairement au poker, par exemple, où on ne connaît pas les cartes des adversaires).
-
-# # ** Recherche
-# # Le jeu du Puissance 4 est un jeu dit *déterministe* et *complètement observable*. Cela siginifie que l'agent sait dans quel état il est et dans quel état il sera (en fonction des actions qu'il fait). La solution de ce type de problème est une suite d'actions (par exemple "jouer dans la colonne n°3").
-
-# # Pour trouver la meilleure solution possible dans un état donné, l'agent doit connaître toutes les possibilités de jeu et leurs conséquences. Nous utilisons pour imager cela un *arbre de recherche*. Cet arbre de recherche permet de parcourir toutes les possibilités de jeu.
-
-# # Exemple de l'arbre de recherche du morpion (ou tic-tac-toe) :
-
-# # [[./img/arbre-recherche.png]]
-
-# # # Pour pouvoir générer cet arbre de recherche pour notre IA, nous aurons besoin d'ajouter à notre Puissance 4 une *fonction qui retourne tous les coups possibles, c'est-à-dire tous les ensembles (ligne,colonne) correspondants aux endroits où le prochain joueur peut placer son pion.*
-
-# # ** Algorithme Min-Max
-# # L'algorithme Min-Max est un algorithme utilisé uniquement pour la programmation d'intelligences artificielles de jeux. Le principe est le suivant:
-# # - Quand c'est au tour de l'agent de jouer (notre IA), il doit trouver la solution qui lui offrira le plus de chances de gagner. Pour ce faire, il va devoir *tester tous les coups* qu'il peut jouer dans l'*état actuel* de la grille.
-# # - Pour chaque coup possible, il vérifie le résultat (a-t-il gagné ?) et va tester *tous les coups que l'adversaire pourra jouer ensuite*.
-# # - L'agent continue de "simuler" la partie jusqu'à ce qu'il arrive dans un *état final*, c'est-à-dire un état où soit un des joueurs a gagné ou alors la grille est remplie.
-# # - L'agent doit recommencer cette simulation de partie pour tous les coups possibles à chaque fois.
-
-# # C'est ici que nous aurons besoin d'utiliser la récursion : l'agent devra tester toutes les parties possibles pour déterminer quel coup amène la partie vers sa victoire. Chaque "étape" ou "étage" dans l'arbre de recherche correspond à ce que l'on appelle *la profondeur*. Plus l'agent va en profondeur, plus le temps de recherche sera long car à chaque prondeur, cela ajoute encore plus de solutions à vérifier.
-
-# # *L'algorithme Min-Max est donc une manière de générer et explorer l'arbre de recherche associé à la partie de Puissance 4.*
-
-# # Le fonctionnement de l'algorithme est le suivant :
-# # - Max et Min sont les deux joueurs.
-# # - Max joue en premier, Min en second.
-# # - Le joueur Max (qui correspond à l'agent) cherche à obtenir le score maximal avec son coup.
-# # - Le joueur Min (qui correspond au joueur humain) cherche à obtenir le score minimal avec son coup.
-
-# # Le Puissance 4 est un *jeu à somme nulle*. Nous pouvons traduire cela par le fait que :
-# # - Quand le joueur 1 gagne, le joueur 2 a perdu.
-# # - Quand le joueur 2 gagne, le joueur 1 a perdu.
-# # - Quand il y a match nul, aucun des joueurs n'a gagné.
-# # Nous avons déjà pu remarquer ça quand nous avons programmé les fonctions pour déterminer le vainqueur d'une partie : quand on trouve l'alignement d'un joueur, on n'a plus besoin de vérifier le reste de la grille.
-
-# # *Pour l'algorithme Min-Max, nous aurons donc trois "scores" possibles pour une grille* :
-# # - 1 si Max gagne.
-# # - -1 si Min gagne.
-# # - 0 si aucun des deux ne gagne.
-
-# # # Voici le pseudo-code de l'algorithme Min-Max :
-
-
-# # # La programmation d'une IA pour jeu de réflexion est un peu différente d'une IA pour résoudre d'autres types de problèmes. Notamment, un temps limite est imposé : si l'ordinateur a besoin de 3 jours pour jouer un coup, ce n'est pas intéressant pour notre besoin. Nous aurons donc besoin d'approximer le "but".
-
-# # * Interfaces graphiques avec Tkinter
-# # Pour ce chapitre, il faut avoir vu et compris ce que sont les classes en Python.
-# # *** Manuel
-# # *"De meilleurs graphismes avec Tkinter"*, p.167
-# # *** Exercices
-# # Dans un programme nommé "visage_tkinter.py", refais l'exercice "visage.py" mais en utilisant cette fois Tkinter.
-
-# # Dans un programme nommé "balle_rebondissante.py", affiche à l'aide de Tkinter un rectangle dans lequel une balle rebondit sur tous les bords.
-# # Adapte l'exercice "carte_identite.py" pour que l'utilisateur entre les informations dans des champs de texte et qu'il clique sur un bouton OK pour les valider.
+# Dans un programme nommé "balle_rebondissante.py", affiche à l'aide de Tkinter un rectangle dans lequel une balle rebondit sur tous les bords.
+# Adapte l'exercice "carte_identite.py" pour que l'utilisateur entre les informations dans des champs de texte et qu'il clique sur un bouton OK pour les valider.
 
 # * Graphismes avec tkinter
 # :PROPERTIES:
