@@ -63,18 +63,18 @@ La méthode grid sert à positionner des éléments (=widgets) dans notre écran
 <h3 id="etapes">Etape par étape</h3>
 <div class="outline-text-3" id="text-etapes">
 </div>
-<div id="outline-container-org984da6a" class="outline-4">
-<h4 id="org984da6a">Pré-requis</h4>
-<div class="outline-text-4" id="text-org984da6a">
+<div id="outline-container-orge730c3d" class="outline-4">
+<h4 id="orge730c3d">Pré-requis</h4>
+<div class="outline-text-4" id="text-orge730c3d">
 <p>
 Il faut déjà avoir initialisé ta grille de puissance 4 avant de paramétrer l'affichage car tu auras besoin de la taille de la grille et des éventuelles valeurs des cases.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org207d121" class="outline-4">
-<h4 id="org207d121">Initialisation</h4>
-<div class="outline-text-4" id="text-org207d121">
+<div id="outline-container-org870ecd0" class="outline-4">
+<h4 id="org870ecd0">Initialisation</h4>
+<div class="outline-text-4" id="text-org870ecd0">
 <ol class="org-ol">
 <li>Crée un objet Tk() (<code>window = tkinter.Tk()</code>).</li>
 <li>Configure la fenêtre (titre, fond, etc).</li>
@@ -83,9 +83,9 @@ Il faut déjà avoir initialisé ta grille de puissance 4 avant de paramétrer l
 </div>
 </div>
 
-<div id="outline-container-org111aa74" class="outline-4">
-<h4 id="org111aa74">Création des widgets</h4>
-<div class="outline-text-4" id="text-org111aa74">
+<div id="outline-container-org5dfcf57" class="outline-4">
+<h4 id="org5dfcf57">Création des widgets</h4>
+<div class="outline-text-4" id="text-org5dfcf57">
 <ol class="org-ol">
 <li><p>
 A l'aide d'une double boucle imbriquée (pour parcourir la grille de puissance 4), il faut pour chaque case de la grille créer une cellule pour ton affichage (une cellule sera un Label()). Exemple à l'intérieur de la boucle:
@@ -146,9 +146,9 @@ Au moment de créer les formes dans le canvas, tu peux les stocker dans une list
 On peut détecter assez facilement sur quelle forme était la souris lorsqu'elle a déclenché l'évènement <code>'&lt;Button-1&gt;'</code> en utilisant la méthode disponible dans notre canvas <code>canvas.find_closest(x,y)</code>.
 </p>
 </div>
-<div id="outline-container-orgab645cd" class="outline-4">
-<h4 id="orgab645cd">Démonstration</h4>
-<div class="outline-text-4" id="text-orgab645cd">
+<div id="outline-container-orgced8543" class="outline-4">
+<h4 id="orgced8543">Démonstration</h4>
+<div class="outline-text-4" id="text-orgced8543">
 <ul class="org-ul">
 <li><p>
 Tu peux utiliser la méthode bind directement dans le canvas après l'avoir créé :
