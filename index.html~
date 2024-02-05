@@ -110,6 +110,12 @@
 <li><a href="#puissance4_etape8">Étape 8 : Lancement du jeu !</a></li>
 </ul>
 </li>
+<li><a href="#tkinter">Graphismes avec tkinter</a>
+<ul>
+<li><a href="#tkinter_ressources">Ressources</a></li>
+<li><a href="#canvas">Peindre sur une toile</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </nav>
@@ -195,9 +201,9 @@ Une fois les exercices d'un cours terminés, appelle le professeur pour qu'il vi
 <h3 id="chapitre1_cours1">Cours 1 : Opérateurs arithmétiques</h3>
 <div class="outline-text-3" id="text-chapitre1_cours1">
 </div>
-<div id="outline-container-orgdba7e88" class="outline-4">
-<h4 id="orgdba7e88">Manuel</h4>
-<div class="outline-text-4" id="text-orgdba7e88">
+<div id="outline-container-org5879c90" class="outline-4">
+<h4 id="org5879c90">Manuel</h4>
+<div class="outline-text-4" id="text-org5879c90">
 <ul class="org-ul">
 <li><b>"Calculer avec Python"</b>, p.22-23</li>
 <li><b>"Les opérateurs de Python"</b>, p.23</li>
@@ -205,9 +211,9 @@ Une fois les exercices d'un cours terminés, appelle le professeur pour qu'il vi
 </ul>
 </div>
 </div>
-<div id="outline-container-org9077355" class="outline-4">
-<h4 id="org9077355">Exercices</h4>
-<div class="outline-text-4" id="text-org9077355">
+<div id="outline-container-org889b6c6" class="outline-4">
+<h4 id="org889b6c6">Exercices</h4>
+<div class="outline-text-4" id="text-org889b6c6">
 <p>
 <b>Pour chaque exercice, il faut créer un nouveau programme.</b>
 </p>
@@ -230,18 +236,18 @@ Une fois les exercices d'un cours terminés, appelle le professeur pour qu'il vi
 <h3 id="chapitre1_cours2">Cours 2 : Variables</h3>
 <div class="outline-text-3" id="text-chapitre1_cours2">
 </div>
-<div id="outline-container-org87cafb6" class="outline-4">
-<h4 id="org87cafb6">Manuel</h4>
-<div class="outline-text-4" id="text-org87cafb6">
+<div id="outline-container-orga1944c2" class="outline-4">
+<h4 id="orga1944c2">Manuel</h4>
+<div class="outline-text-4" id="text-orga1944c2">
 <ul class="org-ul">
 <li><b>"Les variables sont comme des étiquettes"</b>, p.25-26</li>
 <li><b>"Utiliser les variables"</b>, p.26-29</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org340ad78" class="outline-4">
-<h4 id="org340ad78">Exercices</h4>
-<div class="outline-text-4" id="text-org340ad78">
+<div id="outline-container-org67971a8" class="outline-4">
+<h4 id="org67971a8">Exercices</h4>
+<div class="outline-text-4" id="text-org67971a8">
 <ol class="org-ol">
 <li>Dans un programme nommé <code>variables.py</code> :
 <ul class="org-ul">
@@ -263,9 +269,9 @@ Une fois les exercices d'un cours terminés, appelle le professeur pour qu'il vi
 <h3 id="chapitre2_cours3">Cours 3 : Chaînes de caractères 1</h3>
 <div class="outline-text-3" id="text-chapitre2_cours3">
 </div>
-<div id="outline-container-org55e7535" class="outline-4">
-<h4 id="org55e7535">Manuel</h4>
-<div class="outline-text-4" id="text-org55e7535">
+<div id="outline-container-org97e880d" class="outline-4">
+<h4 id="org97e880d">Manuel</h4>
+<div class="outline-text-4" id="text-org97e880d">
 <ul class="org-ul">
 <li><b>"Les chaînes"</b>, p.32</li>
 <li><b>"Créer des chaînes"</b>, p.32-33</li>
@@ -273,9 +279,9 @@ Une fois les exercices d'un cours terminés, appelle le professeur pour qu'il vi
 </ul>
 </div>
 </div>
-<div id="outline-container-orgba1fe34" class="outline-4">
-<h4 id="orgba1fe34">Exercices</h4>
-<div class="outline-text-4" id="text-orgba1fe34">
+<div id="outline-container-orgec12fa6" class="outline-4">
+<h4 id="orgec12fa6">Exercices</h4>
+<div class="outline-text-4" id="text-orgec12fa6">
 <ol class="org-ol">
 <li>Dans un programme nommé <code>prenom_nom.py</code> :
 <ul class="org-ul">
@@ -304,18 +310,18 @@ Une fois les exercices d'un cours terminés, appelle le professeur pour qu'il vi
 <h3 id="chapitre2_cours4">Cours 4 : Chaînes de caractères 2</h3>
 <div class="outline-text-3" id="text-chapitre2_cours4">
 </div>
-<div id="outline-container-org73366fb" class="outline-4">
-<h4 id="org73366fb">Manuel</h4>
-<div class="outline-text-4" id="text-org73366fb">
+<div id="outline-container-orgaa09bd5" class="outline-4">
+<h4 id="orgaa09bd5">Manuel</h4>
+<div class="outline-text-4" id="text-orgaa09bd5">
 <ul class="org-ul">
 <li><b>"Insérer des valeurs dans des chaînes"</b>, p.36-37</li>
 <li><b>"Multiplier des chaînes"</b>, p.37-38</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org81d351c" class="outline-4">
-<h4 id="org81d351c">Exercices</h4>
-<div class="outline-text-4" id="text-org81d351c">
+<div id="outline-container-org37346ec" class="outline-4">
+<h4 id="org37346ec">Exercices</h4>
+<div class="outline-text-4" id="text-org37346ec">
 <ol class="org-ol">
 <li>Dans un programme nommé <code>prenom_nom_mieux.py</code> :
 <ul class="org-ul">
@@ -353,17 +359,17 @@ Une fois les exercices d'un cours terminés, appelle le professeur pour qu'il vi
 <h3 id="chapitre2_cours5">Cours 5 : Listes 1</h3>
 <div class="outline-text-3" id="text-chapitre2_cours5">
 </div>
-<div id="outline-container-orgbc25c03" class="outline-4">
-<h4 id="orgbc25c03">Manuel</h4>
-<div class="outline-text-4" id="text-orgbc25c03">
+<div id="outline-container-org3fbbd8f" class="outline-4">
+<h4 id="org3fbbd8f">Manuel</h4>
+<div class="outline-text-4" id="text-org3fbbd8f">
 <ul class="org-ul">
 <li><b>"Plus puissantes que les chaînes : les listes"</b>, p.38-41</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org0bfa89e" class="outline-4">
-<h4 id="org0bfa89e">Exercices</h4>
-<div class="outline-text-4" id="text-org0bfa89e">
+<div id="outline-container-org594c7bc" class="outline-4">
+<h4 id="org594c7bc">Exercices</h4>
+<div class="outline-text-4" id="text-org594c7bc">
 <ol class="org-ol">
 <li>Dans un programme nommé <code>liste_courses.py</code> :
 <ul class="org-ul">
@@ -398,9 +404,9 @@ Une fois les exercices d'un cours terminés, appelle le professeur pour qu'il vi
 <h3 id="chapitre2_cours6">Cours 6 : Listes 2</h3>
 <div class="outline-text-3" id="text-chapitre2_cours6">
 </div>
-<div id="outline-container-orgcb8f7a4" class="outline-4">
-<h4 id="orgcb8f7a4">Manuel</h4>
-<div class="outline-text-4" id="text-orgcb8f7a4">
+<div id="outline-container-org12373fc" class="outline-4">
+<h4 id="org12373fc">Manuel</h4>
+<div class="outline-text-4" id="text-org12373fc">
 <ul class="org-ul">
 <li><b>"Ajouter des éléments à une liste"</b>, p.41-42</li>
 <li><b>"Supprimer des éléments à une liste"</b>, p.42</li>
@@ -408,9 +414,9 @@ Une fois les exercices d'un cours terminés, appelle le professeur pour qu'il vi
 </ul>
 </div>
 </div>
-<div id="outline-container-org41e0be3" class="outline-4">
-<h4 id="org41e0be3">Exercices</h4>
-<div class="outline-text-4" id="text-org41e0be3">
+<div id="outline-container-org2d1b5f8" class="outline-4">
+<h4 id="org2d1b5f8">Exercices</h4>
+<div class="outline-text-4" id="text-org2d1b5f8">
 <ol class="org-ol">
 <li>Dans un programme nommé <code>liste_eleves.py</code> :
 <ul class="org-ul">
@@ -441,9 +447,9 @@ Une fois les exercices d'un cours terminés, appelle le professeur pour qu'il vi
 <h3 id="chapitre2_cours7">Cours 7 : Tuples et dictionnaires</h3>
 <div class="outline-text-3" id="text-chapitre2_cours7">
 </div>
-<div id="outline-container-org94bbe49" class="outline-4">
-<h4 id="org94bbe49">Manuel</h4>
-<div class="outline-text-4" id="text-org94bbe49">
+<div id="outline-container-orged8f6cf" class="outline-4">
+<h4 id="orged8f6cf">Manuel</h4>
+<div class="outline-text-4" id="text-orged8f6cf">
 <ul class="org-ul">
 <li><b>"Tuples"</b>, p.45</li>
 <li><b>"Dictionnaires"</b>, p.45-47</li>
@@ -467,7 +473,7 @@ Comme vu dans le manuel, tu peux modifier une valeur dans un dictionnaire simple
 <p>
 Résultat :
 </p>
-<pre class="example" id="orgfb4d3bb">
+<pre class="example" id="orgcc287d5">
 {'Elon Musk': 180000000000, 'Jeff Bezos': 114000000000, 'Bill Gates': 104000000000, 'Mark Zuckerberg': 64400000000, 'Moi': 0}
 {'Elon Musk': 180000000000, 'Jeff Bezos': 114000000000, 'Bill Gates': 104000000000, 'Mark Zuckerberg': 64400000000, 'Moi': 100}
 </pre>
@@ -485,15 +491,15 @@ Si tu veux <b>ajouter</b> un élément, c'est-à-dire une clef et une valeur, il
 <p>
 Résulat :
 </p>
-<pre class="example" id="org07cfe5a">
+<pre class="example" id="orgadee623">
 {'Elon Musk': 180000000000, 'Jeff Bezos': 114000000000, 'Bill Gates': 104000000000, 'Mark Zuckerberg': 64400000000, 'Moi': 0}
 {'Elon Musk': 180000000000, 'Jeff Bezos': 114000000000, 'Bill Gates': 104000000000, 'Mark Zuckerberg': 64400000000, 'Moi': 0, 'Mon chat': 100}
 </pre>
 </div>
 </div>
-<div id="outline-container-org5c1d403" class="outline-4">
-<h4 id="org5c1d403">Exercices</h4>
-<div class="outline-text-4" id="text-org5c1d403">
+<div id="outline-container-org29f74b5" class="outline-4">
+<h4 id="org29f74b5">Exercices</h4>
+<div class="outline-text-4" id="text-org29f74b5">
 <ol class="org-ol">
 <li>Dans un programme nommé <code>mon_tuple.py</code> :
 <ul class="org-ul">
@@ -521,9 +527,9 @@ Résulat :
 <h3 id="chapitre2_cours8">Cours 8 : Input</h3>
 <div class="outline-text-3" id="text-chapitre2_cours8">
 </div>
-<div id="outline-container-orga45b201" class="outline-4">
-<h4 id="orga45b201">Cours</h4>
-<div class="outline-text-4" id="text-orga45b201">
+<div id="outline-container-org7ab4cbf" class="outline-4">
+<h4 id="org7ab4cbf">Cours</h4>
+<div class="outline-text-4" id="text-org7ab4cbf">
 <p>
 Jusqu'ici, nous avons donné à nos variables des valeurs directement dans le code python. Comment fait-on si l'on souhaite demander une information à l'utilisateur et qu'il puisse la donner sans qu'il ait besoin de modifier le code ?
 </p>
@@ -549,7 +555,7 @@ On peut utiliser la fonction <code>input()</code> en laissant les parenthèses v
 Résultat :
 </p>
 
-<figure id="orgfb3b9df">
+<figure id="orgff3658d">
 <img src="./img/example_prenom1.png" alt="exemple prenom1" align="center" class="img" width="100%" display="block">
 
 </figure>
@@ -559,7 +565,7 @@ Résultat :
 </p>
 
 
-<figure id="org8ea70ec">
+<figure id="orgfb16679">
 <img src="./img/example_prenom2.png" alt="exemple prenom2" align="center" class="img" width="100%" display="block">
 
 </figure>
@@ -611,9 +617,9 @@ Pour le moment, cela suffira pour créer des programmes plus intéractifs, mais 
 </p>
 </div>
 </div>
-<div id="outline-container-org1deb2e5" class="outline-4">
-<h4 id="org1deb2e5">Exercices</h4>
-<div class="outline-text-4" id="text-org1deb2e5">
+<div id="outline-container-orgafa71fc" class="outline-4">
+<h4 id="orgafa71fc">Exercices</h4>
+<div class="outline-text-4" id="text-orgafa71fc">
 <ol class="org-ol">
 <li>Dans un programme nommé <code>carte_identite.py</code> :
 <ul class="org-ul">
@@ -639,17 +645,17 @@ Pour le moment, cela suffira pour créer des programmes plus intéractifs, mais 
 <h3 id="chapitre3_cours9">Cours 9 : Turtle</h3>
 <div class="outline-text-3" id="text-chapitre3_cours9">
 </div>
-<div id="outline-container-org4cdd0d4" class="outline-4">
-<h4 id="org4cdd0d4">Manuel</h4>
-<div class="outline-text-4" id="text-org4cdd0d4">
+<div id="outline-container-org51ff573" class="outline-4">
+<h4 id="org51ff573">Manuel</h4>
+<div class="outline-text-4" id="text-org51ff573">
 <ul class="org-ul">
 <li><b>"Dessiner avec une tortue"</b>, p.49-56</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org0af4f5f" class="outline-4">
-<h4 id="org0af4f5f">Exercices</h4>
-<div class="outline-text-4" id="text-org0af4f5f">
+<div id="outline-container-org0554bb8" class="outline-4">
+<h4 id="org0554bb8">Exercices</h4>
+<div class="outline-text-4" id="text-org0554bb8">
 <ol class="org-ol">
 <li>Dans un programme nommé <code>carré.py</code>, fais dessiner un carré à une tortue.</li>
 <li>Dans un programme nommé <code>hexagone.py</code>, fais dessiner un hexagone à une tortue.</li>
@@ -670,9 +676,9 @@ Pour le moment, cela suffira pour créer des programmes plus intéractifs, mais 
 <h3 id="chapitre4_cours10">Cours 10 : if</h3>
 <div class="outline-text-3" id="text-chapitre4_cours10">
 </div>
-<div id="outline-container-org9c7abee" class="outline-4">
-<h4 id="org9c7abee">Manuel</h4>
-<div class="outline-text-4" id="text-org9c7abee">
+<div id="outline-container-org57a5153" class="outline-4">
+<h4 id="org57a5153">Manuel</h4>
+<div class="outline-text-4" id="text-org57a5153">
 <ul class="org-ul">
 <li><b>"Poser des questions avec if et else"</b>, p. 59</li>
 <li><b>"Intructions if"</b>, p.60</li>
@@ -681,9 +687,9 @@ Pour le moment, cela suffira pour créer des programmes plus intéractifs, mais 
 </ul>
 </div>
 </div>
-<div id="outline-container-orgf77b18c" class="outline-4">
-<h4 id="orgf77b18c">Exercices</h4>
-<div class="outline-text-4" id="text-orgf77b18c">
+<div id="outline-container-org89448dc" class="outline-4">
+<h4 id="org89448dc">Exercices</h4>
+<div class="outline-text-4" id="text-org89448dc">
 <ol class="org-ol">
 <li>Dans un programme nommé <code>boutique.py</code> :
 <ul class="org-ul">
@@ -724,18 +730,18 @@ Pour le moment, cela suffira pour créer des programmes plus intéractifs, mais 
 <h3 id="chapitre4_cours11">Cours 11 : if, elif, else</h3>
 <div class="outline-text-3" id="text-chapitre4_cours11">
 </div>
-<div id="outline-container-orgf2a2f7b" class="outline-4">
-<h4 id="orgf2a2f7b">Manuel</h4>
-<div class="outline-text-4" id="text-orgf2a2f7b">
+<div id="outline-container-orgb4a355b" class="outline-4">
+<h4 id="orgb4a355b">Manuel</h4>
+<div class="outline-text-4" id="text-orgb4a355b">
 <ul class="org-ul">
 <li><b>"Instructions si-alors-sinon"</b>, p.64-65</li>
 <li><b>"Instructions if et elif"</b>, p.65-66</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org0465e4f" class="outline-4">
-<h4 id="org0465e4f">Exercices</h4>
-<div class="outline-text-4" id="text-org0465e4f">
+<div id="outline-container-orgc0026ac" class="outline-4">
+<h4 id="orgc0026ac">Exercices</h4>
+<div class="outline-text-4" id="text-orgc0026ac">
 <ol class="org-ol">
 <li>Dans un programme nommé <code>dragon.py</code> :
 <ul class="org-ul">
@@ -772,17 +778,17 @@ Pour le moment, cela suffira pour créer des programmes plus intéractifs, mais 
 <h3 id="chapitre4_cours12">Cours 12 : and, or</h3>
 <div class="outline-text-3" id="text-chapitre4_cours12">
 </div>
-<div id="outline-container-org2acc55a" class="outline-4">
-<h4 id="org2acc55a">Manuel</h4>
-<div class="outline-text-4" id="text-org2acc55a">
+<div id="outline-container-orgf324bfb" class="outline-4">
+<h4 id="orgf324bfb">Manuel</h4>
+<div class="outline-text-4" id="text-orgf324bfb">
 <ul class="org-ul">
 <li><b>"Combiner des conditions"</b>, p.66</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org8990b61" class="outline-4">
-<h4 id="org8990b61">Exercices</h4>
-<div class="outline-text-4" id="text-org8990b61">
+<div id="outline-container-org5cb9bb8" class="outline-4">
+<h4 id="org5cb9bb8">Exercices</h4>
+<div class="outline-text-4" id="text-org5cb9bb8">
 <ol class="org-ol">
 <li>Dans un programme nommé <code>montagnes_russes2.py</code> :
 <ul class="org-ul">
@@ -802,18 +808,18 @@ Pour le moment, cela suffira pour créer des programmes plus intéractifs, mais 
 <h3 id="chapitre4_cours13">Cours 13 : Types de données et conversions</h3>
 <div class="outline-text-3" id="text-chapitre4_cours13">
 </div>
-<div id="outline-container-org1cfe979" class="outline-4">
-<h4 id="org1cfe979">Manuel</h4>
-<div class="outline-text-4" id="text-org1cfe979">
+<div id="outline-container-orgf2b9e52" class="outline-4">
+<h4 id="orgf2b9e52">Manuel</h4>
+<div class="outline-text-4" id="text-orgf2b9e52">
 <ul class="org-ul">
 <li><b>"Variables sans valeur : None"</b>, p.66-67</li>
 <li><b>"Différence entre chaînes et nombres"</b>, p.67-69</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgeeb365f" class="outline-4">
-<h4 id="orgeeb365f">Exercices</h4>
-<div class="outline-text-4" id="text-orgeeb365f">
+<div id="outline-container-orgb48267c" class="outline-4">
+<h4 id="orgb48267c">Exercices</h4>
+<div class="outline-text-4" id="text-orgb48267c">
 <ol class="org-ol">
 <li>Dans un programme nommé <code>types_donnees.py</code> :
 <ul class="org-ul">
@@ -838,18 +844,18 @@ Pour le moment, cela suffira pour créer des programmes plus intéractifs, mais 
 <h3 id="chapitre5_cours14">Cours 14 : Les boucles for</h3>
 <div class="outline-text-3" id="text-chapitre5_cours14">
 </div>
-<div id="outline-container-orgadb93f0" class="outline-4">
-<h4 id="orgadb93f0">Manuel</h4>
-<div class="outline-text-4" id="text-orgadb93f0">
+<div id="outline-container-org676b0ee" class="outline-4">
+<h4 id="org676b0ee">Manuel</h4>
+<div class="outline-text-4" id="text-org676b0ee">
 <ul class="org-ul">
 <li><b>"Tourner en boucle"</b>, p.73</li>
 <li><b>"Utiliser les boucles for"</b>, p.74-80</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgfc61453" class="outline-4">
-<h4 id="orgfc61453">Exercices</h4>
-<div class="outline-text-4" id="text-orgfc61453">
+<div id="outline-container-org2a497cb" class="outline-4">
+<h4 id="org2a497cb">Exercices</h4>
+<div class="outline-text-4" id="text-org2a497cb">
 <ol class="org-ol">
 <li>Dans un programme nommé <code>repetition.py</code> :
 <ul class="org-ul">
@@ -903,17 +909,17 @@ Fais un programme qui calcule les 10 premiers nombres de la suite de fibonacci e
 <h3 id="chapitre5_cours15">Cours 15 : Boucles while</h3>
 <div class="outline-text-3" id="text-chapitre5_cours15">
 </div>
-<div id="outline-container-org5f9e770" class="outline-4">
-<h4 id="org5f9e770">Manuel</h4>
-<div class="outline-text-4" id="text-org5f9e770">
+<div id="outline-container-org193a777" class="outline-4">
+<h4 id="org193a777">Manuel</h4>
+<div class="outline-text-4" id="text-org193a777">
 <ul class="org-ul">
 <li><b>"Tant que nous parlons de boucles : while"</b>, p.81-83</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org50d9c07" class="outline-4">
-<h4 id="org50d9c07">Exercices</h4>
-<div class="outline-text-4" id="text-org50d9c07">
+<div id="outline-container-orgabcbf08" class="outline-4">
+<h4 id="orgabcbf08">Exercices</h4>
+<div class="outline-text-4" id="text-orgabcbf08">
 <ol class="org-ol">
 <li>Dans un programme nommé <code>repetition_while.py</code> :
 <ul class="org-ul">
@@ -972,9 +978,9 @@ Ensuite, pour générer le nombre et le stocker, tu dois utiliser la fonction <c
 </div>
 </div>
 
-<div id="outline-container-orge0ccb48" class="outline-4">
-<h4 id="orge0ccb48">Exercice</h4>
-<div class="outline-text-4" id="text-orge0ccb48">
+<div id="outline-container-orgb48f54d" class="outline-4">
+<h4 id="orgb48f54d">Exercice</h4>
+<div class="outline-text-4" id="text-orgb48f54d">
 <p>
 Dans un programme nommé <code>nombre_secret.py</code> :
 </p>
@@ -1016,9 +1022,9 @@ Dans un programme nommé <code>nombre_secret.py</code> :
 <h3 id="chapitre7_cours17">Cours 17 : Fonctions</h3>
 <div class="outline-text-3" id="text-chapitre7_cours17">
 </div>
-<div id="outline-container-org7380f76" class="outline-4">
-<h4 id="org7380f76">Manuel</h4>
-<div class="outline-text-4" id="text-org7380f76">
+<div id="outline-container-org4951381" class="outline-4">
+<h4 id="org4951381">Manuel</h4>
+<div class="outline-text-4" id="text-org4951381">
 <ul class="org-ul">
 <li><b>"Recycler du code avec des fonctions et des modules"</b>, p.87-88</li>
 <li><b>"Utiliser des fonctions"</b>, p.88-89</li>
@@ -1028,9 +1034,9 @@ Dans un programme nommé <code>nombre_secret.py</code> :
 </ul>
 </div>
 </div>
-<div id="outline-container-orgee37419" class="outline-4">
-<h4 id="orgee37419">Exercices</h4>
-<div class="outline-text-4" id="text-orgee37419">
+<div id="outline-container-orgf9f49e5" class="outline-4">
+<h4 id="orgf9f49e5">Exercices</h4>
+<div class="outline-text-4" id="text-orgf9f49e5">
 <ol class="org-ol">
 <li>Dans un programme nommé <code>fonctions1.py</code> :
 <ul class="org-ul">
@@ -1119,9 +1125,9 @@ Dans un programme nommé <code>tri.py</code> :
 <h3 id="chapitre7_cours18">Cours 18 : Les modules</h3>
 <div class="outline-text-3" id="text-chapitre7_cours18">
 </div>
-<div id="outline-container-org9aa8122" class="outline-4">
-<h4 id="org9aa8122">Cours</h4>
-<div class="outline-text-4" id="text-org9aa8122">
+<div id="outline-container-org3d68162" class="outline-4">
+<h4 id="org3d68162">Cours</h4>
+<div class="outline-text-4" id="text-org3d68162">
 <p>
 <b>Un module</b> sert à regrouper des fonctions, des variables et d'autres choses dans des programmes plus vastes et plus puissants. Certains modules sont intégrés dans Python lui-même, tandis que tu peux en télécharger d'autres de manière séparée. Nous en avons déjà utilisé par exemple avec <b>turtle</b> et <b>random</b>.
 </p>
@@ -1147,9 +1153,9 @@ Pour créer ton propre module, il suffit de :
 </div>
 </div>
 
-<div id="outline-container-org4ae873d" class="outline-4">
-<h4 id="org4ae873d">Exercices</h4>
-<div class="outline-text-4" id="text-org4ae873d">
+<div id="outline-container-org35833fd" class="outline-4">
+<h4 id="org35833fd">Exercices</h4>
+<div class="outline-text-4" id="text-org35833fd">
 <p>
 Dans le chapitre suivant, nous allons mettre en pratique les modules et les fonctions ensemble en créant notre propre bibliothèque personnalisée de fonctions !
 </p>
@@ -1199,7 +1205,7 @@ Nous avons vu précédemment les bases du module turtle. En réalité, il existe
 Pour commencer, nous pouvons changer toutes les couleurs : l'arrière-plan, le trait et même le remplissage ! Turtle propose beaucoup de couleurs et libre à toi de les essayer. En voici une liste.
 </p>
 
-<figure id="org5dba008">
+<figure id="org9c55152">
 <img src="./img/turtle_colors.png" alt="colors turtle" align="center" class="img" width="1036px" height="588px" display="block">
 
 </figure>
@@ -1286,7 +1292,7 @@ t.end_fill()
 </div>
 
 
-<figure id="org422c329">
+<figure id="orgc178612">
 <img src="./img/turtle_square.png" alt="turtle square" align="center" class="img" width="155px" height="145hpx" display="block">
 
 </figure>
@@ -1383,7 +1389,7 @@ On peut définir n'importe quel point de l'écran en utilisant les coordonnées.
 </p>
 
 
-<figure id="org4f7fc98">
+<figure id="orgacd546d">
 <img src="./img/turtle_coords.png" alt="turtle coordinates" align="center" class="img" width="405px" height="406px" display="block">
 
 </figure>
@@ -1442,9 +1448,9 @@ pen.setheading(90)
 </div>
 </div>
 </div>
-<div id="outline-container-org83c03b4" class="outline-4">
-<h4 id="org83c03b4">Exercices</h4>
-<div class="outline-text-4" id="text-org83c03b4">
+<div id="outline-container-orgfe1f15d" class="outline-4">
+<h4 id="orgfe1f15d">Exercices</h4>
+<div class="outline-text-4" id="text-orgfe1f15d">
 <p>
 Rendez-vous au cours 18b pour commencer à mettre en application toutes tes nouvelles connaissances.
 </p>
@@ -1463,7 +1469,7 @@ Dans un programme nommé <code>mon_beau_sapin.py</code>, mets en oeuvre tout ce 
 </p>
 
 
-<figure id="org9dfddf2">
+<figure id="orgbede1cd">
 <img src="./img/xmas_tree.png" alt="xmas tree" align="center" class="img" width="480px" height="375px" display="block">
 
 </figure>
@@ -1479,9 +1485,9 @@ Indice : les étages du sapin sont en fait des triangles superposés de tailles 
 <h3 id="chapitre7bis_cours19b">Cours 19b : Turtle, mais avec des fonctions</h3>
 <div class="outline-text-3" id="text-chapitre7bis_cours19b">
 </div>
-<div id="outline-container-org9de25b6" class="outline-4">
-<h4 id="org9de25b6">Manuel</h4>
-<div class="outline-text-4" id="text-org9de25b6">
+<div id="outline-container-org38a878c" class="outline-4">
+<h4 id="org38a878c">Manuel</h4>
+<div class="outline-text-4" id="text-org38a878c">
 <ul class="org-ul">
 <li><b>"Recycler du code avec des fonctions et des modules"</b>, p.87-88</li>
 <li><b>"Utiliser des fonctions"</b>, p.88-89</li>
@@ -1490,9 +1496,9 @@ Indice : les étages du sapin sont en fait des triangles superposés de tailles 
 </ul>
 </div>
 </div>
-<div id="outline-container-org66785d6" class="outline-4">
-<h4 id="org66785d6">Exercice</h4>
-<div class="outline-text-4" id="text-org66785d6">
+<div id="outline-container-orgf114520" class="outline-4">
+<h4 id="orgf114520">Exercice</h4>
+<div class="outline-text-4" id="text-orgf114520">
 <p>
 Le but du premier exercice est de pouvoir dessiner un flocon de neige sans se répéter, grâce aux fonctions.
 </p>
@@ -1501,7 +1507,7 @@ Le but du premier exercice est de pouvoir dessiner un flocon de neige sans se r�
 Voici ce qu'on veut obtenir :
 </p>
 
-<figure id="org63b0666">
+<figure id="org44076f6">
 <img src="./img/snow_flake.png" alt="snow flake" align="center" class="img" width="233px" height="210px" display="block">
 
 </figure>
@@ -1513,7 +1519,7 @@ Ce dessin est très facile à réaliser si on le décompose correctement avec de
 <li>6 fois la même branche :</li>
 </ul>
 
-<figure id="orgd0711e5">
+<figure id="orga624894">
 <img src="./img/branch.png" alt="snow flake branch" align="center" class="img" width="118px" height="213px" display="block">
 
 </figure>
@@ -1522,7 +1528,7 @@ Ce dessin est très facile à réaliser si on le décompose correctement avec de
 <li>Une branche est elle-même composée d'une ligne + une forme en V le tout répété 4 fois:</li>
 </ul>
 
-<figure id="orgefbf110">
+<figure id="orgec53d2a">
 <img src="./img/fd_v.png" alt="snow flake fd + v" align="center" class="img" width="75px" height="116px" display="block">
 
 </figure>
@@ -1531,7 +1537,7 @@ Ce dessin est très facile à réaliser si on le décompose correctement avec de
 <li>Et enfin, la forme en V en elle-même est une suite de plusieurs déplacements.</li>
 </ul>
 
-<figure id="org6b00021">
+<figure id="orgfc7f0ce">
 <img src="./img/v.png" alt="snow flake v" align="center" class="img" width="174px" height="169px" display="block">
 
 </figure>
@@ -1614,9 +1620,9 @@ Pour générer un nombre aléatoire entre 2 et 20 par exemple, voici le code qu'
 </div>
 </div>
 
-<div id="outline-container-org617ef07" class="outline-4">
-<h4 id="org617ef07">Exercices</h4>
-<div class="outline-text-4" id="text-org617ef07">
+<div id="outline-container-orgf53fdab" class="outline-4">
+<h4 id="orgf53fdab">Exercices</h4>
+<div class="outline-text-4" id="text-orgf53fdab">
 <p>
 Dans un programme nommé <code>flocon2.py</code> :
 </p>
@@ -1812,7 +1818,7 @@ Dans un programme nommé <code>lettres.py</code> :
 <p>
 Exemple d'affichage pour <code>chaine = "python"</code> :
 </p>
-<pre class="example" id="orgca6876f">
+<pre class="example" id="org02d2069">
 p
 y
 t
@@ -1841,7 +1847,7 @@ Dans un programme nommé <code>occurrences.py</code> :
 <p>
 Exemple d'affichage pour <code>chaine = "Bonjour"</code> :
 </p>
-<pre class="example" id="orgdf000e9">
+<pre class="example" id="orgc4bb02d">
 Le caractère " B " apparaît 1 fois.
 Le caractère " o " apparaît 2 fois.
 Le caractère " n " apparaît 1 fois.
@@ -1870,7 +1876,7 @@ Dans un programme nommé <code>mot_inverse.py</code> :
 <p>
 Exemple pour le mot "python" :
 </p>
-<pre class="example" id="org49499f1">
+<pre class="example" id="org29797cb">
 mot original : python
 inverse : nohtyp
 </pre>
@@ -1912,7 +1918,7 @@ Nous voulons créer un programme qui permet de calculer un rendu de monnaie et d
 <li>Calculer qu'il faut rendre 81.43€</li>
 <li>Afficher les billets et les pièces à utiliser pour cela. Exemple :</li>
 </ol>
-<pre class="example" id="orgc6af447">
+<pre class="example" id="orga514282">
 Prix à payer : 18.57€
 Rendu : 81.43€
 Décomposition :
@@ -2010,7 +2016,7 @@ Pour t'aider, voici un exemple des fonctions que tu peux créer et utiliser :
 <h2 id="l-systemes">L-systèmes</h2>
 <div class="outline-text-2" id="text-l-systemes">
 
-<figure id="org7d2db85">
+<figure id="orge4908a6">
 <img src="./img/fractal_weeds.jpg" alt="fractal_weeds.jpg">
 
 </figure>
@@ -2057,7 +2063,7 @@ Explications :
 <p>
 Voici les 4 première générations de l'algue de Lindenmayer :
 </p>
-<pre class="example" id="orgc6a3e0a">
+<pre class="example" id="org31726f9">
 Génération 0 : A
 Génération 1 : AB
 Génération 2 : AB A
@@ -2229,7 +2235,7 @@ Désormais, notre fonction pour tracer un L-système est complète. Nous allons 
 <h4 id="orgac7354b">La brindille</h4>
 <div class="outline-text-4" id="text-orgac7354b">
 
-<figure id="org27ef273">
+<figure id="orgbb00131">
 <img src="./img/brindille.png" alt="brindille" align="center" class="img" width="166px" height="320px" display="block">
 
 </figure>
@@ -2260,7 +2266,7 @@ Construire graphiquement (sur l'ordinateur, avec le programme python) la génér
 <h4 id="org43ed760">Le flocon de Von Koch</h4>
 <div class="outline-text-4" id="text-org43ed760">
 
-<figure id="org22aec15">
+<figure id="org88a68e5">
 <img src="./img/flocon_koch.png" alt="flocon de Von Koch" align="center" class="img" width="242px" height="277px" display="block">
 
 </figure>
@@ -2291,7 +2297,7 @@ Construire graphiquement la génération 4 du "flocon de Von Koch", dont le L-sy
 <h4 id="orgd05c6ce">La broussaille</h4>
 <div class="outline-text-4" id="text-orgd05c6ce">
 
-<figure id="org979264f">
+<figure id="org5a2f5e2">
 <img src="./img/broussaille.png" alt="broussaille" align="center" class="img" width="242px" height="287px" display="block">
 
 </figure>
@@ -2324,7 +2330,7 @@ Construire graphiquement la génération 4 de la "broussaille", dont le L-systè
 <h2 id="puissance4">Puissance 4</h2>
 <div class="outline-text-2" id="text-puissance4">
 
-<figure id="org659877a">
+<figure id="org06fd9ed">
 <img src="./img/puissance4.jpg" alt="puissance4.jpg">
 
 </figure>
@@ -2362,7 +2368,7 @@ Le but du jeu est d'aligner une suite de 4 pions de même couleur sur une grille
 Dans cette étape, tu ne vas pas encore coder. Nous allons d'abord réfléchir à la structure de notre programme et imaginer son fonctionnement général. Il faut que l'on définisse de quelles fonctions nous auront besoin pour faire fonctionner notre programme.
 Parfois, il est utile d'utiliser du "pseudo code". Le pseudo code, c'est une façon d'écrire un algorithme de façon presque naturelle, sans langage de programmation. Par exemple, dans un pseudo code on peu écrire :
 </p>
-<pre class="example" id="orgda391fd">
+<pre class="example" id="orgaf2b6c0">
 si (utilisateur écrit "Bonjour") alors
     afficher "Bonjour"
 sinon
@@ -2440,7 +2446,7 @@ Par exemple, si les jetons jaunes sont ceux du joueur 1 et les jetons rouges ceu
 </p>
 
 
-<figure id="org88168a3">
+<figure id="org5a0e6a7">
 <img src="./img/schema_liste.png" alt="schema_liste.png">
 
 </figure>
@@ -2557,7 +2563,7 @@ Nous n'aurons pas besoin d'autres variables globales pour le moment.
 <li><p>
 Crée une fonction <code>recupererSymbole(numeroJoueur)</code>. La logique de cette fonction sera :
 </p>
-<pre class="example" id="orgc1f6e32">
+<pre class="example" id="org70f9fca">
 si numeroJoueur est égal à 1:
     renvoyer symboleJoueur1
 sinon si numeroJoueur est égal à 2:
@@ -2596,7 +2602,7 @@ Début de partie :
 </p>
 
 
-<figure id="org4986b31">
+<figure id="orgfab948f">
 <img src="./img/exemple_vide.png" alt="exemple_vide.png">
 
 </figure>
@@ -2606,7 +2612,7 @@ Après quelques tours :
 </p>
 
 
-<figure id="org3bb02be">
+<figure id="org64a38c0">
 <img src="./img/exemple_tours.png" alt="exemple_tours.png">
 
 </figure>
@@ -2849,6 +2855,282 @@ Désormais, il ne nous reste plus qu'à lancer le jeu : appelle simplement la fo
 <p>
 Quand tu vas tester le jeu, il est très fort probable qu'il y ait des "bugs" et que certaines choses ne fonctionnent pas : c'est normal pour un gros programme. Ne t'inquiètes pas et n'hésite pas à faire plein de tests pour chaque fonction pour trouver d'où vient le problème.
 </p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-tkinter" class="outline-2">
+<h2 id="tkinter">Graphismes avec tkinter</h2>
+<div class="outline-text-2" id="text-tkinter">
+<p>
+Tkinter est un module python qui permet de créer des interfaces graphiques, c'est-à-dire d'afficher à l'écran une interface avec des boutons, des textes, des cases à cocher, etc. Cela permet de créer des programmes plus pratiques et jolis pour les utilisateurs.
+</p>
+</div>
+<div id="outline-container-tkinter_ressources" class="outline-3">
+<h3 id="tkinter_ressources">Ressources</h3>
+<div class="outline-text-3" id="text-tkinter_ressources">
+<p>
+Voici quelques liens utiles pour en savoir plus sur tkiner.
+</p>
+<ul class="org-ul">
+<li><a href="https://tkdocs.com/">https://tkdocs.com/</a> (de bon tutoriels et la documentation expliquée, mais en anglais)</li>
+<li><a href="https://python.doctor/page-tkinter-interface-graphique-python-tutoriel">https://python.doctor/page-tkinter-interface-graphique-python-tutoriel</a> (une bonne introduction à tkinter, en français)</li>
+<li><a href="https://docs.python.org/fr/3/library/tk.html">https://docs.python.org/fr/3/library/tk.html</a> (documentation officielle)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-canvas" class="outline-3">
+<h3 id="canvas">Peindre sur une toile</h3>
+<div class="outline-text-3" id="text-canvas">
+<p>
+Pour introduire quelques concepts clefs de tkinter, nous allons commencer par créer ensemble notre premier petit projet avec interface graphique. Il s'agit de permettre à l'utilisateur de dessiner ce qu'il veut sur un endroit donné avec les couleurs qu'il veut.
+</p>
+</div>
+
+<div id="outline-container-orgfe27d7d" class="outline-4">
+<h4 id="orgfe27d7d">Début</h4>
+<div class="outline-text-4" id="text-orgfe27d7d">
+<p>
+Tout d'abord, crée un programme nommé <code>chef_d_oeuvre.py</code>.
+</p>
+
+<p>
+Pour commencer, comme tous les modules utilisés jusqu'à préssent (turtle, random, etc), il faut importer tkinter.
+</p>
+<div class="org-src-container">
+<pre class="src src-python"><span style="font-weight: bold;">import</span> tkinter
+</pre>
+</div>
+
+<p>
+La première étape pour créer une interface graphique avec tkinter est de créer une fenêtre et de la stocker dans une variable. Nous utiliserons cette variable tout au long du programme pour savoir dans quelle fenêtre nous travaillons.
+</p>
+<div class="org-src-container">
+<pre class="src src-python"><span style="font-weight: bold; font-style: italic;">fenetre</span> = tkinter.Tk()
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org4d47141" class="outline-4">
+<h4 id="org4d47141">Créer et afficher un texte</h4>
+<div class="outline-text-4" id="text-org4d47141">
+<p>
+Maintenant, nous pouvons commencer à configurer l'apparence de notre fenêtre.
+</p>
+
+<p>
+Pour afficher du texte dans une fenêtre, nous utilisons la fonction <code>tkinter.Label()</code>. Cette fonction prend une suite de paramètres dont seul le premier est obligatoire : c'est la fenêtre dans laquelle le texte doit se placer. Les autres paramètres sont pour configurer l'apparence du texte (y compris le texte en lui-même).
+</p>
+
+<p>
+Comme les autres paramètres sont optionnels, il faut les nommer précisément et on peut les écrire dans l'ordre que l'on veut.
+</p>
+
+<p>
+Ensuite, lorsque le texte est configuré, il faut l'insérer dans la fenêtre avec la fonction <code>pack()</code>. Cette étape est toujours nécessaire pour afficher quelque chose dans la fenêtre. Il existe d'autres fonctions pour placer les objets dans la fenêtre mais nous les verrons plus tard.
+</p>
+<div class="org-src-container">
+<pre class="src src-python"><span style="font-weight: bold; font-style: italic;"># </span><span style="font-weight: bold; font-style: italic;">Configuration du texte</span>
+<span style="font-weight: bold; font-style: italic;">texte</span> = tkinter.Label(fenetre, text=<span style="font-style: italic;">"Pour dessiner, utilise ta souris en appuyant sur le bouton gauche."</span>)
+<span style="font-weight: bold; font-style: italic;"># </span><span style="font-weight: bold; font-style: italic;">Placement du texte dans la fen&#234;tre</span>
+texte.pack()
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc15f54a" class="outline-4">
+<h4 id="orgc15f54a">Créer et afficher un canvas</h4>
+<div class="outline-text-4" id="text-orgc15f54a">
+<p>
+Un canvas est un objet de tkinter qui permet de dessiner sur une zone donnée. La fonction utilisée est <code>tkinter.Canvas()</code>. Tout comme le texte, seul le premier paramètre (la fenêtre) est obligatoire.
+</p>
+<div class="org-src-container">
+<pre class="src src-python"><span style="font-weight: bold; font-style: italic;"># </span><span style="font-weight: bold; font-style: italic;">Configurationn du canvas: width(=longueur)=750 pixels, height(=hauteur)=500 pixels, background(=arri&#232;re-plan) blanc</span>
+<span style="font-weight: bold; font-style: italic;">canvas</span> = tkinter.Canvas(fenetre, width=750, height=500, bg=<span style="font-style: italic;">"white"</span>)
+<span style="font-weight: bold; font-style: italic;"># </span><span style="font-weight: bold; font-style: italic;">Placement du canvas dans la fen&#234;tre</span>
+canvas.pack()
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org0b5f7c4" class="outline-4">
+<h4 id="org0b5f7c4">Enregistrer la position</h4>
+<div class="outline-text-4" id="text-org0b5f7c4">
+<p>
+Nous allons maintenant nous intéresser à la logique du programme. Avec tkinter, l'utilisateur peut interagir avec l'interface, et chaque interaction déclenche un "évènement" appelé event. Le principe est donc le suivant :
+</p>
+<ol class="org-ol">
+<li>Définir des fonctions à appeler dans le cas d'évènements précis. Par exemple, nous voulons que notre programme appelle la fonction <code>quand_clic()</code> lorsqu'un clic de souris est détecté.</li>
+<li>Détecter les évènements qui nous intéressent et les envoyer vers les fonctions associées.</li>
+</ol>
+
+<p>
+Tout d'abord, nous allons avoir besoin de 3 variables dans notre programme : <code>dernierX</code>, qui stockera la dernière position X, <code>dernierY</code>, qui stockera la dernière position Y et <code>couleur</code> qui correspondra à la couleur de dessin actuelle.
+</p>
+
+<p>
+Initialise <code>dernierX</code> et <code>dernierY</code> à 0. Initialise <code>couleur</code> à <code>"black"</code> pour que la couleur de départ soit le noir.
+</p>
+
+<p>
+Maintenant, écrivons une fonction <code>enregistrer_position(event)</code> nous permettant de suivre les mouvements du pointeur de souris. Le paramètre event contient plein d'informations relatives à l'évènement qui a déclenché l'appel de la fonction.
+</p>
+
+<p>
+Voici le code du corps de la fonction :
+</p>
+<div class="org-src-container">
+<pre class="src src-python"><span style="font-weight: bold;">global</span> dernierX, dernierY <span style="font-weight: bold; font-style: italic;"># </span><span style="font-weight: bold; font-style: italic;">"global" permet de pr&#233;ciser que dernierX et dernierY sont les variables globales du programme et pas uniquement des variables de la fonction.</span>
+<span style="font-weight: bold; font-style: italic;">dernierX</span> = event.x
+<span style="font-weight: bold; font-style: italic;">dernierY</span> = event.y
+<span style="font-weight: bold; font-style: italic;"># </span><span style="font-weight: bold; font-style: italic;">Ces deux lignes enregistrent les position x et y de l'&#233;v&#232;nement qui a d&#233;clench&#233; l'appel de fonction.</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge2fd304" class="outline-4">
+<h4 id="orge2fd304">Que faire lorsqu'un clic est détecté ?</h4>
+<div class="outline-text-4" id="text-orge2fd304">
+<p>
+Nous allons créer la fonction qui sera appelée quand l'utilisateur cliquera sur la souris. Elle enregistrera simplement l'emplacement de la souris au moment du clic.
+</p>
+<div class="org-src-container">
+<pre class="src src-python"><span style="font-weight: bold;">def</span> <span style="font-weight: bold;">quand_clic</span>(event):
+    enregistrer_position(event)
+</pre>
+</div>
+
+<p>
+Et c'est tout pour le clic !
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb5cc0d4" class="outline-4">
+<h4 id="orgb5cc0d4">Que faire lors du déplacement de la souris après le clic ?</h4>
+<div class="outline-text-4" id="text-orgb5cc0d4">
+<p>
+C'est ici que l'on va commencer à dessiner des formes sur le canvas. Pour que l'utilisateur puisse dessiner ce qu'il veut, nous utiliserons simplement une ligne qui se dessinera pixel par pixel. Chaque déplacement déclenchera l'appel de la fonction <code>quand_bouge(event)</code>. Cette fonction tracera une ligne entre le dernier point enregistré et le point où se trouve la souris actuellement. Ensuite, elle devra enregistrer la nouvelle position pour préparer le prochain mouvement.
+</p>
+
+<p>
+Définis la fonction <code>quand_bouge(event)</code>. Le code à l'intérieur est le suivant :
+</p>
+<div class="org-src-container">
+<pre class="src src-python"><span style="font-weight: bold; font-style: italic;"># </span><span style="font-weight: bold; font-style: italic;">La fonction create_line a 4 parametres obligatoires : les coordonn&#233;es du d&#233;but de la ligne (x, y) et les coordon&#233;es de la fin (x, y)</span>
+<span style="font-weight: bold; font-style: italic;"># </span><span style="font-weight: bold; font-style: italic;">Nous ajoutons ensuite le parametre de couleur en utilisant la variable gloable couleur puis nous mettons l'&#233;paisseur de la ligne &#224; 3 pixels.</span>
+canvas.create_line(dernierX, dernierY, event.x, event.y, fill=couleur, width=3)
+</pre>
+</div>
+<p>
+La dernière étape de la fonction est d'enregistrer la nouvelle position de <code>event</code>. N'oublie pas d'écrire cette partie (nous l'avons déjà vue précédemment) !
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge0fc2e9" class="outline-4">
+<h4 id="orge0fc2e9">Détecter les évènements</h4>
+<div class="outline-text-4" id="text-orge0fc2e9">
+<p>
+Nous avons préparer les fonctions à appeler lorsque seront détectés les évènements qui nous intéressent. Il faut maintenant que l'on écrive le code qui nous permettra de détecter les évènements en question.
+</p>
+
+<p>
+La fonction qui permet d'associer la détection d'évènement à une fonction à déclencer est la fonction <code>bind</code>. Pour détecter un événement dans un objet en particulier, on écrit <code>nom_objet.bind(...)</code>. Dans notre cas, nous voulons détecter les évènements dans l'objet <code>canvas</code>. Nous écrivons donc :
+</p>
+<div class="org-src-container">
+<pre class="src src-python">canvas.bind(<span style="font-style: italic;">"&lt;Button-1&gt;"</span>, quand_clic)   <span style="font-weight: bold; font-style: italic;"># </span><span style="font-weight: bold; font-style: italic;">premier param&#232;tre = &#233;v&#232;nement &#224; d&#233;tecter</span>
+                                        <span style="font-weight: bold; font-style: italic;"># </span><span style="font-weight: bold; font-style: italic;">second param&#232;tre = fonction &#224; appeler</span>
+</pre>
+</div>
+
+<p>
+L'évènement qui correspond au mouvement de la souris s'appelle <code>&lt;B1-Motion&gt;</code>. Ajoute la ligne qui permet de détecter cet évènement et d'appler la fonction <code>quand_bouge()</code>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org371d3b2" class="outline-4">
+<h4 id="org371d3b2">Peindre en couleur</h4>
+<div class="outline-text-4" id="text-org371d3b2">
+<p>
+Maintenant, nous allons créer une petite palette de couleurs sur le côté afin de pouvoir choisir la couleur de notre dessin. Pour cela, nous allons créer des petits carrés de couleurs que nous allons placer dans le canvas.
+</p>
+
+<p>
+Lorsque l'on crée un objet dans un canvas et de manière générale dans une fenêtre tkinter, l'ordinateur lui attribue un numéro unique appelé id (pour identifiant). Nous le gardons en mémoire afin de pouvoir le réutiliser.
+</p>
+
+<p>
+Pour créer une forme, il existe plusieurs fonctions. Pour un rectangle, nous utilisons la fonction <code>create_rectangle</code> de l'objet canvas. Cette fonction prend en paramètres, dans l'odre :
+</p>
+<ol class="org-ol">
+<li>x du point en haut à gauche du rectangle</li>
+<li>y du point en haut à gauche du rectangle</li>
+<li>x du point en bas à droite du rectangle</li>
+<li>y du point en bas à droite du rectangle</li>
+</ol>
+<p>
+A cela nous pouvons ajouter des paramètres nommés, comme <code>fill</code> qui permet de choisir la couleur de remplissage.
+</p>
+
+<p>
+Dessinons le premier carré permettant de choisir la couleur rouge :
+</p>
+<div class="org-src-container">
+<pre class="src src-python"><span style="font-weight: bold; font-style: italic;">red_id</span> = canvas.create_rectangle(10, 10, 30, 30, fill=<span style="font-style: italic;">"red"</span>)
+</pre>
+</div>
+
+<p>
+Dessine 3 autres carrés les uns en dessous des autres avec les couleurs de ton choix. Les coordonnées des autres carrés sont :
+</p>
+<ul class="org-ul">
+<li>10,35,30,55</li>
+<li>10,60,30,80</li>
+<li>Trouve les coordonnées du dernier carré !</li>
+</ul>
+
+<p>
+Il faut maintenant créer les fonctions qui seront associées à l'évènement d'un clic sur un carré. Le plus simple est de faire une fonction par couleur :
+</p>
+<div class="org-src-container">
+<pre class="src src-python"><span style="font-weight: bold;">def</span> <span style="font-weight: bold;">couleur_rouge</span>(event):
+    <span style="font-weight: bold;">global</span> couleur <span style="font-weight: bold; font-style: italic;"># </span><span style="font-weight: bold; font-style: italic;">le mot-cl&#233; global permet de dire &#224; python que nous modifions la variable couleur qui a &#233;t&#233; cr&#233;&#233;e dans le programme, et non pas uniquement dans la fonction.</span>
+    <span style="font-weight: bold; font-style: italic;">couleur</span> = <span style="font-style: italic;">"red"</span>
+</pre>
+</div>
+
+<p>
+Crée les 3 autres fonctions pour les couleurs que tu as choisies.
+</p>
+
+<p>
+Il ne nous reste plus qu'à associer le clic sur un carré à la fonction appropriée. Pour détecter un évènement sur un objet précis dans le canvas, on utilise la fonction <code>tag_bind()</code> qui prend en paramètres :
+</p>
+<ol class="org-ol">
+<li>L'id de l'objet</li>
+<li>L'évènement à détecter</li>
+<li>La fonction à associer à l'évènement</li>
+</ol>
+
+<p>
+Voici le code pour lier le clic sur le carré rouge à la bonne fonction :
+</p>
+<div class="org-src-container">
+<pre class="src src-python">canvas.tag_bind(red_id, <span style="font-style: italic;">"&lt;Button-1&gt;"</span>, couleur_rouge)
+</pre>
+</div>
+
+<p>
+A toi d'écrire les 3 autres lignes !
+</p>
+
+<p>
+Ton programme devrait être prêt désormais, teste-le !
+</p>
+</div>
 </div>
 </div>
 </div>
