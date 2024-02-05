@@ -824,9 +824,41 @@ nom_fonction() # Appel de la fonction pour que le code dans la fonctions soit la
 
 Si tu as bien lu les chapitres du manuel sur les fonctions, tu as probablement vu que les fonctions peuvent aussi s'utiliser avec des *paramètres*. Si ce n'est pas le cas, revois les chapitres du manuel indiqués dans le chapitre précédent.
 
-Nous allons donc utiliser les fonctions et les paramètres pour refaire le sapin du début de manière plus simple et plus rapide.
+Nous allons donc utiliser les fonctions et les paramètres pour améliorer notre programme de dessin de flocon et refaire le sapin du début de manière plus simple et plus rapide.
 
-*** Exercice
+*** Indication sur l'utilisation du module random
+Pour générer un nombre aléatoire entre 2 et 20 par exemple, voici le code qu'il faut taper :
+#+begin_src python
+import random # Première ligne du programme
+mon_nombre = random.randint(2,20)
+#+end_src
+
+*** Exercices
+Dans un programme nommé =flocon2.py= :
+
+Reprends le code que tu as écris dans le programme =flocon.py= et copie-le dans ce nouveau programme. Nous allons y ajouter quelques fonctionnalités intéressantes.
+- Pour commencer, importe le module =random= au début du programme.
+- Efface la ligne de code qui définit la couleur du stylo.
+- Crée une variable =couleurs= qui contient une liste de couleurs de ton choix (en chaînes de caractères)
+- Dans la fonction =flocon()=, ajoute au début de la boucle la ligne suivante qui permet de choisir une couleur au hasard dans la liste pour chaque branche du flocon:
+#+begin_src python
+pen.color(random.choice(couleurs))
+#+end_src
+- Maintenant, modifie les fonctions =flocon()=, =branche()= et =forme_v()= pour qu'elles prennent en paramètre une variable nommée =taille=. Comme son nom l'indique, ce paramètre nous permettra de modifier la taille des flocons.
+- Fais les modifications nécessaires dans ces fonctions pour que les traits tracés par la tortue soient de longueur =taille=.
+- Crée une nouvelle fonction =tempete(nb_flocons)= qui :
+  - Détermine la taille d'un flocon à l'aide du module =random=. Je te conseille de choisir une taille entre 5 et 30.
+  - Détermine la position =x= du début du flocon avec le module =random= (entre -300 et 300).
+  - Détermine la position =y= du début du flocon avec le module =random= (entre -300 et 300).
+  - Lève le stylo.
+  - Se téléporte à la position =x,y= (avec la fonction =goto()=).
+  - Baisse le stylo.
+  - Dessine un flocon de taille =taille= (en appelant bien-sûr la fonction que l'on a créée plus tôt).
+  - Toutes ces actions doivent être répétées =nb_flocons= fois.
+- Enfin, dans le programme (en dehors de la fonction), supprime la ligne qui appelle la fonction =flocon=
+- Crée une variable =nb= qui contient un nombre aléatoire de flocons (entre 1 et 20 par exemple)
+- Appelle la fonction =tempete= en lui donnant =nb= en paramètre.
+
 Dans un programme nommé =sapin_fonctions.py= :
 - Crée une fonction nommée =tronc= qui prend en paramètres =largeur= et =hauteur=, qui correspondent respectivement à la largeur et la hauteur du tronc que l'on veut dessiner.
 - Cette fonction doit :
@@ -1454,17 +1486,9 @@ Passons maintenant à la fonction qui trouve la ligne libre d'une colonne. Nous 
 
 Il faudra garder la dernière ligne libre trouvée, car le parcours de la liste se fait de haut en bas et que nous devons placer les jetons le plus bas possible.
 - Crée une fonction =ligneLibreDeLaColonne()= qui prend en paramètre la =colonne=. Cette fonction doit parcourir toutes les lignes de la =colonne= afin de trouver la colonne libre la plus basse. Elle devra renvoyer le numéro de la ligne libre et -1 si aucune ligne n'est libre pour cette =colonne=.
-# - Crée une fonction =ligneLibreDeLaColonne()= qui prend en paramètre la =colonne=. Dans cette fonction :
-  # - Initialise la variable =premiereLigneLibre= à *-1*. Cela permettra de déterminer si une colonne n'est pas libre. En effet, si nous mettons 0, cela correspond en fait à la ligne 0 et la fonction trouvera toujours une ligne libre même si c'est faux !
-  # - Parcours toutes les lignes de la liste. Pour chaque ligne, si la =colonne= est libre, alors =premiereLigneLibre= prend la valeur de cette ligne.
-  # - Après avoir parcouru toute la liste, retourne la valeur de =premiereLigneLibre=.
 
 *** Placer le jeton
 La dernière fonction intermédiaire pour un tour sera la fonction =placerJeton(joueur, coordonnees)=. Cette fonction placera simplement le numéro du =joueur= à un l'endroit défini par le tuple =coordonnees=.
-# - Crée une fonction =placerJeton()= qui prend un paramètres :
-#   - =joueur= : c'est le numéro du joueur
-#   - =coordonnees= : l'endroit où placer le jeton, sous forme d'un tuple =(ligne, colonne)=
-# - La fonction comportera une seule ligne qui permettra de placer =joueur= dans la grille aux coordonnées données.
 
 *** Jouer le tour
 Enfin, nous allons pouvoir créer la fonction qui fait jouer le tour au joueur :
