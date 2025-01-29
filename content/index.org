@@ -522,6 +522,7 @@ Pour commencer, nous pouvons changer toutes les couleurs : l'arrière-plan, le t
 #+attr_html: :alt colors turtle  :align center :class img :width 1036px :height 588px :display block
 [[./img/turtle_colors.png]]
 
+#+attr_html: :target _blank
 Il existe aussi un site pour rapidement trouver le nom d'une couleur turtle : [[https://trinket.io/docs/colors]]
 
 *** Changer la couleur d'arrière-plan
