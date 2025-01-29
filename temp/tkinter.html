@@ -1,68 +1,22 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Tkinter pour le Puissance 4</title>
-<meta name="generator" content="Org mode">
+<meta name="generator" content="Org Mode" />
 <link rel="stylesheet" type="text/css" href="../theme/personal/src/personalStyle.css"/>
 <script type="text/javascript" src="../theme/personal/src/tabScript.js"></script>
 <link rel="stylesheet" href="../theme/personal/src/highlight/styles/monokai-sublime.min.css"/>
 <script src="../theme/personal/src/highlight/highlight.min.js"></script>
-<script type="text/javascript">
-/*
-@licstart  The following is the entire license notice for the
-JavaScript code in this tag.
-
-Copyright (C) 2012-2020 Free Software Foundation, Inc.
-
-The JavaScript code in this tag is free software: you can
-redistribute it and/or modify it under the terms of the GNU
-General Public License (GNU GPL) as published by the Free Software
-Foundation, either version 3 of the License, or (at your option)
-any later version.  The code is distributed WITHOUT ANY WARRANTY;
-without even the implied warranty of MERCHANTABILITY or FITNESS
-FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
-
-As additional permission under GNU GPL version 3 section 7, you
-may distribute non-source (e.g., minimized or compacted) forms of
-that code without the copy of the GNU GPL normally required by
-section 4, provided you include this license notice and a URL
-through which recipients can access the Corresponding Source.
-
-
-@licend  The above is the entire license notice
-for the JavaScript code in this tag.
-*/
-<!--/*--><![CDATA[/*><!--*/
- function CodeHighlightOn(elem, id)
- {
-   var target = document.getElementById(id);
-   if(null != target) {
-     elem.cacheClassElem = elem.className;
-     elem.cacheClassTarget = target.className;
-     target.className = "code-highlighted";
-     elem.className   = "code-highlighted";
-   }
- }
- function CodeHighlightOff(elem, id)
- {
-   var target = document.getElementById(id);
-   if(elem.cacheClassElem)
-     elem.className = elem.cacheClassElem;
-   if(elem.cacheClassTarget)
-     target.className = elem.cacheClassTarget;
- }
-/*]]>*///-->
-</script>
 </head>
 <body>
-<div id="content">
+<div id="content" class="content">
 <header>
 <h1 class="title">Tkinter pour le Puissance 4</h1>
-</header><nav id="table-of-contents">
+</header><nav id="table-of-contents" role="doc-toc">
 <h2>Table des matières</h2>
-<div id="text-table-of-contents">
+<div id="text-table-of-contents" role="doc-toc">
 <ul>
 <li><a href="#grid">Utiliser la méthode grid pour l'interface du Puissance 4</a>
 <ul>
@@ -82,12 +36,12 @@ for the JavaScript code in this tag.
 </div>
 </nav>
 
-<div id="outline-container-orgf4b1455" class="outline-2">
+<div id="outline-container-grid" class="outline-2">
 <h2 id="grid">Utiliser la méthode grid pour l'interface du Puissance 4</h2>
 <div class="outline-text-2" id="text-grid">
 </div>
 
-<div id="outline-container-org52281a7" class="outline-3">
+<div id="outline-container-ressources" class="outline-3">
 <h3 id="ressources">Ressources</h3>
 <div class="outline-text-3" id="text-ressources">
 <p target="_blank">
@@ -96,7 +50,7 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-org305bff1" class="outline-3">
+<div id="outline-container-pourquoi-grid" class="outline-3">
 <h3 id="pourquoi-grid">Pourquoi une Grid pour le Puissance 4 ?</h3>
 <div class="outline-text-3" id="text-pourquoi-grid">
 <p>
@@ -105,22 +59,22 @@ La méthode grid sert à positionner des éléments (=widgets) dans notre écran
 </div>
 </div>
 
-<div id="outline-container-org672b3e2" class="outline-3">
+<div id="outline-container-etapes" class="outline-3">
 <h3 id="etapes">Etape par étape</h3>
 <div class="outline-text-3" id="text-etapes">
 </div>
-<div id="outline-container-org1d43067" class="outline-4">
-<h4 id="org1d43067">Pré-requis</h4>
-<div class="outline-text-4" id="text-org1d43067">
+<div id="outline-container-org7dc7935" class="outline-4">
+<h4 id="org7dc7935">Pré-requis</h4>
+<div class="outline-text-4" id="text-org7dc7935">
 <p>
 Il faut déjà avoir initialisé ta grille de puissance 4 avant de paramétrer l'affichage car tu auras besoin de la taille de la grille et des éventuelles valeurs des cases.
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgc00e890" class="outline-4">
-<h4 id="orgc00e890">Initialisation</h4>
-<div class="outline-text-4" id="text-orgc00e890">
+<div id="outline-container-orgdf8aa7f" class="outline-4">
+<h4 id="orgdf8aa7f">Initialisation</h4>
+<div class="outline-text-4" id="text-orgdf8aa7f">
 <ol class="org-ol">
 <li>Crée un objet Tk() (<code>window = tkinter.Tk()</code>).</li>
 <li>Configure la fenêtre (titre, fond, etc).</li>
@@ -129,9 +83,9 @@ Il faut déjà avoir initialisé ta grille de puissance 4 avant de paramétrer l
 </div>
 </div>
 
-<div id="outline-container-orgd17734e" class="outline-4">
-<h4 id="orgd17734e">Création des widgets</h4>
-<div class="outline-text-4" id="text-orgd17734e">
+<div id="outline-container-orgad95a58" class="outline-4">
+<h4 id="orgad95a58">Création des widgets</h4>
+<div class="outline-text-4" id="text-orgad95a58">
 <ol class="org-ol">
 <li><p>
 A l'aide d'une double boucle imbriquée (pour parcourir la grille de puissance 4), il faut pour chaque case de la grille créer une cellule pour ton affichage (une cellule sera un Label()). Exemple à l'intérieur de la boucle:
@@ -163,11 +117,11 @@ La fonction clic doit récupérer l'information de la colonne sélectionnée et 
 </div>
 </div>
 
-<div id="outline-container-org38d9682" class="outline-2">
+<div id="outline-container-solution2" class="outline-2">
 <h2 id="solution2">Autre solution sans la méthode grid</h2>
 <div class="outline-text-2" id="text-solution2">
 </div>
-<div id="outline-container-org0878f48" class="outline-3">
+<div id="outline-container-stockage-formes" class="outline-3">
 <h3 id="stockage-formes">Stockage des formes du canvas dans une liste</h3>
 <div class="outline-text-3" id="text-stockage-formes">
 <p>
@@ -185,16 +139,16 @@ Au moment de créer les formes dans le canvas, tu peux les stocker dans une list
 </div>
 </div>
 
-<div id="outline-container-orgc758eba" class="outline-3">
+<div id="outline-container-detection-forme" class="outline-3">
 <h3 id="detection-forme">Détection de la forme cliquée dans un canvas</h3>
 <div class="outline-text-3" id="text-detection-forme">
 <p>
 On peut détecter assez facilement sur quelle forme était la souris lorsqu'elle a déclenché l'évènement <code>'&lt;Button-1&gt;'</code> en utilisant la méthode disponible dans notre canvas <code>canvas.find_closest(x,y)</code>.
 </p>
 </div>
-<div id="outline-container-org6b560ad" class="outline-4">
-<h4 id="org6b560ad">Démonstration</h4>
-<div class="outline-text-4" id="text-org6b560ad">
+<div id="outline-container-orgcc3b5e2" class="outline-4">
+<h4 id="orgcc3b5e2">Démonstration</h4>
+<div class="outline-text-4" id="text-orgcc3b5e2">
 <ul class="org-ul">
 <li><p>
 Tu peux utiliser la méthode bind directement dans le canvas après l'avoir créé :
@@ -225,7 +179,7 @@ Après cette étape, tu as retrouvé la colonne de la forme sur laquelle on a cl
 </div>
 </div>
 </div>
-<div id="outline-container-orgf1b3450" class="outline-3">
+<div id="outline-container-find-below" class="outline-3">
 <h3 id="find-below">Cas d'une forme sous une autre</h3>
 <div class="outline-text-3" id="text-find-below">
 <p>
