@@ -282,7 +282,7 @@ age = int(input("Entrez votre âge : "))
 print("Tu es né en %s !" % (2022 - age))
 #+end_src
 
-Pour le moment, cela suffira pour créer des programmes plus intéractifs, mais nous reverrons plus en détail les conversions en python dans le chapitre 4 (cours 13).
+Pour le moment, cela suffira pour créer des programmes plus interactifs, mais nous reverrons plus en détail les conversions en python dans le chapitre 4 (cours 13).
 *** Exercices
 1. Dans un programme nommé =carte_identite.py= :
    - Pour chaque information à demander à l'utilisateur, il faudra utiliser =input()= avec une question appropriée.
@@ -500,7 +500,7 @@ Dans un programme nommé =nombre_secret.py= :
   - Demander au joueur de trouver le nombre situé entre =minimum= et =maximum=.
   - Si le nombre entré par le joueur est le bon, le jeu doit féliciter le joueur.
   - Si le nombre entré est plus petit ou plus grand, le jeu doit informer le joueur et commencer un nouvel essai s'il en reste au joueur.
-  - Si le nombre n'est pas le bon est qu'il s'agissait du dernier essai, le jeu doit informer le joueur qu'il a perdu.
+  - Si le nombre n'est pas le bon et qu'il s'agissait du dernier essai, le jeu doit informer le joueur qu'il a perdu.
 
 *** BONUS
 - Si le joueur a gagné, le jeu doit se relancer avec une plus grande difficulté (moins d'essais, nombre secret maximum plus grand, ...)
