@@ -1037,7 +1037,7 @@ L'affichage peut être le même dans le cas d'une victoire ou d'une défaite mai
 Pour t'aider, voici un exemple des fonctions que tu peux créer et utiliser :
 - =afficher_mot(mot, lettres_trouvees)= : Affiche le mot avec uniquement les lettres trouvées et des _ à la place des lettres à trouver.
 - =demander_mot()= : Demande un mot à l'utilisateur et le retourne (=return=)
-- =afficher_statut(mot, lettres_trouvees, nb_essais)= : Affiche le statut complet de la partie, c'est-à-dire :
+- =afficher_statut(mot, lettres_trouvees, lettres_essayees, nb_essais)= : Affiche le statut complet de la partie, c'est-à-dire :
   - le mot avec les lettres trouvées jusqu'à présent
   - toutes les lettres essayées
   - les essais restants
