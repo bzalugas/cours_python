@@ -422,7 +422,7 @@ Pour le moment, cela suffira pour créer des programmes plus interactifs, mais n
    - Fais une boucle =for= qui affiche =nombre= fois "Je n'aurais plus jamais besoin de me répéter".
    - Fais une boucle =for= qui affiche tous les nombres de 0 à =nombre= inclus.
    - Fais une boucle =for= qui affiche tous les nombres de 0 à =nombre= exclus.
-   - Crée une liste =liste=.
+   - Crée une liste vide =liste= (=liste = []=)
    - Fais une boucle =for= qui demande =nombre= fois à l'utilisateur d'entrer un mot qui s'ajoutera à la liste.
    - Fais une boucle =for= qui affiche chaque élément de la liste ligne par ligne.
 
