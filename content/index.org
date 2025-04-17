@@ -484,7 +484,7 @@ Pour générer un nombre aléatoire, tu dois d'abord importer le module =random=
 import random
 #+end_src
 
-Ensuite, pour générer le nombre et le stocker, tu dois utiliser la fonction =random.randint(min, max)=. =min= et =max= sont les valeurs minimale et maximale du nombre aléatoire souhaité.
+Ensuite, pour générer le nombre et le stocker, tu dois utiliser la fonction =random.randint(minimum, maximum)=. =minimum= et =maximum= sont les valeurs minimale et maximale du nombre aléatoire souhaité.
 #+begin_src python
 nombre = random.randint(0, 10)
 #+end_src
