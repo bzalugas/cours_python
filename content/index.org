@@ -1101,10 +1101,10 @@ notes_classe = {"Robert": {"français": [13,14,15], "anglais": [18,0,4]},
 
 1. Crée un dictionnaire vide nommé =notes_classes=.
 2. Pour chaque élève dans la liste =eleves= :
-   - Crée un dictionnaire vide =notes_eleves= qui contiendra toutes les notes de chaque matière.
+   - Crée un dictionnaire vide =notes_eleve= qui contiendra toutes les notes de chaque matière.
    - Pour chaque matière dans la liste =matieres=:
      - Crée une variable =notes_matières= qui récupère la *liste* des notes de la matière grâce à la fonction =demander_notes_matieres(eleve,matiere)= (que l'on va coder après).
-     - Ajoute cette liste dans le dictionnaire =notes_eleves=. Cette ligne devrait ressembler à =notes_eleve[matiere] = notes_matiere=.
+     - Ajoute cette liste dans le dictionnaire =notes_eleve=. Cette ligne devrait ressembler à =notes_eleve[matiere] = notes_matiere=.
    - A la fin de la boucle des matières, ajoute le dictionnaire =notes_eleve= au dictionnaire =notes_classe=.
 3. Enfin, *retourne* le dictionnaire contenant toutes les notes de tous les élèves dans toutes les matières.
 
