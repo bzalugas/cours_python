@@ -1065,19 +1065,19 @@ Le programme devra bien-sûr être découpé en fonctions (détaillées plus tar
    - La moyenne par matière de la classe.
 Exemple d'utilisation :
 
-[[./img/notes_eleves1.png]]
+[[./img/notes_eleves1.jpg]]
 
-[[./img/notes_eleves2.png]]
+[[./img/notes_eleves2.jpg]]
 
-[[./img/notes_eleves3.png]]
+[[./img/notes_eleves3.jpg]]
 
-[[./img/notes_eleves4.png]]
+[[./img/notes_eleves4.jpg]]
 
-[[./img/notes_eleves5.png]]
+[[./img/notes_eleves5.jpg]]
 
-[[./img/notes_eleves6.png]]
+[[./img/notes_eleves6.jpg]]
 
-[[./img/notes_eleves7.png]]
+[[./img/notes_eleves7.jpg]]
 
 ** Le code
 :PROPERTIES:
