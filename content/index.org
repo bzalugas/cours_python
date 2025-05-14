@@ -1099,7 +1099,7 @@ notes_classe = {"Robert": {"français": [13,14,15], "anglais": [18,0,4]},
                 "Patrick": {"français": [18,18,18], "anglais": [15,12,19]}}
 #+end_src
 
-1. Crée un dictionnaire vide nommé =notes_classes=.
+1. Crée un dictionnaire vide nommé =notes_classe=.
 2. Pour chaque élève dans la liste =eleves= :
    - Crée un dictionnaire vide =notes_eleve= qui contiendra toutes les notes de chaque matière.
    - Pour chaque matière dans la liste =matieres=:
