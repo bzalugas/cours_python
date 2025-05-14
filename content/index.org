@@ -507,13 +507,13 @@ Dans un programme nommé =nombre_secret.py= :
 - Si le joueur a perdu, le jeu doit baisser la difficulté ou retourner à la difficulté originale.
 - Des messages cachés qui ne s'affichent que si l'on réussit un certain niveau ou si on trouve le nombre secret du premier coup.
 
-* Chapitre 7bis : Turtle avec les fonctions
+* Chapitre 7 : Turtle avec les fonctions
 :PROPERTIES:
-:custom_id: chapitre7bis
+:custom_id: chapitre7
 :END:
-** Cours 17b : Un peu plus de turtle
+** Cours 17 : Un peu plus de turtle
 :PROPERTIES:
-:custom_id: chapitre7bis_cours17b
+:custom_id: chapitre7_cours17
 :END:
 #+attr_html: :target _blank
 Nous avons vu précédemment les bases du module turtle. En réalité, il existe encore beaucoup de fonctionnalités que nous n'avons pas encore explorées. Pour plus de détails et si tu cherches quelque-chose qui n'est pas expliqué ici, voici la documentation officielle de turtle : [[https://docs.python.org/fr/3/library/turtle.html#turtle-graphics-reference]]
@@ -650,9 +650,9 @@ pen.setheading(90)
 #+end_src
 *** Exercices
 Rendez-vous au cours 18b pour commencer à mettre en application toutes tes nouvelles connaissances.
-** Cours 18b : Exercice turtle
+** Cours 18 : Exercice turtle
 :PROPERTIES:
-:custom_id: chapitre7bis_cours18b
+:custom_id: chapitre7_cours18
 :END:
 *** Mon beau sapin ...
 Dans un programme nommé =mon_beau_sapin.py=, mets en oeuvre tout ce que l'on vient de voir en reproduisant ce sapin de noël. Ce n'est pas grave s'il n'est pas exactement similaire, mais applique-toi à le faire le plus ressemblant possible.
@@ -662,9 +662,9 @@ Dans un programme nommé =mon_beau_sapin.py=, mets en oeuvre tout ce que l'on vi
 
 Indice : les étages du sapin sont en fait des triangles superposés de tailles différentes.
 
-** Cours 19b : Turtle, mais avec des fonctions
+** Cours 19 : Turtle, mais avec des fonctions
 :PROPERTIES:
-:custom_id: chapitre7bis_cours19b
+:custom_id: chapitre7_cours19
 :END:
 *** Manuel
 - *"Recycler du code avec des fonctions et des modules"*, p.87-88
@@ -713,7 +713,10 @@ Dans un programme nommé =flocon.py= :
     - Dessiner une branche
     - Tourner à droite de 60\deg
 - Enfin, appelle la fonction =flocon()= et observe le flocon se dessiner !
-** Cours 20b : Les fonctions avec des arguments
+** Cours 20 : Les fonctions avec des arguments
+:PROPERTIES:
+:custom_id: chapitre7_cours20
+:END:
 Nous avons vu dans le chapitre précédent comment créer et utiliser des fonctions :
 #+begin_src python
 def nom_fonction(): #Création de la fonction
@@ -778,13 +781,13 @@ Dans un programme nommé =sapin_fonctions.py= :
 
   *BONUS*
 Ajoute dans le programme une fonction nommée =etoile(taille)= pour dessiner l'étoile au sommet du sapin. Utilise cette fonction à la suite du programme qui dessine le sapin.
-* Chapitre 7 : Les fonctions
+* Chapitre 8 : Les fonctions
 :PROPERTIES:
-:custom_id: chapitre7
+:custom_id: chapitre8
 :END:
-** Cours 17 : Fonctions
+** Cours 21 : Fonctions
 :PROPERTIES:
-:custom_id: chapitre7_cours17
+:custom_id: chapitre7_cours21
 :END:
 *** Manuel
 - *"Recycler du code avec des fonctions et des modules"*, p.87-88
@@ -844,9 +847,9 @@ Ajoute dans le programme une fonction nommée =etoile(taille)= pour dessiner l'�
    - Définis une fonction =creerListe(taille)= qui crée une liste de taille =taille= en demandant à l'utilisateur chaque nombre de la liste et renvoie la liste ainsi créée.
    - Appelle la fonction =creerListe= après avoir demandé la =taille= à l'utiliateur puis utilise la liste créée dans la fonction =tri=. Affiche la liste avant et après avoir utilisé =tri=.
 
-** Cours 18 : Les modules
+** Cours 22 : Les modules
 :PROPERTIES:
-:custom_id: chapitre7_cours18
+:custom_id: chapitre7_cours22
 :END:
 *** Cours
 *Un module* sert à regrouper des fonctions, des variables et d'autres choses dans des programmes plus vastes et plus puissants. Certains modules sont intégrés dans Python lui-même, tandis que tu peux en télécharger d'autres de manière séparée. Nous en avons déjà utilisé par exemple avec *turtle* et *random*.
@@ -879,9 +882,9 @@ Dans le chapitre suivant, nous allons mettre en pratique les modules et les fonc
 
 Tu as maintenant créé les 3 premières fonctions de ton propre module, que tu pourras réutiliser chaque fois que tu en as besoin. Tu es libre d'y ajouter les fonctions qui te semblent intéressantes et que tu as déjà écrites, par exemple dans ce chapitre.
 
-* Chapitre 8 : Mise en pratique 2
+* Chapitre 9 : Mise en pratique 2
 :PROPERTIES:
-:custom_id: chapitre8
+:custom_id: chapitre9
 :END:
 Attention ! Pour chaque exercice, il faudra bien faire la différence entre le code *à l'intérieur des fonctions* et le code qui *utilise les fonctions*.
 
@@ -889,7 +892,7 @@ Nous utiliserons le fichier =mes_fonctions= précédemment et nous y ajouterons 
 
 ** Niveau 1
 :PROPERTIES:
-:custom_id: chapitre8_niv1
+:custom_id: chapitre9_niv1
 :END:
 *** Division euclidienne
 Dans le fichier =mes_fonctions.py= :
@@ -942,7 +945,7 @@ n
 
 ** Niveau 2
 :PROPERTIES:
-:CUSTOM_ID: chapitre8_niv2
+:CUSTOM_ID: chapitre9_niv2
 :END:
 *** Occurrences de lettres
 Dans un programme nommé =occurrences.py= :
@@ -981,7 +984,7 @@ Dans un programme nommé =palindrome.py= :
 
 ** Niveau 3
 :PROPERTIES:
-:custom_id: chapitre8_niv3
+:custom_id: chapitre9_niv3
 :END:
 *** Rendu de monnaie
 Nous voulons créer un programme qui permet de calculer un rendu de monnaie et de dire de quels billets et pièces nous avons besoin pour former la somme à rendre. Par exemple, si la somme à payer est de 18.57€ et qu'un client donne 100€, le programme doit pouvoir :
@@ -1043,6 +1046,85 @@ Pour t'aider, voici un exemple des fonctions que tu peux créer et utiliser :
   - les essais restants
 - =mot_trouve(mot, lettres_trouvees)= : Renvoie =False= s'il reste encore des lettres à trouver dans =mot= et =True= si toutes les lettres ont été trouvées.
 - =jeu()= : la boucle de jeu.
+
+* Notes d'une classe
+:PROPERTIES:
+:custom_id: notes_classe
+:END:
+** Présentation du programme
+:PROPERTIES:
+:custom_id: notes_classe-presentation
+:END:
+Le programme devra bien-sûr être découpé en fonctions (détaillées plus tard). Il devra fonctionner comme suit:
+1. L'utilisateur doit entrer une par une les matières de la classe. Il écrit "stop" une fois qu'il a finit.
+2. L'utilisateur doit entrer un par un les prénoms des élèves de la classe. Il écrit "stop" une fois qu'il a finit.
+3. Pour chaque élève, le programme demande une par une les notes de chaque matière.
+4. Enfin, le programme affiche toutes les informations importantes:
+   - Pour chaque élève : toutes les notes de chaque matière, la moyenne de l'élève pour chaque matière, sa moyenne générale.
+   - La moyenne de la classe.
+   - La moyenne par matière de la classe.
+Exemple d'utilisation :
+
+[[./img/notes_eleves1.png]]
+
+[[./img/notes_eleves2.png]]
+
+[[./img/notes_eleves3.png]]
+
+[[./img/notes_eleves4.png]]
+
+[[./img/notes_eleves5.png]]
+
+[[./img/notes_eleves6.png]]
+
+[[./img/notes_eleves7.png]]
+
+** Le code
+:PROPERTIES:
+:custom_id: notes_classe-code
+:END:
+
+*** Demander la liste des matières
+Commence par créer une fonction =demander_matieres()= qui demande *à l'infini* un nom de matière et l'ajoute dans une liste tant que l'utilisateur n'a pas entré le mot "stop". La fonction *doit retourner la liste des matières*.
+
+Rappelle-toi de la logique : on crée une liste vide (par exemple =liste = []=) puis on utilise la fonction =append= pour y ajouter des éléments.
+
+*** Demander la liste des élèves
+Crée une fonction =demander_eleves()= qui demande un par un le prénom des élèves de la classe. Le fonctionnement sera exactement le même que la fonction =demander_matieres()=. La fonction *doit retourner la liste des élèves*.
+
+*** Demander les notes
+Ici, ça se complique un peu ! Nous allons découper cette fonctionnalité en deux fonctions. Commence par définir la fonction =demander_notes(eleves, matieres)= qui prend en paramètres la liste des élèves et la liste des matières. Cette fonction doit retourner un dictionnaire qui contiendra pour chaque élève toutes les notes de chaque matière. Voici un exemple pour montrer la forme que devra avoir ce dicitonnaire :
+#+begin_src python
+notes_classe = {"Robert": {"français": [13,14,15], "anglais": [18,0,4]},
+                "Patrick": {"français": [18,18,18], "anglais": [15,12,19]}}
+#+end_src
+
+1. Crée un dictionnaire vide nommé =notes_classes=.
+2. Pour chaque élève dans la liste =eleves= :
+   - Crée un dictionnaire vide =notes_eleves= qui contiendra toutes les notes de chaque matière.
+   - Pour chaque matière dans la liste =matieres=:
+     - Crée une variable =notes_matières= qui récupère la *liste* des notes de la matière grâce à la fonction =demander_notes_matieres(eleve,matiere)= (que l'on va coder après).
+     - Ajoute cette liste dans le dictionnaire =notes_eleves=. Cette ligne devrait ressembler à =notes_eleve[matiere] = notes_matiere=.
+   - A la fin de la boucle des matières, ajoute le dictionnaire =notes_eleve= au dictionnaire =notes_classe=.
+3. Enfin, *retourne* le dictionnaire contenant toutes les notes de tous les élèves dans toutes les matières.
+
+La fonction =demander_notes_matieres(eleve,matiere)= :
+1. Crée une liste vide nommée =notes=.
+2. Fais une boucle infinie qui :
+   - Demande une note en affichant le prénom de l'élève et la matière (voir exemple).
+   - Si l'utilisateur a écrit "stop", arrêter la boucle
+   - Sinon, ajoute la note (*attention, c'est un nombre !*) à la liste de notes.
+3. Retourne la liste de notes.
+
+*** Afficher les notes
+Nous allons commencer par faire une fonction qui affiche simplement les notes des matières entrées pour chaque élève. Nous pourrons ainsi vérifier que toutes les étapes d'avant fonctionnent correctement et ça nous fournira la base de l'affichage.
+
+Crée une fonction =afficher_notes(dico_classe, matieres)= qui doit afficher pour chaque élève:
+1. Son prénom.
+2. Pour chaque matière, le nom de la matière.
+3. Toutes les notes de la matière pour cet élève.
+
+Pour l'affichage, aide-toi des exemples fournis pour bien agencer les informations.
 
 * L-systèmes
 :PROPERTIES:
