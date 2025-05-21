@@ -1117,12 +1117,64 @@ La fonction =demander_notes_matieres(eleve,matiere)= :
 3. Retourne la liste de notes.
 
 *** Afficher les notes
-Nous allons commencer par faire une fonction qui affiche simplement les notes des matières entrées pour chaque élève. Nous pourrons ainsi vérifier que toutes les étapes d'avant fonctionnent correctement et ça nous fournira la base de l'affichage.
+Nous allons commencer par faire une fonction qui affiche simplement les notes des matières entrées pour chaque élève. Nous pourrons ainsi vérifier que toutes les étapes d'avant fonctionnent correctement et nous aurons ainsi la base de l'affichage.
 
-Crée une fonction =afficher_notes(dico_classe, matieres)= qui doit afficher pour chaque élève:
+Crée une fonction =afficher_notes(notes_classe, matieres)= qui doit afficher pour chaque élève:
 1. Son prénom.
 2. Pour chaque matière, le nom de la matière.
 3. Toutes les notes de la matière pour cet élève.
+
+*** Les calculs
+Entrons dans le vif du sujet. Nous avons codé un système pour demander les prénoms, les matières et les notes. Passons donc maintenant aux calculs des moyennes.
+
+*** Calcul d'une moyenne
+Commence par coder une fonction qui permet de calculer une moyenne à partir d'une liste de notes. Crée une fonction nommée =calcul_moyenne= qui prend en paramètre =liste_notes= qui sera la liste des notes.
+
+Cette fonction doit *renvoyer* la moyenne ainsi calculée.
+
+*** Calcul de la moyenne générale
+Crée ensuite une fonction =calcul_moyenne_generale= qui prend en paramètre le dictionnaire de toutes les notes d'un élève par matière. *C'est le dictionnaire contenu dans la valeur de chaque élève du dictionnaire nommé =notes_classes= dans la fonction =demander_notes= par exemple*. Appelle ce paramètre =notes_eleve=.
+
+Pour commencer cette fonction, n'oublie pas de déclarer une variable =moyenne= qui est égale à *0* au début.
+
+Ensuite, pour chaque matière contenue dans le dictionnaire =notes_eleve=, ajoute à la moyenne la moyenne de l'élève dans cette matière (utilise la fonction codée précédemment).
+
+Enfin, divise le total des moyennes par le nombre de matières (taille du dictionnaire =notes_eleves=...) et *retourne* le résultat.
+
+*** Calcul de la moyenne de la classe
+Crée une fonction =calcul_moyenne_classe= qui prend en paramètre le dictionnaire des notes de la classe. Nomme ce paramètre =notes_classe=.
+
+En t'aidant de la fonction calculant la moyenne générale, fais la moyenne des moyennes générales de tous les élèves puis *retourne* le résultat. Les étapes ne sont pas détaillées pour cette fonction car elles sont très similaires aux deux fonctions précédentes.
+
+*** Calcul de la moyenne de la classe par matière
+Crée une fonction =calcul_moyennes_classe_matieres= qui prend en paramètre le dictionnaire des notes de la classe nommé =notes_classe=.
+
+Pour cette fonction, tu dois créer un dictionnaire contenant le nom des matières en clef et la moyenne de la classe dans la matière en valeur. Pour l'exemple d'affichage du début, le résultat ressemble à ceci :
+#+begin_src python
+moyennes_matieres = {"français": 16, "anglais": 13}
+#+end_src
+
+Commence par déclarer une variable =moyennes_matieres= contenant un dictionnaire vide. Pour chaque élève, il faudra calculer sa moyenne dans chaque matière et ajouter les résultats dans le dictionnaire. A la fin, il faudra bien-sûr diviser le résultat des moyennes pour chaque matière par le nombre d'élèves.
+
+Après avoir créé la variable =moyennes_matieres=, pour chaque *élève* :
+- Fais une boucle qui parcourt chaque matière de l'élève.
+- Si la matière n'est pas encore dans =moyennes_matieres=, alors ajoute-la et mets sa valeur à 0.
+- Dans tous les cas, ajoute la moyenne de l'élève pour cette matière dans le dictionnaire. Bien-sûr, utilise la fonction dédiée pour le calcul de la moyenne.
+
+Enfin, pour chaque matière du dictionnaire =moyennes_matieres=, divise la valeur de la matière par le nombre d'élèves.
+
+N'oublie pas de retourner le dictionnaire.
+
+*** L'affichage final
+Nous allons maintenant ajouter du code à la fonction =afficher_notes()=.
+
+A la suite de celle-ci, ajoute l'affichage pour chaque élève de :
+1. La moyenne de l'élève pour la matière.
+2. Une fois toutes les matières affichées, afficher la moyenne générale de l'élève.
+
+Une fois toutes les notes des élèves affichées, Affiche :
+1. La moyenne de la classe
+2. Pour chaque matière, la moyenne de la classe pour cette matière.
 
 Pour l'affichage, aide-toi des exemples fournis pour bien agencer les informations.
 
