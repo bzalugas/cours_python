@@ -1154,7 +1154,7 @@ Pour cette fonction, tu dois créer un dictionnaire contenant le nom des matièr
 moyennes_matieres = {"français": 16, "anglais": 13}
 #+end_src
 
-Commence par déclarer une variable =moyennes_matieres= contenant un dictionnaire vide. Pour chaque élève, il faudra calculer sa moyenne dans chaque matière et ajouter les résultats dans le dictionnaire. A la fin, il faudra bien-sûr diviser le résultat des moyennes pour chaque matière par le nombre d'élèves.
+Déclare donc une variable nommée =moyennes_matieres= et contenant un dictionnaire vide. Pour chaque élève, il faudra calculer sa moyenne dans chaque matière et ajouter les résultats dans le dictionnaire. A la fin, il faudra bien-sûr diviser le résultat des moyennes pour chaque matière par le nombre d'élèves.
 
 Après avoir créé la variable =moyennes_matieres=, pour chaque *élève* :
 - Fais une boucle qui parcourt chaque matière de l'élève.
