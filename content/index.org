@@ -1178,6 +1178,273 @@ Une fois toutes les notes des élèves affichées, Affiche :
 
 Pour l'affichage, aide-toi des exemples fournis pour bien agencer les informations.
 
+* Premier jeu graphique : le pong
+:PROPERTIES:
+:custom_id: pong
+:END:
+Voici enfin le moment tant attendu : un jeu avec une interface graphique ! Un programme avec interface graphique est un programme qui permet à l'utilisateur d'intéragir avec une fenêtre générée par celui-ci au lieu de le faire dans la console. C'est en fait la forme de la plupart des programmes que tu connais mais nous allons voir que coder une interface graphique prend plus de temps que simplement afficher des choses dans la console.
+
+Pour t'aider à résoudre des problèmes que tu pourrais rencontrer ou créer d'autres jeux plus tard, voici la documentation officielle de pygame : [[https://www.pygame.org/docs/]]. N'hésite pas à faire des recherches sur internet pour t'aider à ajouter des fonctionnalités ou te débloquer lorsque tu rencontres un problème !
+
+** Présentation du projet
+:PROPERTIES:
+:custom_id: pong-presentation
+:END:
+Pour se faire une première idée du développement d'interfaces graphiques, nous allons commencer par un jeu qui ne demande pas de choses trop complexes à part afficher des formes et pouvoir en déplacer certaines avec le clavier. Le jeu idéal pour cela est un pong : une balle qui rebondit sur les bords de l'écran et que l'on doit faire rebondir avec une raquette rectangulaire pour qu'elle ne tombe pas. On pourra ensuite améliorer le jeu pour y jouer à deux, avec une raquette de chaque côté de l'écran.
+
+En python, pour la création de jeux avec interface graphique, il existe plusieurs modules que l'on peut utiliser. Le premier, c'est *tkinter*. Ce module permet de créer toutes sortes d'interfaces graphiques mais il devient vite très long de coder des jeux vidéos un peu complexes.
+
+Le second, c'est *pygame*. Comme son nom l'indique, il s'agit d'un module spécialisé dans la création de jeux avec python. Il simplifie beaucoup d'étapes qui peuvent prendre beaucoup de temps habituellement et nous permet de coder rapidement le début d'un jeu. C'est ce dernier module que nous allons utiliser pour coder ton premier jeu avec python !
+
+** Présentation de pygame
+:PROPERTIES:
+:custom_id: pong-presentation_pygame
+:END:
+Lorsque l'on code un jeu vidéo, le code ressemble en général toujours à la même chose : au début, on initialise quelques variables puis on démarre une *boucle de jeu*. Cette boucle contient toute la partie logique et rendu du code et continue jusqu'à la fin du jeu. Pygame ne fait pas exception : pour la plupart des jeux codés avec ce module, le schéma sera le même. Voici donc la forme de base d'un jeu pygame qui ne fait rien à part lancer une fenêtre qui peut être fermée :
+
+#+begin_src python
+import pygame # importation du module
+
+pygame.init() # initialisation du module
+
+screen = pygame.display.set_mode((1280,720)) # création d'une fenêtre de 1280 pixels de large et 720 de haut.
+pygame.display.set_caption("Titre du jeu") # définition du titre de la fenêtre.
+
+clock = pygame.time.Clock() # création d'une variable d'horloge permettant de paramétrer le nombre d'images par seconde (=fps).
+
+running = True # variable indiquant si la boucle de jeu doit continuer (True) ou s'arrêter (False)
+while running == True:
+    for event in pygame.event.get(): # boucle qui récupère tous les évènements enregistrés
+        if event.type == pygame.QUIT: # parmi les évènement, si un évènement est de type "QUIT" (càd l'utilisateur a cliqué sur la croix)
+            running = False # la variable running est mise à False pour que la prochaine boucle s'arrête
+
+    # Toute la logique du code sera écrite ici
+
+    screen.fill((20,125,125)) # remplissage de l'écran par la couleur RGB 20,125,125
+
+    # La partie rendu des objets ou images sera codée ici
+
+    pygame.display.flip() # application des modifications dans la fenêtre
+    clock.tick(30) # permet à la boucle d'attendre jusqu'à la prochaine image (30 fps pour cet exemple)
+
+pygame.quit() # lorsque l'on sort de la boucle, on doit quitter proprement la fenêtre de pygame
+
+#+end_src
+
+Pour déplacer un objet sur l'écran, il faut en fait redessiner par dessus l'ancienne "image" : on remplit à nouveau le fond à chaque boucle puis on redessine les objets selon les nouveaux paramètres.
+
+** Début du pong : afficher un cercle
+:PROPERTIES:
+:custom_id: pong-debut
+:END:
+En reprenant la base de code présentée avant, on va commencer par initialiser quelques variables avant la boucle de jeu qui seront modifiées au cours de cette boucle et qui représenterons les coordonnées de notre balle. Nous ajoutons aussi des variables pour différents paramètres comme la taille de la fenêtre et le rayon du cercle représentant la balle.
+
+#+begin_src python
+import pygame
+
+pygame.init()
+
+# variables pour le jeu
+fenetre_l, fenetre_h = 600,600
+balle_x = fenetre_l // 2 # position x de la balle : la moitié de la largeur de fenêtre
+balle_y = fenetre_h // 2 # position y de la balle : la moitié de la hauteur de fenêtre
+rayon_balle = 20 # définition du rayon de la balle à 20 pixels
+vitesse = 20 # vitesse de déplacement de la balle
+
+fenetre = pygame.display.set_mode((fenetre_l, fenetre_h)) # création d'une fenêtre de 600 pixels de large et 600 de haut.
+
+horloge = pygame.time.Clock()
+
+continuer = True
+while continuer == True:
+    for evenement in pygame.event.get():
+        if evenement.type == pygame.QUIT:
+            continuer = False
+
+    # Toute la logique du code sera écrite ici
+
+    screen.fill((20,125,125)) # remplissage de l'écran par la couleur RGB 20,125,125
+
+    # La partie rendu des objets ou images sera codée ici
+
+    pygame.display.flip()
+    horloge.tick(30)
+
+pygame.quit()
+#+end_src
+
+Ensuite, on doit utiliser ces variables pour dessiner la balle à l'écran dans la boucle car lorsqu'on la déplacera, il faudra la dessiner à ses nouvelles coordonnées à chaque déplacement.
+
+Ajoute cette ligne à la suite du remplissage de l'écran par une couleur. Tu es libre de modifier la couleur de la balle et du remplissage d'écran :
+
+#+begin_src python
+pygame.draw.circle(fenetre, (0,0,200), (x,y), rayon_balle) # les paramètres sont : la fenetre dans laquelle dessiner le cercle, la couleur, la position, le rayon du cercle
+#+end_src
+
+Si tu lances le programme, tu devrais voir s'afficher un cercle de la couleur de ton choix sur un fond lui aussi de la couleur que tu as choisie. Bravo tu as réussi à afficher un cercle !
+
+** Déplacer un cercle
+:PROPERTIES:
+:custom_id: pong-deplacer_cercle
+:END:
+Passons maintenant aux choses intéressantes : le déplacement du cercle représentant la balle. Pour cela, il va falloir changer la coordonnée balle_x ou balle_y en fonction de la touche du clavier qui est appuyée. C'est un simple enchaînement de conditions if.
+
+Pour récupérer la liste des touches pressées, on utilise la fonction =pygame.key.get_pressed()=. Cette fonction renvoie une liste contenant pour chaque touche True si elle est pressée et False sinon. Pour savoir quel indice de la liste correspond à quelle touche, on utilise les constantes déjà existantes de pygame. La liste complète est disponible dans la documentation de pygame : [[https://www.pygame.org/docs/ref/key.html]].
+
+Les touches (=keys) qui nous intéressent sont les flèches du clavier, représentées par les constantes *pygame.K_UP*, *pygame.K_DOWN*, *pygame.K_LEFT*, *pygame.K_RIGHT* pour les flèches *haut*, *bas*, *gauche*, *droite*.
+
+Pour vérifier si une touche a été pressée, on écrit :
+#+begin_src python
+touches = pygame.key.get_pressed()
+if touches[la touche qui nous intéresse] == True:
+    action à effectuer
+#+end_src
+
+Dans notre cas, si la touche flèche haut est pressée, on veut *enlever* la valeur de =vitesse= à la coordonnée balle_y. Oui, *enlever*, car les coordonnées en pygame commencent en haut à gauche à 0 et finissent en bas à droite:
+
+[[./img/schema_fenetre_pygame.png]]
+
+Donc, le début du code pour déplacer la balle à l'aide des flèches sera le suivant :
+#+begin_src python
+touches = pygame.key.get_pressed()
+if touches[pygame.K_UP] == True:
+    balle_y = balle_y - vitesse
+#+end_src
+
+A toi maintenant d'écrire le code manquant pour déplacer la balle dans les sens manquants.
+
+** Bloquer la balle dans la fenêtre
+:PROPERTIES:
+:custom_id: pong-bloquer_balle
+:END:
+Maintenant que nous pouvons déplacer la balle, c'est super chouette mais on aimerait qu'elle ne puisse pas sortir de la fenêtre ! Pour cela, c'est simple : après avoir fait les changement de coordonnées (ou pas) dans la boucle, il faut que l'on vérifie si les coordonnées de la balle ne dépassent ni à gauche, ni à droite, ni en haut, ni en bas. Si c'est le cas, on doit forcer la coordonnée qui dépasse à revenir à sa valeur maximale ou minimale avant d'afficher le cercle.
+
+Mais comment savoir quelles sont les coordonnées maximales et minimales ?
+
+[[./img/schema_pygame_balle.png]]
+
+Dans notre exemple, vu que la fenêtre fait 600px de largeur et de hauteur, et que le cercle fait 20px de rayon, les valeurs à ne pas dépasser à droite et à gauche seront 600 - 20 = 580px. A gauche ou en haut, ce sera 0 + 20 = 20px. *Pour pouvoir changer facilement plus tard la taille de la fenêtre sans altérer le fonctionnement du jeu, nous allons calculer au début ces valeurs en fonction des variables créées avant.* Ajoute ce code à la suite de la déclaration des variables :
+#+begin_src python
+limite_gauche = 0 + rayon_balle
+limite_haut = 0 + rayon_balle
+limite_droite = fenetre_l - rayon_balle
+limite_bas = fenetre_h - rayon_balle
+#+end_src
+
+Enfin, dans la boucle, après les "if" de déplacement de la balle, commence par ajouter ceci, qui permet à la balle de ne jamais dépasser la limite du bord droit de la fenêtre :
+#+begin_src python
+if balle_x > limite_droite:
+    balle_x = limite_droite
+#+end_src
+
+A toi de trouver les 3 conditions manquantes pour que la balle ne dépasse d'aucun bord de la fenêtre.
+
+** Déplacer la balle automatiquement
+:PROPERTIES:
+:custom_id: pong-deplacements_auto
+:END:
+Maintenant que l'on arrive à déplacer la balle sans qu'elle quitte la fenêtre, il faut qu'elle puisse se déplacer de manière autonome car dans le jeu final le joueur ne déplacera pas la balle mais la raquette. Pour pouvoir effectuer les déplacements automatiques, il faut alors choisir des valeurs de vitesses sur l'axe des abscisses (x) et des ordonnées (y) et appliquer ces valeurs aux positions de la balle à chaque répétition de la boucle while. La partie un peu plus délicate de cette étape est de savoir comment déterminer ces deux vitesses.
+
+Comme nous voulons que le jeu ne soit pas trop prévisible, nous allons déterminer les vitesses de manière aléatoire. *Attention* : on pourrait simplement définir les deux vitesses avec =random.randint(-20,20)= par exemple, mais cette technique risque de poser problème. En effet, si la =vitesse_x= est de 20 et =vitesse_y= pareil, on aura une vitesse totale bien trop élevée. A l'inverse, on risque d'avoir des vitesses trop faibles. Le mieux est donc de déterminer une vitesse de manière aléatoire et de calculer l'autre en fonction de la première pour que la vitesse totale soit toujours la même au début du jeu.
+
+Commençons par déterminer la vitesse de x. Nous déclarerons nos nouvelles variables à la suite des autres, avant la boucle while. *N'oublie pas d'importer le module =random= au tout début du code.* :
+#+begin_src python
+vitesse_x = random.randint(1, 19) # Détermination uniquement positive pour éviter le 0 et jusqu'à 19 pour que vitesse_y ne soit pas 0.
+#+end_src
+
+Maintenant, calculons =vitesse_y= à partir de =vitesse_x= et déterminons les signes des deux variables aléatoirement. *Changer les signes permet de changer la direction sur les axes.*
+#+begin_src python
+vitesse_y = 20 - vitesse_x # La vitesse totale doit être 20, d'où ce calcul
+# détermination des signes des variables :
+vitesse_x = vitesse_x if random.randint(0,1) == 0 else -vitesse_x
+vitesse_y = vitesse_y if random.randint(0,1) == 0 else -vitesse_y
+#+end_src
+
+Il ne nous reste plus qu'à modifier le code dans la boucle que les vitesses soient ajoutées aux positions correspondantes à chaque répétition (à toi de jouer !).
+
+** Le rebond !
+:PROPERTIES:
+:custom_id: pong-rebond
+:END:
+Le programme avance : nous avons à ce stade une balle qui se déplace dans la fenêtre sans jamais en sortir mais elle ne rebondit pas encore contre les bords. Nous allons donc remédier à cela.
+
+Pour pouvoir faire rebondir la balle, il suffit d'inverser sa vitesse lorsqu'elle rencontre un bord. Nous avons déjà écrit un code qui détecte en quelques sorte le moment où la balle atteint un bord pour qu'elle ne le dépasse pas. Il faut donc ajouter dans ces conditions le fait d'inverser =vitesse_x= si c'est le côté droit ou gauche et d'inverser =vitesse_y= sinon.
+
+Bravo, tu as codé une balle qui rebondit dans une fenêtre ! C'est une bonne étape de franchie pour la suite du jeu.
+
+** La raquette
+:PROPERTIES:
+:custom_id: pong-raquette
+:END:
+Il faut maintenant que l'on puisse taper la balle pour éviter qu'elle n'atteigne le bas de la fenêtre. L'outil idéal pour cela est une raquette !
+
+Pour notre jeu, la raquette sera un *rectangle* situé en bas de la fenêtre que l'on pourra déplacer de gauche à droite. Commençons donc par déterminer quelques variables qui définiriont la position de la raquette. Nous nommerons ces variables avec un "1" car plus tard nous ajouterons une seconde raquette pour jouer à deux.
+
+Pour déterminer la position initiale de la raquette, c'est un peu plus complexe que pour la balle car la création d'un rectangle en pygame se fait différemment : on définit les coordonnées du point en haut à gauche du rectangle puis la longueur et la hauteur. Nous repérerons donc les coordonnées de la raquette par rapport à son point en haut à gauche. Nous devons donc faire quelques calculs pour centrer la raquette horizontalement.
+#+begin_src python
+largeur_raquette = 100
+hauteur_raquette = 15
+
+raquette1_x = (fenetre_l // 2) - (largeur_raquette // 2)
+#+end_src
+
+Pour la position y de la raquette, choisissons une valeur arbitraire ni trop haute ni trop basse :
+#+begin_src python
+raquette1_y = fenetre_h - hauteur_raquette - 40
+#+end_src
+
+Il faut maintenant "dessiner" la raquette dans la boucle, de la même façon que la balle. La différence est que l'on va d'abord créer un objet *Rect* que l'on dessinera ensuite dans la fenêtre. Ajoute ce code à la suite du rendu graphique que l'on a déjà codé :
+#+begin_src python
+raquette1 = pygame.Rect(raquette1_x, raquette1_y, largeur_raquette, hauteur_raquette) # création de l'objet rectangle
+pygame.draw.rect(fenetre, (227,106,36), raquette1) # dessin du rectangle dans la fenêtre. Choisis la couleur que tu veux.
+#+end_src
+
+** Le déplacement de la raquette
+:PROPERTIES:
+:custom_id: pong-deplacement_raquette
+:END:
+Pour déplacer la raquette, tu n'as pas vraiment besoin de monde aide : on a déjà le code qui détecte l'appui sur les touches du clavier, il faut donc changer quelle coordonnée tu modifies lors de l'appui sur les flèches gauche et droite du clavier !
+
+Fais ensuite en sorte que la raquette ne sorte pas de plus de sa moitié de l'écran.
+
+** Le rebond sur la raquette
+:PROPERTIES:
+:custom_id: pong-rebond_raquette
+:END:
+Cette partie est un peu plus difficile car il n'y a pas de solution simple et rapide pour déterminer si la balle entre en collision avec la raquette : nous allons devoir vérifier en fonction de leur coordonnées respectives.
+
+Pour savoir si la balle touche la raquette, nous devons comparer les coordonnées horizontales et verticales des deux objets. Procédons donc par étape.
+
+*** Étape 1 : collision verticale
+La balle entre en collision avec la raquette sur le plan vertical si sa coordonnée =y + rayon_balle= est *supérieure ou égale* à la coordonnée =y= de la raquette et si sa coordonée =y - rayon_balle= est *inférieure ou égale* à la coordonnée =y + hauteur_raquette=. Nous précisions la limite basse de la raquette également car nous allons ensuite coder la fin de partie si la balle touche le bas de la fenêtre. Il faut pour cela que la balle ne rebondisse pas si elle passe sous la raquette.
+
+*** Étape 2 : collision horizontale
+La balle entre en collision avec la raquette sur le plan horizontal si sa coordonnée =x + rayon_balle= est *supérieure ou égale* à la coordonnée =x= de la raquette et si sa coordonnée =x - rayon_balle= est *inférieure ou égale* à la coordonnée =x + largeur_raquette=.
+
+*** Le code
+Voici le début de la condition qui permet de faire rebondir la balle vers le haut. Ce code est bien-sûr dans la boucle car il faut vérifier à chaque image si la balle doit rebondir.
+#+begin_src python
+if balle_y + rayon_balle >= raquette_y and balle_y - rayon_balle <= raquette_y + hauteur_raquette and ... :
+    # action pour inverser la vitesse verticale de la balle
+#+end_src
+Ajoute le code manquant à la place des pointillés.
+
+** La défaite
+:PROPERTIES:
+:custom_id: pong-defaite1
+:END:
+Pour cette première partie du jeu, qui se joue tout seul, la partie est perdue si la balle touche le bord bas de la fenêtre. Il faut donc ajouter une condition qui stoppe la boucle de jeu si le joueur perd.
+
+À partir du code que l'on a déjà écrit, trouve la condition qui permet de savoir si la balle touche le bas de la fenêtre. Pour quitter la boucle de jeu, fais comme lorsqu'on clique sur la croix de la fenêtre.
+
+** Le score
+:PROPERTIES:
+:custom_id: pong-score
+:END:
+Ajoute un système de score qui s'incrémente chaque fois que la balle rebondit sur la raquette. Dans un premier temps, affiche ce score dans la console quand le joueur perd.
+
+Une fois que ton score fonctionne, aide-toi de la documentation officielle et d'internet pour trouver comment afficher le texte correspondant au score directement dans la fenêtre.
+
 * L-systèmes
 :PROPERTIES:
 :custom_id: l-systemes
