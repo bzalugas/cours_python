@@ -84,13 +84,29 @@
 </li>
 <li><a href="#pendu">Le pendu</a>
 <ul>
-<li><a href="#orga2bed43">Fonctionnement du programme</a></li>
+<li><a href="#org368b301">Fonctionnement du programme</a></li>
 </ul>
 </li>
 <li><a href="#notes_classe">Notes d'une classe</a>
 <ul>
 <li><a href="#notes_classe-presentation">Présentation du programme</a></li>
 <li><a href="#notes_classe-code">Le code</a></li>
+</ul>
+</li>
+<li><a href="#pong">Premier jeu graphique : le pong</a>
+<ul>
+<li><a href="#pong-presentation">Présentation du projet</a></li>
+<li><a href="#pong-presentation_pygame">Présentation de pygame</a></li>
+<li><a href="#pong-debut">Début du pong : afficher un cercle</a></li>
+<li><a href="#pong-deplacer_cercle">Déplacer un cercle</a></li>
+<li><a href="#pong-bloquer_balle">Bloquer la balle dans la fenêtre</a></li>
+<li><a href="#pong-deplacements_auto">Déplacer la balle automatiquement</a></li>
+<li><a href="#pong-rebond">Le rebond !</a></li>
+<li><a href="#pong-raquette">La raquette</a></li>
+<li><a href="#pong-deplacement_raquette">Le déplacement de la raquette</a></li>
+<li><a href="#pong-rebond_raquette">Le rebond sur la raquette</a></li>
+<li><a href="#pong-defaite1">La défaite</a></li>
+<li><a href="#pong-score">Le score</a></li>
 </ul>
 </li>
 <li><a href="#l-systemes">L-systèmes</a>
@@ -130,17 +146,17 @@
 <h2 id="introduction">Introduction</h2>
 <div class="outline-text-2" id="text-introduction">
 </div>
-<div id="outline-container-org233708f" class="outline-4">
-<h4 id="org233708f">Manuel de Python</h4>
-<div class="outline-text-4" id="text-org233708f">
+<div id="outline-container-orgd3125b8" class="outline-4">
+<h4 id="orgd3125b8">Manuel de Python</h4>
+<div class="outline-text-4" id="text-orgd3125b8">
 <p target="_blank">
 Tu peux télécharger le manuel de python en <a href="manuel/manuel_python.pdf" target="_blank">cliquant ici</a>.
 </p>
 </div>
 </div>
-<div id="outline-container-orgf41ea18" class="outline-4">
-<h4 id="orgf41ea18">Présentation</h4>
-<div class="outline-text-4" id="text-orgf41ea18">
+<div id="outline-container-org87e0e2c" class="outline-4">
+<h4 id="org87e0e2c">Présentation</h4>
+<div class="outline-text-4" id="text-org87e0e2c">
 <ul class="org-ul">
 <li>Prénom</li>
 <li>As-tu déjà programmé ? Si oui, avec quel langage de programmation ?</li>
@@ -148,9 +164,9 @@ Tu peux télécharger le manuel de python en <a href="manuel/manuel_python.pdf" 
 </ul>
 </div>
 </div>
-<div id="outline-container-orgdf8b8e2" class="outline-4">
-<h4 id="orgdf8b8e2">Notions de base</h4>
-<div class="outline-text-4" id="text-orgdf8b8e2">
+<div id="outline-container-org34ebdb6" class="outline-4">
+<h4 id="org34ebdb6">Notions de base</h4>
+<div class="outline-text-4" id="text-org34ebdb6">
 <ul class="org-ul">
 <li>Programmation ?</li>
 <li>Programme ?</li>
@@ -162,9 +178,9 @@ Tu peux télécharger le manuel de python en <a href="manuel/manuel_python.pdf" 
 </ul>
 </div>
 </div>
-<div id="outline-container-org05e6178" class="outline-4">
-<h4 id="org05e6178">Pourquoi Python ?</h4>
-<div class="outline-text-4" id="text-org05e6178">
+<div id="outline-container-org7adf68d" class="outline-4">
+<h4 id="org7adf68d">Pourquoi Python ?</h4>
+<div class="outline-text-4" id="text-org7adf68d">
 <ul class="org-ul">
 <li>Langage interprété : versatilité (le fonctionnement ne dépend pas du système d'exploitation)</li>
 <li>Syntaxe simple</li>
@@ -172,9 +188,9 @@ Tu peux télécharger le manuel de python en <a href="manuel/manuel_python.pdf" 
 </ul>
 </div>
 </div>
-<div id="outline-container-orge37bfc7" class="outline-4">
-<h4 id="orge37bfc7">Fonctionnement du cours</h4>
-<div class="outline-text-4" id="text-orge37bfc7">
+<div id="outline-container-org0dca115" class="outline-4">
+<h4 id="org0dca115">Fonctionnement du cours</h4>
+<div class="outline-text-4" id="text-org0dca115">
 <p target="_blank">
 <b>Les notions dont tu auras besoin dans ce cours se trouvent dans le <a href="manuel/manuel_python.pdf" target="_blank">manuel de python</a>.</b> Dans chaque cours, les chapitres que tu dois lire sont indiqués au début dans la section <b>Manuel</b>. Une fois que tu as lu les chapitres demandés, tu devras faire les exercices de la section <b>Exercices</b>.
 </p>
@@ -188,9 +204,9 @@ Une fois les exercices d'un cours terminés, appelle le professeur pour qu'il vi
 </p>
 </div>
 </div>
-<div id="outline-container-org96399b1" class="outline-4">
-<h4 id="org96399b1">Introduction à IDLE</h4>
-<div class="outline-text-4" id="text-org96399b1">
+<div id="outline-container-org18440f1" class="outline-4">
+<h4 id="org18440f1">Introduction à IDLE</h4>
+<div class="outline-text-4" id="text-org18440f1">
 <ul class="org-ul">
 <li>Sauvegarder un programme (p.18 du manuel)</li>
 <li>Premier programme : Crée un premier programme nommé <code>bonjour.py</code> qui affiche le texte <b>"Bonjour tout le monde !"</b></li>
@@ -207,9 +223,9 @@ Une fois les exercices d'un cours terminés, appelle le professeur pour qu'il vi
 <h3 id="chapitre1_cours1">Cours 1 : Opérateurs arithmétiques</h3>
 <div class="outline-text-3" id="text-chapitre1_cours1">
 </div>
-<div id="outline-container-org5879816" class="outline-4">
-<h4 id="org5879816">Manuel</h4>
-<div class="outline-text-4" id="text-org5879816">
+<div id="outline-container-orgb82f5c5" class="outline-4">
+<h4 id="orgb82f5c5">Manuel</h4>
+<div class="outline-text-4" id="text-orgb82f5c5">
 <ul class="org-ul">
 <li><b>"Calculer avec Python"</b>, p.22-23</li>
 <li><b>"Les opérateurs de Python"</b>, p.23</li>
@@ -217,9 +233,9 @@ Une fois les exercices d'un cours terminés, appelle le professeur pour qu'il vi
 </ul>
 </div>
 </div>
-<div id="outline-container-org76ffb40" class="outline-4">
-<h4 id="org76ffb40">Exercices</h4>
-<div class="outline-text-4" id="text-org76ffb40">
+<div id="outline-container-org8c8f8a8" class="outline-4">
+<h4 id="org8c8f8a8">Exercices</h4>
+<div class="outline-text-4" id="text-org8c8f8a8">
 <p>
 <b>Pour chaque exercice, il faut créer un nouveau programme.</b>
 </p>
@@ -242,18 +258,18 @@ Une fois les exercices d'un cours terminés, appelle le professeur pour qu'il vi
 <h3 id="chapitre1_cours2">Cours 2 : Variables</h3>
 <div class="outline-text-3" id="text-chapitre1_cours2">
 </div>
-<div id="outline-container-org890f475" class="outline-4">
-<h4 id="org890f475">Manuel</h4>
-<div class="outline-text-4" id="text-org890f475">
+<div id="outline-container-orgd0134a9" class="outline-4">
+<h4 id="orgd0134a9">Manuel</h4>
+<div class="outline-text-4" id="text-orgd0134a9">
 <ul class="org-ul">
 <li><b>"Les variables sont comme des étiquettes"</b>, p.25-26</li>
 <li><b>"Utiliser les variables"</b>, p.26-29</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orga109d26" class="outline-4">
-<h4 id="orga109d26">Exercices</h4>
-<div class="outline-text-4" id="text-orga109d26">
+<div id="outline-container-orgd4b7b75" class="outline-4">
+<h4 id="orgd4b7b75">Exercices</h4>
+<div class="outline-text-4" id="text-orgd4b7b75">
 <ol class="org-ol">
 <li>Dans un programme nommé <code>variables.py</code> :
 <ul class="org-ul">
@@ -275,9 +291,9 @@ Une fois les exercices d'un cours terminés, appelle le professeur pour qu'il vi
 <h3 id="chapitre2_cours3">Cours 3 : Chaînes de caractères 1</h3>
 <div class="outline-text-3" id="text-chapitre2_cours3">
 </div>
-<div id="outline-container-orgea6489f" class="outline-4">
-<h4 id="orgea6489f">Manuel</h4>
-<div class="outline-text-4" id="text-orgea6489f">
+<div id="outline-container-orgb8b65d9" class="outline-4">
+<h4 id="orgb8b65d9">Manuel</h4>
+<div class="outline-text-4" id="text-orgb8b65d9">
 <ul class="org-ul">
 <li><b>"Les chaînes"</b>, p.32</li>
 <li><b>"Créer des chaînes"</b>, p.32-33</li>
@@ -285,9 +301,9 @@ Une fois les exercices d'un cours terminés, appelle le professeur pour qu'il vi
 </ul>
 </div>
 </div>
-<div id="outline-container-orge70f125" class="outline-4">
-<h4 id="orge70f125">Exercices</h4>
-<div class="outline-text-4" id="text-orge70f125">
+<div id="outline-container-orgb657af8" class="outline-4">
+<h4 id="orgb657af8">Exercices</h4>
+<div class="outline-text-4" id="text-orgb657af8">
 <ol class="org-ol">
 <li>Dans un programme nommé <code>prenom_nom.py</code> :
 <ul class="org-ul">
@@ -316,18 +332,18 @@ Une fois les exercices d'un cours terminés, appelle le professeur pour qu'il vi
 <h3 id="chapitre2_cours4">Cours 4 : Chaînes de caractères 2</h3>
 <div class="outline-text-3" id="text-chapitre2_cours4">
 </div>
-<div id="outline-container-org3f319d7" class="outline-4">
-<h4 id="org3f319d7">Manuel</h4>
-<div class="outline-text-4" id="text-org3f319d7">
+<div id="outline-container-org2b14dfd" class="outline-4">
+<h4 id="org2b14dfd">Manuel</h4>
+<div class="outline-text-4" id="text-org2b14dfd">
 <ul class="org-ul">
 <li><b>"Insérer des valeurs dans des chaînes"</b>, p.36-37</li>
 <li><b>"Multiplier des chaînes"</b>, p.37-38</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org90d53fb" class="outline-4">
-<h4 id="org90d53fb">Exercices</h4>
-<div class="outline-text-4" id="text-org90d53fb">
+<div id="outline-container-org0359fd7" class="outline-4">
+<h4 id="org0359fd7">Exercices</h4>
+<div class="outline-text-4" id="text-org0359fd7">
 <ol class="org-ol">
 <li>Dans un programme nommé <code>prenom_nom_mieux.py</code> :
 <ul class="org-ul">
@@ -365,17 +381,17 @@ Une fois les exercices d'un cours terminés, appelle le professeur pour qu'il vi
 <h3 id="chapitre2_cours5">Cours 5 : Listes 1</h3>
 <div class="outline-text-3" id="text-chapitre2_cours5">
 </div>
-<div id="outline-container-orgea92a65" class="outline-4">
-<h4 id="orgea92a65">Manuel</h4>
-<div class="outline-text-4" id="text-orgea92a65">
+<div id="outline-container-org8b6b3f6" class="outline-4">
+<h4 id="org8b6b3f6">Manuel</h4>
+<div class="outline-text-4" id="text-org8b6b3f6">
 <ul class="org-ul">
 <li><b>"Plus puissantes que les chaînes : les listes"</b>, p.38-41</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org715525f" class="outline-4">
-<h4 id="org715525f">Exercices</h4>
-<div class="outline-text-4" id="text-org715525f">
+<div id="outline-container-orgb12a5d4" class="outline-4">
+<h4 id="orgb12a5d4">Exercices</h4>
+<div class="outline-text-4" id="text-orgb12a5d4">
 <ol class="org-ol">
 <li>Dans un programme nommé <code>liste_courses.py</code> :
 <ul class="org-ul">
@@ -410,9 +426,9 @@ Une fois les exercices d'un cours terminés, appelle le professeur pour qu'il vi
 <h3 id="chapitre2_cours6">Cours 6 : Listes 2</h3>
 <div class="outline-text-3" id="text-chapitre2_cours6">
 </div>
-<div id="outline-container-orgf0b877d" class="outline-4">
-<h4 id="orgf0b877d">Manuel</h4>
-<div class="outline-text-4" id="text-orgf0b877d">
+<div id="outline-container-org73c6bcc" class="outline-4">
+<h4 id="org73c6bcc">Manuel</h4>
+<div class="outline-text-4" id="text-org73c6bcc">
 <ul class="org-ul">
 <li><b>"Ajouter des éléments à une liste"</b>, p.41-42</li>
 <li><b>"Supprimer des éléments à une liste"</b>, p.42</li>
@@ -420,9 +436,9 @@ Une fois les exercices d'un cours terminés, appelle le professeur pour qu'il vi
 </ul>
 </div>
 </div>
-<div id="outline-container-org5a9eb76" class="outline-4">
-<h4 id="org5a9eb76">Exercices</h4>
-<div class="outline-text-4" id="text-org5a9eb76">
+<div id="outline-container-org0f56b8e" class="outline-4">
+<h4 id="org0f56b8e">Exercices</h4>
+<div class="outline-text-4" id="text-org0f56b8e">
 <ol class="org-ol">
 <li>Dans un programme nommé <code>liste_eleves.py</code> :
 <ul class="org-ul">
@@ -453,9 +469,9 @@ Une fois les exercices d'un cours terminés, appelle le professeur pour qu'il vi
 <h3 id="chapitre2_cours7">Cours 7 : Tuples et dictionnaires</h3>
 <div class="outline-text-3" id="text-chapitre2_cours7">
 </div>
-<div id="outline-container-org335e04c" class="outline-4">
-<h4 id="org335e04c">Manuel</h4>
-<div class="outline-text-4" id="text-org335e04c">
+<div id="outline-container-org8156fbb" class="outline-4">
+<h4 id="org8156fbb">Manuel</h4>
+<div class="outline-text-4" id="text-org8156fbb">
 <ul class="org-ul">
 <li><b>"Tuples"</b>, p.45</li>
 <li><b>"Dictionnaires"</b>, p.45-47</li>
@@ -463,9 +479,9 @@ Une fois les exercices d'un cours terminés, appelle le professeur pour qu'il vi
 </div>
 </div>
 
-<div id="outline-container-org9a0dc0a" class="outline-4">
-<h4 id="org9a0dc0a">Indication complémentaire sur les dictionnaires</h4>
-<div class="outline-text-4" id="text-org9a0dc0a">
+<div id="outline-container-org42d3b0b" class="outline-4">
+<h4 id="org42d3b0b">Indication complémentaire sur les dictionnaires</h4>
+<div class="outline-text-4" id="text-org42d3b0b">
 <p>
 Comme vu dans le manuel, tu peux modifier une valeur dans un dictionnaire simplement en utilisant sa clef :
 </p>
@@ -479,7 +495,7 @@ Comme vu dans le manuel, tu peux modifier une valeur dans un dictionnaire simple
 <p>
 Résultat :
 </p>
-<pre class="example" id="org5508e36">
+<pre class="example" id="org2683ac3">
 {'Elon Musk': 180000000000, 'Jeff Bezos': 114000000000, 'Bill Gates': 104000000000, 'Mark Zuckerberg': 64400000000, 'Moi': 0}
 {'Elon Musk': 180000000000, 'Jeff Bezos': 114000000000, 'Bill Gates': 104000000000, 'Mark Zuckerberg': 64400000000, 'Moi': 100}
 </pre>
@@ -497,15 +513,15 @@ Si tu veux <b>ajouter</b> un élément, c'est-à-dire une clef et une valeur, il
 <p>
 Résulat :
 </p>
-<pre class="example" id="orgb850752">
+<pre class="example" id="org66e6e00">
 {'Elon Musk': 180000000000, 'Jeff Bezos': 114000000000, 'Bill Gates': 104000000000, 'Mark Zuckerberg': 64400000000, 'Moi': 0}
 {'Elon Musk': 180000000000, 'Jeff Bezos': 114000000000, 'Bill Gates': 104000000000, 'Mark Zuckerberg': 64400000000, 'Moi': 0, 'Mon chat': 100}
 </pre>
 </div>
 </div>
-<div id="outline-container-org751894b" class="outline-4">
-<h4 id="org751894b">Exercices</h4>
-<div class="outline-text-4" id="text-org751894b">
+<div id="outline-container-orgd4a4496" class="outline-4">
+<h4 id="orgd4a4496">Exercices</h4>
+<div class="outline-text-4" id="text-orgd4a4496">
 <ol class="org-ol">
 <li>Dans un programme nommé <code>mon_tuple.py</code> :
 <ul class="org-ul">
@@ -533,9 +549,9 @@ Résulat :
 <h3 id="chapitre2_cours8">Cours 8 : Input</h3>
 <div class="outline-text-3" id="text-chapitre2_cours8">
 </div>
-<div id="outline-container-org6d81ebf" class="outline-4">
-<h4 id="org6d81ebf">Cours</h4>
-<div class="outline-text-4" id="text-org6d81ebf">
+<div id="outline-container-orgfcafa56" class="outline-4">
+<h4 id="orgfcafa56">Cours</h4>
+<div class="outline-text-4" id="text-orgfcafa56">
 <p>
 Jusqu'ici, nous avons donné à nos variables des valeurs directement dans le code python. Comment fait-on si l'on souhaite demander une information à l'utilisateur et qu'il puisse la donner sans qu'il ait besoin de modifier le code ?
 </p>
@@ -561,7 +577,7 @@ On peut utiliser la fonction <code>input()</code> en laissant les parenthèses v
 Résultat :
 </p>
 
-<figure id="orgc8b78a7">
+<figure id="org1fde36f">
 <img src="./img/example_prenom1.png" alt="exemple prenom1" align="center" class="img" width="100%" display="block">
 
 </figure>
@@ -571,7 +587,7 @@ Résultat :
 </p>
 
 
-<figure id="org9c7a078">
+<figure id="orge1024a7">
 <img src="./img/example_prenom2.png" alt="exemple prenom2" align="center" class="img" width="100%" display="block">
 
 </figure>
@@ -623,9 +639,9 @@ Pour le moment, cela suffira pour créer des programmes plus interactifs, mais n
 </p>
 </div>
 </div>
-<div id="outline-container-org460bc9a" class="outline-4">
-<h4 id="org460bc9a">Exercices</h4>
-<div class="outline-text-4" id="text-org460bc9a">
+<div id="outline-container-org5789b94" class="outline-4">
+<h4 id="org5789b94">Exercices</h4>
+<div class="outline-text-4" id="text-org5789b94">
 <ol class="org-ol">
 <li>Dans un programme nommé <code>carte_identite.py</code> :
 <ul class="org-ul">
@@ -651,17 +667,17 @@ Pour le moment, cela suffira pour créer des programmes plus interactifs, mais n
 <h3 id="chapitre3_cours9">Cours 9 : Turtle</h3>
 <div class="outline-text-3" id="text-chapitre3_cours9">
 </div>
-<div id="outline-container-org7740672" class="outline-4">
-<h4 id="org7740672">Manuel</h4>
-<div class="outline-text-4" id="text-org7740672">
+<div id="outline-container-orgc392879" class="outline-4">
+<h4 id="orgc392879">Manuel</h4>
+<div class="outline-text-4" id="text-orgc392879">
 <ul class="org-ul">
 <li><b>"Dessiner avec une tortue"</b>, p.49-56</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org3a0d6fd" class="outline-4">
-<h4 id="org3a0d6fd">Exercices</h4>
-<div class="outline-text-4" id="text-org3a0d6fd">
+<div id="outline-container-orga8b767c" class="outline-4">
+<h4 id="orga8b767c">Exercices</h4>
+<div class="outline-text-4" id="text-orga8b767c">
 <ol class="org-ol">
 <li>Dans un programme nommé <code>carré.py</code>, fais dessiner un carré à une tortue.</li>
 <li>Dans un programme nommé <code>hexagone.py</code>, fais dessiner un hexagone à une tortue.</li>
@@ -682,9 +698,9 @@ Pour le moment, cela suffira pour créer des programmes plus interactifs, mais n
 <h3 id="chapitre4_cours10">Cours 10 : if</h3>
 <div class="outline-text-3" id="text-chapitre4_cours10">
 </div>
-<div id="outline-container-orge22b9a0" class="outline-4">
-<h4 id="orge22b9a0">Manuel</h4>
-<div class="outline-text-4" id="text-orge22b9a0">
+<div id="outline-container-org28d0c12" class="outline-4">
+<h4 id="org28d0c12">Manuel</h4>
+<div class="outline-text-4" id="text-org28d0c12">
 <ul class="org-ul">
 <li><b>"Poser des questions avec if et else"</b>, p. 59</li>
 <li><b>"Intructions if"</b>, p.60</li>
@@ -693,9 +709,9 @@ Pour le moment, cela suffira pour créer des programmes plus interactifs, mais n
 </ul>
 </div>
 </div>
-<div id="outline-container-org759da7c" class="outline-4">
-<h4 id="org759da7c">Exercices</h4>
-<div class="outline-text-4" id="text-org759da7c">
+<div id="outline-container-org1fa32ad" class="outline-4">
+<h4 id="org1fa32ad">Exercices</h4>
+<div class="outline-text-4" id="text-org1fa32ad">
 <ol class="org-ol">
 <li>Dans un programme nommé <code>boutique.py</code> :
 <ul class="org-ul">
@@ -736,18 +752,18 @@ Pour le moment, cela suffira pour créer des programmes plus interactifs, mais n
 <h3 id="chapitre4_cours11">Cours 11 : if, elif, else</h3>
 <div class="outline-text-3" id="text-chapitre4_cours11">
 </div>
-<div id="outline-container-org685aa71" class="outline-4">
-<h4 id="org685aa71">Manuel</h4>
-<div class="outline-text-4" id="text-org685aa71">
+<div id="outline-container-org35942ff" class="outline-4">
+<h4 id="org35942ff">Manuel</h4>
+<div class="outline-text-4" id="text-org35942ff">
 <ul class="org-ul">
 <li><b>"Instructions si-alors-sinon"</b>, p.64-65</li>
 <li><b>"Instructions if et elif"</b>, p.65-66</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org2d41dd4" class="outline-4">
-<h4 id="org2d41dd4">Exercices</h4>
-<div class="outline-text-4" id="text-org2d41dd4">
+<div id="outline-container-org3efc549" class="outline-4">
+<h4 id="org3efc549">Exercices</h4>
+<div class="outline-text-4" id="text-org3efc549">
 <ol class="org-ol">
 <li>Dans un programme nommé <code>dragon.py</code> :
 <ul class="org-ul">
@@ -784,17 +800,17 @@ Pour le moment, cela suffira pour créer des programmes plus interactifs, mais n
 <h3 id="chapitre4_cours12">Cours 12 : and, or</h3>
 <div class="outline-text-3" id="text-chapitre4_cours12">
 </div>
-<div id="outline-container-org57b1eeb" class="outline-4">
-<h4 id="org57b1eeb">Manuel</h4>
-<div class="outline-text-4" id="text-org57b1eeb">
+<div id="outline-container-org9d48ecb" class="outline-4">
+<h4 id="org9d48ecb">Manuel</h4>
+<div class="outline-text-4" id="text-org9d48ecb">
 <ul class="org-ul">
 <li><b>"Combiner des conditions"</b>, p.66</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org12c7fdc" class="outline-4">
-<h4 id="org12c7fdc">Exercices</h4>
-<div class="outline-text-4" id="text-org12c7fdc">
+<div id="outline-container-org82a7d22" class="outline-4">
+<h4 id="org82a7d22">Exercices</h4>
+<div class="outline-text-4" id="text-org82a7d22">
 <ol class="org-ol">
 <li>Dans un programme nommé <code>montagnes_russes2.py</code> :
 <ul class="org-ul">
@@ -814,18 +830,18 @@ Pour le moment, cela suffira pour créer des programmes plus interactifs, mais n
 <h3 id="chapitre4_cours13">Cours 13 : Types de données et conversions</h3>
 <div class="outline-text-3" id="text-chapitre4_cours13">
 </div>
-<div id="outline-container-org13a4b46" class="outline-4">
-<h4 id="org13a4b46">Manuel</h4>
-<div class="outline-text-4" id="text-org13a4b46">
+<div id="outline-container-orgbaabb29" class="outline-4">
+<h4 id="orgbaabb29">Manuel</h4>
+<div class="outline-text-4" id="text-orgbaabb29">
 <ul class="org-ul">
 <li><b>"Variables sans valeur : None"</b>, p.66-67</li>
 <li><b>"Différence entre chaînes et nombres"</b>, p.67-69</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org582cb34" class="outline-4">
-<h4 id="org582cb34">Exercices</h4>
-<div class="outline-text-4" id="text-org582cb34">
+<div id="outline-container-org0b7e50e" class="outline-4">
+<h4 id="org0b7e50e">Exercices</h4>
+<div class="outline-text-4" id="text-org0b7e50e">
 <ol class="org-ol">
 <li>Dans un programme nommé <code>types_donnees.py</code> :
 <ul class="org-ul">
@@ -850,18 +866,18 @@ Pour le moment, cela suffira pour créer des programmes plus interactifs, mais n
 <h3 id="chapitre5_cours14">Cours 14 : Les boucles for</h3>
 <div class="outline-text-3" id="text-chapitre5_cours14">
 </div>
-<div id="outline-container-org07dad67" class="outline-4">
-<h4 id="org07dad67">Manuel</h4>
-<div class="outline-text-4" id="text-org07dad67">
+<div id="outline-container-org66828d6" class="outline-4">
+<h4 id="org66828d6">Manuel</h4>
+<div class="outline-text-4" id="text-org66828d6">
 <ul class="org-ul">
 <li><b>"Tourner en boucle"</b>, p.73</li>
 <li><b>"Utiliser les boucles for"</b>, p.74-80</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgebb50b8" class="outline-4">
-<h4 id="orgebb50b8">Exercices</h4>
-<div class="outline-text-4" id="text-orgebb50b8">
+<div id="outline-container-org14ab41c" class="outline-4">
+<h4 id="org14ab41c">Exercices</h4>
+<div class="outline-text-4" id="text-org14ab41c">
 <ol class="org-ol">
 <li>Dans un programme nommé <code>repetition.py</code> :
 <ul class="org-ul">
@@ -915,17 +931,17 @@ Fais un programme qui calcule les 10 premiers nombres de la suite de fibonacci e
 <h3 id="chapitre5_cours15">Cours 15 : Boucles while</h3>
 <div class="outline-text-3" id="text-chapitre5_cours15">
 </div>
-<div id="outline-container-org22f1dbe" class="outline-4">
-<h4 id="org22f1dbe">Manuel</h4>
-<div class="outline-text-4" id="text-org22f1dbe">
+<div id="outline-container-org940a245" class="outline-4">
+<h4 id="org940a245">Manuel</h4>
+<div class="outline-text-4" id="text-org940a245">
 <ul class="org-ul">
 <li><b>"Tant que nous parlons de boucles : while"</b>, p.81-83</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgb1eb3d0" class="outline-4">
-<h4 id="orgb1eb3d0">Exercices</h4>
-<div class="outline-text-4" id="text-orgb1eb3d0">
+<div id="outline-container-org3865617" class="outline-4">
+<h4 id="org3865617">Exercices</h4>
+<div class="outline-text-4" id="text-org3865617">
 <ol class="org-ol">
 <li>Dans un programme nommé <code>repetition_while.py</code> :
 <ul class="org-ul">
@@ -963,9 +979,9 @@ Fais un programme qui calcule les 10 premiers nombres de la suite de fibonacci e
 <div class="outline-text-3" id="text-chapitre6_cours16">
 </div>
 
-<div id="outline-container-org05ba18f" class="outline-4">
-<h4 id="org05ba18f">Indication pour générer un nombre aléatoire</h4>
-<div class="outline-text-4" id="text-org05ba18f">
+<div id="outline-container-org872db86" class="outline-4">
+<h4 id="org872db86">Indication pour générer un nombre aléatoire</h4>
+<div class="outline-text-4" id="text-org872db86">
 <p>
 Pour générer un nombre aléatoire, tu dois d'abord importer le module <code>random</code>. Il faut toujours importer les modules en début de programme pour plus de clarté :
 </p>
@@ -984,9 +1000,9 @@ Ensuite, pour générer le nombre et le stocker, tu dois utiliser la fonction <c
 </div>
 </div>
 
-<div id="outline-container-org95bfa1c" class="outline-4">
-<h4 id="org95bfa1c">Exercice</h4>
-<div class="outline-text-4" id="text-org95bfa1c">
+<div id="outline-container-org15dc9c2" class="outline-4">
+<h4 id="org15dc9c2">Exercice</h4>
+<div class="outline-text-4" id="text-org15dc9c2">
 <p>
 Dans un programme nommé <code>nombre_secret.py</code> :
 </p>
@@ -1007,9 +1023,9 @@ Dans un programme nommé <code>nombre_secret.py</code> :
 </div>
 </div>
 
-<div id="outline-container-orgd0fc55c" class="outline-4">
-<h4 id="orgd0fc55c">BONUS</h4>
-<div class="outline-text-4" id="text-orgd0fc55c">
+<div id="outline-container-org882f1ff" class="outline-4">
+<h4 id="org882f1ff">BONUS</h4>
+<div class="outline-text-4" id="text-org882f1ff">
 <ul class="org-ul">
 <li>Si le joueur a gagné, le jeu doit se relancer avec une plus grande difficulté (moins d'essais, nombre secret maximum plus grand, &#x2026;)</li>
 <li>Si le joueur a perdu, le jeu doit baisser la difficulté ou retourner à la difficulté originale.</li>
@@ -1031,14 +1047,14 @@ Dans un programme nommé <code>nombre_secret.py</code> :
 Nous avons vu précédemment les bases du module turtle. En réalité, il existe encore beaucoup de fonctionnalités que nous n'avons pas encore explorées. Pour plus de détails et si tu cherches quelque-chose qui n'est pas expliqué ici, voici la documentation officielle de turtle : <a href="https://docs.python.org/fr/3/library/turtle.html#turtle-graphics-reference" target="_blank">https://docs.python.org/fr/3/library/turtle.html#turtle-graphics-reference</a>
 </p>
 </div>
-<div id="outline-container-orgd9da6fd" class="outline-4">
-<h4 id="orgd9da6fd">Les couleurs</h4>
-<div class="outline-text-4" id="text-orgd9da6fd">
+<div id="outline-container-orgc3defcc" class="outline-4">
+<h4 id="orgc3defcc">Les couleurs</h4>
+<div class="outline-text-4" id="text-orgc3defcc">
 <p>
 Pour commencer, nous pouvons changer toutes les couleurs : l'arrière-plan, le trait et même le remplissage ! Turtle propose beaucoup de couleurs et libre à toi de les essayer. En voici une liste.
 </p>
 
-<figure id="org563e17f">
+<figure id="org6848ede">
 <img src="./img/turtle_colors.png" alt="colors turtle" align="center" class="img" width="1036px" height="588px" display="block">
 
 </figure>
@@ -1049,9 +1065,9 @@ Il existe aussi un site pour rapidement trouver le nom d'une couleur turtle : <a
 </div>
 </div>
 
-<div id="outline-container-orgce12478" class="outline-4">
-<h4 id="orgce12478">Changer la couleur d'arrière-plan</h4>
-<div class="outline-text-4" id="text-orgce12478">
+<div id="outline-container-org36a5cb1" class="outline-4">
+<h4 id="org36a5cb1">Changer la couleur d'arrière-plan</h4>
+<div class="outline-text-4" id="text-org36a5cb1">
 <p>
 La fonction à utiliser pour changer la couleur d'arrière-plan est :
 </p>
@@ -1061,9 +1077,9 @@ La fonction à utiliser pour changer la couleur d'arrière-plan est :
 </div>
 </div>
 </div>
-<div id="outline-container-org255a4fe" class="outline-4">
-<h4 id="org255a4fe">Changer la couleur du trait</h4>
-<div class="outline-text-4" id="text-org255a4fe">
+<div id="outline-container-org25b18f0" class="outline-4">
+<h4 id="org25b18f0">Changer la couleur du trait</h4>
+<div class="outline-text-4" id="text-org25b18f0">
 <p>
 La fonction à utiliser pour changer la couleur du trait est :
 </p>
@@ -1074,9 +1090,9 @@ t.color(<span style="font-style: italic;">"couleur"</span>) <span style="font-we
 </div>
 </div>
 </div>
-<div id="outline-container-org9d5724a" class="outline-4">
-<h4 id="org9d5724a">Changer la couleur de remplissage d'une forme</h4>
-<div class="outline-text-4" id="text-org9d5724a">
+<div id="outline-container-org2f1c996" class="outline-4">
+<h4 id="org2f1c996">Changer la couleur de remplissage d'une forme</h4>
+<div class="outline-text-4" id="text-org2f1c996">
 <p>
 Pour changer la couleur de remplissage d'une forme, il y a plusieurs étapes à respecter.
 </p>
@@ -1125,16 +1141,16 @@ t.end_fill()
 </div>
 
 
-<figure id="orgef2a69f">
+<figure id="org6f67f34">
 <img src="./img/turtle_square.png" alt="turtle square" align="center" class="img" width="155px" height="145hpx" display="block">
 
 </figure>
 </div>
 </div>
 
-<div id="outline-container-org5db24fe" class="outline-4">
-<h4 id="org5db24fe">La vitesse</h4>
-<div class="outline-text-4" id="text-org5db24fe">
+<div id="outline-container-orga1bce24" class="outline-4">
+<h4 id="orga1bce24">La vitesse</h4>
+<div class="outline-text-4" id="text-orga1bce24">
 <p>
 Il est possible de changer la vitesse d'exécution d'un dessin avec turtle en utilisant la fonction
 </p>
@@ -1149,9 +1165,9 @@ La vitesse la plus rapide est&#x2026; <code>t.speed(0)</code> !
 </div>
 </div>
 
-<div id="outline-container-orge0af2ee" class="outline-4">
-<h4 id="orge0af2ee">La taille du trait</h4>
-<div class="outline-text-4" id="text-orge0af2ee">
+<div id="outline-container-org4c78682" class="outline-4">
+<h4 id="org4c78682">La taille du trait</h4>
+<div class="outline-text-4" id="text-org4c78682">
 <p>
 Tu peux changer la taille du trait avec la fonction
 </p>
@@ -1162,9 +1178,9 @@ Tu peux changer la taille du trait avec la fonction
 </div>
 </div>
 
-<div id="outline-container-org4e5bcc2" class="outline-4">
-<h4 id="org4e5bcc2">Lever ou baisser le stylo</h4>
-<div class="outline-text-4" id="text-org4e5bcc2">
+<div id="outline-container-org3cf081a" class="outline-4">
+<h4 id="org3cf081a">Lever ou baisser le stylo</h4>
+<div class="outline-text-4" id="text-org3cf081a">
 <p>
 Par moments, tu peux avoir besoin de déplacer la tortue sans pour autant qu'elle trace des lignes sur sa trajectoire. Eh bien, il est possible de lui faire "lever" son stylo à l'aide de la fonction
 </p>
@@ -1182,9 +1198,9 @@ Une fois que tu veux que la tortue dessine à nouveau, utilise simplement la fon
 </div>
 </div>
 </div>
-<div id="outline-container-org27fd343" class="outline-4">
-<h4 id="org27fd343">Dessiner un cercle</h4>
-<div class="outline-text-4" id="text-org27fd343">
+<div id="outline-container-org9ae3212" class="outline-4">
+<h4 id="org9ae3212">Dessiner un cercle</h4>
+<div class="outline-text-4" id="text-org9ae3212">
 <p>
 Il est possible de dessiner un cercle rapidement a l'aide de la fonction
 </p>
@@ -1195,9 +1211,9 @@ Il est possible de dessiner un cercle rapidement a l'aide de la fonction
 </div>
 </div>
 
-<div id="outline-container-orgda8f83e" class="outline-4">
-<h4 id="orgda8f83e">Afficher ou cacher la tortue</h4>
-<div class="outline-text-4" id="text-orgda8f83e">
+<div id="outline-container-org620697a" class="outline-4">
+<h4 id="org620697a">Afficher ou cacher la tortue</h4>
+<div class="outline-text-4" id="text-org620697a">
 <p>
 Si tu veux cacher la forme de la tortue, tu dois utiliser la fonction
 </p>
@@ -1214,15 +1230,15 @@ Pour l'afficher à nouveau, c'est à l'aide de la fonction
 </div>
 </div>
 </div>
-<div id="outline-container-orgd74e12f" class="outline-4">
-<h4 id="orgd74e12f">Se déplacer directement à des coordonnées précises</h4>
-<div class="outline-text-4" id="text-orgd74e12f">
+<div id="outline-container-orgeb6a15a" class="outline-4">
+<h4 id="orgeb6a15a">Se déplacer directement à des coordonnées précises</h4>
+<div class="outline-text-4" id="text-orgeb6a15a">
 <p>
 On peut définir n'importe quel point de l'écran en utilisant les coordonnées. Les <b>abscisses x</b> indiquent la position horizontale, tandis que les <b>ordonnées y</b> indiquent la position verticale.
 </p>
 
 
-<figure id="orgf42cc25">
+<figure id="org9926519">
 <img src="./img/turtle_coords.png" alt="turtle coordinates" align="center" class="img" width="405px" height="406px" display="block">
 
 </figure>
@@ -1246,9 +1262,9 @@ pen.forward(100)
 </div>
 </div>
 </div>
-<div id="outline-container-orgb665a75" class="outline-4">
-<h4 id="orgb665a75">Connaître les coordonnées actuelles de la tortue</h4>
-<div class="outline-text-4" id="text-orgb665a75">
+<div id="outline-container-org1c5e0f1" class="outline-4">
+<h4 id="org1c5e0f1">Connaître les coordonnées actuelles de la tortue</h4>
+<div class="outline-text-4" id="text-org1c5e0f1">
 <p>
 On peut récupérer les coordonnées de la tortue grâce à la fonction <code>pos()</code> de turtle. Cette fonction renvoie un <b>tuple</b> de la forme <code>(abscisse x, ordonnée y)</code>.
 </p>
@@ -1266,9 +1282,9 @@ On peut récupérer les coordonnées de la tortue grâce à la fonction <code>po
 </div>
 </div>
 </div>
-<div id="outline-container-orgb7e8e62" class="outline-4">
-<h4 id="orgb7e8e62">Définir l'orientation de la tortue</h4>
-<div class="outline-text-4" id="text-orgb7e8e62">
+<div id="outline-container-org7d3a996" class="outline-4">
+<h4 id="org7d3a996">Définir l'orientation de la tortue</h4>
+<div class="outline-text-4" id="text-org7d3a996">
 <p>
 Pour changer l'orientation de la tortue, nous avons vu les fonctions <code>right(angle)</code> et <code>left(angle)</code>. Parfois, nous avons besoin d'orienter directement la tortue vers une direction donnée, par exemple pour pouvoir remettre l'orientation à 0. La fonction qui sert à faire cela est la fonction <code>setheading(direction)</code>. Le paramètre <code>direction</code> est un nombre entier.
 <b>Exemple :</b>
@@ -1281,9 +1297,9 @@ pen.setheading(90)
 </div>
 </div>
 </div>
-<div id="outline-container-org20becf8" class="outline-4">
-<h4 id="org20becf8">Exercices</h4>
-<div class="outline-text-4" id="text-org20becf8">
+<div id="outline-container-org97a5f04" class="outline-4">
+<h4 id="org97a5f04">Exercices</h4>
+<div class="outline-text-4" id="text-org97a5f04">
 <p>
 Rendez-vous au cours 18b pour commencer à mettre en application toutes tes nouvelles connaissances.
 </p>
@@ -1294,15 +1310,15 @@ Rendez-vous au cours 18b pour commencer à mettre en application toutes tes nouv
 <h3 id="chapitre7_cours18">Cours 18 : Exercice turtle</h3>
 <div class="outline-text-3" id="text-chapitre7_cours18">
 </div>
-<div id="outline-container-orgef647d5" class="outline-4">
-<h4 id="orgef647d5">Mon beau sapin &#x2026;</h4>
-<div class="outline-text-4" id="text-orgef647d5">
+<div id="outline-container-orga2fd962" class="outline-4">
+<h4 id="orga2fd962">Mon beau sapin &#x2026;</h4>
+<div class="outline-text-4" id="text-orga2fd962">
 <p>
 Dans un programme nommé <code>mon_beau_sapin.py</code>, mets en oeuvre tout ce que l'on vient de voir en reproduisant ce sapin de noël. Ce n'est pas grave s'il n'est pas exactement similaire, mais applique-toi à le faire le plus ressemblant possible.
 </p>
 
 
-<figure id="org3c248c1">
+<figure id="orgabef052">
 <img src="./img/xmas_tree.png" alt="xmas tree" align="center" class="img" width="480px" height="375px" display="block">
 
 </figure>
@@ -1318,9 +1334,9 @@ Indice : les étages du sapin sont en fait des triangles superposés de tailles 
 <h3 id="chapitre7_cours19">Cours 19 : Turtle, mais avec des fonctions</h3>
 <div class="outline-text-3" id="text-chapitre7_cours19">
 </div>
-<div id="outline-container-org3d8459a" class="outline-4">
-<h4 id="org3d8459a">Manuel</h4>
-<div class="outline-text-4" id="text-org3d8459a">
+<div id="outline-container-org09c1dc2" class="outline-4">
+<h4 id="org09c1dc2">Manuel</h4>
+<div class="outline-text-4" id="text-org09c1dc2">
 <ul class="org-ul">
 <li><b>"Recycler du code avec des fonctions et des modules"</b>, p.87-88</li>
 <li><b>"Utiliser des fonctions"</b>, p.88-89</li>
@@ -1329,9 +1345,9 @@ Indice : les étages du sapin sont en fait des triangles superposés de tailles 
 </ul>
 </div>
 </div>
-<div id="outline-container-org93c428e" class="outline-4">
-<h4 id="org93c428e">Exercice</h4>
-<div class="outline-text-4" id="text-org93c428e">
+<div id="outline-container-org24b56df" class="outline-4">
+<h4 id="org24b56df">Exercice</h4>
+<div class="outline-text-4" id="text-org24b56df">
 <p>
 Le but du premier exercice est de pouvoir dessiner un flocon de neige sans se répéter, grâce aux fonctions.
 </p>
@@ -1340,7 +1356,7 @@ Le but du premier exercice est de pouvoir dessiner un flocon de neige sans se r�
 Voici ce qu'on veut obtenir :
 </p>
 
-<figure id="org3e5e942">
+<figure id="orgeef3e1a">
 <img src="./img/snow_flake.png" alt="snow flake" align="center" class="img" width="233px" height="210px" display="block">
 
 </figure>
@@ -1352,7 +1368,7 @@ Ce dessin est très facile à réaliser si on le décompose correctement avec de
 <li>6 fois la même branche :</li>
 </ul>
 
-<figure id="org4a20e61">
+<figure id="org99db153">
 <img src="./img/branch.png" alt="snow flake branch" align="center" class="img" width="118px" height="213px" display="block">
 
 </figure>
@@ -1361,7 +1377,7 @@ Ce dessin est très facile à réaliser si on le décompose correctement avec de
 <li>Une branche est elle-même composée d'une ligne + une forme en V le tout répété 4 fois:</li>
 </ul>
 
-<figure id="orgfba795e">
+<figure id="orgfbd5cc8">
 <img src="./img/fd_v.png" alt="snow flake fd + v" align="center" class="img" width="75px" height="116px" display="block">
 
 </figure>
@@ -1370,7 +1386,7 @@ Ce dessin est très facile à réaliser si on le décompose correctement avec de
 <li>Et enfin, la forme en V en elle-même est une suite de plusieurs déplacements.</li>
 </ul>
 
-<figure id="orgf1c03f5">
+<figure id="orgc187f7a">
 <img src="./img/v.png" alt="snow flake v" align="center" class="img" width="174px" height="169px" display="block">
 
 </figure>
@@ -1439,9 +1455,9 @@ Nous allons donc utiliser les fonctions et les paramètres pour améliorer notre
 </p>
 </div>
 
-<div id="outline-container-org62ef6da" class="outline-4">
-<h4 id="org62ef6da">Indication sur l'utilisation du module random</h4>
-<div class="outline-text-4" id="text-org62ef6da">
+<div id="outline-container-org228cbc9" class="outline-4">
+<h4 id="org228cbc9">Indication sur l'utilisation du module random</h4>
+<div class="outline-text-4" id="text-org228cbc9">
 <p>
 Pour générer un nombre aléatoire entre 2 et 20 par exemple, voici le code qu'il faut taper :
 </p>
@@ -1453,9 +1469,9 @@ Pour générer un nombre aléatoire entre 2 et 20 par exemple, voici le code qu'
 </div>
 </div>
 
-<div id="outline-container-org76846cc" class="outline-4">
-<h4 id="org76846cc">Exercices</h4>
-<div class="outline-text-4" id="text-org76846cc">
+<div id="outline-container-orgd6b7e21" class="outline-4">
+<h4 id="orgd6b7e21">Exercices</h4>
+<div class="outline-text-4" id="text-orgd6b7e21">
 <p>
 Dans un programme nommé <code>flocon2.py</code> :
 </p>
@@ -1537,9 +1553,9 @@ Ajoute dans le programme une fonction nommée <code>etoile(taille)</code> pour d
 <h3 id="chapitre7_cours21">Cours 21 : Fonctions</h3>
 <div class="outline-text-3" id="text-chapitre7_cours21">
 </div>
-<div id="outline-container-orgc565796" class="outline-4">
-<h4 id="orgc565796">Manuel</h4>
-<div class="outline-text-4" id="text-orgc565796">
+<div id="outline-container-org19ae24e" class="outline-4">
+<h4 id="org19ae24e">Manuel</h4>
+<div class="outline-text-4" id="text-org19ae24e">
 <ul class="org-ul">
 <li><b>"Recycler du code avec des fonctions et des modules"</b>, p.87-88</li>
 <li><b>"Utiliser des fonctions"</b>, p.88-89</li>
@@ -1549,9 +1565,9 @@ Ajoute dans le programme une fonction nommée <code>etoile(taille)</code> pour d
 </ul>
 </div>
 </div>
-<div id="outline-container-org8986f91" class="outline-4">
-<h4 id="org8986f91">Exercices</h4>
-<div class="outline-text-4" id="text-org8986f91">
+<div id="outline-container-org16784c1" class="outline-4">
+<h4 id="org16784c1">Exercices</h4>
+<div class="outline-text-4" id="text-org16784c1">
 <ol class="org-ol">
 <li>Dans un programme nommé <code>fonctions1.py</code> :
 <ul class="org-ul">
@@ -1640,9 +1656,9 @@ Dans un programme nommé <code>tri.py</code> :
 <h3 id="chapitre7_cours22">Cours 22 : Les modules</h3>
 <div class="outline-text-3" id="text-chapitre7_cours22">
 </div>
-<div id="outline-container-org78128e0" class="outline-4">
-<h4 id="org78128e0">Cours</h4>
-<div class="outline-text-4" id="text-org78128e0">
+<div id="outline-container-org1459255" class="outline-4">
+<h4 id="org1459255">Cours</h4>
+<div class="outline-text-4" id="text-org1459255">
 <p>
 <b>Un module</b> sert à regrouper des fonctions, des variables et d'autres choses dans des programmes plus vastes et plus puissants. Certains modules sont intégrés dans Python lui-même, tandis que tu peux en télécharger d'autres de manière séparée. Nous en avons déjà utilisé par exemple avec <b>turtle</b> et <b>random</b>.
 </p>
@@ -1668,9 +1684,9 @@ Pour créer ton propre module, il suffit de :
 </div>
 </div>
 
-<div id="outline-container-org42282e1" class="outline-4">
-<h4 id="org42282e1">Exercices</h4>
-<div class="outline-text-4" id="text-org42282e1">
+<div id="outline-container-orga42b230" class="outline-4">
+<h4 id="orga42b230">Exercices</h4>
+<div class="outline-text-4" id="text-orga42b230">
 <p>
 Dans le chapitre suivant, nous allons mettre en pratique les modules et les fonctions ensemble en créant notre propre bibliothèque personnalisée de fonctions !
 </p>
@@ -1718,9 +1734,9 @@ Nous utiliserons le fichier <code>mes_fonctions</code> précédemment et nous y 
 <h3 id="chapitre9_niv1">Niveau 1</h3>
 <div class="outline-text-3" id="text-chapitre9_niv1">
 </div>
-<div id="outline-container-orgd8166f7" class="outline-4">
-<h4 id="orgd8166f7">Division euclidienne</h4>
-<div class="outline-text-4" id="text-orgd8166f7">
+<div id="outline-container-orgd9894f7" class="outline-4">
+<h4 id="orgd9894f7">Division euclidienne</h4>
+<div class="outline-text-4" id="text-orgd9894f7">
 <p>
 Dans le fichier <code>mes_fonctions.py</code> :
 </p>
@@ -1737,9 +1753,9 @@ Dans un programme nommé <code>manips_nombres.py</code> :
 </div>
 </div>
 
-<div id="outline-container-orgc69d5eb" class="outline-4">
-<h4 id="orgc69d5eb">Pair ou impair</h4>
-<div class="outline-text-4" id="text-orgc69d5eb">
+<div id="outline-container-orgd43440a" class="outline-4">
+<h4 id="orgd43440a">Pair ou impair</h4>
+<div class="outline-text-4" id="text-orgd43440a">
 <p>
 Dans le fichier <code>mes_fonctions.py</code> :
 </p>
@@ -1755,9 +1771,9 @@ Dans le programme <code>manips_nombres.py</code>:
 </div>
 </div>
 
-<div id="outline-container-org0079e6c" class="outline-4">
-<h4 id="org0079e6c">Diviseurs</h4>
-<div class="outline-text-4" id="text-org0079e6c">
+<div id="outline-container-org25f5af9" class="outline-4">
+<h4 id="org25f5af9">Diviseurs</h4>
+<div class="outline-text-4" id="text-org25f5af9">
 <p>
 Dans le fichier <code>mes_fonctions.py</code> :
 </p>
@@ -1773,9 +1789,9 @@ Dans le programme <code>manips_nombres.py</code> :
 </div>
 </div>
 
-<div id="outline-container-org2acc092" class="outline-4">
-<h4 id="org2acc092">Nombres premiers</h4>
-<div class="outline-text-4" id="text-org2acc092">
+<div id="outline-container-orgf4ee274" class="outline-4">
+<h4 id="orgf4ee274">Nombres premiers</h4>
+<div class="outline-text-4" id="text-orgf4ee274">
 <p>
 Dans le fichier <code>mes_fonctions.py</code> :
 </p>
@@ -1796,9 +1812,9 @@ Pour la suite, tu es libre d'ajouter et d'utiliser les fonctions que tu veux à 
 </div>
 </div>
 
-<div id="outline-container-org6e04e5a" class="outline-4">
-<h4 id="org6e04e5a">Cercle</h4>
-<div class="outline-text-4" id="text-org6e04e5a">
+<div id="outline-container-org62ec4c0" class="outline-4">
+<h4 id="org62ec4c0">Cercle</h4>
+<div class="outline-text-4" id="text-org62ec4c0">
 <p>
 Dans un programme nommé <code>super_cercle.py</code> :
 </p>
@@ -1811,9 +1827,9 @@ Dans un programme nommé <code>super_cercle.py</code> :
 </div>
 </div>
 
-<div id="outline-container-orgabb5a1c" class="outline-4">
-<h4 id="orgabb5a1c">Lettres</h4>
-<div class="outline-text-4" id="text-orgabb5a1c">
+<div id="outline-container-orgd0779ca" class="outline-4">
+<h4 id="orgd0779ca">Lettres</h4>
+<div class="outline-text-4" id="text-orgd0779ca">
 <p>
 Dans un programme nommé <code>lettres.py</code> :
 </p>
@@ -1824,7 +1840,7 @@ Dans un programme nommé <code>lettres.py</code> :
 <p>
 Exemple d'affichage pour <code>chaine = "python"</code> :
 </p>
-<pre class="example" id="org7720007">
+<pre class="example" id="orgde854aa">
 p
 y
 t
@@ -1840,9 +1856,9 @@ n
 <h3 id="chapitre9_niv2">Niveau 2</h3>
 <div class="outline-text-3" id="text-chapitre9_niv2">
 </div>
-<div id="outline-container-org9366b2a" class="outline-4">
-<h4 id="org9366b2a">Occurrences de lettres</h4>
-<div class="outline-text-4" id="text-org9366b2a">
+<div id="outline-container-org51a4e85" class="outline-4">
+<h4 id="org51a4e85">Occurrences de lettres</h4>
+<div class="outline-text-4" id="text-org51a4e85">
 <p>
 Dans un programme nommé <code>occurrences.py</code> :
 </p>
@@ -1853,7 +1869,7 @@ Dans un programme nommé <code>occurrences.py</code> :
 <p>
 Exemple d'affichage pour <code>chaine = "Bonjour"</code> :
 </p>
-<pre class="example" id="org11958ed">
+<pre class="example" id="org0c9d70b">
 Le caractère " B " apparaît 1 fois.
 Le caractère " o " apparaît 2 fois.
 Le caractère " n " apparaît 1 fois.
@@ -1865,9 +1881,9 @@ Le caractère " r " apparaît 1 fois.
 </div>
 </div>
 
-<div id="outline-container-org96693dd" class="outline-4">
-<h4 id="org96693dd">Mot inverse</h4>
-<div class="outline-text-4" id="text-org96693dd">
+<div id="outline-container-orgc4d60be" class="outline-4">
+<h4 id="orgc4d60be">Mot inverse</h4>
+<div class="outline-text-4" id="text-orgc4d60be">
 <p>
 Dans un programme nommé <code>mot_inverse.py</code> :
 </p>
@@ -1882,15 +1898,15 @@ Dans un programme nommé <code>mot_inverse.py</code> :
 <p>
 Exemple pour le mot "python" :
 </p>
-<pre class="example" id="orgfe3d33b">
+<pre class="example" id="org5e0b367">
 mot original : python
 inverse : nohtyp
 </pre>
 </div>
 </div>
-<div id="outline-container-orgd5edae7" class="outline-4">
-<h4 id="orgd5edae7">Palindrome</h4>
-<div class="outline-text-4" id="text-orgd5edae7">
+<div id="outline-container-org5aa4ebb" class="outline-4">
+<h4 id="org5aa4ebb">Palindrome</h4>
+<div class="outline-text-4" id="text-org5aa4ebb">
 <p>
 Un palindrome est un mot dont l'ordre des lettres reste le même qu'on le lise de gauche à droite ou de droite à gauche.
 </p>
@@ -1914,9 +1930,9 @@ Dans un programme nommé <code>palindrome.py</code> :
 <h3 id="chapitre9_niv3">Niveau 3</h3>
 <div class="outline-text-3" id="text-chapitre9_niv3">
 </div>
-<div id="outline-container-org351ab0e" class="outline-4">
-<h4 id="org351ab0e">Rendu de monnaie</h4>
-<div class="outline-text-4" id="text-org351ab0e">
+<div id="outline-container-org22b59df" class="outline-4">
+<h4 id="org22b59df">Rendu de monnaie</h4>
+<div class="outline-text-4" id="text-org22b59df">
 <p>
 Nous voulons créer un programme qui permet de calculer un rendu de monnaie et de dire de quels billets et pièces nous avons besoin pour former la somme à rendre. Par exemple, si la somme à payer est de 18.57€ et qu'un client donne 100€, le programme doit pouvoir :
 </p>
@@ -1924,7 +1940,7 @@ Nous voulons créer un programme qui permet de calculer un rendu de monnaie et d
 <li>Calculer qu'il faut rendre 81.43€</li>
 <li>Afficher les billets et les pièces à utiliser pour cela. Exemple :</li>
 </ol>
-<pre class="example" id="orgda9b230">
+<pre class="example" id="org497168f">
 Prix à payer : 18.57€
 Rendu : 81.43€
 Décomposition :
@@ -1975,9 +1991,9 @@ Bien-sûr, ton code doit contenir uniquement des fonctions, qui peuvent faire ap
 </p>
 </div>
 
-<div id="outline-container-orga2bed43" class="outline-3">
-<h3 id="orga2bed43">Fonctionnement du programme</h3>
-<div class="outline-text-3" id="text-orga2bed43">
+<div id="outline-container-org368b301" class="outline-3">
+<h3 id="org368b301">Fonctionnement du programme</h3>
+<div class="outline-text-3" id="text-org368b301">
 <p>
 Le programme devra :
 </p>
@@ -2044,43 +2060,43 @@ Exemple d'utilisation :
 </p>
 
 
-<figure id="org61ca8f3">
+<figure id="org6a9a236">
 <img src="./img/notes_eleves1.jpg" alt="notes_eleves1.jpg">
 
 </figure>
 
 
-<figure id="org947b623">
+<figure id="org73b6174">
 <img src="./img/notes_eleves2.jpg" alt="notes_eleves2.jpg">
 
 </figure>
 
 
-<figure id="org80f3759">
+<figure id="orge11c294">
 <img src="./img/notes_eleves3.jpg" alt="notes_eleves3.jpg">
 
 </figure>
 
 
-<figure id="org3ba31a7">
+<figure id="org53c787c">
 <img src="./img/notes_eleves4.jpg" alt="notes_eleves4.jpg">
 
 </figure>
 
 
-<figure id="orgac90b31">
+<figure id="orgb7e74e5">
 <img src="./img/notes_eleves5.jpg" alt="notes_eleves5.jpg">
 
 </figure>
 
 
-<figure id="orgcc1c805">
+<figure id="org27f254a">
 <img src="./img/notes_eleves6.jpg" alt="notes_eleves6.jpg">
 
 </figure>
 
 
-<figure id="orgcf3c9dc">
+<figure id="org7ef3f8b">
 <img src="./img/notes_eleves7.jpg" alt="notes_eleves7.jpg">
 
 </figure>
@@ -2092,9 +2108,9 @@ Exemple d'utilisation :
 <div class="outline-text-3" id="text-notes_classe-code">
 </div>
 
-<div id="outline-container-orga9b226a" class="outline-4">
-<h4 id="orga9b226a">Demander la liste des matières</h4>
-<div class="outline-text-4" id="text-orga9b226a">
+<div id="outline-container-org2427a78" class="outline-4">
+<h4 id="org2427a78">Demander la liste des matières</h4>
+<div class="outline-text-4" id="text-org2427a78">
 <p>
 Commence par créer une fonction <code>demander_matieres()</code> qui demande <b>à l'infini</b> un nom de matière et l'ajoute dans une liste tant que l'utilisateur n'a pas entré le mot "stop". La fonction <b>doit retourner la liste des matières</b>.
 </p>
@@ -2105,18 +2121,18 @@ Rappelle-toi de la logique : on crée une liste vide (par exemple <code>liste = 
 </div>
 </div>
 
-<div id="outline-container-orgf386273" class="outline-4">
-<h4 id="orgf386273">Demander la liste des élèves</h4>
-<div class="outline-text-4" id="text-orgf386273">
+<div id="outline-container-orgaf9c513" class="outline-4">
+<h4 id="orgaf9c513">Demander la liste des élèves</h4>
+<div class="outline-text-4" id="text-orgaf9c513">
 <p>
 Crée une fonction <code>demander_eleves()</code> qui demande un par un le prénom des élèves de la classe. Le fonctionnement sera exactement le même que la fonction <code>demander_matieres()</code>. La fonction <b>doit retourner la liste des élèves</b>.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org64d4e03" class="outline-4">
-<h4 id="org64d4e03">Demander les notes</h4>
-<div class="outline-text-4" id="text-org64d4e03">
+<div id="outline-container-orgb229d37" class="outline-4">
+<h4 id="orgb229d37">Demander les notes</h4>
+<div class="outline-text-4" id="text-orgb229d37">
 <p>
 Ici, ça se complique un peu ! Nous allons découper cette fonctionnalité en deux fonctions. Commence par définir la fonction <code>demander_notes(eleves, matieres)</code> qui prend en paramètres la liste des élèves et la liste des matières. Cette fonction doit retourner un dictionnaire qui contiendra pour chaque élève toutes les notes de chaque matière. Voici un exemple pour montrer la forme que devra avoir ce dicitonnaire :
 </p>
@@ -2157,9 +2173,9 @@ La fonction <code>demander_notes_matieres(eleve,matiere)</code> :
 </div>
 </div>
 
-<div id="outline-container-org575f1c1" class="outline-4">
-<h4 id="org575f1c1">Afficher les notes</h4>
-<div class="outline-text-4" id="text-org575f1c1">
+<div id="outline-container-orgb6e4de4" class="outline-4">
+<h4 id="orgb6e4de4">Afficher les notes</h4>
+<div class="outline-text-4" id="text-orgb6e4de4">
 <p>
 Nous allons commencer par faire une fonction qui affiche simplement les notes des matières entrées pour chaque élève. Nous pourrons ainsi vérifier que toutes les étapes d'avant fonctionnent correctement et nous aurons ainsi la base de l'affichage.
 </p>
@@ -2175,18 +2191,18 @@ Crée une fonction <code>afficher_notes(notes_classe, matieres)</code> qui doit 
 </div>
 </div>
 
-<div id="outline-container-org2991ea6" class="outline-4">
-<h4 id="org2991ea6">Les calculs</h4>
-<div class="outline-text-4" id="text-org2991ea6">
+<div id="outline-container-org55a9c40" class="outline-4">
+<h4 id="org55a9c40">Les calculs</h4>
+<div class="outline-text-4" id="text-org55a9c40">
 <p>
 Entrons dans le vif du sujet. Nous avons codé un système pour demander les prénoms, les matières et les notes. Passons donc maintenant aux calculs des moyennes.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org5ad4245" class="outline-4">
-<h4 id="org5ad4245">Calcul d'une moyenne</h4>
-<div class="outline-text-4" id="text-org5ad4245">
+<div id="outline-container-org138027c" class="outline-4">
+<h4 id="org138027c">Calcul d'une moyenne</h4>
+<div class="outline-text-4" id="text-org138027c">
 <p>
 Commence par coder une fonction qui permet de calculer une moyenne à partir d'une liste de notes. Crée une fonction nommée <code>calcul_moyenne</code> qui prend en paramètre <code>liste_notes</code> qui sera la liste des notes.
 </p>
@@ -2197,9 +2213,9 @@ Cette fonction doit <b>renvoyer</b> la moyenne ainsi calculée.
 </div>
 </div>
 
-<div id="outline-container-orgcf3cf0e" class="outline-4">
-<h4 id="orgcf3cf0e">Calcul de la moyenne générale</h4>
-<div class="outline-text-4" id="text-orgcf3cf0e">
+<div id="outline-container-org855b375" class="outline-4">
+<h4 id="org855b375">Calcul de la moyenne générale</h4>
+<div class="outline-text-4" id="text-org855b375">
 <p>
 Crée ensuite une fonction <code>calcul_moyenne_generale</code> qui prend en paramètre le dictionnaire de toutes les notes d'un élève par matière. <b>C'est le dictionnaire contenu dans la valeur de chaque élève du dictionnaire nommé <code>notes_classes</code> dans la fonction <code>demander_notes</code> par exemple</b>. Appelle ce paramètre <code>notes_eleve</code>.
 </p>
@@ -2218,9 +2234,9 @@ Enfin, divise le total des moyennes par le nombre de matières (taille du dictio
 </div>
 </div>
 
-<div id="outline-container-org07e42d7" class="outline-4">
-<h4 id="org07e42d7">Calcul de la moyenne de la classe</h4>
-<div class="outline-text-4" id="text-org07e42d7">
+<div id="outline-container-orge05f737" class="outline-4">
+<h4 id="orge05f737">Calcul de la moyenne de la classe</h4>
+<div class="outline-text-4" id="text-orge05f737">
 <p>
 Crée une fonction <code>calcul_moyenne_classe</code> qui prend en paramètre le dictionnaire des notes de la classe. Nomme ce paramètre <code>notes_classe</code>.
 </p>
@@ -2231,9 +2247,9 @@ En t'aidant de la fonction calculant la moyenne générale, fais la moyenne des 
 </div>
 </div>
 
-<div id="outline-container-org18d6d7b" class="outline-4">
-<h4 id="org18d6d7b">Calcul de la moyenne de la classe par matière</h4>
-<div class="outline-text-4" id="text-org18d6d7b">
+<div id="outline-container-orgfe83071" class="outline-4">
+<h4 id="orgfe83071">Calcul de la moyenne de la classe par matière</h4>
+<div class="outline-text-4" id="text-orgfe83071">
 <p>
 Crée une fonction <code>calcul_moyennes_classe_matieres</code> qui prend en paramètre le dictionnaire des notes de la classe nommé <code>notes_classe</code>.
 </p>
@@ -2269,9 +2285,9 @@ N'oublie pas de retourner le dictionnaire.
 </div>
 </div>
 
-<div id="outline-container-orgaf1691c" class="outline-4">
-<h4 id="orgaf1691c">L'affichage final</h4>
-<div class="outline-text-4" id="text-orgaf1691c">
+<div id="outline-container-orgdd37213" class="outline-4">
+<h4 id="orgdd37213">L'affichage final</h4>
+<div class="outline-text-4" id="text-orgdd37213">
 <p>
 Nous allons maintenant ajouter du code à la fonction <code>afficher_notes()</code>.
 </p>
@@ -2300,11 +2316,420 @@ Pour l'affichage, aide-toi des exemples fournis pour bien agencer les informatio
 </div>
 </div>
 
+<div id="outline-container-pong" class="outline-2">
+<h2 id="pong">Premier jeu graphique : le pong</h2>
+<div class="outline-text-2" id="text-pong">
+<p>
+Voici enfin le moment tant attendu : un jeu avec une interface graphique ! Un programme avec interface graphique est un programme qui permet à l'utilisateur d'intéragir avec une fenêtre générée par celui-ci au lieu de le faire dans la console. C'est en fait la forme de la plupart des programmes que tu connais mais nous allons voir que coder une interface graphique prend plus de temps que simplement afficher des choses dans la console.
+</p>
+
+<p>
+Pour t'aider à résoudre des problèmes que tu pourrais rencontrer ou créer d'autres jeux plus tard, voici la documentation officielle de pygame : <a href="https://www.pygame.org/docs/">https://www.pygame.org/docs/</a>. N'hésite pas à faire des recherches sur internet pour t'aider à ajouter des fonctionnalités ou te débloquer lorsque tu rencontres un problème !
+</p>
+</div>
+
+<div id="outline-container-pong-presentation" class="outline-3">
+<h3 id="pong-presentation">Présentation du projet</h3>
+<div class="outline-text-3" id="text-pong-presentation">
+<p>
+Pour se faire une première idée du développement d'interfaces graphiques, nous allons commencer par un jeu qui ne demande pas de choses trop complexes à part afficher des formes et pouvoir en déplacer certaines avec le clavier. Le jeu idéal pour cela est un pong : une balle qui rebondit sur les bords de l'écran et que l'on doit faire rebondir avec une raquette rectangulaire pour qu'elle ne tombe pas. On pourra ensuite améliorer le jeu pour y jouer à deux, avec une raquette de chaque côté de l'écran.
+</p>
+
+<p>
+En python, pour la création de jeux avec interface graphique, il existe plusieurs modules que l'on peut utiliser. Le premier, c'est <b>tkinter</b>. Ce module permet de créer toutes sortes d'interfaces graphiques mais il devient vite très long de coder des jeux vidéos un peu complexes.
+</p>
+
+<p>
+Le second, c'est <b>pygame</b>. Comme son nom l'indique, il s'agit d'un module spécialisé dans la création de jeux avec python. Il simplifie beaucoup d'étapes qui peuvent prendre beaucoup de temps habituellement et nous permet de coder rapidement le début d'un jeu. C'est ce dernier module que nous allons utiliser pour coder ton premier jeu avec python !
+</p>
+</div>
+</div>
+
+<div id="outline-container-pong-presentation_pygame" class="outline-3">
+<h3 id="pong-presentation_pygame">Présentation de pygame</h3>
+<div class="outline-text-3" id="text-pong-presentation_pygame">
+<p>
+Lorsque l'on code un jeu vidéo, le code ressemble en général toujours à la même chose : au début, on initialise quelques variables puis on démarre une <b>boucle de jeu</b>. Cette boucle contient toute la partie logique et rendu du code et continue jusqu'à la fin du jeu. Pygame ne fait pas exception : pour la plupart des jeux codés avec ce module, le schéma sera le même. Voici donc la forme de base d'un jeu pygame qui ne fait rien à part lancer une fenêtre qui peut être fermée :
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"><span style="font-weight: bold;">import</span> pygame <span style="font-weight: bold; font-style: italic;"># </span><span style="font-weight: bold; font-style: italic;">importation du module</span>
+
+pygame.init() <span style="font-weight: bold; font-style: italic;"># </span><span style="font-weight: bold; font-style: italic;">initialisation du module</span>
+
+<span style="font-weight: bold; font-style: italic;">screen</span> = pygame.display.set_mode((1280,720)) <span style="font-weight: bold; font-style: italic;"># </span><span style="font-weight: bold; font-style: italic;">cr&#233;ation d'une fen&#234;tre de 1280 pixels de large et 720 de haut.</span>
+pygame.display.set_caption(<span style="font-style: italic;">"Titre du jeu"</span>) <span style="font-weight: bold; font-style: italic;"># </span><span style="font-weight: bold; font-style: italic;">d&#233;finition du titre de la fen&#234;tre.</span>
+
+<span style="font-weight: bold; font-style: italic;">clock</span> = pygame.time.Clock() <span style="font-weight: bold; font-style: italic;"># </span><span style="font-weight: bold; font-style: italic;">cr&#233;ation d'une variable d'horloge permettant de param&#233;trer le nombre d'images par seconde (=fps).</span>
+
+<span style="font-weight: bold; font-style: italic;">running</span> = <span style="font-weight: bold; text-decoration: underline;">True</span> <span style="font-weight: bold; font-style: italic;"># </span><span style="font-weight: bold; font-style: italic;">variable indiquant si la boucle de jeu doit continuer (True) ou s'arr&#234;ter (False)</span>
+<span style="font-weight: bold;">while</span> running == <span style="font-weight: bold; text-decoration: underline;">True</span>:
+    <span style="font-weight: bold;">for</span> event <span style="font-weight: bold;">in</span> pygame.event.get(): <span style="font-weight: bold; font-style: italic;"># </span><span style="font-weight: bold; font-style: italic;">boucle qui r&#233;cup&#232;re tous les &#233;v&#232;nements enregistr&#233;s</span>
+        <span style="font-weight: bold;">if</span> event.<span style="font-weight: bold;">type</span> == pygame.QUIT: <span style="font-weight: bold; font-style: italic;"># </span><span style="font-weight: bold; font-style: italic;">parmi les &#233;v&#232;nement, si un &#233;v&#232;nement est de type "QUIT" (c&#224;d l'utilisateur a cliqu&#233; sur la croix)</span>
+            <span style="font-weight: bold; font-style: italic;">running</span> = <span style="font-weight: bold; text-decoration: underline;">False</span> <span style="font-weight: bold; font-style: italic;"># </span><span style="font-weight: bold; font-style: italic;">la variable running est mise &#224; False pour que la prochaine boucle s'arr&#234;te</span>
+
+    <span style="font-weight: bold; font-style: italic;"># </span><span style="font-weight: bold; font-style: italic;">Toute la logique du code sera &#233;crite ici</span>
+
+    screen.fill((20,125,125)) <span style="font-weight: bold; font-style: italic;"># </span><span style="font-weight: bold; font-style: italic;">remplissage de l'&#233;cran par la couleur RGB 20,125,125</span>
+
+    <span style="font-weight: bold; font-style: italic;"># </span><span style="font-weight: bold; font-style: italic;">La partie rendu des objets ou images sera cod&#233;e ici</span>
+
+    pygame.display.flip() <span style="font-weight: bold; font-style: italic;"># </span><span style="font-weight: bold; font-style: italic;">application des modifications dans la fen&#234;tre</span>
+    clock.tick(30) <span style="font-weight: bold; font-style: italic;"># </span><span style="font-weight: bold; font-style: italic;">permet &#224; la boucle d'attendre jusqu'&#224; la prochaine image (30 fps pour cet exemple)</span>
+
+pygame.<span style="font-weight: bold; text-decoration: underline;">quit</span>() <span style="font-weight: bold; font-style: italic;"># </span><span style="font-weight: bold; font-style: italic;">lorsque l'on sort de la boucle, on doit quitter proprement la fen&#234;tre de pygame</span>
+
+</pre>
+</div>
+
+<p>
+Pour déplacer un objet sur l'écran, il faut en fait redessiner par dessus l'ancienne "image" : on remplit à nouveau le fond à chaque boucle puis on redessine les objets selon les nouveaux paramètres.
+</p>
+</div>
+</div>
+
+<div id="outline-container-pong-debut" class="outline-3">
+<h3 id="pong-debut">Début du pong : afficher un cercle</h3>
+<div class="outline-text-3" id="text-pong-debut">
+<p>
+En reprenant la base de code présentée avant, on va commencer par initialiser quelques variables avant la boucle de jeu qui seront modifiées au cours de cette boucle et qui représenterons les coordonnées de notre balle. Nous ajoutons aussi des variables pour différents paramètres comme la taille de la fenêtre et le rayon du cercle représentant la balle.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"><span style="font-weight: bold;">import</span> pygame
+
+pygame.init()
+
+<span style="font-weight: bold; font-style: italic;"># </span><span style="font-weight: bold; font-style: italic;">variables pour le jeu</span>
+<span style="font-weight: bold; font-style: italic;">fenetre_l</span>, <span style="font-weight: bold; font-style: italic;">fenetre_h</span> = 600,600
+<span style="font-weight: bold; font-style: italic;">balle_x</span> = fenetre_l // 2 <span style="font-weight: bold; font-style: italic;"># </span><span style="font-weight: bold; font-style: italic;">position x de la balle : la moiti&#233; de la largeur de fen&#234;tre</span>
+<span style="font-weight: bold; font-style: italic;">balle_y</span> = fenetre_h // 2 <span style="font-weight: bold; font-style: italic;"># </span><span style="font-weight: bold; font-style: italic;">position y de la balle : la moiti&#233; de la hauteur de fen&#234;tre</span>
+<span style="font-weight: bold; font-style: italic;">rayon_balle</span> = 20 <span style="font-weight: bold; font-style: italic;"># </span><span style="font-weight: bold; font-style: italic;">d&#233;finition du rayon de la balle &#224; 20 pixels</span>
+<span style="font-weight: bold; font-style: italic;">vitesse</span> = 20 <span style="font-weight: bold; font-style: italic;"># </span><span style="font-weight: bold; font-style: italic;">vitesse de d&#233;placement de la balle</span>
+
+<span style="font-weight: bold; font-style: italic;">fenetre</span> = pygame.display.set_mode((fenetre_l, fenetre_h)) <span style="font-weight: bold; font-style: italic;"># </span><span style="font-weight: bold; font-style: italic;">cr&#233;ation d'une fen&#234;tre de 600 pixels de large et 600 de haut.</span>
+
+<span style="font-weight: bold; font-style: italic;">horloge</span> = pygame.time.Clock()
+
+<span style="font-weight: bold; font-style: italic;">continuer</span> = <span style="font-weight: bold; text-decoration: underline;">True</span>
+<span style="font-weight: bold;">while</span> continuer == <span style="font-weight: bold; text-decoration: underline;">True</span>:
+    <span style="font-weight: bold;">for</span> evenement <span style="font-weight: bold;">in</span> pygame.event.get():
+        <span style="font-weight: bold;">if</span> evenement.<span style="font-weight: bold;">type</span> == pygame.QUIT:
+            <span style="font-weight: bold; font-style: italic;">continuer</span> = <span style="font-weight: bold; text-decoration: underline;">False</span>
+
+    <span style="font-weight: bold; font-style: italic;"># </span><span style="font-weight: bold; font-style: italic;">Toute la logique du code sera &#233;crite ici</span>
+
+    screen.fill((20,125,125)) <span style="font-weight: bold; font-style: italic;"># </span><span style="font-weight: bold; font-style: italic;">remplissage de l'&#233;cran par la couleur RGB 20,125,125</span>
+
+    <span style="font-weight: bold; font-style: italic;"># </span><span style="font-weight: bold; font-style: italic;">La partie rendu des objets ou images sera cod&#233;e ici</span>
+
+    pygame.display.flip()
+    horloge.tick(30)
+
+pygame.<span style="font-weight: bold; text-decoration: underline;">quit</span>()
+</pre>
+</div>
+
+<p>
+Ensuite, on doit utiliser ces variables pour dessiner la balle à l'écran dans la boucle car lorsqu'on la déplacera, il faudra la dessiner à ses nouvelles coordonnées à chaque déplacement.
+</p>
+
+<p>
+Ajoute cette ligne à la suite du remplissage de l'écran par une couleur. Tu es libre de modifier la couleur de la balle et du remplissage d'écran :
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python">pygame.draw.circle(fenetre, (0,0,200), (x,y), rayon_balle) <span style="font-weight: bold; font-style: italic;"># </span><span style="font-weight: bold; font-style: italic;">les param&#232;tres sont : la fenetre dans laquelle dessiner le cercle, la couleur, la position, le rayon du cercle</span>
+</pre>
+</div>
+
+<p>
+Si tu lances le programme, tu devrais voir s'afficher un cercle de la couleur de ton choix sur un fond lui aussi de la couleur que tu as choisie. Bravo tu as réussi à afficher un cercle !
+</p>
+</div>
+</div>
+
+<div id="outline-container-pong-deplacer_cercle" class="outline-3">
+<h3 id="pong-deplacer_cercle">Déplacer un cercle</h3>
+<div class="outline-text-3" id="text-pong-deplacer_cercle">
+<p>
+Passons maintenant aux choses intéressantes : le déplacement du cercle représentant la balle. Pour cela, il va falloir changer la coordonnée balle_x ou balle_y en fonction de la touche du clavier qui est appuyée. C'est un simple enchaînement de conditions if.
+</p>
+
+<p>
+Pour récupérer la liste des touches pressées, on utilise la fonction <code>pygame.key.get_pressed()</code>. Cette fonction renvoie une liste contenant pour chaque touche True si elle est pressée et False sinon. Pour savoir quel indice de la liste correspond à quelle touche, on utilise les constantes déjà existantes de pygame. La liste complète est disponible dans la documentation de pygame : <a href="https://www.pygame.org/docs/ref/key.html">https://www.pygame.org/docs/ref/key.html</a>.
+</p>
+
+<p>
+Les touches (=keys) qui nous intéressent sont les flèches du clavier, représentées par les constantes <b>pygame.K_UP</b>, <b>pygame.K_DOWN</b>, <b>pygame.K_LEFT</b>, <b>pygame.K_RIGHT</b> pour les flèches <b>haut</b>, <b>bas</b>, <b>gauche</b>, <b>droite</b>.
+</p>
+
+<p>
+Pour vérifier si une touche a été pressée, on écrit :
+</p>
+<div class="org-src-container">
+<pre class="src src-python"><span style="font-weight: bold; font-style: italic;">touches</span> = pygame.key.get_pressed()
+<span style="font-weight: bold;">if</span> touches[la touche qui nous int&#233;resse] == <span style="font-weight: bold; text-decoration: underline;">True</span>:
+    action &#224; effectuer
+</pre>
+</div>
+
+<p>
+Dans notre cas, si la touche flèche haut est pressée, on veut <b>enlever</b> la valeur de <code>vitesse</code> à la coordonnée balle_y. Oui, <b>enlever</b>, car les coordonnées en pygame commencent en haut à gauche à 0 et finissent en bas à droite:
+</p>
+
+
+<figure id="org86a9ab2">
+<img src="./img/schema_fenetre_pygame.png" alt="schema_fenetre_pygame.png">
+
+</figure>
+
+<p>
+Donc, le début du code pour déplacer la balle à l'aide des flèches sera le suivant :
+</p>
+<div class="org-src-container">
+<pre class="src src-python"><span style="font-weight: bold; font-style: italic;">touches</span> = pygame.key.get_pressed()
+<span style="font-weight: bold;">if</span> touches[pygame.K_UP] == <span style="font-weight: bold; text-decoration: underline;">True</span>:
+    <span style="font-weight: bold; font-style: italic;">balle_y</span> = balle_y - vitesse
+</pre>
+</div>
+
+<p>
+A toi maintenant d'écrire le code manquant pour déplacer la balle dans les sens manquants.
+</p>
+</div>
+</div>
+
+<div id="outline-container-pong-bloquer_balle" class="outline-3">
+<h3 id="pong-bloquer_balle">Bloquer la balle dans la fenêtre</h3>
+<div class="outline-text-3" id="text-pong-bloquer_balle">
+<p>
+Maintenant que nous pouvons déplacer la balle, c'est super chouette mais on aimerait qu'elle ne puisse pas sortir de la fenêtre ! Pour cela, c'est simple : après avoir fait les changement de coordonnées (ou pas) dans la boucle, il faut que l'on vérifie si les coordonnées de la balle ne dépassent ni à gauche, ni à droite, ni en haut, ni en bas. Si c'est le cas, on doit forcer la coordonnée qui dépasse à revenir à sa valeur maximale ou minimale avant d'afficher le cercle.
+</p>
+
+<p>
+Mais comment savoir quelles sont les coordonnées maximales et minimales ?
+</p>
+
+
+<figure id="org97632bc">
+<img src="./img/schema_pygame_balle.png" alt="schema_pygame_balle.png">
+
+</figure>
+
+<p>
+Dans notre exemple, vu que la fenêtre fait 600px de largeur et de hauteur, et que le cercle fait 20px de rayon, les valeurs à ne pas dépasser à droite et à gauche seront 600 - 20 = 580px. A gauche ou en haut, ce sera 0 + 20 = 20px. <b>Pour pouvoir changer facilement plus tard la taille de la fenêtre sans altérer le fonctionnement du jeu, nous allons calculer au début ces valeurs en fonction des variables créées avant.</b> Ajoute ce code à la suite de la déclaration des variables :
+</p>
+<div class="org-src-container">
+<pre class="src src-python"><span style="font-weight: bold; font-style: italic;">limite_gauche</span> = 0 + rayon_balle
+<span style="font-weight: bold; font-style: italic;">limite_haut</span> = 0 + rayon_balle
+<span style="font-weight: bold; font-style: italic;">limite_droite</span> = fenetre_l - rayon_balle
+<span style="font-weight: bold; font-style: italic;">limite_bas</span> = fenetre_h - rayon_balle
+</pre>
+</div>
+
+<p>
+Enfin, dans la boucle, après les "if" de déplacement de la balle, commence par ajouter ceci, qui permet à la balle de ne jamais dépasser la limite du bord droit de la fenêtre :
+</p>
+<div class="org-src-container">
+<pre class="src src-python"><span style="font-weight: bold;">if</span> balle_x &gt; limite_droite:
+    <span style="font-weight: bold; font-style: italic;">balle_x</span> = limite_droite
+</pre>
+</div>
+
+<p>
+A toi de trouver les 3 conditions manquantes pour que la balle ne dépasse d'aucun bord de la fenêtre.
+</p>
+</div>
+</div>
+
+<div id="outline-container-pong-deplacements_auto" class="outline-3">
+<h3 id="pong-deplacements_auto">Déplacer la balle automatiquement</h3>
+<div class="outline-text-3" id="text-pong-deplacements_auto">
+<p>
+Maintenant que l'on arrive à déplacer la balle sans qu'elle quitte la fenêtre, il faut qu'elle puisse se déplacer de manière autonome car dans le jeu final le joueur ne déplacera pas la balle mais la raquette. Pour pouvoir effectuer les déplacements automatiques, il faut alors choisir des valeurs de vitesses sur l'axe des abscisses (x) et des ordonnées (y) et appliquer ces valeurs aux positions de la balle à chaque répétition de la boucle while. La partie un peu plus délicate de cette étape est de savoir comment déterminer ces deux vitesses.
+</p>
+
+<p>
+Comme nous voulons que le jeu ne soit pas trop prévisible, nous allons déterminer les vitesses de manière aléatoire. <b>Attention</b> : on pourrait simplement définir les deux vitesses avec <code>random.randint(-20,20)</code> par exemple, mais cette technique risque de poser problème. En effet, si la <code>vitesse_x</code> est de 20 et <code>vitesse_y</code> pareil, on aura une vitesse totale bien trop élevée. A l'inverse, on risque d'avoir des vitesses trop faibles. Le mieux est donc de déterminer une vitesse de manière aléatoire et de calculer l'autre en fonction de la première pour que la vitesse totale soit toujours la même au début du jeu.
+</p>
+
+<p>
+Commençons par déterminer la vitesse de x. Nous déclarerons nos nouvelles variables à la suite des autres, avant la boucle while. <b>N'oublie pas d'importer le module <code>random</code> au tout début du code.</b> :
+</p>
+<div class="org-src-container">
+<pre class="src src-python"><span style="font-weight: bold; font-style: italic;">vitesse_x</span> = random.randint(1, 19) <span style="font-weight: bold; font-style: italic;"># </span><span style="font-weight: bold; font-style: italic;">D&#233;termination uniquement positive pour &#233;viter le 0 et jusqu'&#224; 19 pour que vitesse_y ne soit pas 0.</span>
+</pre>
+</div>
+
+<p>
+Maintenant, calculons <code>vitesse_y</code> à partir de <code>vitesse_x</code> et déterminons les signes des deux variables aléatoirement. <b>Changer les signes permet de changer la direction sur les axes.</b>
+</p>
+<div class="org-src-container">
+<pre class="src src-python"><span style="font-weight: bold; font-style: italic;">vitesse_y</span> = 20 - vitesse_x <span style="font-weight: bold; font-style: italic;"># </span><span style="font-weight: bold; font-style: italic;">La vitesse totale doit &#234;tre 20, d'o&#249; ce calcul</span>
+<span style="font-weight: bold; font-style: italic;"># </span><span style="font-weight: bold; font-style: italic;">d&#233;termination des signes des variables :</span>
+<span style="font-weight: bold; font-style: italic;">vitesse_x</span> = vitesse_x <span style="font-weight: bold;">if</span> random.randint(0,1) == 0 <span style="font-weight: bold;">else</span> -vitesse_x
+<span style="font-weight: bold; font-style: italic;">vitesse_y</span> = vitesse_y <span style="font-weight: bold;">if</span> random.randint(0,1) == 0 <span style="font-weight: bold;">else</span> -vitesse_y
+</pre>
+</div>
+
+<p>
+Il ne nous reste plus qu'à modifier le code dans la boucle que les vitesses soient ajoutées aux positions correspondantes à chaque répétition (à toi de jouer !).
+</p>
+</div>
+</div>
+
+<div id="outline-container-pong-rebond" class="outline-3">
+<h3 id="pong-rebond">Le rebond !</h3>
+<div class="outline-text-3" id="text-pong-rebond">
+<p>
+Le programme avance : nous avons à ce stade une balle qui se déplace dans la fenêtre sans jamais en sortir mais elle ne rebondit pas encore contre les bords. Nous allons donc remédier à cela.
+</p>
+
+<p>
+Pour pouvoir faire rebondir la balle, il suffit d'inverser sa vitesse lorsqu'elle rencontre un bord. Nous avons déjà écrit un code qui détecte en quelques sorte le moment où la balle atteint un bord pour qu'elle ne le dépasse pas. Il faut donc ajouter dans ces conditions le fait d'inverser <code>vitesse_x</code> si c'est le côté droit ou gauche et d'inverser <code>vitesse_y</code> sinon.
+</p>
+
+<p>
+Bravo, tu as codé une balle qui rebondit dans une fenêtre ! C'est une bonne étape de franchie pour la suite du jeu.
+</p>
+</div>
+</div>
+
+<div id="outline-container-pong-raquette" class="outline-3">
+<h3 id="pong-raquette">La raquette</h3>
+<div class="outline-text-3" id="text-pong-raquette">
+<p>
+Il faut maintenant que l'on puisse taper la balle pour éviter qu'elle n'atteigne le bas de la fenêtre. L'outil idéal pour cela est une raquette !
+</p>
+
+<p>
+Pour notre jeu, la raquette sera un <b>rectangle</b> situé en bas de la fenêtre que l'on pourra déplacer de gauche à droite. Commençons donc par déterminer quelques variables qui définiriont la position de la raquette. Nous nommerons ces variables avec un "1" car plus tard nous ajouterons une seconde raquette pour jouer à deux.
+</p>
+
+<p>
+Pour déterminer la position initiale de la raquette, c'est un peu plus complexe que pour la balle car la création d'un rectangle en pygame se fait différemment : on définit les coordonnées du point en haut à gauche du rectangle puis la longueur et la hauteur. Nous repérerons donc les coordonnées de la raquette par rapport à son point en haut à gauche. Nous devons donc faire quelques calculs pour centrer la raquette horizontalement.
+</p>
+<div class="org-src-container">
+<pre class="src src-python"><span style="font-weight: bold; font-style: italic;">largeur_raquette</span> = 100
+<span style="font-weight: bold; font-style: italic;">hauteur_raquette</span> = 15
+
+<span style="font-weight: bold; font-style: italic;">raquette1_x</span> = (fenetre_l // 2) - (largeur_raquette // 2)
+</pre>
+</div>
+
+<p>
+Pour la position y de la raquette, choisissons une valeur arbitraire ni trop haute ni trop basse :
+</p>
+<div class="org-src-container">
+<pre class="src src-python"><span style="font-weight: bold; font-style: italic;">raquette1_y</span> = fenetre_h - hauteur_raquette - 40
+</pre>
+</div>
+
+<p>
+Il faut maintenant "dessiner" la raquette dans la boucle, de la même façon que la balle. La différence est que l'on va d'abord créer un objet <b>Rect</b> que l'on dessinera ensuite dans la fenêtre. Ajoute ce code à la suite du rendu graphique que l'on a déjà codé :
+</p>
+<div class="org-src-container">
+<pre class="src src-python"><span style="font-weight: bold; font-style: italic;">raquette1</span> = pygame.Rect(raquette1_x, raquette1_y, largeur_raquette, hauteur_raquette) <span style="font-weight: bold; font-style: italic;"># </span><span style="font-weight: bold; font-style: italic;">cr&#233;ation de l'objet rectangle</span>
+pygame.draw.rect(fenetre, (227,106,36), raquette1) <span style="font-weight: bold; font-style: italic;"># </span><span style="font-weight: bold; font-style: italic;">dessin du rectangle dans la fen&#234;tre. Choisis la couleur que tu veux.</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-pong-deplacement_raquette" class="outline-3">
+<h3 id="pong-deplacement_raquette">Le déplacement de la raquette</h3>
+<div class="outline-text-3" id="text-pong-deplacement_raquette">
+<p>
+Pour déplacer la raquette, tu n'as pas vraiment besoin de monde aide : on a déjà le code qui détecte l'appui sur les touches du clavier, il faut donc changer quelle coordonnée tu modifies lors de l'appui sur les flèches gauche et droite du clavier !
+</p>
+
+<p>
+Fais ensuite en sorte que la raquette ne sorte pas de plus de sa moitié de l'écran.
+</p>
+</div>
+</div>
+
+<div id="outline-container-pong-rebond_raquette" class="outline-3">
+<h3 id="pong-rebond_raquette">Le rebond sur la raquette</h3>
+<div class="outline-text-3" id="text-pong-rebond_raquette">
+<p>
+Cette partie est un peu plus difficile car il n'y a pas de solution simple et rapide pour déterminer si la balle entre en collision avec la raquette : nous allons devoir vérifier en fonction de leur coordonnées respectives.
+</p>
+
+<p>
+Pour savoir si la balle touche la raquette, nous devons comparer les coordonnées horizontales et verticales des deux objets. Procédons donc par étape.
+</p>
+</div>
+
+<div id="outline-container-orgd9b44de" class="outline-4">
+<h4 id="orgd9b44de">Étape 1 : collision verticale</h4>
+<div class="outline-text-4" id="text-orgd9b44de">
+<p>
+La balle entre en collision avec la raquette sur le plan vertical si sa coordonnée <code>y + rayon_balle</code> est <b>supérieure ou égale</b> à la coordonnée <code>y</code> de la raquette et si sa coordonée <code>y - rayon_balle</code> est <b>inférieure ou égale</b> à la coordonnée <code>y + hauteur_raquette</code>. Nous précisions la limite basse de la raquette également car nous allons ensuite coder la fin de partie si la balle touche le bas de la fenêtre. Il faut pour cela que la balle ne rebondisse pas si elle passe sous la raquette.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org64330bd" class="outline-4">
+<h4 id="org64330bd">Étape 2 : collision horizontale</h4>
+<div class="outline-text-4" id="text-org64330bd">
+<p>
+La balle entre en collision avec la raquette sur le plan horizontal si sa coordonnée <code>x + rayon_balle</code> est <b>supérieure ou égale</b> à la coordonnée <code>x</code> de la raquette et si sa coordonnée <code>x - rayon_balle</code> est <b>inférieure ou égale</b> à la coordonnée <code>x + largeur_raquette</code>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgea469a5" class="outline-4">
+<h4 id="orgea469a5">Le code</h4>
+<div class="outline-text-4" id="text-orgea469a5">
+<p>
+Voici le début de la condition qui permet de faire rebondir la balle vers le haut. Ce code est bien-sûr dans la boucle car il faut vérifier à chaque image si la balle doit rebondir.
+</p>
+<div class="org-src-container">
+<pre class="src src-python"><span style="font-weight: bold;">if</span> balle_y + rayon_balle &gt;= raquette_y <span style="font-weight: bold;">and</span> balle_y - rayon_balle &lt;= raquette_y + hauteur_raquette <span style="font-weight: bold;">and</span> ... :
+    <span style="font-weight: bold; font-style: italic;"># </span><span style="font-weight: bold; font-style: italic;">action pour inverser la vitesse verticale de la balle</span>
+</pre>
+</div>
+<p>
+Ajoute le code manquant à la place des pointillés.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-pong-defaite1" class="outline-3">
+<h3 id="pong-defaite1">La défaite</h3>
+<div class="outline-text-3" id="text-pong-defaite1">
+<p>
+Pour cette première partie du jeu, qui se joue tout seul, la partie est perdue si la balle touche le bord bas de la fenêtre. Il faut donc ajouter une condition qui stoppe la boucle de jeu si le joueur perd.
+</p>
+
+<p>
+À partir du code que l'on a déjà écrit, trouve la condition qui permet de savoir si la balle touche le bas de la fenêtre. Pour quitter la boucle de jeu, fais comme lorsqu'on clique sur la croix de la fenêtre.
+</p>
+</div>
+</div>
+
+<div id="outline-container-pong-score" class="outline-3">
+<h3 id="pong-score">Le score</h3>
+<div class="outline-text-3" id="text-pong-score">
+<p>
+Ajoute un système de score qui s'incrémente chaque fois que la balle rebondit sur la raquette. Dans un premier temps, affiche ce score dans la console quand le joueur perd.
+</p>
+
+<p>
+Une fois que ton score fonctionne, aide-toi de la documentation officielle et d'internet pour trouver comment afficher le texte correspondant au score directement dans la fenêtre.
+</p>
+</div>
+</div>
+</div>
+
 <div id="outline-container-l-systemes" class="outline-2">
 <h2 id="l-systemes">L-systèmes</h2>
 <div class="outline-text-2" id="text-l-systemes">
 
-<figure id="org6c4b874">
+<figure id="orgb515d82">
 <img src="./img/fractal_weeds.jpg" alt="fractal_weeds.jpg">
 
 </figure>
@@ -2351,7 +2776,7 @@ Explications :
 <p>
 Voici les 4 première générations de l'algue de Lindenmayer :
 </p>
-<pre class="example" id="orgee58ddb">
+<pre class="example" id="org24abdbb">
 Génération 0 : A
 Génération 1 : AB
 Génération 2 : AB A
@@ -2519,11 +2944,11 @@ Désormais, notre fonction pour tracer un L-système est complète. Nous allons 
 </p>
 </div>
 
-<div id="outline-container-org1214967" class="outline-4">
-<h4 id="org1214967">La brindille</h4>
-<div class="outline-text-4" id="text-org1214967">
+<div id="outline-container-org8b2199e" class="outline-4">
+<h4 id="org8b2199e">La brindille</h4>
+<div class="outline-text-4" id="text-org8b2199e">
 
-<figure id="org0454329">
+<figure id="org22f4117">
 <img src="./img/brindille.png" alt="brindille" align="center" class="img" width="166px" height="320px" display="block">
 
 </figure>
@@ -2550,11 +2975,11 @@ Construire graphiquement (sur l'ordinateur, avec le programme python) la génér
 </div>
 </div>
 
-<div id="outline-container-org4777480" class="outline-4">
-<h4 id="org4777480">Le flocon de Von Koch</h4>
-<div class="outline-text-4" id="text-org4777480">
+<div id="outline-container-org8e78b7c" class="outline-4">
+<h4 id="org8e78b7c">Le flocon de Von Koch</h4>
+<div class="outline-text-4" id="text-org8e78b7c">
 
-<figure id="org8108f6c">
+<figure id="org16279c7">
 <img src="./img/flocon_koch.png" alt="flocon de Von Koch" align="center" class="img" width="242px" height="277px" display="block">
 
 </figure>
@@ -2581,11 +3006,11 @@ Construire graphiquement la génération 4 du "flocon de Von Koch", dont le L-sy
 </div>
 </div>
 
-<div id="outline-container-org802950a" class="outline-4">
-<h4 id="org802950a">La broussaille</h4>
-<div class="outline-text-4" id="text-org802950a">
+<div id="outline-container-orgb146ea6" class="outline-4">
+<h4 id="orgb146ea6">La broussaille</h4>
+<div class="outline-text-4" id="text-orgb146ea6">
 
-<figure id="org090f72d">
+<figure id="org7581da3">
 <img src="./img/broussaille.png" alt="broussaille" align="center" class="img" width="242px" height="287px" display="block">
 
 </figure>
@@ -2618,7 +3043,7 @@ Construire graphiquement la génération 4 de la "broussaille", dont le L-systè
 <h2 id="puissance4">Puissance 4</h2>
 <div class="outline-text-2" id="text-puissance4">
 
-<figure id="org4edfa0e">
+<figure id="org2ae5782">
 <img src="./img/puissance4.jpg" alt="puissance4.jpg">
 
 </figure>
@@ -2656,7 +3081,7 @@ Le but du jeu est d'aligner une suite de 4 pions de même couleur sur une grille
 Dans cette étape, tu ne vas pas encore coder. Nous allons d'abord réfléchir à la structure de notre programme et imaginer son fonctionnement général. Il faut que l'on définisse de quelles fonctions nous auront besoin pour faire fonctionner notre programme.
 Parfois, il est utile d'utiliser du "pseudo code". Le pseudo code, c'est une façon d'écrire un algorithme de façon presque naturelle, sans langage de programmation. Par exemple, dans un pseudo code on peu écrire :
 </p>
-<pre class="example" id="org4eba6ff">
+<pre class="example" id="org014585b">
 si (utilisateur écrit "Bonjour") alors
     afficher "Bonjour"
 sinon
@@ -2675,9 +3100,9 @@ La seule instruction qui ne sera pas dans une fonction sera celle qui lance le j
 </p>
 </div>
 
-<div id="outline-container-org427542c" class="outline-4">
-<h4 id="org427542c">Fonctionnement de la grille</h4>
-<div class="outline-text-4" id="text-org427542c">
+<div id="outline-container-org5d37e9a" class="outline-4">
+<h4 id="org5d37e9a">Fonctionnement de la grille</h4>
+<div class="outline-text-4" id="text-org5d37e9a">
 <p>
 La "grille" du jeu sera représentée par une liste <b>à deux dimension</b>, c'est à dire une liste de plusieurs listes. Ce sera donc une liste contenant 6 listes qui contiendront chacune 7 chiffres. Chaque sous-liste de la grille représentera une ligne de la grille. Comme le Puissance 4 contient 7 colonnes, chaque ligne aura donc 7 chiffres. La valeur d'une case de la grille a 3 possibilités :
 </p>
@@ -2734,7 +3159,7 @@ Par exemple, si les jetons jaunes sont ceux du joueur 1 et les jetons rouges ceu
 </p>
 
 
-<figure id="orgdcf67f5">
+<figure id="org27ef90f">
 <img src="./img/schema_liste.png" alt="schema_liste.png">
 
 </figure>
@@ -2760,9 +3185,9 @@ Le premier indice correspond à la ligne et le second à la colonne. Alors pour 
 </div>
 </div>
 
-<div id="outline-container-org7df096b" class="outline-4">
-<h4 id="org7df096b">Liste des fonctions</h4>
-<div class="outline-text-4" id="text-org7df096b">
+<div id="outline-container-orgb6fcd1f" class="outline-4">
+<h4 id="orgb6fcd1f">Liste des fonctions</h4>
+<div class="outline-text-4" id="text-orgb6fcd1f">
 <p>
 Maintenant que nous avons une idée générale du fonctionnement de la <b>grille de jeu</b>, voici une liste exhaustive des fonctions dont nous aurons besoin. Tu n'as pas besoin de tout comprendre dès le début, cette section servira aussi plus tard pour t'y retrouver dans toutes les fonctions. Ne commences pas non plus à coder les fonctions ici car nous allons revenir en détail sur chacune d'elles dans les étapes suivantes.
 </p>
@@ -2844,14 +3269,14 @@ Nous n'aurons pas besoin d'autres variables globales pour le moment.
 <h3 id="puissance4_etape3">Étape 3 : Définir les fonctions d'affichage</h3>
 <div class="outline-text-3" id="text-puissance4_etape3">
 </div>
-<div id="outline-container-orgdf9ddc5" class="outline-4">
-<h4 id="orgdf9ddc5">Affichage des symboles des joueurs</h4>
-<div class="outline-text-4" id="text-orgdf9ddc5">
+<div id="outline-container-orgc6efbbc" class="outline-4">
+<h4 id="orgc6efbbc">Affichage des symboles des joueurs</h4>
+<div class="outline-text-4" id="text-orgc6efbbc">
 <ul class="org-ul">
 <li><p>
 Crée une fonction <code>recupererSymbole(numeroJoueur)</code>. La logique de cette fonction sera :
 </p>
-<pre class="example" id="orgef4e6a5">
+<pre class="example" id="org709a796">
 si numeroJoueur est égal à 1:
     renvoyer symboleJoueur1
 sinon si numeroJoueur est égal à 2:
@@ -2863,9 +3288,9 @@ sinon
 </div>
 </div>
 
-<div id="outline-container-org7be6bb3" class="outline-4">
-<h4 id="org7be6bb3">Affichage de la grille</h4>
-<div class="outline-text-4" id="text-org7be6bb3">
+<div id="outline-container-orge62a61c" class="outline-4">
+<h4 id="orge62a61c">Affichage de la grille</h4>
+<div class="outline-text-4" id="text-orge62a61c">
 <ul class="org-ul">
 <li><p>
 Crée une fonction <code>initialiserGrille()</code> qui utilisera la variable globale <code>grille</code> pour lui redonner sa valeur par défaut :
@@ -2890,7 +3315,7 @@ Début de partie :
 </p>
 
 
-<figure id="orge2df71b">
+<figure id="org5a41bdf">
 <img src="./img/exemple_vide.png" alt="exemple_vide.png">
 
 </figure>
@@ -2900,16 +3325,16 @@ Après quelques tours :
 </p>
 
 
-<figure id="org25f7f3b">
+<figure id="orgb642867">
 <img src="./img/exemple_tours.png" alt="exemple_tours.png">
 
 </figure>
 </div>
 </div>
 
-<div id="outline-container-org749471a" class="outline-4">
-<h4 id="org749471a">Affichage de fin de partie</h4>
-<div class="outline-text-4" id="text-org749471a">
+<div id="outline-container-org1e9d3a5" class="outline-4">
+<h4 id="org1e9d3a5">Affichage de fin de partie</h4>
+<div class="outline-text-4" id="text-org1e9d3a5">
 <ul class="org-ul">
 <li>Crée une fonction <code>afficherFinDePartie</code> qui prend en paramètre une variable <code>gagnant</code>. Cette fonction doit :
 <ul class="org-ul">
@@ -2967,9 +3392,9 @@ Dans cette étape nous allons commencer la fonction principale <code>boucleDeJeu
 </p>
 </div>
 
-<div id="outline-container-orgac7e876" class="outline-4">
-<h4 id="orgac7e876">Fonctions intermédiaires</h4>
-<div class="outline-text-4" id="text-orgac7e876">
+<div id="outline-container-org29ecafa" class="outline-4">
+<h4 id="org29ecafa">Fonctions intermédiaires</h4>
+<div class="outline-text-4" id="text-org29ecafa">
 <p>
 Pour commencer, nous allons déclarer les fonctions utilisées dans <code>boucleDeJeu()</code> sans pour autant en écrire le code, avec le mot-clef <code>pass</code> :
 </p>
@@ -2981,9 +3406,9 @@ Pour commencer, nous allons déclarer les fonctions utilisées dans <code>boucle
 </div>
 </div>
 
-<div id="outline-container-orgc4f2629" class="outline-4">
-<h4 id="orgc4f2629">Boucle du jeu</h4>
-<div class="outline-text-4" id="text-orgc4f2629">
+<div id="outline-container-orgb9906e8" class="outline-4">
+<h4 id="orgb9906e8">Boucle du jeu</h4>
+<div class="outline-text-4" id="text-orgb9906e8">
 <p>
 Définissons maintenant la logique de la boucle de jeu :
 </p>
@@ -3016,9 +3441,9 @@ Nous allons maintenant coder le déroulement d'un tour. Voici ce qu'il se passe 
 </ul>
 </div>
 
-<div id="outline-container-org6de663e" class="outline-4">
-<h4 id="org6de663e">Demander la colonne</h4>
-<div class="outline-text-4" id="text-org6de663e">
+<div id="outline-container-org22b1b60" class="outline-4">
+<h4 id="org22b1b60">Demander la colonne</h4>
+<div class="outline-text-4" id="text-org22b1b60">
 <p>
 Commençons par la fonction qui demande la colonne au joueur :
 </p>
@@ -3034,9 +3459,9 @@ Commençons par la fonction qui demande la colonne au joueur :
 </div>
 </div>
 
-<div id="outline-container-org9838f53" class="outline-4">
-<h4 id="org9838f53">Trouver la ligne où placer le jeton</h4>
-<div class="outline-text-4" id="text-org9838f53">
+<div id="outline-container-org53b9305" class="outline-4">
+<h4 id="org53b9305">Trouver la ligne où placer le jeton</h4>
+<div class="outline-text-4" id="text-org53b9305">
 <p>
 Passons maintenant à la fonction qui trouve la ligne libre d'une colonne. Nous allons devoir coder une fonction qui parcourt chaque ligne de la grille pour vérifier si la colonne choisie est libre sur cette ligne. (Voir le fonctionnement de la grille à l'étape 1 pour savoir si une case est libre).
 </p>
@@ -3050,18 +3475,18 @@ Il faudra garder la dernière ligne libre trouvée, car le parcours de la liste 
 </div>
 </div>
 
-<div id="outline-container-orgebff6ef" class="outline-4">
-<h4 id="orgebff6ef">Placer le jeton</h4>
-<div class="outline-text-4" id="text-orgebff6ef">
+<div id="outline-container-org590e3f9" class="outline-4">
+<h4 id="org590e3f9">Placer le jeton</h4>
+<div class="outline-text-4" id="text-org590e3f9">
 <p>
 La dernière fonction intermédiaire pour un tour sera la fonction <code>placerJeton(joueur, coordonnees)</code>. Cette fonction placera simplement le numéro du <code>joueur</code> à un l'endroit défini par le tuple <code>coordonnees</code>.
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgcde2a70" class="outline-4">
-<h4 id="orgcde2a70">Jouer le tour</h4>
-<div class="outline-text-4" id="text-orgcde2a70">
+<div id="outline-container-org475f058" class="outline-4">
+<h4 id="org475f058">Jouer le tour</h4>
+<div class="outline-text-4" id="text-org475f058">
 <p>
 Enfin, nous allons pouvoir créer la fonction qui fait jouer le tour au joueur :
 </p>
@@ -3097,9 +3522,9 @@ Pour cela, nous utiliserons deux fonctions différentes : une première qui perm
 </p>
 </div>
 
-<div id="outline-container-orgaabcb7c" class="outline-4">
-<h4 id="orgaabcb7c">Trouver un alignement</h4>
-<div class="outline-text-4" id="text-orgaabcb7c">
+<div id="outline-container-org67acf14" class="outline-4">
+<h4 id="org67acf14">Trouver un alignement</h4>
+<div class="outline-text-4" id="text-org67acf14">
 <p>
 Nous allons commencer par déterminer si un joueur a gagné. Pour cela, nous devons créer 3 fonctions intermédiaires :
 </p>
@@ -3111,18 +3536,18 @@ Nous allons commencer par déterminer si un joueur a gagné. Pour cela, nous dev
 </div>
 </div>
 
-<div id="outline-container-org49e5581" class="outline-4">
-<h4 id="org49e5581">Le joueur a-t-il a gagné ?</h4>
-<div class="outline-text-4" id="text-org49e5581">
+<div id="outline-container-org96ea31f" class="outline-4">
+<h4 id="org96ea31f">Le joueur a-t-il a gagné ?</h4>
+<div class="outline-text-4" id="text-org96ea31f">
 <p>
 Maintenant que nous avons codé nos 3 fonctions intermédiaires, nous pouvons modier la fonction <code>joueurGagne(joueur)</code>. La fonction doit maintenant renvoyer <code>True</code> si le <code>joueur</code> a un alignement horizontal, vertical ou en diagonale. Sinon, elle retourne <code>False</code>.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org3bff306" class="outline-4">
-<h4 id="org3bff306">Match nul ?</h4>
-<div class="outline-text-4" id="text-org3bff306">
+<div id="outline-container-org213dbc7" class="outline-4">
+<h4 id="org213dbc7">Match nul ?</h4>
+<div class="outline-text-4" id="text-org213dbc7">
 <p>
 Enfin, il nous manque la fonction qui vérifie s'il y a <b>match nul</b>. Nous savons qu'il y a match nul si la grille est remplie et que personne n'a gagné. Alors, nous avons simplement besoin d'une fonction qui vérifie si la grille est pleine :
 </p>
@@ -3175,9 +3600,9 @@ Pour introduire quelques concepts clefs de tkinter, nous allons commencer par cr
 </p>
 </div>
 
-<div id="outline-container-orgfbc4eb0" class="outline-4">
-<h4 id="orgfbc4eb0">Début</h4>
-<div class="outline-text-4" id="text-orgfbc4eb0">
+<div id="outline-container-org39e9cf4" class="outline-4">
+<h4 id="org39e9cf4">Début</h4>
+<div class="outline-text-4" id="text-org39e9cf4">
 <p>
 Tout d'abord, crée un programme nommé <code>chef_d_oeuvre.py</code>.
 </p>
@@ -3199,9 +3624,9 @@ La première étape pour créer une interface graphique avec tkinter est de cré
 </div>
 </div>
 </div>
-<div id="outline-container-orgf281737" class="outline-4">
-<h4 id="orgf281737">Créer et afficher un texte</h4>
-<div class="outline-text-4" id="text-orgf281737">
+<div id="outline-container-orge2ee43c" class="outline-4">
+<h4 id="orge2ee43c">Créer et afficher un texte</h4>
+<div class="outline-text-4" id="text-orge2ee43c">
 <p>
 Maintenant, nous pouvons commencer à configurer l'apparence de notre fenêtre.
 </p>
@@ -3226,9 +3651,9 @@ texte.pack()
 </div>
 </div>
 </div>
-<div id="outline-container-org26d885c" class="outline-4">
-<h4 id="org26d885c">Créer et afficher un canvas</h4>
-<div class="outline-text-4" id="text-org26d885c">
+<div id="outline-container-org120be15" class="outline-4">
+<h4 id="org120be15">Créer et afficher un canvas</h4>
+<div class="outline-text-4" id="text-org120be15">
 <p>
 Un canvas est un objet de tkinter qui permet de dessiner sur une zone donnée. La fonction utilisée est <code>tkinter.Canvas()</code>. Tout comme le texte, seul le premier paramètre (la fenêtre) est obligatoire.
 </p>
@@ -3241,9 +3666,9 @@ canvas.pack()
 </div>
 </div>
 </div>
-<div id="outline-container-org32800e1" class="outline-4">
-<h4 id="org32800e1">Enregistrer la position</h4>
-<div class="outline-text-4" id="text-org32800e1">
+<div id="outline-container-orgea59912" class="outline-4">
+<h4 id="orgea59912">Enregistrer la position</h4>
+<div class="outline-text-4" id="text-orgea59912">
 <p>
 Nous allons maintenant nous intéresser à la logique du programme. Avec tkinter, l'utilisateur peut interagir avec l'interface, et chaque interaction déclenche un "évènement" appelé event. Le principe est donc le suivant :
 </p>
@@ -3277,9 +3702,9 @@ Voici le code du corps de la fonction :
 </div>
 </div>
 
-<div id="outline-container-orgb9e3929" class="outline-4">
-<h4 id="orgb9e3929">Que faire lorsqu'un clic est détecté ?</h4>
-<div class="outline-text-4" id="text-orgb9e3929">
+<div id="outline-container-orgfea30ed" class="outline-4">
+<h4 id="orgfea30ed">Que faire lorsqu'un clic est détecté ?</h4>
+<div class="outline-text-4" id="text-orgfea30ed">
 <p>
 Nous allons créer la fonction qui sera appelée quand l'utilisateur cliquera sur la souris. Elle enregistrera simplement l'emplacement de la souris au moment du clic.
 </p>
@@ -3295,9 +3720,9 @@ Et c'est tout pour le clic !
 </div>
 </div>
 
-<div id="outline-container-org3fe672b" class="outline-4">
-<h4 id="org3fe672b">Que faire lors du déplacement de la souris après le clic ?</h4>
-<div class="outline-text-4" id="text-org3fe672b">
+<div id="outline-container-org46a438f" class="outline-4">
+<h4 id="org46a438f">Que faire lors du déplacement de la souris après le clic ?</h4>
+<div class="outline-text-4" id="text-org46a438f">
 <p>
 C'est ici que l'on va commencer à dessiner des formes sur le canvas. Pour que l'utilisateur puisse dessiner ce qu'il veut, nous utiliserons simplement une ligne qui se dessinera pixel par pixel. Chaque déplacement déclenchera l'appel de la fonction <code>quand_bouge(event)</code>. Cette fonction tracera une ligne entre le dernier point enregistré et le point où se trouve la souris actuellement. Ensuite, elle devra enregistrer la nouvelle position pour préparer le prochain mouvement.
 </p>
@@ -3317,9 +3742,9 @@ La dernière étape de la fonction est d'enregistrer la nouvelle position de <co
 </div>
 </div>
 
-<div id="outline-container-orgd143b41" class="outline-4">
-<h4 id="orgd143b41">Détecter les évènements</h4>
-<div class="outline-text-4" id="text-orgd143b41">
+<div id="outline-container-org3ac0679" class="outline-4">
+<h4 id="org3ac0679">Détecter les évènements</h4>
+<div class="outline-text-4" id="text-org3ac0679">
 <p>
 Nous avons préparer les fonctions à appeler lorsque seront détectés les évènements qui nous intéressent. Il faut maintenant que l'on écrive le code qui nous permettra de détecter les évènements en question.
 </p>
@@ -3339,9 +3764,9 @@ L'évènement qui correspond au mouvement de la souris s'appelle <code>&lt;B1-Mo
 </div>
 </div>
 
-<div id="outline-container-org36b5e0f" class="outline-4">
-<h4 id="org36b5e0f">Peindre en couleur</h4>
-<div class="outline-text-4" id="text-org36b5e0f">
+<div id="outline-container-org0eaad60" class="outline-4">
+<h4 id="org0eaad60">Peindre en couleur</h4>
+<div class="outline-text-4" id="text-org0eaad60">
 <p>
 Maintenant, nous allons créer une petite palette de couleurs sur le côté afin de pouvoir choisir la couleur de notre dessin. Pour cela, nous allons créer des petits carrés de couleurs que nous allons placer dans le canvas.
 </p>
