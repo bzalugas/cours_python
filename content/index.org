@@ -326,11 +326,11 @@ Pour le moment, cela suffira pour créer des programmes plus interactifs, mais n
 *** Exercices
 1. Dans un programme nommé =boutique.py= :
    - Demande à l'utilisateur un nombre entier correspondant à la somme d'argent qu'il a et stocke sa réponse dans une variable =euros=.
-   - Si =euros= est supérieure à 2, le programme doit afficher "Tu peux t'acheter des chewing-gums" puis enlever 2 à =euros=.
-   - Si =euros= est supérieure à 30, le programme devra aussi afficher "Tu peux t'acheter des légos" puis enlever 30 à =euros=.
-   - Si =euros= est supérieure à 350, le programme devra aussi afficher "Tu peux t'acheter une playstation" puis enlever 350 à =euros=.
-   - Si =euros= est supérieure à 5000000, le programme devra aussi afficher "Tu es trop riche et tu donnes toute ta fortune !" puis =euros= devra être mise à 0.
-   - Enfin, affiche "Il te reste <euros>" en remplaçant =euros= par ce qu'il y a dans la variable.
+   - Si =euros= est *supérieure ou égale* à 2, le programme doit afficher "Tu peux t'acheter des chewing-gums" puis enlever 2 à =euros=.
+   - Si =euros= est *supérieure ou égale* à 30, le programme devra aussi afficher "Tu peux t'acheter des légos" puis enlever 30 à =euros=.
+   - Si =euros= est *supérieure ou égale* à 350, le programme devra aussi afficher "Tu peux t'acheter une playstation" puis enlever 350 à =euros=.
+   - Si =euros= est *supérieure ou égale* à 5000000, le programme devra aussi afficher "Tu es trop riche et tu donnes toute ta fortune !" puis =euros= devra être mise à 0.
+   - Enfin, affiche "Il te reste <euros> euros" en remplaçant =euros= par ce qu'il y a dans la variable.
 
 2. Dans un programme nommé =montagnes_russes.py= :
    - Demande à l'utilisateur son âge puis sa taille et stocke ses réponses dans des variables =age= et =taille=.
