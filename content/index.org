@@ -1443,7 +1443,7 @@ Pour cette première partie du jeu, qui se joue tout seul, la partie est perdue 
 :END:
 Ajoute un système de score qui s'incrémente chaque fois que la balle rebondit sur la raquette. Dans un premier temps, affiche ce score dans la console quand le joueur perd.
 
-Une fois que ton score fonctionne, aide-toi de la documentation officielle et d'internet pour trouver comment afficher le texte correspondant au score directement dans la fenêtre.
+Une fois que ton score fonctionne, aide-toi de la documentation officielle (disponible au début du chapitre) et d'internet pour trouver comment afficher le texte correspondant au score directement dans la fenêtre.
 
 * L-systèmes
 :PROPERTIES:
